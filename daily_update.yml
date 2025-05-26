@@ -1,0 +1,37 @@
+name: Daily Stock Update
+
+on:
+  schedule:
+    - cron: '30 12 * * *'  # Runs every day at 12:30 UTC (6 PM IST)
+  workflow_dispatch:
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repo
+        uses: actions/checkout@v3
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.10'
+
+      - name: Install Dependencies
+        run: |
+          pip install -r requirements.txt
+
+      - name: Run Data Fetch Script
+        run: python data_fetch.py
+
+      - name: Run GPT Analysis
+        run: python gpt_analyze.py
+
+      - name: Commit and Push Updated Data
+        run: |
+          git config --global user.name 'auto-bot'
+          git config --global user.email 'bot@example.com'
+          git add stock_data.db gpt_recommendation.json
+          git commit -m "Daily update $(date)" || echo "No changes to commit"
+          git push
