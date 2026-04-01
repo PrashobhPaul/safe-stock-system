@@ -1,0 +1,1631 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>StockSage India — AI-Powered Stock Predictions</title>
+  <meta name="description" content="Rule-based intelligent stock predictions for Indian markets (NSE/BSE). Updated daily after market close.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Crimson+Pro:ital,wght@0,400;0,600;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg-void: #060a06;
+      --bg-deep: #090e09;
+      --bg-surface: #0d150d;
+      --bg-card: #101a10;
+      --bg-card-hover: #142014;
+      --border: #1c2e1c;
+      --border-bright: #2a4a2a;
+      --green-primary: #00e676;
+      --green-dim: #00b85a;
+      --green-glow: rgba(0, 230, 118, 0.15);
+      --green-muted: #1a3a1a;
+      --amber: #ffb300;
+      --amber-dim: #c68400;
+      --red: #ff4444;
+      --red-dim: #cc2222;
+      --text-primary: #d4ecd4;
+      --text-secondary: #6a8f6a;
+      --text-dim: #3a5a3a;
+      --text-label: #4a7a4a;
+      --white: #e8f5e8;
+      --mono: 'Space Mono', monospace;
+      --serif: 'Crimson Pro', Georgia, serif;
+      --sans: 'DM Sans', sans-serif;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--bg-void);
+      color: var(--text-primary);
+      font-family: var(--mono);
+      font-size: 13px;
+      line-height: 1.5;
+      min-height: 100vh;
+      overflow-x: hidden;
+    }
+
+    /* Scanline overlay */
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background: repeating-linear-gradient(
+        0deg,
+        transparent,
+        transparent 2px,
+        rgba(0, 0, 0, 0.07) 2px,
+        rgba(0, 0, 0, 0.07) 4px
+      );
+      pointer-events: none;
+      z-index: 9999;
+    }
+
+    /* Grid background */
+    body::after {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background-image:
+        linear-gradient(rgba(0, 230, 118, 0.025) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0, 230, 118, 0.025) 1px, transparent 1px);
+      background-size: 40px 40px;
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    /* ── TICKER TAPE ── */
+    .ticker-bar {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: var(--bg-deep);
+      border-bottom: 1px solid var(--border);
+      padding: 6px 0;
+      overflow: hidden;
+      white-space: nowrap;
+    }
+
+    .ticker-inner {
+      display: inline-flex;
+      gap: 0;
+      animation: ticker 60s linear infinite;
+    }
+
+    .ticker-bar:hover .ticker-inner { animation-play-state: paused; }
+
+    @keyframes ticker {
+      from { transform: translateX(0); }
+      to { transform: translateX(-50%); }
+    }
+
+    .ticker-item {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 0 24px;
+      border-right: 1px solid var(--border);
+      font-size: 11px;
+      letter-spacing: 0.05em;
+    }
+
+    .ticker-name { color: var(--text-secondary); }
+    .ticker-value { color: var(--white); font-weight: 700; }
+    .ticker-change.up { color: var(--green-primary); }
+    .ticker-change.down { color: var(--red); }
+    .ticker-dot { width: 5px; height: 5px; border-radius: 50%; animation: pulse 2s infinite; }
+    .ticker-dot.up { background: var(--green-primary); }
+    .ticker-dot.down { background: var(--red); }
+    @keyframes pulse { 0%,100%{ opacity:1; } 50%{ opacity:0.3; } }
+
+    /* ── HEADER ── */
+    .header {
+      position: relative;
+      z-index: 1;
+      padding: 32px 40px 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .logo-area {}
+
+    .logo-eyebrow {
+      font-family: var(--mono);
+      font-size: 10px;
+      letter-spacing: 0.25em;
+      color: var(--green-primary);
+      text-transform: uppercase;
+      margin-bottom: 6px;
+    }
+
+    .logo-title {
+      font-family: var(--serif);
+      font-size: 42px;
+      font-weight: 600;
+      color: var(--white);
+      line-height: 1;
+      letter-spacing: -0.02em;
+    }
+
+    .logo-title span { color: var(--green-primary); }
+
+    .logo-sub {
+      font-family: var(--sans);
+      font-size: 13px;
+      color: var(--text-secondary);
+      margin-top: 8px;
+      font-weight: 300;
+    }
+
+    .header-meta {
+      text-align: right;
+    }
+
+    .last-updated {
+      font-size: 11px;
+      color: var(--text-secondary);
+      margin-bottom: 4px;
+    }
+
+    .last-updated span { color: var(--green-primary); }
+
+    .market-status {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 11px;
+      letter-spacing: 0.1em;
+      padding: 4px 10px;
+      border: 1px solid var(--border-bright);
+      background: var(--bg-surface);
+    }
+
+    .status-dot {
+      width: 6px; height: 6px;
+      border-radius: 50%;
+      background: var(--amber);
+    }
+
+    .status-dot.closed { background: var(--red); box-shadow: 0 0 6px var(--red); }
+    .status-dot.open { background: var(--green-primary); animation: pulse 1.5s infinite; box-shadow: 0 0 6px var(--green-primary); }
+
+    /* ── LAYOUT ── */
+    .main {
+      position: relative;
+      z-index: 1;
+      padding: 32px 40px;
+      max-width: 1600px;
+      margin: 0 auto;
+    }
+
+    /* ── SECTION HEADERS ── */
+    .section-header {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 20px;
+    }
+
+    .section-label {
+      font-size: 10px;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--green-primary);
+      font-weight: 700;
+    }
+
+    .section-line {
+      flex: 1;
+      height: 1px;
+      background: linear-gradient(90deg, var(--border-bright), transparent);
+    }
+
+    .section-count {
+      font-size: 10px;
+      color: var(--text-dim);
+      letter-spacing: 0.1em;
+    }
+
+    /* ── INDICES ROW ── */
+    .indices-row {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 12px;
+      margin-bottom: 40px;
+    }
+
+    .index-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      padding: 16px;
+      position: relative;
+      overflow: hidden;
+      transition: border-color 0.2s;
+    }
+
+    .index-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 2px;
+      background: linear-gradient(90deg, var(--green-primary), transparent);
+    }
+
+    .index-card:hover { border-color: var(--border-bright); }
+
+    .index-name {
+      font-size: 10px;
+      letter-spacing: 0.1em;
+      color: var(--text-secondary);
+      text-transform: uppercase;
+      margin-bottom: 8px;
+    }
+
+    .index-value {
+      font-size: 20px;
+      font-weight: 700;
+      color: var(--white);
+      margin-bottom: 4px;
+      letter-spacing: -0.02em;
+    }
+
+    .index-change {
+      font-size: 12px;
+      font-weight: 700;
+    }
+
+    .up { color: var(--green-primary); }
+    .down { color: var(--red); }
+    .neutral { color: var(--amber); }
+
+    /* ── BREADTH BAR ── */
+    .breadth-section {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      padding: 20px;
+      margin-bottom: 40px;
+      display: flex;
+      align-items: center;
+      gap: 32px;
+    }
+
+    .breadth-label {
+      font-size: 10px;
+      letter-spacing: 0.2em;
+      color: var(--text-secondary);
+      text-transform: uppercase;
+      white-space: nowrap;
+      min-width: 110px;
+    }
+
+    .breadth-bar-wrap {
+      flex: 1;
+      display: flex;
+      height: 20px;
+      overflow: hidden;
+      border: 1px solid var(--border);
+    }
+
+    .breadth-bar-advance {
+      background: var(--green-primary);
+      opacity: 0.8;
+      transition: width 1.5s cubic-bezier(.16,1,.3,1);
+    }
+
+    .breadth-bar-unchanged {
+      background: var(--amber);
+      opacity: 0.5;
+      transition: width 1.5s cubic-bezier(.16,1,.3,1);
+    }
+
+    .breadth-bar-decline {
+      background: var(--red);
+      opacity: 0.7;
+      flex: 1;
+    }
+
+    .breadth-stats {
+      display: flex;
+      gap: 20px;
+      white-space: nowrap;
+    }
+
+    .breadth-stat { font-size: 11px; }
+    .breadth-stat .num { font-size: 14px; font-weight: 700; }
+
+    /* ── TOP PICKS GRID ── */
+    .picks-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 16px;
+      margin-bottom: 40px;
+    }
+
+    .pick-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      padding: 24px;
+      position: relative;
+      overflow: hidden;
+      transition: all 0.25s ease;
+      cursor: default;
+    }
+
+    .pick-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      width: 3px;
+      background: var(--green-primary);
+      opacity: 0.6;
+    }
+
+    .pick-card:hover {
+      border-color: var(--border-bright);
+      background: var(--bg-card-hover);
+      transform: translateY(-1px);
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5), 0 0 20px var(--green-glow);
+    }
+
+    .pick-card:hover::before { opacity: 1; }
+
+    .pick-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 16px;
+    }
+
+    .pick-rank {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      font-size: 11px;
+      color: var(--text-dim);
+      letter-spacing: 0.1em;
+    }
+
+    .pick-symbol {
+      font-size: 22px;
+      font-weight: 700;
+      color: var(--white);
+      letter-spacing: 0.05em;
+    }
+
+    .pick-name {
+      font-family: var(--sans);
+      font-size: 12px;
+      color: var(--text-secondary);
+      margin-top: 2px;
+      font-weight: 300;
+    }
+
+    .pick-sector {
+      display: inline-block;
+      font-size: 9px;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--text-dim);
+      border: 1px solid var(--border);
+      padding: 2px 7px;
+      margin-top: 6px;
+    }
+
+    .pick-signal-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 5px 12px;
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+    }
+
+    .signal-strong-buy {
+      background: rgba(0, 230, 118, 0.15);
+      border: 1px solid var(--green-primary);
+      color: var(--green-primary);
+    }
+
+    .signal-buy {
+      background: rgba(0, 184, 90, 0.1);
+      border: 1px solid var(--green-dim);
+      color: var(--green-dim);
+    }
+
+    .signal-watch {
+      background: rgba(255, 179, 0, 0.1);
+      border: 1px solid var(--amber);
+      color: var(--amber);
+    }
+
+    .signal-dot {
+      width: 6px; height: 6px;
+      border-radius: 50%;
+      background: currentColor;
+      animation: pulse 2s infinite;
+    }
+
+    /* ── SCORE DISPLAY ── */
+    .pick-score-row {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      margin: 16px 0;
+      padding: 16px 0;
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .pick-score-main {
+      text-align: center;
+      min-width: 70px;
+    }
+
+    .score-number {
+      font-size: 40px;
+      font-weight: 700;
+      line-height: 1;
+      color: var(--green-primary);
+    }
+
+    .score-number.high { color: var(--green-primary); }
+    .score-number.medium { color: var(--amber); }
+    .score-number.low { color: var(--red); }
+
+    .score-label {
+      font-size: 9px;
+      letter-spacing: 0.2em;
+      color: var(--text-dim);
+      text-transform: uppercase;
+      margin-top: 2px;
+    }
+
+    .pick-score-bars {
+      flex: 1;
+    }
+
+    .score-bar-row {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 6px;
+    }
+
+    .score-bar-label {
+      font-size: 9px;
+      letter-spacing: 0.08em;
+      color: var(--text-secondary);
+      text-transform: uppercase;
+      min-width: 72px;
+    }
+
+    .score-bar-track {
+      flex: 1;
+      height: 5px;
+      background: var(--bg-void);
+      border: 1px solid var(--border);
+      overflow: hidden;
+    }
+
+    .score-bar-fill {
+      height: 100%;
+      background: var(--green-primary);
+      width: 0;
+      transition: width 1.2s cubic-bezier(.16,1,.3,1);
+    }
+
+    .score-bar-fill.trend { background: #00e676; }
+    .score-bar-fill.momentum { background: #29b6f6; }
+    .score-bar-fill.volume { background: #ab47bc; }
+    .score-bar-fill.breakout { background: #ffca28; }
+    .score-bar-fill.pa { background: #ff7043; }
+
+    .score-bar-val {
+      font-size: 10px;
+      font-weight: 700;
+      color: var(--text-secondary);
+      min-width: 22px;
+      text-align: right;
+    }
+
+    /* ── PICK PRICE ROW ── */
+    .pick-price-row {
+      display: flex;
+      gap: 16px;
+      margin-bottom: 14px;
+    }
+
+    .price-item {
+      flex: 1;
+      background: var(--bg-void);
+      border: 1px solid var(--border);
+      padding: 8px 12px;
+      text-align: center;
+    }
+
+    .price-item-label {
+      font-size: 9px;
+      letter-spacing: 0.15em;
+      color: var(--text-dim);
+      text-transform: uppercase;
+      margin-bottom: 4px;
+    }
+
+    .price-item-val {
+      font-size: 14px;
+      font-weight: 700;
+    }
+
+    .price-item-val.current { color: var(--white); }
+    .price-item-val.target { color: var(--green-primary); }
+    .price-item-val.stop { color: var(--red); }
+    .price-item-val.rr { color: var(--amber); }
+
+    /* ── REASONS ── */
+    .pick-reasons {
+      margin-top: 14px;
+    }
+
+    .reasons-title {
+      font-size: 9px;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--text-dim);
+      margin-bottom: 8px;
+    }
+
+    .reason-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 6px;
+      font-family: var(--sans);
+      font-size: 11px;
+      font-weight: 300;
+      color: var(--text-secondary);
+      margin-bottom: 4px;
+      line-height: 1.4;
+    }
+
+    .reason-bullet {
+      color: var(--green-primary);
+      font-size: 8px;
+      margin-top: 4px;
+      flex-shrink: 0;
+    }
+
+    /* ── INDICATORS GRID ── */
+    .indicators-mini {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 6px;
+      margin-top: 14px;
+      padding-top: 14px;
+      border-top: 1px solid var(--border);
+    }
+
+    .ind-item {
+      background: var(--bg-void);
+      padding: 6px 8px;
+    }
+
+    .ind-label {
+      font-size: 8px;
+      letter-spacing: 0.12em;
+      color: var(--text-dim);
+      text-transform: uppercase;
+      margin-bottom: 2px;
+    }
+
+    .ind-val {
+      font-size: 11px;
+      font-weight: 700;
+      color: var(--text-primary);
+    }
+
+    /* ── SECTOR MOMENTUM ── */
+    .sector-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 8px;
+      margin-bottom: 40px;
+    }
+
+    .sector-row {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      padding: 10px 16px;
+    }
+
+    .sector-name {
+      font-family: var(--sans);
+      font-size: 12px;
+      min-width: 150px;
+      color: var(--text-primary);
+      font-weight: 400;
+    }
+
+    .sector-bar-track {
+      flex: 1;
+      height: 4px;
+      background: var(--bg-void);
+      border: 1px solid var(--border);
+      overflow: hidden;
+    }
+
+    .sector-bar-fill {
+      height: 100%;
+      width: 0;
+      transition: width 1.4s cubic-bezier(.16,1,.3,1);
+    }
+
+    .sector-bar-fill.up { background: var(--green-primary); }
+    .sector-bar-fill.neutral { background: var(--amber); }
+    .sector-bar-fill.down { background: var(--red); }
+
+    .sector-score {
+      font-size: 11px;
+      font-weight: 700;
+      min-width: 28px;
+      text-align: right;
+    }
+
+    .sector-trend-icon {
+      font-size: 12px;
+      min-width: 16px;
+    }
+
+    /* ── WATCHLIST / AVOID ── */
+    .simple-list {
+      display: grid;
+      grid-template-columns: repeat(1, 1fr);
+      gap: 8px;
+      margin-bottom: 40px;
+    }
+
+    .simple-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      padding: 14px 20px;
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .simple-card::before {
+      content: '';
+      width: 3px;
+      height: 100%;
+      position: absolute;
+      left: 0;
+    }
+
+    .simple-symbol {
+      font-size: 14px;
+      font-weight: 700;
+      color: var(--white);
+      min-width: 100px;
+    }
+
+    .simple-name {
+      font-family: var(--sans);
+      font-size: 11px;
+      color: var(--text-secondary);
+      font-weight: 300;
+      flex: 1;
+    }
+
+    .simple-reason {
+      font-family: var(--sans);
+      font-size: 11px;
+      color: var(--text-dim);
+      font-weight: 300;
+      flex: 2;
+    }
+
+    .simple-score {
+      font-size: 13px;
+      font-weight: 700;
+      min-width: 40px;
+      text-align: right;
+    }
+
+    /* ── METHODOLOGY ── */
+    .methodology {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      padding: 32px;
+      margin-bottom: 40px;
+    }
+
+    .method-title {
+      font-family: var(--serif);
+      font-size: 24px;
+      font-weight: 600;
+      color: var(--white);
+      margin-bottom: 8px;
+    }
+
+    .method-subtitle {
+      font-family: var(--sans);
+      font-size: 13px;
+      color: var(--text-secondary);
+      font-weight: 300;
+      margin-bottom: 24px;
+    }
+
+    .method-grid {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 16px;
+    }
+
+    .method-item {
+      padding: 16px;
+      background: var(--bg-void);
+      border: 1px solid var(--border);
+      border-top: 2px solid;
+    }
+
+    .method-item:nth-child(1) { border-top-color: #00e676; }
+    .method-item:nth-child(2) { border-top-color: #29b6f6; }
+    .method-item:nth-child(3) { border-top-color: #ab47bc; }
+    .method-item:nth-child(4) { border-top-color: #ffca28; }
+    .method-item:nth-child(5) { border-top-color: #ff7043; }
+
+    .method-cat {
+      font-size: 10px;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      margin-bottom: 6px;
+      font-weight: 700;
+    }
+
+    .method-item:nth-child(1) .method-cat { color: #00e676; }
+    .method-item:nth-child(2) .method-cat { color: #29b6f6; }
+    .method-item:nth-child(3) .method-cat { color: #ab47bc; }
+    .method-item:nth-child(4) .method-cat { color: #ffca28; }
+    .method-item:nth-child(5) .method-cat { color: #ff7043; }
+
+    .method-pts {
+      font-size: 24px;
+      font-weight: 700;
+      color: var(--white);
+      margin-bottom: 8px;
+    }
+
+    .method-pts span { font-size: 12px; color: var(--text-dim); font-weight: 400; }
+
+    .method-signals {
+      list-style: none;
+      margin-top: 8px;
+    }
+
+    .method-signals li {
+      font-family: var(--sans);
+      font-size: 11px;
+      color: var(--text-secondary);
+      font-weight: 300;
+      padding: 3px 0;
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      gap: 6px;
+    }
+
+    .method-signals li:last-child { border-bottom: none; }
+
+    .method-signals li::before {
+      content: '↳';
+      color: var(--text-dim);
+      flex-shrink: 0;
+    }
+
+    /* ── DISCLAIMER ── */
+    .disclaimer {
+      background: rgba(255, 68, 68, 0.05);
+      border: 1px solid rgba(255, 68, 68, 0.2);
+      padding: 20px 24px;
+      margin-bottom: 40px;
+    }
+
+    .disclaimer-title {
+      font-size: 10px;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--red);
+      margin-bottom: 8px;
+      font-weight: 700;
+    }
+
+    .disclaimer-text {
+      font-family: var(--sans);
+      font-size: 11px;
+      color: var(--text-secondary);
+      font-weight: 300;
+      line-height: 1.7;
+    }
+
+    /* ── FOOTER ── */
+    footer {
+      position: relative;
+      z-index: 1;
+      padding: 24px 40px;
+      border-top: 1px solid var(--border);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .footer-left {
+      font-size: 11px;
+      color: var(--text-dim);
+    }
+
+    .footer-links {
+      display: flex;
+      gap: 20px;
+    }
+
+    .footer-links a {
+      font-size: 11px;
+      color: var(--text-secondary);
+      text-decoration: none;
+      letter-spacing: 0.05em;
+      transition: color 0.2s;
+    }
+
+    .footer-links a:hover { color: var(--green-primary); }
+
+    /* ── LOADING STATE ── */
+    .loading-screen {
+      position: fixed;
+      inset: 0;
+      background: var(--bg-void);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      z-index: 10000;
+      transition: opacity 0.5s ease;
+    }
+
+    .loading-screen.hidden {
+      opacity: 0;
+      pointer-events: none;
+    }
+
+    .loading-title {
+      font-family: var(--serif);
+      font-size: 32px;
+      color: var(--white);
+      margin-bottom: 8px;
+    }
+
+    .loading-title span { color: var(--green-primary); }
+
+    .loading-bar {
+      width: 200px;
+      height: 2px;
+      background: var(--border);
+      margin-top: 24px;
+      overflow: hidden;
+    }
+
+    .loading-fill {
+      height: 100%;
+      background: var(--green-primary);
+      animation: loadingAnim 1.2s ease-in-out;
+    }
+
+    @keyframes loadingAnim {
+      from { width: 0%; }
+      to { width: 100%; }
+    }
+
+    .loading-status {
+      font-size: 11px;
+      color: var(--text-secondary);
+      margin-top: 12px;
+      letter-spacing: 0.1em;
+    }
+
+    /* ── CURSOR ── */
+    .cursor { display: inline-block; animation: blink 1s step-end infinite; }
+    @keyframes blink { 0%,100%{ opacity:1; } 50%{ opacity:0; } }
+
+    /* ── ERROR STATE ── */
+    .error-notice {
+      background: rgba(255, 68, 68, 0.05);
+      border: 1px solid var(--red);
+      padding: 16px 20px;
+      margin-bottom: 20px;
+      font-size: 12px;
+      color: var(--red);
+      display: none;
+    }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 1200px) {
+      .method-grid { grid-template-columns: repeat(3, 1fr); }
+      .indices-row { grid-template-columns: repeat(3, 1fr); }
+    }
+
+    @media (max-width: 900px) {
+      .header { padding: 20px; flex-direction: column; gap: 16px; align-items: flex-start; }
+      .main { padding: 20px; }
+      .picks-grid { grid-template-columns: 1fr; }
+      .indices-row { grid-template-columns: repeat(2, 1fr); }
+      .sector-grid { grid-template-columns: 1fr; }
+      .method-grid { grid-template-columns: repeat(2, 1fr); }
+      .logo-title { font-size: 30px; }
+      footer { flex-direction: column; gap: 12px; align-items: flex-start; }
+    }
+
+    @media (max-width: 600px) {
+      .indices-row { grid-template-columns: 1fr 1fr; }
+      .method-grid { grid-template-columns: 1fr; }
+      .breadth-section { flex-direction: column; align-items: flex-start; }
+      .pick-price-row { flex-wrap: wrap; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- Loading Screen -->
+<div class="loading-screen" id="loadingScreen">
+  <div style="text-align:center;">
+    <div class="loading-title">Stock<span>Sage</span> India</div>
+    <div style="font-size:11px;color:var(--text-secondary);letter-spacing:0.15em;margin-top:4px;">INITIALIZING ANALYSIS ENGINE</div>
+    <div class="loading-bar"><div class="loading-fill"></div></div>
+    <div class="loading-status" id="loadingStatus">Loading market data<span class="cursor">_</span></div>
+  </div>
+</div>
+
+<!-- Ticker Tape -->
+<div class="ticker-bar" id="tickerBar">
+  <div class="ticker-inner" id="tickerContent">
+    <div class="ticker-item">
+      <span class="ticker-dot up"></span>
+      <span class="ticker-name">NIFTY 50</span>
+      <span class="ticker-value">—</span>
+      <span class="ticker-change up" id="t-nifty">Loading...</span>
+    </div>
+    <div class="ticker-item">
+      <span class="ticker-dot up"></span>
+      <span class="ticker-name">SENSEX</span>
+      <span class="ticker-value">—</span>
+      <span class="ticker-change up" id="t-sensex">Loading...</span>
+    </div>
+    <div class="ticker-item">
+      <span class="ticker-dot down"></span>
+      <span class="ticker-name">BANK NIFTY</span>
+      <span class="ticker-value">—</span>
+      <span class="ticker-change" id="t-bank">—</span>
+    </div>
+    <div class="ticker-item">
+      <span class="ticker-dot up"></span>
+      <span class="ticker-name">NIFTY IT</span>
+      <span class="ticker-value">—</span>
+      <span class="ticker-change up" id="t-it">—</span>
+    </div>
+    <div class="ticker-item">
+      <span class="ticker-name">MIDCAP 100</span>
+      <span class="ticker-value">—</span>
+    </div>
+    <div class="ticker-item">
+      <span class="ticker-name">₹/USD</span>
+      <span class="ticker-value">83.82</span>
+    </div>
+    <div class="ticker-item">
+      <span class="ticker-name">GOLD (MCX)</span>
+      <span class="ticker-value">71,450</span>
+    </div>
+    <div class="ticker-item">
+      <span class="ticker-name">CRUDE OIL</span>
+      <span class="ticker-value">6,824</span>
+    </div>
+    <!-- Duplicate for seamless loop -->
+    <div class="ticker-item">
+      <span class="ticker-dot up"></span>
+      <span class="ticker-name">NIFTY 50</span>
+      <span class="ticker-value">—</span>
+      <span class="ticker-change up">Loading...</span>
+    </div>
+    <div class="ticker-item">
+      <span class="ticker-dot up"></span>
+      <span class="ticker-name">SENSEX</span>
+      <span class="ticker-value">—</span>
+    </div>
+    <div class="ticker-item">
+      <span class="ticker-dot down"></span>
+      <span class="ticker-name">BANK NIFTY</span>
+      <span class="ticker-value">—</span>
+    </div>
+    <div class="ticker-item">
+      <span class="ticker-dot up"></span>
+      <span class="ticker-name">NIFTY IT</span>
+      <span class="ticker-value">—</span>
+    </div>
+    <div class="ticker-item">
+      <span class="ticker-name">MIDCAP 100</span>
+      <span class="ticker-value">—</span>
+    </div>
+    <div class="ticker-item">
+      <span class="ticker-name">₹/USD</span>
+      <span class="ticker-value">83.82</span>
+    </div>
+    <div class="ticker-item">
+      <span class="ticker-name">GOLD (MCX)</span>
+      <span class="ticker-value">71,450</span>
+    </div>
+    <div class="ticker-item">
+      <span class="ticker-name">CRUDE OIL</span>
+      <span class="ticker-value">6,824</span>
+    </div>
+  </div>
+</div>
+
+<!-- Header -->
+<header class="header">
+  <div class="logo-area">
+    <div class="logo-eyebrow">▸ NSE/BSE Intelligence Terminal</div>
+    <div class="logo-title">Stock<span>Sage</span> India</div>
+    <div class="logo-sub">Rule-Based Intelligent Stock Analysis · Updated Daily After Market Close (4:00 PM IST)</div>
+  </div>
+  <div class="header-meta">
+    <div class="last-updated">Last Analysis: <span id="lastUpdatedTime">—</span></div>
+    <div class="last-updated">For Market Date: <span id="marketDate">—</span></div>
+    <div style="margin-top: 8px;">
+      <span class="market-status">
+        <span class="status-dot closed" id="statusDot"></span>
+        <span id="marketStatusText">MARKET CLOSED</span>
+      </span>
+    </div>
+  </div>
+</header>
+
+<main class="main">
+
+  <div class="error-notice" id="errorNotice">
+    ⚠ Could not load latest predictions. Showing cached data. Check back after 4:15 PM IST on trading days.
+  </div>
+
+  <!-- Indices -->
+  <div class="section-header">
+    <div class="section-label">▸ Market Indices</div>
+    <div class="section-line"></div>
+    <div class="section-count">REAL-TIME DATA VIA ANALYSIS ENGINE</div>
+  </div>
+  <div class="indices-row" id="indicesRow">
+    <!-- Filled by JS -->
+  </div>
+
+  <!-- Market Breadth -->
+  <div class="section-header">
+    <div class="section-label">▸ Market Breadth</div>
+    <div class="section-line"></div>
+  </div>
+  <div class="breadth-section" id="breadthSection">
+    <div class="breadth-label">Advance / Decline</div>
+    <div class="breadth-bar-wrap">
+      <div class="breadth-bar-advance" id="breadthAdvance" style="width:0%"></div>
+      <div class="breadth-bar-unchanged" id="breadthUnchanged" style="width:0%"></div>
+      <div class="breadth-bar-decline" id="breadthDecline"></div>
+    </div>
+    <div class="breadth-stats" id="breadthStats">
+      <div class="breadth-stat up">
+        <div class="num" id="bAdvance">—</div>
+        <div>Advances</div>
+      </div>
+      <div class="breadth-stat neutral">
+        <div class="num" id="bUnchanged">—</div>
+        <div>Unchanged</div>
+      </div>
+      <div class="breadth-stat down">
+        <div class="num" id="bDecline">—</div>
+        <div>Declines</div>
+      </div>
+      <div class="breadth-stat up">
+        <div class="num" id="b52High">—</div>
+        <div>52W Highs</div>
+      </div>
+      <div class="breadth-stat down">
+        <div class="num" id="b52Low">—</div>
+        <div>52W Lows</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Top Picks -->
+  <div class="section-header">
+    <div class="section-label">▸ Today's Top Picks — Buy Tomorrow at Open</div>
+    <div class="section-line"></div>
+    <div class="section-count" id="picksCount">0 STOCKS</div>
+  </div>
+  <div class="picks-grid" id="picksGrid">
+    <!-- Filled by JS -->
+  </div>
+
+  <!-- Sector Momentum -->
+  <div class="section-header">
+    <div class="section-label">▸ Sector Momentum</div>
+    <div class="section-line"></div>
+  </div>
+  <div class="sector-grid" id="sectorGrid">
+    <!-- Filled by JS -->
+  </div>
+
+  <!-- Watchlist -->
+  <div class="section-header">
+    <div class="section-label">▸ Watchlist — Monitor for Entry</div>
+    <div class="section-line"></div>
+  </div>
+  <div class="simple-list" id="watchlistGrid">
+    <!-- Filled by JS -->
+  </div>
+
+  <!-- Avoid -->
+  <div class="section-header">
+    <div class="section-label" style="color: var(--red);">▸ Avoid / Bearish Signals</div>
+    <div class="section-line"></div>
+  </div>
+  <div class="simple-list" id="avoidGrid">
+    <!-- Filled by JS -->
+  </div>
+
+  <!-- Methodology -->
+  <div class="section-header">
+    <div class="section-label">▸ Scoring Methodology</div>
+    <div class="section-line"></div>
+  </div>
+  <div class="methodology">
+    <div class="method-title">How StockSage Scores Stocks</div>
+    <div class="method-subtitle">
+      Each stock is scored 0–100 using a five-category weighted rule-based engine processing 20+ technical indicators.
+      No machine learning, no LLMs — pure quantitative rules applied consistently across Nifty 100 + Midcap 150 universe.
+    </div>
+    <div class="method-grid">
+      <div class="method-item">
+        <div class="method-cat">Trend Analysis</div>
+        <div class="method-pts">30 <span>/ 100 pts</span></div>
+        <ul class="method-signals">
+          <li>SMA 20/50/200 alignment (bullish stack)</li>
+          <li>Price vs SMA200 distance (optimal zone)</li>
+          <li>EMA 12/26 crossover detection</li>
+          <li>ADX trend strength (>25 = strong)</li>
+          <li>Higher highs / higher lows structure</li>
+        </ul>
+      </div>
+      <div class="method-item">
+        <div class="method-cat">Momentum</div>
+        <div class="method-pts">25 <span>/ 100 pts</span></div>
+        <ul class="method-signals">
+          <li>RSI zone scoring (50–65 = optimal)</li>
+          <li>MACD line vs signal line crossover</li>
+          <li>MACD histogram direction & magnitude</li>
+          <li>Stochastic Oscillator (%K/%D)</li>
+          <li>Rate of Change (ROC) 10-day</li>
+        </ul>
+      </div>
+      <div class="method-item">
+        <div class="method-cat">Volume</div>
+        <div class="method-pts">20 <span>/ 100 pts</span></div>
+        <ul class="method-signals">
+          <li>Volume vs 20-day average ratio</li>
+          <li>OBV (On-Balance Volume) trend slope</li>
+          <li>Volume-Price confirmation (3-day)</li>
+          <li>Accumulation/Distribution indicator</li>
+          <li>Volume surge detection (>2x spike)</li>
+        </ul>
+      </div>
+      <div class="method-item">
+        <div class="method-cat">Breakout</div>
+        <div class="method-pts">15 <span>/ 100 pts</span></div>
+        <ul class="method-signals">
+          <li>Bollinger Band position (% within band)</li>
+          <li>Bollinger Band squeeze detection</li>
+          <li>20-day high breakout confirmation</li>
+          <li>Price channel analysis</li>
+          <li>ATR-based volatility regime</li>
+        </ul>
+      </div>
+      <div class="method-item">
+        <div class="method-cat">Price Action</div>
+        <div class="method-pts">10 <span>/ 100 pts</span></div>
+        <ul class="method-signals">
+          <li>52-week high proximity (< 10% = bullish)</li>
+          <li>5-day return momentum</li>
+          <li>Today's candle direction (close vs open)</li>
+          <li>Support/resistance level proximity</li>
+          <li>Gap-up / gap-down analysis</li>
+        </ul>
+      </div>
+    </div>
+    <div style="margin-top: 20px; padding-top: 20px; border-top: 1px solid var(--border); display: flex; gap: 32px; flex-wrap: wrap;">
+      <div>
+        <div style="font-size: 10px; letter-spacing: 0.15em; color: var(--text-dim); text-transform: uppercase; margin-bottom: 6px;">Signal Thresholds</div>
+        <div style="display: flex; gap: 16px; flex-wrap: wrap;">
+          <span style="font-size: 12px; color: var(--green-primary);">● STRONG BUY ≥ 75</span>
+          <span style="font-size: 12px; color: var(--green-dim);">● BUY 60–74</span>
+          <span style="font-size: 12px; color: var(--amber);">● WATCH 45–59</span>
+          <span style="font-size: 12px; color: var(--red);">● AVOID < 45</span>
+        </div>
+      </div>
+      <div>
+        <div style="font-size: 10px; letter-spacing: 0.15em; color: var(--text-dim); text-transform: uppercase; margin-bottom: 6px;">Stock Universe</div>
+        <div style="font-family: var(--sans); font-size: 12px; color: var(--text-secondary); font-weight: 300;">
+          Nifty 50 + Nifty Next 50 + Nifty Midcap 100 (≈ 200 stocks analyzed daily)
+        </div>
+      </div>
+      <div>
+        <div style="font-size: 10px; letter-spacing: 0.15em; color: var(--text-dim); text-transform: uppercase; margin-bottom: 6px;">Data Source</div>
+        <div style="font-family: var(--sans); font-size: 12px; color: var(--text-secondary); font-weight: 300;">
+          Yahoo Finance API (yfinance) · NSE India · 1 year of daily OHLCV
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Disclaimer -->
+  <div class="disclaimer">
+    <div class="disclaimer-title">⚠ Important Disclaimer</div>
+    <div class="disclaimer-text">
+      StockSage India is an educational and informational tool only. This is NOT financial advice. The predictions generated are purely rule-based technical analysis outputs and do not guarantee future performance. Stock markets are inherently unpredictable and investments carry risk of loss. Always conduct your own due diligence, consult a SEBI-registered financial advisor before making any investment decisions, and never invest more than you can afford to lose. Past technical signals do not guarantee future returns. The authors and contributors of this project are not responsible for any trading losses.
+    </div>
+  </div>
+
+</main>
+
+<footer>
+  <div class="footer-left">
+    StockSage India · Open Source · MIT License · Data: Yahoo Finance, NSE India
+  </div>
+  <div class="footer-links">
+    <a href="https://github.com/yourusername/india-stock-predictor" target="_blank">GitHub Repository</a>
+    <a href="#methodology">Methodology</a>
+    <a href="predictions.json" target="_blank">Raw JSON Data</a>
+  </div>
+</footer>
+
+<script>
+// ══════════════════════════════════════════════════════════
+// StockSage India — Frontend Engine
+// ══════════════════════════════════════════════════════════
+
+let data = null;
+
+async function loadData() {
+  try {
+    const resp = await fetch('./predictions.json?t=' + Date.now());
+    if (!resp.ok) throw new Error('HTTP ' + resp.status);
+    data = await resp.json();
+    return true;
+  } catch (err) {
+    console.error('Failed to load predictions:', err);
+    document.getElementById('errorNotice').style.display = 'block';
+    return false;
+  }
+}
+
+function formatNum(n, decimals = 2) {
+  if (n === null || n === undefined) return '—';
+  return n.toLocaleString('en-IN', { minimumFractionDigits: decimals, maximumFractionDigits: decimals });
+}
+
+function signClass(n) {
+  return n > 0 ? 'up' : n < 0 ? 'down' : 'neutral';
+}
+
+function signSymbol(n) {
+  return n > 0 ? '+' : '';
+}
+
+function getScoreClass(s) {
+  return s >= 75 ? 'high' : s >= 60 ? 'medium' : 'low';
+}
+
+function renderIndices() {
+  const idx = data.indices;
+  const order = ['NIFTY50', 'SENSEX', 'NIFTY_BANK', 'NIFTY_IT', 'NIFTY_MIDCAP100'];
+  const labels = { NIFTY50: 'NIFTY 50', SENSEX: 'SENSEX', NIFTY_BANK: 'BANK NIFTY', NIFTY_IT: 'NIFTY IT', NIFTY_MIDCAP100: 'MIDCAP 100' };
+  const container = document.getElementById('indicesRow');
+  container.innerHTML = order.map(key => {
+    if (!idx[key]) return '';
+    const d = idx[key];
+    const cls = signClass(d.change_pct);
+    return `
+      <div class="index-card">
+        <div class="index-name">${labels[key]}</div>
+        <div class="index-value">${formatNum(d.value, 2)}</div>
+        <div class="index-change ${cls}">${signSymbol(d.change)}${formatNum(d.change, 2)} (${signSymbol(d.change_pct)}${formatNum(d.change_pct, 2)}%)</div>
+      </div>`;
+  }).join('');
+}
+
+function renderBreadth() {
+  const b = data.market_breadth;
+  const total = b.advances + b.declines + b.unchanged;
+  const advPct = (b.advances / total * 100).toFixed(1);
+  const unchPct = (b.unchanged / total * 100).toFixed(1);
+
+  setTimeout(() => {
+    document.getElementById('breadthAdvance').style.width = advPct + '%';
+    document.getElementById('breadthUnchanged').style.width = unchPct + '%';
+  }, 300);
+
+  document.getElementById('bAdvance').textContent = b.advances.toLocaleString('en-IN');
+  document.getElementById('bUnchanged').textContent = b.unchanged.toLocaleString('en-IN');
+  document.getElementById('bDecline').textContent = b.declines.toLocaleString('en-IN');
+  document.getElementById('b52High').textContent = b.new_52w_high;
+  document.getElementById('b52Low').textContent = b.new_52w_low;
+}
+
+function renderTicker() {
+  const idx = data.indices;
+  const n = idx.NIFTY50;
+  const s = idx.SENSEX;
+  const b = idx.NIFTY_BANK;
+  const it = idx.NIFTY_IT;
+
+  function tickerVal(d) {
+    const cls = d.change_pct >= 0 ? 'up' : 'down';
+    const sym = d.change_pct >= 0 ? '▲' : '▼';
+    return `<span class="ticker-change ${cls}">${sym} ${signSymbol(d.change_pct)}${formatNum(d.change_pct, 2)}%</span>`;
+  }
+
+  // Update ticker items inline
+  const items = document.querySelectorAll('.ticker-item');
+  const updates = [
+    [0, `<span class="ticker-dot ${n.change_pct>=0?'up':'down'}"></span><span class="ticker-name">NIFTY 50</span> <span class="ticker-value">${formatNum(n.value)}</span> ${tickerVal(n)}`],
+    [1, `<span class="ticker-dot ${s.change_pct>=0?'up':'down'}"></span><span class="ticker-name">SENSEX</span> <span class="ticker-value">${formatNum(s.value)}</span> ${tickerVal(s)}`],
+    [2, `<span class="ticker-dot ${b.change_pct>=0?'up':'down'}"></span><span class="ticker-name">BANK NIFTY</span> <span class="ticker-value">${formatNum(b.value)}</span> ${tickerVal(b)}`],
+    [3, `<span class="ticker-dot ${it.change_pct>=0?'up':'down'}"></span><span class="ticker-name">NIFTY IT</span> <span class="ticker-value">${formatNum(it.value)}</span> ${tickerVal(it)}`],
+  ];
+  updates.forEach(([i, html]) => {
+    if (items[i]) items[i].innerHTML = html;
+    if (items[i + 8]) items[i + 8].innerHTML = html; // duplicate for loop
+  });
+}
+
+function renderPicks() {
+  const container = document.getElementById('picksGrid');
+  document.getElementById('picksCount').textContent = data.top_picks.length + ' STOCKS';
+
+  container.innerHTML = data.top_picks.map((s, i) => {
+    const signalClass = s.signal === 'STRONG BUY' ? 'signal-strong-buy' : s.signal === 'BUY' ? 'signal-buy' : 'signal-watch';
+    const scoreClass = getScoreClass(s.score);
+    const changeCls = s.change_pct >= 0 ? 'up' : 'down';
+    const maxScores = { trend: 30, momentum: 25, volume: 20, breakout: 15, price_action: 10 };
+
+    return `
+    <div class="pick-card" style="animation-delay: ${i * 0.08}s">
+      <div class="pick-rank">#${s.rank}</div>
+
+      <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:12px;">
+        <div>
+          <div class="pick-symbol">${s.symbol}
+            <span class="${changeCls}" style="font-size:13px;font-weight:400;"> ${signSymbol(s.change_pct)}${s.change_pct.toFixed(2)}%</span>
+          </div>
+          <div class="pick-name">${s.name}</div>
+          <div class="pick-sector">${s.sector}</div>
+        </div>
+        <div class="${signalClass} pick-signal-badge">
+          <span class="signal-dot"></span>
+          ${s.signal}
+        </div>
+      </div>
+
+      <div class="pick-score-row">
+        <div class="pick-score-main">
+          <div class="score-number ${scoreClass}">${s.score}</div>
+          <div class="score-label">Score</div>
+        </div>
+        <div class="pick-score-bars">
+          ${Object.entries(s.scores).map(([k, v]) => `
+            <div class="score-bar-row">
+              <div class="score-bar-label">${k.replace('_',' ')}</div>
+              <div class="score-bar-track">
+                <div class="score-bar-fill ${k === 'price_action' ? 'pa' : k}" data-pct="${(v / maxScores[k] * 100).toFixed(0)}"></div>
+              </div>
+              <div class="score-bar-val">${v}/${maxScores[k]}</div>
+            </div>
+          `).join('')}
+        </div>
+      </div>
+
+      <div class="pick-price-row">
+        <div class="price-item">
+          <div class="price-item-label">Current</div>
+          <div class="price-item-val current">₹${formatNum(s.current_price)}</div>
+        </div>
+        <div class="price-item">
+          <div class="price-item-label">Target</div>
+          <div class="price-item-val target">₹${formatNum(s.target_price)}</div>
+        </div>
+        <div class="price-item">
+          <div class="price-item-label">Stop Loss</div>
+          <div class="price-item-val stop">₹${formatNum(s.stop_loss)}</div>
+        </div>
+        <div class="price-item">
+          <div class="price-item-label">Risk:Reward</div>
+          <div class="price-item-val rr">1:${s.risk_reward}</div>
+        </div>
+      </div>
+
+      <div class="indicators-mini">
+        <div class="ind-item">
+          <div class="ind-label">RSI (14)</div>
+          <div class="ind-val ${s.indicators.rsi > 70 ? 'down' : s.indicators.rsi < 40 ? 'down' : 'up'}">${s.indicators.rsi}</div>
+        </div>
+        <div class="ind-item">
+          <div class="ind-label">MACD</div>
+          <div class="ind-val ${s.indicators.macd_signal.includes('Bull') ? 'up' : 'down'}">${s.indicators.macd_signal}</div>
+        </div>
+        <div class="ind-item">
+          <div class="ind-label">Volume</div>
+          <div class="ind-val up">${s.indicators.volume_ratio}x avg</div>
+        </div>
+        <div class="ind-item">
+          <div class="ind-label">SMA Align</div>
+          <div class="ind-val ${s.indicators.sma_alignment.includes('Full') ? 'up' : 'neutral'}" style="font-size:9px;">${s.indicators.sma_alignment}</div>
+        </div>
+        <div class="ind-item">
+          <div class="ind-label">52W High</div>
+          <div class="ind-val up">${s.indicators.week52_pct}% away</div>
+        </div>
+        <div class="ind-item">
+          <div class="ind-label">BB Position</div>
+          <div class="ind-val ${s.indicators.bb_position > 0.7 ? 'up' : 'neutral'}">${(s.indicators.bb_position * 100).toFixed(0)}%</div>
+        </div>
+      </div>
+
+      <div class="pick-reasons">
+        <div class="reasons-title">▸ Key Signals Detected</div>
+        ${s.reasons.map(r => `
+          <div class="reason-item">
+            <span class="reason-bullet">●</span>
+            <span>${r}</span>
+          </div>
+        `).join('')}
+      </div>
+    </div>`;
+  }).join('');
+
+  // Animate score bars after a brief delay
+  setTimeout(() => {
+    document.querySelectorAll('.score-bar-fill').forEach(el => {
+      el.style.width = el.dataset.pct + '%';
+    });
+  }, 400);
+}
+
+function renderSectors() {
+  const container = document.getElementById('sectorGrid');
+  container.innerHTML = data.sector_momentum.map((s, i) => {
+    const cls = s.trend;
+    const icon = s.trend === 'up' ? '↑' : s.trend === 'down' ? '↓' : '→';
+    return `
+    <div class="sector-row">
+      <div class="sector-name">${s.sector}</div>
+      <div class="sector-bar-track">
+        <div class="sector-bar-fill ${cls}" data-pct="${s.score}"></div>
+      </div>
+      <div class="sector-score ${cls === 'up' ? 'up' : cls === 'down' ? 'down' : 'neutral'}">${s.score}</div>
+      <div class="sector-trend-icon ${cls === 'up' ? 'up' : cls === 'down' ? 'down' : 'neutral'}">${icon}</div>
+    </div>`;
+  }).join('');
+
+  setTimeout(() => {
+    document.querySelectorAll('.sector-bar-fill').forEach(el => {
+      el.style.width = el.dataset.pct + '%';
+    });
+  }, 600);
+}
+
+function renderWatchlist() {
+  const container = document.getElementById('watchlistGrid');
+  container.innerHTML = data.watchlist.map(s => `
+    <div class="simple-card">
+      <div class="simple-symbol">${s.symbol}</div>
+      <div class="simple-name">${s.name} <span style="color:var(--text-dim);font-size:10px;">[${s.sector}]</span></div>
+      <div class="simple-reason">${s.reason}</div>
+      <div class="simple-score neutral">${s.score}</div>
+    </div>
+  `).join('');
+}
+
+function renderAvoid() {
+  const container = document.getElementById('avoidGrid');
+  container.innerHTML = data.avoid.map(s => `
+    <div class="simple-card" style="border-left: 3px solid var(--red);">
+      <div class="simple-symbol" style="color:var(--red);">${s.symbol}</div>
+      <div class="simple-name">${s.name} <span style="color:var(--text-dim);font-size:10px;">[${s.sector}]</span></div>
+      <div class="simple-reason">${s.reason}</div>
+      <div class="simple-score down">${s.score}</div>
+    </div>
+  `).join('');
+}
+
+function updateHeader() {
+  const dt = new Date(data.generated_at);
+  const options = { timeZone: 'Asia/Kolkata', year: 'numeric', month: 'short', day: 'numeric', hour: '2-digit', minute: '2-digit', hour12: true };
+  document.getElementById('lastUpdatedTime').textContent = dt.toLocaleString('en-IN', options) + ' IST';
+  document.getElementById('marketDate').textContent = data.market_date;
+
+  // Market status logic
+  const now = new Date();
+  const istNow = new Date(now.toLocaleString('en-US', { timeZone: 'Asia/Kolkata' }));
+  const hours = istNow.getHours();
+  const minutes = istNow.getMinutes();
+  const totalMins = hours * 60 + minutes;
+  const isWeekday = istNow.getDay() >= 1 && istNow.getDay() <= 5;
+  const isOpen = isWeekday && totalMins >= 555 && totalMins < 930; // 9:15 AM - 3:30 PM
+
+  const statusDot = document.getElementById('statusDot');
+  const statusText = document.getElementById('marketStatusText');
+  if (isOpen) {
+    statusDot.className = 'status-dot open';
+    statusText.textContent = 'MARKET OPEN';
+  } else {
+    statusDot.className = 'status-dot closed';
+    statusText.textContent = 'MARKET CLOSED';
+  }
+}
+
+// ── INIT ──
+async function init() {
+  const statusEl = document.getElementById('loadingStatus');
+
+  const statuses = [
+    'Fetching market data...',
+    'Running technical analysis...',
+    'Scoring momentum indicators...',
+    'Ranking opportunities...',
+    'Building dashboard...',
+  ];
+
+  let si = 0;
+  const statusInterval = setInterval(() => {
+    si = (si + 1) % statuses.length;
+    statusEl.innerHTML = statuses[si] + '<span class="cursor">_</span>';
+  }, 600);
+
+  const ok = await loadData();
+  clearInterval(statusInterval);
+
+  if (ok && data) {
+    updateHeader();
+    renderTicker();
+    renderIndices();
+    renderBreadth();
+    renderPicks();
+    renderSectors();
+    renderWatchlist();
+    renderAvoid();
+  }
+
+  // Hide loading screen
+  setTimeout(() => {
+    const ls = document.getElementById('loadingScreen');
+    ls.classList.add('hidden');
+    setTimeout(() => ls.remove(), 500);
+  }, 800);
+}
+
+init();
+</script>
+</body>
+</html>

@@ -1,0 +1,13 @@
+# StockSage India — Python dependencies
+# No paid APIs. No OpenAI. No Streamlit.
+
+# Data fetching
+yfinance>=0.2.36
+pandas>=2.0.0
+numpy>=1.24.0
+requests>=2.31.0
+
+# Timezone support
+pytz>=2024.1
+
+# SQLite is part of Python stdlib — no install needed

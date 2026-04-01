@@ -1,37 +1,121 @@
-name: Daily Stock Update
+name: 📈 Daily Stock Analysis
 
 on:
+  # 10:45 UTC = 4:15 PM IST  (NSE closes at 3:30 PM IST — 45 min buffer)
   schedule:
-    - cron: '30 12 * * *'  # Runs every day at 12:30 UTC (6 PM IST)
+    - cron: "45 10 * * 1-5"
+
+  # Keep your original 12:30 UTC slot as a backup run
+  # - cron: "30 12 * * 1-5"
+
+  # Manual trigger from GitHub Actions UI
   workflow_dispatch:
+    inputs:
+      reason:
+        description: "Reason for manual run"
+        required: false
+        default: "Manual trigger"
 
 jobs:
   update:
+    name: Fetch Data & Run Analysis
     runs-on: ubuntu-latest
+    timeout-minutes: 40
+
+    permissions:
+      contents: write   # Required to commit predictions.json
 
     steps:
-      - name: Checkout Repo
-        uses: actions/checkout@v3
-
-      - name: Set up Python
-        uses: actions/setup-python@v4
+      # ── CHECKOUT ──
+      - name: Checkout Repository
+        uses: actions/checkout@v4
         with:
-          python-version: '3.10'
+          fetch-depth: 1
 
-      - name: Install Dependencies
+      # ── PYTHON ──
+      - name: Set up Python 3.11
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: "pip"
+          cache-dependency-path: "requirements.txt"
+
+      # ── DEPENDENCIES ──
+      - name: Install dependencies
         run: |
+          python -m pip install --upgrade pip
           pip install -r requirements.txt
 
-      - name: Run Data Fetch Script
-        run: python data_fetch.py
-
-      - name: Run GPT Analysis
-        run: python gpt_analyze.py
-
-      - name: Commit and Push Updated Data
+      # ── STEP 1: FETCH DATA ──
+      - name: Run data_fetch.py
         run: |
-          git config --global user.name 'auto-bot'
-          git config --global user.email 'bot@example.com'
-          git add stock_data.db gpt_recommendation.json
-          git commit -m "Daily update $(date)" || echo "No changes to commit"
-          git push
+          echo "📥 Fetching stock data from Yahoo Finance..."
+          python data_fetch.py
+          echo "✅ stock_data.db updated"
+          echo "DB size: $(du -sh stock_data.db | cut -f1)"
+
+      # ── STEP 2: ANALYZE (replaces gpt_analyze.py) ──
+      - name: Run analyze.py (rule-based engine)
+        run: |
+          echo "🧠 Running rule-based scoring engine..."
+          python analyze.py
+          echo "✅ predictions.json and gpt_recommendation.json updated"
+
+      # ── VERIFY ──
+      - name: Verify outputs
+        run: |
+          if [ ! -f "predictions.json" ]; then
+            echo "❌ predictions.json missing!"
+            exit 1
+          fi
+          python -c "
+          import json
+          with open('predictions.json') as f:
+              d = json.load(f)
+          picks = d['top_picks']
+          print(f'Generated : {d[\"generated_at\"]}')
+          print(f'Analyzed  : {d[\"stocks_analyzed\"]} stocks')
+          print(f'Top picks : {len(picks)}')
+          if picks:
+              print(f'Best pick : #{picks[0][\"symbol\"]} (score={picks[0][\"score\"]})')
+          "
+
+      # ── COMMIT ──
+      - name: Commit and push updated files
+        run: |
+          git config --global user.name  "auto-bot"
+          git config --global user.email "bot@example.com"
+
+          # Stage both outputs — stock_data.db is large, skip it to keep repo lean
+          git add predictions.json gpt_recommendation.json
+
+          if git diff --staged --quiet; then
+            echo "ℹ️ No changes — nothing to commit"
+          else
+            IST=$(TZ='Asia/Kolkata' date '+%Y-%m-%d %H:%M IST')
+            git commit -m "📈 Daily update ${IST}"
+            git push
+            echo "✅ Pushed predictions.json and gpt_recommendation.json"
+          fi
+
+      # ── SUMMARY ──
+      - name: Job Summary
+        if: always()
+        run: |
+          echo "## 📈 StockSage India — Daily Analysis" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          if [ -f "predictions.json" ]; then
+            python -c "
+          import json
+          with open('predictions.json') as f:
+              d = json.load(f)
+          print(f'**Generated:** {d[\"generated_at\"]}')
+          print(f'**Stocks Analyzed:** {d[\"stocks_analyzed\"]}')
+          print('')
+          print('### 🏆 Top Picks')
+          print('| # | Symbol | Score | Signal | Price | Target | R:R |')
+          print('|---|--------|-------|--------|-------|--------|-----|')
+          for p in d['top_picks'][:10]:
+              print(f'| {p[\"rank\"]} | {p[\"symbol\"]} | {p[\"score\"]} | {p[\"signal\"]} | ₹{p[\"current_price\"]:,.2f} | ₹{p[\"target_price\"]:,.2f} | 1:{p[\"risk_reward\"]} |')
+            " >> $GITHUB_STEP_SUMMARY
+          fi
