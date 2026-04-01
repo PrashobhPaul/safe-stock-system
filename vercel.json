@@ -1,0 +1,17 @@
+{
+  "version": 2,
+  "functions": {
+    "api/quotes.py": {
+      "maxDuration": 60,
+      "memory": 512
+    },
+    "api/briefing.py": {
+      "maxDuration": 30,
+      "memory": 256
+    }
+  },
+  "rewrites": [
+    { "source": "/api/quotes",   "destination": "/api/quotes.py"   },
+    { "source": "/api/briefing", "destination": "/api/briefing.py" }
+  ]
+}
