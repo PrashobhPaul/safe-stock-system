@@ -1,10 +1,8 @@
 name: 📈 Daily Stock Analysis
 
 on:
-  # 10:45 UTC = 4:15 PM IST — after NSE market close at 3:30 PM
   schedule:
     - cron: "45 10 * * 1-5"
-  # Allow manual trigger
   workflow_dispatch:
 
 jobs:
@@ -25,45 +23,16 @@ jobs:
         uses: actions/setup-python@v5
         with:
           python-version: "3.11"
-          cache: "pip"
-          cache-dependency-path: "api/requirements.txt"
 
-      - name: Install dependencies
+      - name: Install dependencies directly
         run: |
           python -m pip install --upgrade pip
-          pip install yfinance pandas numpy requests pytz
+          pip install yfinance==0.2.36 pandas numpy requests pytz
 
       - name: Run analysis and save predictions.json
         run: |
-          python - << 'PYEOF'
-          import json, sys, os
-          sys.path.insert(0, 'api')
-
-          # Import the scoring logic from api/quotes.py
-          from quotes import build_response
-
-          print("Running StockSage analysis...")
-          data = build_response()
-
-          if "error" in data:
-              print(f"ERROR: {data['error']}")
-              sys.exit(1)
-
-          # Save to predictions.json
-          with open("predictions.json", "w") as f:
-              json.dump(data, f, indent=2, default=str)
-
-          picks_s = len(data.get("short_term",{}).get("picks",[]))
-          picks_m = len(data.get("medium_term",{}).get("picks",[]))
-          picks_l = len(data.get("long_term",{}).get("picks",[]))
-          total   = data.get("stocks_analyzed", 0)
-
-          print(f"✅ Done! {total} stocks analyzed")
-          print(f"   Short term  : {picks_s} picks")
-          print(f"   Medium term : {picks_m} picks")
-          print(f"   Long term   : {picks_l} picks")
-          print(f"   Generated at: {data['generated_at']}")
-          PYEOF
+          cd $GITHUB_WORKSPACE
+          python api/quotes_daily.py
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
 
@@ -85,16 +54,17 @@ jobs:
         if: always()
         run: |
           echo "## 📈 StockSage Daily Analysis" >> $GITHUB_STEP_SUMMARY
-          python - << 'PYEOF' >> $GITHUB_STEP_SUMMARY
+          python - << 'PYEOF' >> $GITHUB_STEP_SUMMARY 2>/dev/null || echo "Summary unavailable"
           import json
           try:
               with open("predictions.json") as f:
                   d = json.load(f)
-              print(f"**Date:** {d['market_date']}")
-              print(f"**Stocks:** {d['stocks_analyzed']}")
+              print(f"**Date:** {d.get('market_date','?')}")
+              print(f"**Stocks analyzed:** {d.get('stocks_analyzed','?')}")
               print()
               for cat, label in [("short_term","⚡ Short"),("medium_term","📈 Medium"),("long_term","🏛 Long")]:
                   picks = d.get(cat,{}).get("picks",[])
+                  if not picks: continue
                   print(f"### {label} Term")
                   print("| # | Symbol | Score | Signal | Entry | Target | Hold |")
                   print("|---|--------|-------|--------|-------|--------|------|")
@@ -102,7 +72,7 @@ jobs:
                       ep = p.get("trade_plan",{}).get("entry",{}).get("ideal_price","—")
                       tp = p.get("trade_plan",{}).get("exit",{}).get("target_ideal","—")
                       hd = p.get("trade_plan",{}).get("exit",{}).get("hold_duration","—")
-                      print(f"| {p['rank']} | **{p['symbol']}** | {p['score']} | {p['signal']} | ₹{ep} | ₹{tp} | {hd} |")
+                      print(f"| {p['rank']} | **{p['symbol']}** | {p['score']} | {p['signal']} | {ep} | {tp} | {hd} |")
                   print()
           except Exception as e:
               print(f"Error: {e}")
