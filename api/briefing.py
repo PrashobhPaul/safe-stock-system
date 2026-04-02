@@ -1,95 +1,106 @@
 from http.server import BaseHTTPRequestHandler
 import json
 import os
-import requests
+import urllib.request
+import urllib.error
 from datetime import datetime
 import pytz
 
 IST = pytz.timezone("Asia/Kolkata")
-GEMINI_URL = "https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent"
+GEMINI_URL = (
+    "https://generativelanguage.googleapis.com/v1beta/models"
+    "/gemini-1.5-flash:generateContent"
+)
 
 
 def call_gemini(prompt: str, api_key: str) -> dict:
+    """Call Gemini using only stdlib urllib — no requests dependency needed."""
     url  = f"{GEMINI_URL}?key={api_key}"
-    body = {
+    body = json.dumps({
         "contents": [{"parts": [{"text": prompt}]}],
         "generationConfig": {
-            "temperature":      0.35,
-            "maxOutputTokens":  1200,
+            "temperature":      0.3,
+            "maxOutputTokens":  800,
             "responseMimeType": "application/json",
         },
-    }
-    r = requests.post(url, json=body, timeout=25)
-    r.raise_for_status()
-    text = r.json()["candidates"][0]["content"]["parts"][0]["text"]
-    text = text.strip().lstrip("```json").lstrip("```").rstrip("```").strip()
-    return json.loads(text)
+    }).encode("utf-8")
+
+    req = urllib.request.Request(
+        url,
+        data=body,
+        headers={"Content-Type": "application/json"},
+        method="POST",
+    )
+
+    with urllib.request.urlopen(req, timeout=20) as resp:
+        data = json.loads(resp.read().decode("utf-8"))
+
+    text = data["candidates"][0]["content"]["parts"][0]["text"]
+    text = text.strip()
+    # Strip markdown fences if present
+    if text.startswith("```"):
+        text = text.split("\n", 1)[1] if "\n" in text else text[3:]
+    if text.endswith("```"):
+        text = text[:-3]
+    return json.loads(text.strip())
 
 
-def build_prompt(predictions: dict, mode: str, symbol: str = "", sector: str = "") -> str:
-    picks = predictions.get("top_picks", [])[:10]
-    secs  = predictions.get("sector_momentum", [])[:6]
-    date  = predictions.get("market_date", "today")
+def build_lean_prompt(predictions: dict) -> str:
+    """Build a compact prompt — only essential data, no huge JSON blobs."""
+    picks   = predictions.get("top_picks", [])[:8]
+    secs    = predictions.get("sector_momentum", [])[:5]
+    brd     = predictions.get("market_breadth", {})
+    date    = predictions.get("market_date", "today")
+    total   = predictions.get("stocks_analyzed", 0)
 
-    if mode == "stock" and symbol:
-        pick = next((p for p in predictions.get("top_picks", []) if p["symbol"] == symbol), None)
-        if not pick:
-            return None
-        ind = pick.get("indicators", {})
-        tp  = pick.get("trade_plan", {})
-        entry = tp.get("entry", {})
-        exit_ = tp.get("exit", {})
-        return f"""Analyse {pick['symbol']} ({pick.get('name','')}) for a retail NSE investor.
-Score:{pick['score']}/100 Signal:{pick['signal']} Sector:{pick.get('sector','')}
-Price:₹{pick['current_price']} Change:{pick['change_pct']}%
-Entry:₹{entry.get('ideal_price','')} Target:₹{exit_.get('target_ideal','')} Hold:{exit_.get('hold_duration','')}
-RSI:{ind.get('rsi','')} MACD:{ind.get('macd_signal','')} Vol:{ind.get('volume_ratio','')}x
-SMA:{ind.get('sma_alignment','')} 52W:{ind.get('week52_pct','')}% away
-Signals: {' | '.join(pick.get('reasons',[]))}
-
-Respond ONLY with JSON (no markdown):
-{{"summary":"3-4 sentence view","bullish_case":"2-3 sentences","bearish_case":"2-3 sentences","entry_strategy":"practical entry advice","exit_strategy":"when to exit","position_sizing":"% portfolio suggestion","verdict":"BUY_TOMORROW|WAIT_FOR_PULLBACK|AVOID|WATCH","one_line":"single sentence thesis"}}"""
-
-    if mode == "quick":
-        lines = [f"{p['symbol']} Score:{p['score']} RSI:{p['indicators'].get('rsi','?')} Vol:{p['indicators'].get('volume_ratio','?')}x Chg:{p['change_pct']}%" for p in picks[:5]]
-        return f"""NSE top stocks today:
-{chr(10).join(lines)}
-
-Respond ONLY with JSON:
-{{"overall_sentiment":"BULLISH|MILDLY_BULLISH|NEUTRAL|MILDLY_BEARISH|BEARISH","sentiment_reason":"one sentence","top_insight":"one sentence","momentum_read":"one sentence"}}"""
-
-    # Full briefing
-    up_secs   = [f"{s['sector']}({s['score']})" for s in secs if s['trend'] == 'up']
-    down_secs = [f"{s['sector']}({s['score']})" for s in secs if s['trend'] == 'down']
-    brd       = predictions.get("market_breadth", {})
-    brd_str   = f"Adv:{brd.get('advances',0):,} Dec:{brd.get('declines',0):,}"
-
-    pick_lines = []
+    # Compact pick lines
+    lines = []
     for p in picks:
         ind = p.get("indicators", {})
-        sc  = p.get("scores", {})
         tp  = p.get("trade_plan", {})
-        entry = tp.get("entry", {}) if tp else {}
-        exit_ = tp.get("exit", {}) if tp else {}
-        pick_lines.append(
-            f"#{p.get('rank','?')} {p['symbol']} Score:{p['score']}/100 {p['signal']} "
-            f"₹{p['current_price']} ({'+' if p['change_pct']>=0 else ''}{p['change_pct']}%) "
-            f"Entry:₹{entry.get('ideal_price','')} Target:₹{exit_.get('target_ideal','')} "
-            f"Hold:{exit_.get('hold_duration','')} "
-            f"RSI:{ind.get('rsi','?')} MACD:{ind.get('macd_signal','?')} Vol:{ind.get('volume_ratio','?')}x"
+        ep  = tp.get("entry", {}).get("ideal_price", "?") if tp else "?"
+        tgt = tp.get("exit", {}).get("target_ideal", "?") if tp else "?"
+        hld = tp.get("exit", {}).get("hold_duration", "?") if tp else "?"
+        lines.append(
+            f"#{p.get('rank','?')} {p['symbol']} "
+            f"Score:{p['score']}/100 {p['signal']} "
+            f"₹{p['current_price']} ({'+' if p.get('change_pct',0)>=0 else ''}{p.get('change_pct',0)}%) "
+            f"Entry:₹{ep} Target:₹{tgt} Hold:{hld} "
+            f"RSI:{ind.get('rsi','?')} Vol:{ind.get('volume_ratio','?')}x "
+            f"SMA:{ind.get('sma_alignment','?')}"
         )
 
-    return f"""You are a senior NSE equity analyst. Date:{date}
-Market Breadth:{brd_str}
-Strong sectors:{', '.join(up_secs) if up_secs else 'mixed'}
-Weak sectors:{', '.join(down_secs) if down_secs else 'none'}
+    up_secs   = [s["sector"] for s in secs if s.get("trend") == "up"]
+    down_secs = [s["sector"] for s in secs if s.get("trend") == "down"]
+    adv = brd.get("advances", 0)
+    dec = brd.get("declines", 0)
+
+    prompt = f"""You are a senior NSE equity analyst. Date: {date}
+{total} stocks analyzed. Advance/Decline: {adv:,}/{dec:,}
+Strong sectors: {', '.join(up_secs) or 'mixed'}
+Weak sectors: {', '.join(down_secs) or 'none'}
 
 TOP PICKS:
-{chr(10).join(pick_lines)}
+{chr(10).join(lines) if lines else 'No picks today'}
 
-Write a professional daily briefing. Be specific. 2-3 sentences per stock narrative.
-Do NOT invent data. Respond ONLY with JSON (no markdown, no backticks):
-{{"market_summary":"2-3 sentence overview","overall_sentiment":"BULLISH|MILDLY_BULLISH|NEUTRAL|MILDLY_BEARISH|BEARISH","sentiment_reason":"one sentence","top_insight":"single most important thing for tomorrow","momentum_read":"one sentence on momentum","stock_narratives":{{"SYMBOL":"2-3 sentence analysis"}},"sector_themes":["theme1","theme2","theme3"],"risks_to_watch":["risk1","risk2","risk3"],"best_risk_reward":"SYMBOL — one sentence","beginner_tip":"one practical tip","confidence_note":"honest limitation note"}}"""
+Write a brief professional market briefing for Indian retail investors.
+Be specific, honest, and mention key risks.
+
+Respond ONLY with this exact JSON structure (no markdown, no explanation):
+{{
+  "market_summary": "2-3 sentence market overview for tomorrow",
+  "overall_sentiment": "BULLISH",
+  "sentiment_reason": "one sentence why",
+  "top_insight": "single most important thing investors should know",
+  "sector_themes": ["theme1", "theme2"],
+  "risks_to_watch": ["risk1", "risk2"],
+  "best_risk_reward": "SYMBOL — one sentence on best setup",
+  "beginner_tip": "one practical tip for new investors",
+  "stock_narratives": {{
+    "SYMBOL": "2 sentence analysis"
+  }}
+}}"""
+    return prompt
 
 
 class handler(BaseHTTPRequestHandler):
@@ -99,52 +110,78 @@ class handler(BaseHTTPRequestHandler):
         self._cors()
         self.end_headers()
 
+    def do_GET(self):
+        """Health check endpoint."""
+        api_key = os.environ.get("GEMINI_API_KEY", "")
+        status = {
+            "status": "ok",
+            "gemini_key_set": bool(api_key),
+            "timestamp": datetime.now(IST).isoformat(),
+        }
+        self._json(status)
+
     def do_POST(self):
+        # Check API key first
         api_key = os.environ.get("GEMINI_API_KEY", "")
         if not api_key:
-            self._json({"error": "GEMINI_API_KEY not set in Vercel environment variables"}, 500)
+            self._json({
+                "error": "GEMINI_API_KEY not configured in Vercel environment variables. Go to Vercel → Settings → Environment Variables → Add GEMINI_API_KEY"
+            }, 500)
             return
 
+        # Parse request body
         try:
-            length      = int(self.headers.get("Content-Length", 0))
-            body        = json.loads(self.rfile.read(length)) if length else {}
-            predictions = body.get("predictions", {})
-            mode        = body.get("mode", "full")
-            symbol      = body.get("symbol", "")
-            sector      = body.get("sector", "")
-        except Exception:
-            self._json({"error": "Invalid JSON body"}, 400)
+            length = int(self.headers.get("Content-Length", 0))
+            if length > 0:
+                raw  = self.rfile.read(length)
+                body = json.loads(raw)
+            else:
+                body = {}
+        except Exception as e:
+            self._json({"error": f"Invalid request body: {str(e)}"}, 400)
             return
 
+        predictions = body.get("predictions", {})
         if not predictions:
-            self._json({"error": "predictions field required"}, 400)
+            self._json({"error": "Missing predictions data in request body"}, 400)
             return
 
+        # Build prompt and call Gemini
         try:
-            prompt = build_prompt(predictions, mode, symbol, sector)
-            if not prompt:
-                self._json({"error": f"Symbol {symbol} not found"}, 404)
-                return
-
+            prompt = build_lean_prompt(predictions)
             result = call_gemini(prompt, api_key)
-            result["mode"]         = mode
+
+            # Add metadata
             result["generated_at"] = datetime.now(IST).isoformat()
             result["model_used"]   = "Google Gemini 1.5 Flash"
             result["provider"]     = "gemini-1.5-flash"
 
-            self._json({"llm_analysis": result, "generated_at": result["generated_at"]})
+            self._json({"llm_analysis": result})
 
-        except requests.HTTPError as e:
-            self._json({"error": f"Gemini API error {e.response.status_code}"}, 502)
+        except urllib.error.HTTPError as e:
+            body_text = e.read().decode("utf-8", errors="ignore")[:300]
+            if e.code == 400:
+                self._json({"error": f"Gemini rejected request (400): {body_text}"}, 502)
+            elif e.code == 403:
+                self._json({"error": "Gemini API key invalid or quota exceeded (403)"}, 502)
+            elif e.code == 429:
+                self._json({"error": "Gemini rate limit hit (429). Try again in 60 seconds."}, 429)
+            else:
+                self._json({"error": f"Gemini HTTP error {e.code}: {body_text}"}, 502)
+
         except json.JSONDecodeError as e:
-            self._json({"error": f"Gemini returned invalid JSON: {str(e)}"}, 502)
+            self._json({"error": f"Gemini returned invalid JSON: {str(e)[:100]}"}, 502)
+
+        except TimeoutError:
+            self._json({"error": "Gemini request timed out (20s). Try again."}, 504)
+
         except Exception as e:
-            self._json({"error": str(e)}, 500)
+            self._json({"error": f"Internal error: {str(e)}"}, 500)
 
     def _json(self, data: dict, status: int = 200):
-        body = json.dumps(data, default=str).encode()
+        body = json.dumps(data, default=str, ensure_ascii=False).encode("utf-8")
         self.send_response(status)
-        self.send_header("Content-Type",   "application/json")
+        self.send_header("Content-Type",   "application/json; charset=utf-8")
         self.send_header("Content-Length", str(len(body)))
         self._cors()
         self.end_headers()
@@ -152,7 +189,7 @@ class handler(BaseHTTPRequestHandler):
 
     def _cors(self):
         self.send_header("Access-Control-Allow-Origin",  "*")
-        self.send_header("Access-Control-Allow-Methods", "POST, OPTIONS")
+        self.send_header("Access-Control-Allow-Methods", "GET, POST, OPTIONS")
         self.send_header("Access-Control-Allow-Headers", "Content-Type")
 
     def log_message(self, *args):
