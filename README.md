@@ -1,17 +1,12 @@
 # StockSage India — Enterprise PWA
 
 > AI-powered Indian stock market predictions. Zero login. Zero config. Open to all.
-> Installable on Android as APK. Works offline. Updates daily.
-
 **[🌐 Live App →](https://PrashobhPaul.github.io/safe-stock-system)**
 
 ---
 
 ## Philosophy
 
-- **No login** — anyone visits, sees predictions immediately
-- **No configuration popup** — works out of the box
-- **PWA** — installable on Android/iOS like a native app
 - **Offline-first** — shows last cached data when offline
 - **Three horizons** — Short (5–15d), Medium (4–12w), Long (6–18m)
 - **Precise entry/exit** — limit order prices for first 30-60 min after market open
