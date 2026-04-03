@@ -6,20 +6,20 @@
   <meta name="mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-  <meta name="apple-mobile-web-app-title" content="StockSage">
-  <meta name="application-name" content="StockSage India">
+  <meta name="apple-mobile-web-app-title" content="ProfitPilot">
+  <meta name="application-name" content="ProfitPilot">
   <meta name="msapplication-TileColor" content="#060a06">
   <meta name="theme-color" content="#00e676" media="(prefers-color-scheme: dark)">
   <meta name="theme-color" content="#00e676">
-  <meta name="description" content="AI-powered Indian stock picks — Short, Medium & Long term with precise entry/exit prices. Updated daily after NSE close.">
-  <meta name="keywords" content="NSE, BSE, Indian stocks, stock predictions, Nifty, technical analysis">
+  <meta name="description" content="ProfitPilot — Your AI Assistant for Smarter Trading. Short, Medium & Long term NSE stock picks with precise entry/exit prices.">
+  <meta name="keywords" content="NSE, BSE, Indian stocks, stock predictions, Nifty, ProfitPilot, AI trading">
 
   <!-- Open Graph for sharing -->
-  <meta property="og:title" content="StockSage India — Stock Intelligence">
-  <meta property="og:description" content="Free AI-powered Indian stock market predictions. Short, Medium & Long term picks with precise entry and exit prices.">
+  <meta property="og:title" content="ProfitPilot — Your AI Assistant for Smarter Trading">
+  <meta property="og:description" content="AI-powered Indian stock picks with precise entry & exit prices. Short, Medium & Long term picks updated daily.">
   <meta property="og:type" content="website">
 
-  <title>StockSage India</title>
+  <title>ProfitPilot — Smarter Trading</title>
 
   <link rel="manifest" href="./manifest.json">
   <link rel="icon" href="./icons/icon-192.png" type="image/png">
@@ -750,15 +750,23 @@
 
 <!-- ── LOADING SPLASH ── -->
 <div class="splash" id="splash">
-  <div class="splash-logo">Stock<span>Sage</span> India</div>
-  <div class="splash-sub">AI Stock Intelligence</div>
+  <div class="splash-logo"><img src="./icons/icon-192.png" alt="ProfitPilot" style="width:72px;height:72px;border-radius:16px;margin-bottom:12px;display:block;margin-left:auto;margin-right:auto"><span style="color:var(--grn)">Profit</span>Pilot</div>
+  <div class="splash-sub">Your AI Assistant for Smarter Trading</div>
   <div class="splash-bar"><div class="splash-fill"></div></div>
   <div class="splash-status" id="splashStatus">Loading predictions…</div>
 </div>
 
 <!-- ── APP HEADER ── -->
 <header class="app-header">
-  <div class="app-logo">Stock<span>Sage</span></div>
+  <div style="display:flex;align-items:center;gap:10px">
+    <img src="./icons/icon-96.png" alt="ProfitPilot"
+         style="width:34px;height:34px;border-radius:8px;flex-shrink:0"
+         onerror="this.style.display='none'">
+    <div>
+      <div class="app-logo"><span style="color:var(--grn)">Profit</span>Pilot</div>
+      <div style="font-family:var(--sans);font-size:9px;color:var(--tx2);font-weight:300;letter-spacing:.05em;margin-top:1px">Your AI Assistant for Smarter Trading</div>
+    </div>
+  </div>
   <div class="header-right">
     <div class="mkt-time" id="mktTime">—</div>
     <div class="live-badge">
@@ -788,7 +796,7 @@
 <!-- ── INSTALL BANNER ── -->
 <div class="install-banner" id="installBanner">
   <div class="install-icon">📲</div>
-  <div class="install-text">Add StockSage to your home screen for app-like experience</div>
+  <div class="install-text">Add ProfitPilot to your home screen for the full app experience</div>
   <button class="install-btn" onclick="installPWA()">Install</button>
   <button class="install-close" onclick="dismissInstall()">✕</button>
 </div>
@@ -924,7 +932,8 @@
 
 <script>
 // ═══════════════════════════════════════════════════════════════
-// StockSage India — Enterprise PWA v4.0
+// ProfitPilot — Your AI Assistant for Smarter Trading
+// Enterprise PWA v4.0 | NSE/BSE Intelligence
 //
 // NO LOGIN. NO CONFIG POPUP. INSTANT LOAD.
 // Anyone visits → data loads immediately from predictions.json
@@ -936,8 +945,11 @@
 // ║  Leave as '' to use cached predictions.json only         ║
 // ║  e.g. 'https://safe-stock-system.vercel.app'             ║
 // ╚══════════════════════════════════════════════════════════╝
-  
+// ── Vercel URL — update this after your Vercel deployment ──
+// Replace with your actual URL from Vercel dashboard
+// e.g. 'https://safe-stock-system-oipa.vercel.app'
 const VERCEL_URL = 'https://safe-stock-system-oipa.vercel.app';
+
 const DATA_URL      = './predictions.json';
 const REFRESH_MS    = 60_000;   // live score refresh (market hours)
 const BRIEFING_MS   = 300_000;  // AI briefing refresh
@@ -1040,7 +1052,7 @@ function switchTab(tab) {
   document.getElementById('nav-'+tab).classList.add('active');
   window.scrollTo({top:0,behavior:'smooth'});
   // Load AI briefing when user navigates to AI tab
-  if (tab==='ai' && !llm && VERCEL_URL) fetchBriefing();
+  if (tab==='ai' && !llm) fetchBriefing();
 }
 
 // Hash-based deep linking
@@ -1052,45 +1064,128 @@ window.addEventListener('hashchange', handleHash);
 
 // ── Data loading ──
 async function loadData() {
-  // Try live Vercel API first (if configured)
+
+  // 1. Try live Vercel API first
   if (VERCEL_URL) {
     try {
       const r = await fetch(VERCEL_URL+'/api/quotes', {
         cache: 'no-store',
-        signal: AbortSignal.timeout(9000),
+        signal: AbortSignal.timeout(10000),
       });
       if (r.ok) {
         const d = await r.json();
-        if (!d.error) return { ...d, _source: 'live' };
+        if (d && !d.error && d.stocks_analyzed) {
+          console.log('✅ Live data loaded from Vercel');
+          return { ...d, _source: 'live' };
+        }
       }
-    } catch { /* fall through to cached */ }
+    } catch(e) {
+      console.warn('Vercel API unavailable:', e.message);
+    }
   }
-  // Fallback: predictions.json (updated daily by GitHub Actions)
-  const r = await fetch(DATA_URL+'?t='+Date.now(), { cache: 'no-store' });
-  if (!r.ok) throw new Error('predictions.json not found');
-  const d = await r.json();
-  return { ...d, _source: 'cached' };
+
+  // 2. Try predictions.json (committed by GitHub Actions daily)
+  try {
+    const r = await fetch(DATA_URL+'?t='+Date.now(), { cache: 'no-store' });
+    if (r.ok) {
+      const d = await r.json();
+      if (d && (d.top_picks || d.short_term)) {
+        console.log('✅ Cached data loaded from predictions.json');
+        return { ...d, _source: 'cached' };
+      }
+    }
+  } catch(e) {
+    console.warn('predictions.json unavailable:', e.message);
+  }
+
+  // 3. Last resort — return empty structure so app still renders
+  console.warn('⚠ No data source available — showing empty state');
+  const now = new Date().toLocaleString('en-IN',{timeZone:'Asia/Kolkata'});
+  return {
+    generated_at:     new Date().toISOString(),
+    market_date:      new Date().toLocaleDateString('en-CA'),
+    analysis_version: 'offline',
+    stocks_analyzed:  0,
+    _source:          'empty',
+    indices:          { NIFTY50:{value:0,change:0,change_pct:0}, SENSEX:{value:0,change:0,change_pct:0}, NIFTY_BANK:{value:0,change:0,change_pct:0}, NIFTY_IT:{value:0,change:0,change_pct:0}, NIFTY_MIDCAP100:{value:0,change:0,change_pct:0} },
+    market_breadth:   { advances:0, declines:0, unchanged:0, new_52w_high:0, new_52w_low:0 },
+    short_term:       { label:'Short Term', picks:[] },
+    medium_term:      { label:'Medium Term', picks:[] },
+    long_term:        { label:'Long Term', picks:[] },
+    top_picks:        [],
+    watchlist:        [],
+    avoid:            [],
+    sector_momentum:  [],
+  };
 }
 
 async function fetchBriefing() {
-  if (!VERCEL_URL || !data) return;
+  if (!data) return;
+  const el = document.getElementById('aiBriefingContent');
+
+  // Show loading state
+  el.innerHTML = `<div class="ai-card"><div class="ai-loading">
+    <div class="ai-spin">⟳</div>
+    <div class="ai-load-text">Asking Gemini AI…<br><span style="font-size:11px;color:var(--txd)">This takes 10–15 seconds</span></div>
+  </div></div>`;
+
+  // If no Vercel URL set, show setup message
+  if (!VERCEL_URL) {
+    el.innerHTML = `<div class="ai-card">
+      <div class="ai-card-title">📊 AI Briefing</div>
+      <div style="font-family:var(--sans);font-size:13px;color:var(--tx2);padding:16px 0;line-height:1.8">
+        ⚙️ To enable Gemini AI briefings:<br>
+        1. Deploy to <a href="https://vercel.com" style="color:var(--grn)" target="_blank">Vercel</a><br>
+        2. Add <code style="color:var(--grn)">GEMINI_API_KEY</code> in Vercel → Settings → Env Variables<br>
+        3. Set <code style="color:var(--grn)">VERCEL_URL</code> in index.html<br><br>
+        <span style="color:var(--txd);font-size:11px">Meanwhile, run GitHub Actions workflow for daily predictions with AI</span>
+      </div>
+    </div>`;
+    return;
+  }
+
   try {
-    document.getElementById('aiBriefingContent').innerHTML = `
-      <div class="ai-card"><div class="ai-loading">
-        <div class="ai-spin">⟳</div>
-        <div class="ai-load-text">Asking Gemini AI…</div>
-      </div></div>`;
     const r = await fetch(VERCEL_URL+'/api/briefing', {
       method:  'POST',
       headers: {'Content-Type':'application/json'},
       body:    JSON.stringify({predictions:data, mode:'full'}),
-      signal:  AbortSignal.timeout(25000),
+      signal:  AbortSignal.timeout(30000),
     });
-    if (r.ok) {
-      const d = await r.json();
-      if (d.llm_analysis) { llm = d.llm_analysis; renderAI(); }
+
+    if (!r.ok) {
+      throw new Error(`Server returned ${r.status}: ${r.statusText}`);
     }
-  } catch(e) { console.warn('Briefing:', e); }
+
+    const d = await r.json();
+
+    if (d.error) {
+      throw new Error(d.error);
+    }
+
+    if (d.llm_analysis) {
+      llm = d.llm_analysis;
+      renderAI();
+    } else {
+      throw new Error('No AI analysis returned');
+    }
+
+  } catch(e) {
+    console.warn('Briefing error:', e);
+    const msg = e.message || 'Unknown error';
+    const isKey = msg.includes('GEMINI_API_KEY') || msg.includes('API key');
+    el.innerHTML = `<div class="ai-card">
+      <div class="ai-card-title">📊 AI Briefing — Error</div>
+      <div style="background:rgba(255,68,68,.06);border:1px solid rgba(255,68,68,.2);padding:14px;margin-bottom:14px;font-family:var(--sans);font-size:12px;color:#ff9090;line-height:1.7">
+        ⚠ ${msg}
+      </div>
+      ${isKey ? `<div style="font-family:var(--sans);font-size:12px;color:var(--tx2);line-height:1.7">
+        Fix: Go to Vercel → Settings → Environment Variables → Add <code style="color:var(--grn)">GEMINI_API_KEY</code>
+      </div>` : ''}
+      <button onclick="fetchBriefing()" style="margin-top:14px;background:var(--bgc);border:1px solid var(--bdrb);color:var(--grn);font-family:var(--mono);font-size:11px;padding:8px 16px;cursor:pointer">
+        ↻ Try Again
+      </button>
+    </div>`;
+  }
 }
 
 // ── RENDER FUNCTIONS ──
@@ -1220,10 +1315,46 @@ function renderHorizon(cat) {
   }
 
   if (!bucket.length) {
+    const catLabel = cat==='short' ? 'short-term momentum' : cat==='medium' ? 'medium-term trend' : 'long-term wealth';
+    const catIcon  = cat==='short' ? '⚡' : cat==='medium' ? '📈' : '🏛';
+    const catColor = cat==='short' ? 'var(--short)' : cat==='medium' ? 'var(--medium)' : 'var(--long)';
+    const analyzed = data.stocks_analyzed || 0;
+    const isOpen   = isOpen_mkt();
+
+    // No data at all yet
+    if (analyzed === 0) {
+      el.innerHTML = `<div class="empty-state">
+        <div class="empty-icon">${catIcon}</div>
+        <div class="empty-title" style="color:var(--wht)">Waiting for first analysis</div>
+        <div class="empty-text" style="max-width:360px;margin:0 auto">
+          The daily analysis hasn't run yet.<br><br>
+          <strong style="color:var(--amb)">To get picks now:</strong><br>
+          Go to GitHub → Actions → <strong>Daily Stock Analysis</strong> → <strong>Run workflow</strong><br><br>
+          <span style="color:var(--txd);font-size:11px">
+            After ~10 minutes, real picks will appear here automatically.
+          </span>
+        </div>
+      </div>`;
+      return;
+    }
+
+    // Analysis ran but no picks in this category
     el.innerHTML = `<div class="empty-state">
-      <div class="empty-icon">🔍</div>
-      <div class="empty-title">No picks today</div>
-      <div class="empty-text">No ${cat}-term picks identified today.<br>Check back after 4:15 PM IST.</div>
+      <div class="empty-icon">${catIcon}</div>
+      <div class="empty-title" style="color:var(--wht)">No ${cat}-term picks right now</div>
+      <div class="empty-text" style="max-width:340px;margin:0 auto">
+        Our engine analyzed <strong style="color:${catColor}">${analyzed} NSE stocks</strong>
+        and found no high-confidence ${catLabel} setups meeting our criteria today.<br><br>
+        <span style="color:var(--txd);font-size:11px">
+          ${isOpen
+            ? '🟢 Market open — scores refresh every 60s. Check back shortly.'
+            : '🔴 Market closed — next analysis at 4:15 PM IST on the next trading day.'}
+        </span><br><br>
+        <span style="color:var(--txd);font-size:11px">
+          This is by design — we only show picks when the setup is genuinely strong.<br>
+          Check the other tabs for picks.
+        </span>
+      </div>
     </div>`;
     return;
   }
@@ -1232,6 +1363,11 @@ function renderHorizon(cat) {
   setTimeout(() => {
     el.querySelectorAll('.sm-bar-f').forEach(e => e.style.width=(e.dataset.pct||0)+'%');
   }, 200);
+}
+
+function isOpen_mkt() {
+  const d=ist(); const m=d.getHours()*60+d.getMinutes();
+  return d.getDay()>=1&&d.getDay()<=5&&m>=555&&m<930;
 }
 
 function renderIndices() {
@@ -1293,13 +1429,21 @@ function renderLists() {
 function renderAI() {
   const llmData = llm || data.llm_analysis;
   const el = document.getElementById('aiBriefingContent');
-  if (!llmData || llmData.provider==='placeholder') {
+
+  if (!llmData) {
+    // Only show setup message if we haven't tried fetching yet
+    return;
+  }
+
+  if (llmData.provider==='placeholder' || llmData.error) {
     el.innerHTML = `<div class="ai-card">
       <div class="ai-card-title">📊 AI Briefing</div>
-      <div style="font-family:var(--sans);font-size:13px;color:var(--tx2);padding:16px 0;line-height:1.7">
-        AI briefing requires Vercel deployment with Gemini API key.<br>
-        <a href="https://github.com/PrashobhPaul/safe-stock-system" style="color:var(--grn)" target="_blank">Setup guide →</a>
+      <div style="font-family:var(--sans);font-size:13px;color:var(--tx2);padding:12px 0;line-height:1.8">
+        ${llmData.market_summary || 'AI briefing unavailable. Check Gemini API key in Vercel settings.'}
       </div>
+      <button onclick="fetchBriefing()" style="background:var(--bgc);border:1px solid var(--bdrb);color:var(--grn);font-family:var(--mono);font-size:11px;padding:8px 16px;cursor:pointer;margin-top:8px">
+        ↻ Retry AI Briefing
+      </button>
     </div>`;
     return;
   }
@@ -1359,35 +1503,31 @@ async function manualRefresh() {
 function startAutoRefresh() {
   clearInterval(refreshTmr);
   clearInterval(briefTmr);
-  if (VERCEL_URL) {
-    refreshTmr = setInterval(async () => {
-      if (!isOpen()) return;
-      try { data = await loadData(); renderAll(); } catch{}
-    }, REFRESH_MS);
-    briefTmr = setInterval(() => {
-      if (activeTab==='ai') fetchBriefing();
-    }, BRIEFING_MS);
-  }
+  // Refresh scores every 60s during market hours
+  refreshTmr = setInterval(async () => {
+    if (!isOpen()) return;
+    try { data = await loadData(); renderAll(); } catch{}
+  }, REFRESH_MS);
+  // Refresh AI briefing every 5 min
+  briefTmr = setInterval(() => {
+    fetchBriefing();
+  }, BRIEFING_MS);
 }
 
 // ── INIT — runs immediately, no user action needed ──
 async function init() {
-  const statuses = ['Loading predictions…','Crunching numbers…','Building picks…','Almost there…'];
+  const statuses = ['Connecting to live feed…','Fetching stock data…','Running analysis…','Almost ready…'];
   let si = 0;
   const sid = setInterval(()=>{
     si=(si+1)%statuses.length;
     const e=document.getElementById('splashStatus');
     if(e) e.textContent=statuses[si];
-  }, 600);
+  }, 700);
 
-  try {
-    data = await loadData();
-    renderAll();
-    handleHash(); // handle deep links (#short, #long, etc.)
-  } catch(e) {
-    document.getElementById('splashStatus').textContent = 'Using cached data…';
-    console.error('Init error:', e);
-  }
+  // loadData() never throws now — always returns something
+  data = await loadData();
+  renderAll();
+  handleHash();
 
   clearInterval(sid);
   startAutoRefresh();
@@ -1399,10 +1539,8 @@ async function init() {
     setTimeout(()=>s.remove(), 600);
   }, 700);
 
-  // Fetch AI briefing silently in background if Vercel is set
-  if (VERCEL_URL) {
-    setTimeout(() => fetchBriefing(), 2000);
-  }
+  // Fetch AI briefing in background always on load (not just on AI tab)
+  setTimeout(() => fetchBriefing(), 1500);
 }
 
 // Start immediately
