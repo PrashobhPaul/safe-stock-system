@@ -1,53 +1,56 @@
 {
-  "generated_at": "2025-04-01T16:15:00+05:30",
-  "market_date": "2025-04-01",
-  "analysis_version": "2.1",
-  "stocks_analyzed": 85,
+  "generated_at": "2026-04-03T16:54:45.596848+05:30",
+  "market_date": "2026-04-03",
+  "analysis_version": "4.1",
+  "stocks_analyzed": 0,
   "indices": {
-    "NIFTY50": { "value": 22513.70, "change": 127.35, "change_pct": 0.57 },
-    "SENSEX": { "value": 74119.45, "change": 381.20, "change_pct": 0.52 },
-    "NIFTY_BANK": { "value": 48742.10, "change": -89.55, "change_pct": -0.18 },
-    "NIFTY_IT": { "value": 35186.30, "change": 423.80, "change_pct": 1.22 },
-    "NIFTY_MIDCAP100": { "value": 50341.25, "change": 290.40, "change_pct": 0.58 }
+    "NIFTY50": {
+      "value": 0,
+      "change": 0,
+      "change_pct": 0
+    },
+    "SENSEX": {
+      "value": 0,
+      "change": 0,
+      "change_pct": 0
+    },
+    "NIFTY_BANK": {
+      "value": 0,
+      "change": 0,
+      "change_pct": 0
+    },
+    "NIFTY_IT": {
+      "value": 0,
+      "change": 0,
+      "change_pct": 0
+    },
+    "NIFTY_MIDCAP100": {
+      "value": 0,
+      "change": 0,
+      "change_pct": 0
+    }
   },
   "market_breadth": {
-    "advances": 1923, "declines": 1541, "unchanged": 112,
-    "new_52w_high": 87, "new_52w_low": 23
+    "advances": 0,
+    "declines": 0,
+    "unchanged": 0,
+    "new_52w_high": 0,
+    "new_52w_low": 0
   },
-  "top_picks": [
-    { "rank": 1, "symbol": "HCLTECH", "name": "HCL Technologies Ltd", "sector": "IT", "current_price": 1587.40, "change_pct": 2.14, "score": 84, "signal": "STRONG BUY", "confidence": "HIGH", "target_price": 1680.00, "stop_loss": 1530.00, "risk_reward": 3.1, "scores": { "trend": 27, "momentum": 22, "volume": 17, "breakout": 13, "price_action": 5 }, "indicators": { "rsi": 59.2, "macd_signal": "Bullish Crossover", "sma_alignment": "Full Bull (Price > 20 > 50 > 200)", "volume_ratio": 1.92, "week52_pct": 4.8, "atr": 32.4, "bb_position": 0.82 }, "reasons": [ "Full bullish SMA alignment (price > 20/50/200 SMA)", "RSI at optimal buy zone (59.2) — not overbought", "Volume spike 1.9x the 20-day average", "MACD bullish crossover confirmed", "Only 4.8% below 52-week high", "OBV trending up for 8 consecutive sessions" ] },
-    { "rank": 2, "symbol": "WIPRO", "name": "Wipro Ltd", "sector": "IT", "current_price": 478.25, "change_pct": 1.87, "score": 80, "signal": "STRONG BUY", "confidence": "HIGH", "target_price": 510.00, "stop_loss": 458.00, "risk_reward": 2.9, "scores": { "trend": 25, "momentum": 21, "volume": 16, "breakout": 13, "price_action": 5 }, "indicators": { "rsi": 56.8, "macd_signal": "Bullish", "sma_alignment": "Full Bull (Price > 20 > 50 > 200)", "volume_ratio": 1.74, "week52_pct": 3.2, "atr": 9.8, "bb_position": 0.79 }, "reasons": [ "Breaking above 20-day high on high volume", "Full bullish SMA alignment confirmed", "RSI at sweet spot (56.8)", "Bollinger Band squeeze breakout forming", "Volume 1.7x above average with price participation", "3.2% from 52-week high — momentum stock" ] },
-    { "rank": 3, "symbol": "TITAN", "name": "Titan Company Ltd", "sector": "Consumer Discretionary", "current_price": 3421.80, "change_pct": 1.45, "score": 77, "signal": "BUY", "confidence": "HIGH", "target_price": 3620.00, "stop_loss": 3310.00, "risk_reward": 2.6, "scores": { "trend": 24, "momentum": 20, "volume": 15, "breakout": 13, "price_action": 5 }, "indicators": { "rsi": 62.1, "macd_signal": "Bullish", "sma_alignment": "Full Bull (Price > 20 > 50 > 200)", "volume_ratio": 1.58, "week52_pct": 6.1, "atr": 68.4, "bb_position": 0.76 }, "reasons": [ "Price breaking out of 3-week consolidation range", "RSI strengthening without being overbought (62.1)", "MACD histogram expanding bullishly", "Volume 1.6x above 20-day average", "Consumer discretionary sector showing strength", "Strong bullish candle closing near day's high" ] },
-    { "rank": 4, "symbol": "RELIANCE", "name": "Reliance Industries Ltd", "sector": "Conglomerate", "current_price": 1298.55, "change_pct": 0.92, "score": 75, "signal": "BUY", "confidence": "HIGH", "target_price": 1380.00, "stop_loss": 1255.00, "risk_reward": 2.4, "scores": { "trend": 25, "momentum": 19, "volume": 15, "breakout": 11, "price_action": 5 }, "indicators": { "rsi": 53.7, "macd_signal": "Bullish", "sma_alignment": "Full Bull (Price > 20 > 50 > 200)", "volume_ratio": 1.48, "week52_pct": 9.4, "atr": 25.6, "bb_position": 0.68 }, "reasons": [ "Heavyweight stock with full bullish SMA alignment", "RSI at healthy recovery zone (53.7)", "Volume above average with sustained buying", "MACD showing positive divergence", "Strong support at SMA50 — tested and held", "Consolidation period likely ending" ] },
-    { "rank": 5, "symbol": "APOLLOHOSP", "name": "Apollo Hospitals Enterprise", "sector": "Healthcare", "current_price": 6847.30, "change_pct": 1.68, "score": 73, "signal": "BUY", "confidence": "MEDIUM", "target_price": 7250.00, "stop_loss": 6620.00, "risk_reward": 2.7, "scores": { "trend": 22, "momentum": 20, "volume": 14, "breakout": 12, "price_action": 5 }, "indicators": { "rsi": 60.4, "macd_signal": "Bullish Crossover", "sma_alignment": "Bull (Price > 50 > 200 SMA)", "volume_ratio": 1.62, "week52_pct": 7.8, "atr": 138.2, "bb_position": 0.74 }, "reasons": [ "Healthcare sector momentum building", "RSI bullish at 60.4 with room to run", "Fresh MACD signal line crossover", "Volume confirming the breakout", "7.8% from 52-week high — chasing momentum", "Price reclaimed SMA20 after brief pullback" ] },
-    { "rank": 6, "symbol": "BAJFINANCE", "name": "Bajaj Finance Ltd", "sector": "NBFC", "current_price": 8934.60, "change_pct": 0.74, "score": 71, "signal": "BUY", "confidence": "MEDIUM", "target_price": 9450.00, "stop_loss": 8620.00, "risk_reward": 2.4, "scores": { "trend": 23, "momentum": 18, "volume": 14, "breakout": 11, "price_action": 5 }, "indicators": { "rsi": 54.1, "macd_signal": "Bullish", "sma_alignment": "Full Bull (Price > 20 > 50 > 200)", "volume_ratio": 1.39, "week52_pct": 8.9, "atr": 179.6, "bb_position": 0.64 }, "reasons": [ "NBFC sector recovering post-RBI policy clarity", "Price above all key moving averages", "RSI trending up from oversold recovery", "Institutional buying detected via OBV", "Support at SMA50 tested and held strongly", "Price channel breakout with volume" ] },
-    { "rank": 7, "symbol": "SUNPHARMA", "name": "Sun Pharmaceutical Industries", "sector": "Pharma", "current_price": 1734.50, "change_pct": 1.23, "score": 70, "signal": "BUY", "confidence": "MEDIUM", "target_price": 1840.00, "stop_loss": 1675.00, "risk_reward": 2.5, "scores": { "trend": 22, "momentum": 18, "volume": 14, "breakout": 11, "price_action": 5 }, "indicators": { "rsi": 57.9, "macd_signal": "Bullish", "sma_alignment": "Full Bull (Price > 20 > 50 > 200)", "volume_ratio": 1.51, "week52_pct": 5.6, "atr": 34.8, "bb_position": 0.71 }, "reasons": [ "Pharma index outperforming broader market", "RSI recovering from mid-range (57.9)", "Clean price structure above all MAs", "Volume surging with price move", "Near 52-week highs — strong momentum", "MACD showing upward trajectory" ] },
-    { "rank": 8, "symbol": "MARUTI", "name": "Maruti Suzuki India Ltd", "sector": "Automobiles", "current_price": 12187.40, "change_pct": 0.61, "score": 68, "signal": "BUY", "confidence": "MEDIUM", "target_price": 12900.00, "stop_loss": 11780.00, "risk_reward": 2.2, "scores": { "trend": 21, "momentum": 17, "volume": 14, "breakout": 11, "price_action": 5 }, "indicators": { "rsi": 52.3, "macd_signal": "Mildly Bullish", "sma_alignment": "Bull (Price > 50 > 200 SMA)", "volume_ratio": 1.44, "week52_pct": 11.2, "atr": 243.7, "bb_position": 0.58 }, "reasons": [ "Auto sector gaining on rural demand data", "Price holding above critical SMA50 support", "Volume picking up after 3-day consolidation", "RSI building momentum from neutral zone", "MACD turning positive after weeks below zero", "Monthly chart showing reversal candle" ] },
-    { "rank": 9, "symbol": "LTIM", "name": "LTIMindtree Ltd", "sector": "IT", "current_price": 5618.30, "change_pct": 2.45, "score": 67, "signal": "BUY", "confidence": "MEDIUM", "target_price": 5960.00, "stop_loss": 5420.00, "risk_reward": 2.3, "scores": { "trend": 20, "momentum": 18, "volume": 13, "breakout": 11, "price_action": 5 }, "indicators": { "rsi": 58.6, "macd_signal": "Bullish Crossover", "sma_alignment": "Bull (Price > 20 > 50 SMA)", "volume_ratio": 1.67, "week52_pct": 14.3, "atr": 112.4, "bb_position": 0.73 }, "reasons": [ "Mid-cap IT catching up with large-cap rally", "Strong RSI at 58.6 with bullish bias", "Fresh MACD crossover on high volume", "Price recovering above SMA20 and SMA50", "Volume 1.7x average showing institutional interest", "Sector tailwind from IT spending recovery" ] },
-    { "rank": 10, "symbol": "TRENT", "name": "Trent Ltd", "sector": "Retail", "current_price": 5841.20, "change_pct": 1.94, "score": 66, "signal": "BUY", "confidence": "MEDIUM", "target_price": 6180.00, "stop_loss": 5620.00, "risk_reward": 2.2, "scores": { "trend": 20, "momentum": 17, "volume": 13, "breakout": 11, "price_action": 5 }, "indicators": { "rsi": 63.4, "macd_signal": "Bullish", "sma_alignment": "Bull (Price > 20 > 50 SMA)", "volume_ratio": 1.55, "week52_pct": 9.7, "atr": 117.2, "bb_position": 0.78 }, "reasons": [ "Consumer retail momentum continuing", "RSI strong at 63.4 — healthy uptrend", "Price well above all near-term MAs", "Volume consistent with accumulation pattern", "Bollinger Band position suggests more upside", "Strong recent earnings supporting price" ] }
-  ],
-  "watchlist": [
-    { "symbol": "INFY", "name": "Infosys Ltd", "sector": "IT", "current_price": 1567.80, "score": 61, "signal": "WATCH", "reason": "RSI recovering — wait for confirmation above 1580" },
-    { "symbol": "ICICIBANK", "name": "ICICI Bank Ltd", "sector": "Banking", "current_price": 1245.30, "score": 59, "signal": "WATCH", "reason": "MACD turning — volume needs to pick up" },
-    { "symbol": "ADANIPORTS", "name": "Adani Ports & SEZ", "sector": "Infra", "current_price": 1387.60, "score": 58, "signal": "WATCH", "reason": "Breakout level at 1400 — monitor closely" },
-    { "symbol": "NTPC", "name": "NTPC Ltd", "sector": "Power", "current_price": 341.25, "score": 57, "signal": "WATCH", "reason": "Power sector building — wait for SMA20 reclaim" },
-    { "symbol": "HINDUNILVR", "name": "Hindustan Unilever", "sector": "FMCG", "current_price": 2287.40, "score": 55, "signal": "WATCH", "reason": "FMCG defensive play — volume not confirming yet" }
-  ],
-  "avoid": [
-    { "symbol": "PAYTM", "name": "One97 Communications", "sector": "Fintech", "current_price": 784.30, "score": 22, "reason": "Price below all MAs, RSI bearish, weak volume" },
-    { "symbol": "ZOMATO", "name": "Zomato Ltd", "sector": "Internet", "current_price": 217.50, "score": 28, "reason": "Overbought RSI (76), volume declining on price rise" },
-    { "symbol": "UPL", "name": "UPL Ltd", "sector": "Agrochemicals", "current_price": 489.10, "score": 25, "reason": "Death cross (SMA50 < SMA200), fundamental concerns" }
-  ],
-  "sector_momentum": [
-    { "sector": "IT", "score": 78, "trend": "up" },
-    { "sector": "Healthcare", "score": 72, "trend": "up" },
-    { "sector": "Consumer Discretionary", "score": 68, "trend": "up" },
-    { "sector": "FMCG", "score": 62, "trend": "neutral" },
-    { "sector": "Automobiles", "score": 61, "trend": "neutral" },
-    { "sector": "NBFC", "score": 59, "trend": "neutral" },
-    { "sector": "Banking", "score": 54, "trend": "neutral" },
-    { "sector": "Energy", "score": 48, "trend": "down" },
-    { "sector": "Metals", "score": 42, "trend": "down" },
-    { "sector": "Realty", "score": 38, "trend": "down" }
-  ]
+  "short_term": {
+    "label": "Short Term (5\u201315 days)",
+    "picks": []
+  },
+  "medium_term": {
+    "label": "Medium Term (4\u201312 weeks)",
+    "picks": []
+  },
+  "long_term": {
+    "label": "Long Term (6\u201318 months)",
+    "picks": []
+  },
+  "top_picks": [],
+  "watchlist": [],
+  "avoid": [],
+  "sector_momentum": []
 }
