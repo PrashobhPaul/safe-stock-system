@@ -1,735 +1,493 @@
 """
-analyze.py — StockSage India
-==============================
-Rule-based stock scoring engine. Replaces gpt_analyze.py.
-Reads OHLCV data from stock_data.db (built by data_fetch.py),
-applies 20+ technical indicators across 5 scoring categories,
-and outputs predictions.json for the static HTML dashboard.
+analyze.py — StockSage India v3 (Rules Engine)
+================================================
+Orchestrator. Runs:
+  1. ResilientFetcher over the full universe (focused portfolio + broad NSE).
+  2. rules_engine.PortfolioAnalyzer over the focused portfolio holdings.
+  3. A legacy-shape projection for the existing index.html scanner UI.
 
-Scoring categories (total 0–100):
-  Trend Analysis  : 0–30 pts
-  Momentum        : 0–25 pts
-  Volume          : 0–20 pts
-  Breakout        : 0–15 pts
-  Price Action    : 0–10 pts
+Writes predictions.json with BOTH shapes so:
+  • portfolio.html consumes the new `portfolio` block
+  • index.html consumes the legacy `top_picks/short_term/...` block
 
-No OpenAI API key needed. Zero paid services.
+Zero LLM. Zero paid services. Every failure is handled — the pipeline
+NEVER crashes GitHub Actions.
 """
 
+from __future__ import annotations
+
 import json
-import sqlite3
 import logging
+import sys
+from dataclasses import asdict
 from datetime import datetime, date
+from pathlib import Path
+from typing import Optional
+
 import pytz
 
-import numpy as np
-import pandas as pd
+from resilient_fetcher import ResilientFetcher
+from rules_engine import (
+    PortfolioAnalyzer,
+    TechnicalScorer,
+    TechnicalSnapshot,
+    load_config,
+)
 
+IST = pytz.timezone("Asia/Kolkata")
+log = logging.getLogger("analyze")
 logging.basicConfig(
     level=logging.INFO,
     format="%(asctime)s [%(levelname)s] %(message)s",
     datefmt="%H:%M:%S",
 )
-log = logging.getLogger("analyze")
 
-IST = pytz.timezone("Asia/Kolkata")
+ROOT = Path(__file__).resolve().parent
+CONFIG_PATH = ROOT / "focused_portfolio.yml"
+OUTPUT_PATH = ROOT / "predictions.json"
+DB_PATH = str(ROOT / "stock_data.db")
 
-# ─────────────────────────────────────────────────────────────
-# METADATA — Names and Sectors
-# ─────────────────────────────────────────────────────────────
 
-STOCK_META = {
-    "RELIANCE.NS":   ("Reliance Industries Ltd",        "Conglomerate"),
-    "TCS.NS":        ("Tata Consultancy Services",       "IT"),
-    "INFY.NS":       ("Infosys Ltd",                     "IT"),
-    "ICICIBANK.NS":  ("ICICI Bank Ltd",                  "Banking"),
-    "HDFCBANK.NS":   ("HDFC Bank Ltd",                   "Banking"),
-    "KOTAKBANK.NS":  ("Kotak Mahindra Bank",             "Banking"),
-    "LT.NS":         ("Larsen & Toubro Ltd",             "Infrastructure"),
-    "SBIN.NS":       ("State Bank of India",             "Banking"),
-    "AXISBANK.NS":   ("Axis Bank Ltd",                   "Banking"),
-    "BAJFINANCE.NS": ("Bajaj Finance Ltd",               "NBFC"),
-    "TATAMOTORS.NS": ("Tata Motors Ltd",                 "Automobiles"),
-    "TATASTEEL.NS":  ("Tata Steel Ltd",                  "Metals"),
-    "HINDUNILVR.NS": ("Hindustan Unilever Ltd",          "FMCG"),
-    "ITC.NS":        ("ITC Ltd",                         "FMCG"),
-    "WIPRO.NS":      ("Wipro Ltd",                       "IT"),
-    "TECHM.NS":      ("Tech Mahindra Ltd",               "IT"),
-    "NTPC.NS":       ("NTPC Ltd",                        "Power"),
-    "POWERGRID.NS":  ("Power Grid Corp",                 "Power"),
-    "ONGC.NS":       ("Oil & Natural Gas Corp",          "Oil & Gas"),
-    "COALINDIA.NS":  ("Coal India Ltd",                  "Mining"),
-    "BHARTIARTL.NS": ("Bharti Airtel Ltd",               "Telecom"),
-    "ADANIPORTS.NS": ("Adani Ports & SEZ",               "Infrastructure"),
-    "ULTRACEMCO.NS": ("UltraTech Cement",                "Cement"),
-    "GRASIM.NS":     ("Grasim Industries",               "Cement"),
-    "NESTLEIND.NS":  ("Nestle India Ltd",                "FMCG"),
-    "MARUTI.NS":     ("Maruti Suzuki India",             "Automobiles"),
-    "ASIANPAINT.NS": ("Asian Paints Ltd",                "Paints"),
-    "SUNPHARMA.NS":  ("Sun Pharmaceutical Industries",   "Pharma"),
-    "CIPLA.NS":      ("Cipla Ltd",                       "Pharma"),
-    "DRREDDY.NS":    ("Dr. Reddy's Laboratories",        "Pharma"),
-    "BAJAJ-AUTO.NS": ("Bajaj Auto Ltd",                  "Automobiles"),
-    "HEROMOTOCO.NS": ("Hero MotoCorp Ltd",               "Automobiles"),
-    "EICHERMOT.NS":  ("Eicher Motors Ltd",               "Automobiles"),
-    "HCLTECH.NS":    ("HCL Technologies Ltd",            "IT"),
-    "DIVISLAB.NS":   ("Divi's Laboratories",             "Pharma"),
-    "SBILIFE.NS":    ("SBI Life Insurance",              "Insurance"),
-    "HDFCLIFE.NS":   ("HDFC Life Insurance",             "Insurance"),
-    "ICICIPRULI.NS": ("ICICI Prudential Life",           "Insurance"),
-    "BRITANNIA.NS":  ("Britannia Industries",            "FMCG"),
-    "SHREECEM.NS":   ("Shree Cement Ltd",                "Cement"),
-    "TRENT.NS":      ("Trent Ltd",                       "Retail"),
-    "TATAELXSI.NS":  ("Tata Elxsi Ltd",                  "IT"),
-    "JSWENERGY.NS":  ("JSW Energy Ltd",                  "Power"),
-    "TVSMOTOR.NS":   ("TVS Motor Company",               "Automobiles"),
-    "ZOMATO.NS":     ("Zomato Ltd",                      "Internet"),
-    "NHPC.NS":       ("NHPC Ltd",                        "Power"),
-    "DIXON.NS":      ("Dixon Technologies",              "Electronics"),
-    "TITAN.NS":      ("Titan Company Ltd",               "Consumer Disc."),
-    "BAJAJFINSV.NS": ("Bajaj Finserv Ltd",               "NBFC"),
-    "M&M.NS":        ("Mahindra & Mahindra",             "Automobiles"),
-    "APOLLOHOSP.NS": ("Apollo Hospitals Enterprise",     "Healthcare"),
-    "TATACONSUM.NS": ("Tata Consumer Products",          "FMCG"),
-    "JSWSTEEL.NS":   ("JSW Steel Ltd",                   "Metals"),
-    "BPCL.NS":       ("Bharat Petroleum Corp",           "Oil & Gas"),
-    "INDUSINDBK.NS": ("IndusInd Bank Ltd",               "Banking"),
-    "HINDALCO.NS":   ("Hindalco Industries",             "Metals"),
-    "VEDL.NS":       ("Vedanta Ltd",                     "Metals"),
-    "PFC.NS":        ("Power Finance Corp",              "NBFC"),
-    "RECLTD.NS":     ("REC Ltd",                         "NBFC"),
-    "HAL.NS":        ("Hindustan Aeronautics",           "Defence"),
-    "BEL.NS":        ("Bharat Electronics",              "Defence"),
-    "IRCTC.NS":      ("Indian Railway Catering",         "Travel"),
-    "NAUKRI.NS":     ("Info Edge India",                 "Internet"),
-    "PIDILITIND.NS": ("Pidilite Industries",             "Chemicals"),
-    "HAVELLS.NS":    ("Havells India",                   "Electricals"),
-    "LTIM.NS":       ("LTIMindtree Ltd",                 "IT"),
-    "PERSISTENT.NS": ("Persistent Systems",              "IT"),
-    "COFORGE.NS":    ("Coforge Ltd",                     "IT"),
-    "POLYCAB.NS":    ("Polycab India",                   "Electricals"),
-    "MUTHOOTFIN.NS": ("Muthoot Finance",                 "NBFC"),
-    "CHOLAFIN.NS":   ("Cholamandalam Investment",        "NBFC"),
-    "BANKBARODA.NS": ("Bank of Baroda",                  "Banking"),
-    "FEDERALBNK.NS": ("Federal Bank Ltd",               "Banking"),
-    "IDFCFIRSTB.NS": ("IDFC First Bank",                 "Banking"),
-    "DABUR.NS":      ("Dabur India Ltd",                 "FMCG"),
-    "MARICO.NS":     ("Marico Ltd",                      "FMCG"),
-    "GODREJCP.NS":   ("Godrej Consumer Products",        "FMCG"),
-    "COLPAL.NS":     ("Colgate-Palmolive India",         "FMCG"),
-    "AMBUJACEM.NS":  ("Ambuja Cements",                  "Cement"),
-    "ACC.NS":        ("ACC Ltd",                         "Cement"),
-    "BERGEPAINT.NS": ("Berger Paints India",             "Paints"),
-    "AUROPHARMA.NS": ("Aurobindo Pharma",                "Pharma"),
-    "LUPIN.NS":      ("Lupin Ltd",                       "Pharma"),
+# ─────────────────────────────────────────────────────────────────────────────
+# Broader universe — used by the legacy index.html scanner view.
+# Union of focused tickers + existing blue-chips. Deduped.
+# ─────────────────────────────────────────────────────────────────────────────
+
+BROAD_UNIVERSE = [
+    # ── Core blue chips ────────────────────────────────────────────────
+    "RELIANCE.NS", "TCS.NS", "INFY.NS", "HDFCBANK.NS", "ICICIBANK.NS",
+    "KOTAKBANK.NS", "AXISBANK.NS", "SBIN.NS", "BAJFINANCE.NS", "BAJAJFINSV.NS",
+    "LT.NS", "ITC.NS", "HINDUNILVR.NS", "BHARTIARTL.NS", "MARUTI.NS",
+    "M&M.NS", "TATAMOTORS.NS", "TATASTEEL.NS", "JSWSTEEL.NS", "HINDALCO.NS",
+    "SUNPHARMA.NS", "CIPLA.NS", "DRREDDY.NS", "DIVISLAB.NS",
+    "WIPRO.NS", "HCLTECH.NS", "TECHM.NS", "LTIM.NS", "PERSISTENT.NS", "COFORGE.NS",
+    "NTPC.NS", "POWERGRID.NS", "ONGC.NS", "COALINDIA.NS", "BPCL.NS",
+    "ADANIPORTS.NS", "ULTRACEMCO.NS", "GRASIM.NS", "NESTLEIND.NS",
+    "ASIANPAINT.NS", "BAJAJ-AUTO.NS", "HEROMOTOCO.NS", "EICHERMOT.NS",
+    "SBILIFE.NS", "HDFCLIFE.NS", "ICICIPRULI.NS", "BRITANNIA.NS", "SHREECEM.NS",
+    "TRENT.NS", "TATAELXSI.NS", "JSWENERGY.NS", "TVSMOTOR.NS",
+    "ZOMATO.NS", "NHPC.NS", "DIXON.NS", "TITAN.NS", "APOLLOHOSP.NS",
+    "TATACONSUM.NS", "INDUSINDBK.NS", "VEDL.NS", "PFC.NS", "RECLTD.NS",
+    "HAL.NS", "BEL.NS", "IRCTC.NS", "NAUKRI.NS", "PIDILITIND.NS", "HAVELLS.NS",
+    "POLYCAB.NS", "MUTHOOTFIN.NS", "CHOLAFIN.NS", "BANKBARODA.NS",
+    "FEDERALBNK.NS", "IDFCFIRSTB.NS", "DABUR.NS", "MARICO.NS", "GODREJCP.NS",
+    "COLPAL.NS", "AMBUJACEM.NS", "ACC.NS", "BERGEPAINT.NS", "AUROPHARMA.NS", "LUPIN.NS",
+    # ── Focused portfolio additions (from focused_portfolio.yml) ──────
+    "ECLERX.NS", "CHAMBLFERT.NS", "ARE&M.NS", "HYUNDAI.NS", "SBICARD.NS",
+    "TATAPOWER.NS", "KPITTECH.NS", "TATACAP.NS", "JBMA.NS", "EXIDEIND.NS",
+    "BLS.NS", "ETERNAL.NS", "TARIL.NS", "IREDA.NS", "POONAWALLA.NS",
+    "TEXRAIL.NS", "SERVOTECH.NS", "SIEMENS.NS", "DEEPAKNTR.NS", "ZENTEC.NS",
+    "GREENPOWER.NS", "ZINKA.NS", "CROMPTON.NS", "DMART.NS", "TATAINVEST.NS",
+    "COCHINSHIP.NS", "AURIONPRO.NS", "SUZLON.NS", "EASEMYTRIP.NS",
+    "HUHTAMAKI.NS", "GREAVESCOT.NS", "RPOWER.NS", "OLAELEC.NS", "PCJEWELLER.NS",
+    "CYIENTDLM.NS", "ADSL.NS", "BSE.NS", "NELCO.NS", "SWIGGY.NS", "URBAN.NS",
+    "MON150BEES.NS",  # alternate ETF ticker candidate
+]
+
+SECTOR_MAP = {
+    "RELIANCE.NS": "Conglomerate",  "TCS.NS": "IT", "INFY.NS": "IT",
+    "HDFCBANK.NS": "Banking", "ICICIBANK.NS": "Banking", "KOTAKBANK.NS": "Banking",
+    "AXISBANK.NS": "Banking", "SBIN.NS": "Banking", "BAJFINANCE.NS": "NBFC",
+    "BAJAJFINSV.NS": "NBFC", "LT.NS": "Infrastructure", "ITC.NS": "FMCG",
+    "HINDUNILVR.NS": "FMCG", "BHARTIARTL.NS": "Telecom", "MARUTI.NS": "Automobiles",
+    "M&M.NS": "Automobiles", "TATAMOTORS.NS": "Automobiles", "TATASTEEL.NS": "Metals",
+    "JSWSTEEL.NS": "Metals", "HINDALCO.NS": "Metals", "SUNPHARMA.NS": "Pharma",
+    "CIPLA.NS": "Pharma", "DRREDDY.NS": "Pharma", "DIVISLAB.NS": "Pharma",
+    "WIPRO.NS": "IT", "HCLTECH.NS": "IT", "TECHM.NS": "IT", "LTIM.NS": "IT",
+    "PERSISTENT.NS": "IT", "COFORGE.NS": "IT", "KPITTECH.NS": "IT",
+    "TATAELXSI.NS": "IT", "ECLERX.NS": "IT",
+    "NTPC.NS": "Power", "POWERGRID.NS": "Power", "NHPC.NS": "Power",
+    "JSWENERGY.NS": "Power", "TATAPOWER.NS": "Power", "SUZLON.NS": "Power",
+    "IREDA.NS": "NBFC", "ONGC.NS": "Oil & Gas", "COALINDIA.NS": "Mining",
+    "BPCL.NS": "Oil & Gas", "ADANIPORTS.NS": "Infrastructure",
+    "ULTRACEMCO.NS": "Cement", "GRASIM.NS": "Cement", "AMBUJACEM.NS": "Cement",
+    "ACC.NS": "Cement", "SHREECEM.NS": "Cement", "NESTLEIND.NS": "FMCG",
+    "ASIANPAINT.NS": "Paints", "BERGEPAINT.NS": "Paints",
+    "BAJAJ-AUTO.NS": "Automobiles", "HEROMOTOCO.NS": "Automobiles",
+    "EICHERMOT.NS": "Automobiles", "TVSMOTOR.NS": "Automobiles",
+    "SBILIFE.NS": "Insurance", "HDFCLIFE.NS": "Insurance",
+    "ICICIPRULI.NS": "Insurance", "BRITANNIA.NS": "FMCG", "TRENT.NS": "Retail",
+    "DMART.NS": "Retail", "ZOMATO.NS": "Internet", "ETERNAL.NS": "Internet",
+    "SWIGGY.NS": "Internet", "NAUKRI.NS": "Internet", "URBAN.NS": "Internet",
+    "ZINKA.NS": "Logistics", "DIXON.NS": "Electronics", "TITAN.NS": "Consumer Disc.",
+    "APOLLOHOSP.NS": "Healthcare", "TATACONSUM.NS": "FMCG",
+    "INDUSINDBK.NS": "Banking", "BANKBARODA.NS": "Banking",
+    "FEDERALBNK.NS": "Banking", "IDFCFIRSTB.NS": "Banking",
+    "VEDL.NS": "Metals", "PFC.NS": "NBFC", "RECLTD.NS": "NBFC",
+    "MUTHOOTFIN.NS": "NBFC", "CHOLAFIN.NS": "NBFC", "POONAWALLA.NS": "NBFC",
+    "SBICARD.NS": "NBFC", "TATACAP.NS": "NBFC", "TATAINVEST.NS": "NBFC",
+    "BSE.NS": "Capital Markets", "HAL.NS": "Defence", "BEL.NS": "Defence",
+    "ZENTEC.NS": "Defence", "COCHINSHIP.NS": "Defence", "IRCTC.NS": "Travel",
+    "EASEMYTRIP.NS": "Travel", "PIDILITIND.NS": "Chemicals",
+    "DEEPAKNTR.NS": "Chemicals", "CHAMBLFERT.NS": "Chemicals",
+    "HAVELLS.NS": "Electricals", "POLYCAB.NS": "Electricals",
+    "CROMPTON.NS": "Electricals", "DABUR.NS": "FMCG", "MARICO.NS": "FMCG",
+    "GODREJCP.NS": "FMCG", "COLPAL.NS": "FMCG", "HUHTAMAKI.NS": "FMCG",
+    "AUROPHARMA.NS": "Pharma", "LUPIN.NS": "Pharma",
+    "EXIDEIND.NS": "Automobiles", "ARE&M.NS": "Automobiles",
+    "HYUNDAI.NS": "Automobiles", "JBMA.NS": "Automobiles",
+    "TARIL.NS": "Capital Goods", "SIEMENS.NS": "Capital Goods",
+    "TEXRAIL.NS": "Capital Goods", "GREAVESCOT.NS": "Capital Goods",
+    "AURIONPRO.NS": "IT", "BLS.NS": "Services", "OLAELEC.NS": "Automobiles",
+    "SERVOTECH.NS": "Power", "GREENPOWER.NS": "Power", "RPOWER.NS": "Power",
+    "CYIENTDLM.NS": "Electronics", "ADSL.NS": "IT",
+    "PCJEWELLER.NS": "Consumer Disc.", "NELCO.NS": "Telecom",
+    "MON150BEES.NS": "ETF",
 }
 
 
-# ─────────────────────────────────────────────────────────────
-# TECHNICAL INDICATORS
-# ─────────────────────────────────────────────────────────────
+# ─────────────────────────────────────────────────────────────────────────────
+# Legacy projection — derives old-shape top_picks/short_term/etc from the new
+# engine output so the existing index.html keeps working without any edits.
+# ─────────────────────────────────────────────────────────────────────────────
 
-def calc_rsi(close: pd.Series, period: int = 14) -> pd.Series:
-    delta = close.diff()
-    gain = delta.where(delta > 0, 0.0).rolling(period).mean()
-    loss = (-delta.where(delta < 0, 0.0)).rolling(period).mean()
-    rs = gain / loss.replace(0, np.nan)
-    return 100 - (100 / (1 + rs))
-
-
-def calc_macd(close: pd.Series, fast=12, slow=26, signal=9):
-    ema_fast = close.ewm(span=fast, adjust=False).mean()
-    ema_slow = close.ewm(span=slow, adjust=False).mean()
-    macd_line = ema_fast - ema_slow
-    signal_line = macd_line.ewm(span=signal, adjust=False).mean()
-    histogram = macd_line - signal_line
-    return macd_line, signal_line, histogram
+def _pick_category(tech: dict) -> str:
+    """Simple heuristic bucket for the legacy Short/Medium/Long panels."""
+    if not tech:
+        return "medium"
+    trend = (tech.get("components") or {}).get("trend", 0)
+    brk   = (tech.get("components") or {}).get("breakout", 0)
+    in_base = tech.get("in_base", False)
+    if brk >= 8 or (tech.get("volume_ratio") or 0) >= 1.5:
+        return "short"
+    if trend >= 20 and not in_base:
+        return "long"
+    return "medium"
 
 
-def calc_bollinger(close: pd.Series, period=20, std_dev=2):
-    sma = close.rolling(period).mean()
-    std = close.rolling(period).std()
-    upper = sma + std_dev * std
-    lower = sma - std_dev * std
-    width = (upper - lower) / sma.replace(0, np.nan)
-    position = (close - lower) / (upper - lower).replace(0, np.nan)
-    return sma, upper, lower, width, position
+def _tranche_entry_price(decision: dict) -> Optional[float]:
+    plan = decision.get("tranche_plan") or []
+    if plan:
+        return plan[0].get("price")
+    return decision.get("entry_ceiling") or decision.get("current_price")
 
 
-def calc_stochastic(df: pd.DataFrame, k_period=14, d_period=3):
-    low_min = df["low"].rolling(k_period).min()
-    high_max = df["high"].rolling(k_period).max()
-    denom = (high_max - low_min).replace(0, np.nan)
-    k = 100 * (df["close"] - low_min) / denom
-    d = k.rolling(d_period).mean()
-    return k, d
+def _legacy_pick(d: dict, cat: str, rank: int) -> dict:
+    """Map a Decision dict to the shape index.html's makeCard() expects."""
+    tech = d.get("tech") or {}
+    price = d.get("current_price") or 0
+    stop = d.get("stop_loss") or round(price * 0.94, 2) if price else 0
+    entry_p = _tranche_entry_price(d) or price
+    st_t = d.get("st_target") or (round(price * 1.10, 2) if price else 0)
+    lt_t = d.get("lt_target") or (round(price * 1.25, 2) if price else 0)
 
+    atr = tech.get("atr") or (price * 0.018 if price else 0)
 
-def calc_obv(close: pd.Series, volume: pd.Series) -> pd.Series:
-    direction = np.sign(close.diff()).fillna(0)
-    return (direction * volume).cumsum()
+    hold_dur_map = {"short": "5–15 trading days",
+                    "medium": "4–12 weeks",
+                    "long":   "6–18 months"}
 
+    # Legacy signal mapping
+    action = d.get("action", "HOLD")
+    legacy_sig = {
+        "ADD": "BUY" if (tech.get("score") or 0) < 75 else "STRONG BUY",
+        "WAIT_FOR_DIP": "WATCH",
+        "HOLD": "WATCH",
+        "TRIM": "WATCH",
+        "EXIT": "AVOID",
+        "BLACKOUT": "WATCH",
+        "DO_NOT_TRADE": "AVOID",
+    }.get(action, "WATCH")
 
-def calc_atr(df: pd.DataFrame, period=14) -> pd.Series:
-    high_low = df["high"] - df["low"]
-    high_close = (df["high"] - df["close"].shift()).abs()
-    low_close = (df["low"] - df["close"].shift()).abs()
-    tr = pd.concat([high_low, high_close, low_close], axis=1).max(axis=1)
-    return tr.rolling(period).mean()
-
-
-def calc_adx(df: pd.DataFrame, period=14):
-    high = df["high"]
-    low = df["low"]
-    close = df["close"]
-    plus_dm = high.diff()
-    minus_dm = -low.diff()
-    plus_dm = plus_dm.where((plus_dm > minus_dm) & (plus_dm > 0), 0)
-    minus_dm = minus_dm.where((minus_dm > plus_dm) & (minus_dm > 0), 0)
-    hl = high - low
-    hc = (high - close.shift()).abs()
-    lc = (low - close.shift()).abs()
-    tr = pd.concat([hl, hc, lc], axis=1).max(axis=1)
-    atr = tr.rolling(period).mean()
-    plus_di = 100 * (plus_dm.rolling(period).mean() / atr.replace(0, np.nan))
-    minus_di = 100 * (minus_dm.rolling(period).mean() / atr.replace(0, np.nan))
-    dx = 100 * (plus_di - minus_di).abs() / (plus_di + minus_di).replace(0, np.nan)
-    adx = dx.rolling(period).mean()
-    return adx, plus_di, minus_di
-
-
-def calc_roc(close: pd.Series, period=10) -> pd.Series:
-    return ((close - close.shift(period)) / close.shift(period).replace(0, np.nan)) * 100
-
-
-# ─────────────────────────────────────────────────────────────
-# SCORING ENGINE
-# ─────────────────────────────────────────────────────────────
-
-def score_stock(ticker: str, df: pd.DataFrame) -> dict | None:
-    """
-    Core scoring function. Applies 5-category rule-based scoring.
-    df columns expected: date, open, high, low, close, volume (lowercase)
-    """
-    if len(df) < 60:
-        return None
-
-    close = df["close"]
-    high = df["high"]
-    low = df["low"]
-    volume = df["volume"]
-    open_ = df["open"]
-
-    reasons = []
-
-    # ── Moving Averages ──
-    sma20 = close.rolling(20).mean()
-    sma50 = close.rolling(50).mean()
-    sma200 = close.rolling(200).mean() if len(df) >= 200 else pd.Series([np.nan] * len(df))
-    ema12 = close.ewm(span=12, adjust=False).mean()
-    ema26 = close.ewm(span=26, adjust=False).mean()
-    ema50 = close.ewm(span=50, adjust=False).mean()
-
-    # ── Indicators ──
-    rsi = calc_rsi(close)
-    macd_line, signal_line, histogram = calc_macd(close)
-    _, bb_upper, bb_lower, bb_width, bb_pos = calc_bollinger(close)
-    stoch_k, stoch_d = calc_stochastic(df)
-    obv = calc_obv(close, volume)
-    atr = calc_atr(df)
-    adx, plus_di, minus_di = calc_adx(df)
-    roc = calc_roc(close)
-
-    # Current values
-    c         = close.iloc[-1]
-    c_open    = open_.iloc[-1]
-    c_sma20   = sma20.iloc[-1]
-    c_sma50   = sma50.iloc[-1]
-    c_sma200  = sma200.iloc[-1]
-    c_ema12   = ema12.iloc[-1]
-    c_ema26   = ema26.iloc[-1]
-    c_ema50   = ema50.iloc[-1]
-    c_rsi     = rsi.iloc[-1]
-    c_macd    = macd_line.iloc[-1]
-    c_signal  = signal_line.iloc[-1]
-    c_hist    = histogram.iloc[-1]
-    c_hist_p  = histogram.iloc[-2] if len(histogram) > 1 else 0
-    c_bb_pos  = bb_pos.iloc[-1]
-    c_bb_w    = bb_width.iloc[-1]
-    c_stk_k   = stoch_k.iloc[-1]
-    c_stk_d   = stoch_d.iloc[-1]
-    c_adx     = adx.iloc[-1] if not np.isnan(adx.iloc[-1]) else 15.0
-    c_roc     = roc.iloc[-1]
-    c_atr     = atr.iloc[-1]
-
-    vol_avg = volume.rolling(20).mean().iloc[-1]
-    vol_ratio = (volume.iloc[-1] / vol_avg) if vol_avg > 0 else 1.0
-
-    # ── 1. TREND (0–30) ──
-    trend = 0
-    has_200 = not np.isnan(c_sma200)
-
-    if has_200:
-        if c > c_sma20 and c_sma20 > c_sma50 and c_sma50 > c_sma200:
-            trend += 12
-            reasons.append("Full bullish SMA alignment (price > 20 > 50 > 200 SMA)")
-        elif c > c_sma50 and c_sma50 > c_sma200:
-            trend += 8
-            reasons.append("Bullish SMA alignment (price > 50 > 200 SMA)")
-        elif c > c_sma200:
-            trend += 4
-
-        pct_above_200 = ((c - c_sma200) / c_sma200) * 100
-        if 5 <= pct_above_200 <= 25:
-            trend += 4
-        elif 0 < pct_above_200 < 5:
-            trend += 2
-    else:
-        if c > c_sma20 and c_sma20 > c_sma50:
-            trend += 8
-
-    if c_ema12 > c_ema26:
-        # Check fresh crossover within last 5 sessions
-        fresh = any(
-            ema12.iloc[-(i+1)] <= ema26.iloc[-(i+1)]
-            for i in range(1, min(6, len(ema12)))
-        )
-        if fresh:
-            trend += 6
-            reasons.append("Fresh EMA 12/26 bullish crossover")
-        else:
-            trend += 3
-
-    if c > c_ema50:
-        trend += 2
-
-    if not np.isnan(c_adx):
-        if c_adx >= 35:   trend += 5; reasons.append(f"Strong trend (ADX {c_adx:.0f})")
-        elif c_adx >= 25: trend += 3
-        elif c_adx >= 20: trend += 1
-
-    if not np.isnan(plus_di.iloc[-1]) and plus_di.iloc[-1] > minus_di.iloc[-1]:
-        trend += 2
-
-    trend = min(trend, 30)
-
-    # ── 2. MOMENTUM (0–25) ──
-    mom = 0
-    if not np.isnan(c_rsi):
-        if   50 <= c_rsi <= 65: mom += 12; reasons.append(f"RSI at optimal buy zone ({c_rsi:.1f})")
-        elif 45 <= c_rsi < 50:  mom += 7
-        elif 65 < c_rsi <= 70:  mom += 5
-        elif 40 <= c_rsi < 45:  mom += 3
-        elif 30 <= c_rsi < 40:  mom += 2
-
-    if c_macd > c_signal:
-        mom += 5
-        # Zero-line crossover (strong signal)
-        prev_macd = macd_line.iloc[-2] if len(macd_line) > 1 else c_macd
-        if c_macd > 0 and prev_macd <= 0:
-            mom += 4
-            reasons.append("MACD crossed zero line — strong bull signal")
-        else:
-            reasons.append("MACD bullish (above signal line)")
-
-    if c_hist > 0 and c_hist > c_hist_p:
-        mom += 4
-        reasons.append("MACD histogram expanding")
-    elif c_hist > 0:
-        mom += 1
-
-    if not np.isnan(c_stk_k) and 40 <= c_stk_k <= 80 and c_stk_k > c_stk_d:
-        mom += 3
-        if c_stk_k < 55:
-            mom += 1
-
-    if not np.isnan(c_roc) and c_roc > 3:
-        mom += 2
-
-    mom = min(mom, 25)
-
-    # ── 3. VOLUME (0–20) ──
-    vol = 0
-    if   vol_ratio >= 2.5: vol += 10; reasons.append(f"Volume surge {vol_ratio:.1f}x avg — institutional activity")
-    elif vol_ratio >= 2.0: vol += 8;  reasons.append(f"High volume {vol_ratio:.1f}x avg")
-    elif vol_ratio >= 1.5: vol += 6;  reasons.append(f"Above-average volume {vol_ratio:.1f}x avg")
-    elif vol_ratio >= 1.2: vol += 3
-    elif vol_ratio < 0.7:  vol -= 2
-
-    if len(obv) >= 10:
-        obv_slope = (obv.iloc[-1] - obv.iloc[-6]) / 5
-        obv_prev  = (obv.iloc[-6] - obv.iloc[-11]) / 5
-        if obv_slope > 0:
-            vol += 4
-            reasons.append("OBV trending up — accumulation detected")
-        if obv_slope > obv_prev:
-            vol += 2
-
-    if len(close) >= 6 and len(volume) >= 6:
-        price_up = close.iloc[-1] > close.iloc[-4]
-        vol_up   = volume.iloc[-3:].mean() > volume.iloc[-6:-3].mean()
-        if price_up and vol_up:
-            vol += 4
-            reasons.append("Price and volume both rising over 3 days")
-
-    vol = min(max(vol, 0), 20)
-
-    # ── 4. BREAKOUT (0–15) ──
-    brk = 0
-    if not np.isnan(c_bb_pos):
-        if   c_bb_pos >= 0.8: brk += 5; reasons.append("Price near upper Bollinger Band")
-        elif c_bb_pos >= 0.6: brk += 3
-        elif c_bb_pos < 0.2:  brk -= 2
-
-    if len(bb_width) >= 25:
-        avg_w = bb_width.rolling(20).mean().iloc[-1]
-        if not np.isnan(avg_w) and c_bb_w < avg_w * 0.80:
-            brk += 4
-            reasons.append("Bollinger Band squeeze — breakout likely")
-
-    if len(high) >= 21:
-        high_20 = high.iloc[-21:-1].max()
-        if c > high_20:
-            brk += 5
-            reasons.append("Breaking above 20-day high")
-        elif len(high) >= 11 and c > high.iloc[-11:-1].max():
-            brk += 2
-
-    if len(high) >= 252 and c > high.iloc[-252:-1].max():
-        brk += 5
-        reasons.append("New 52-week high!")
-
-    brk = min(max(brk, 0), 15)
-
-    # ── 5. PRICE ACTION (0–10) ──
-    pa = 0
-    if len(close) >= 252:
-        w52h = high.iloc[-252:].max()
-        pct_from_high = ((w52h - c) / w52h) * 100
-        if   pct_from_high <= 3:  pa += 5; reasons.append(f"Near 52-week high ({pct_from_high:.1f}% away)")
-        elif pct_from_high <= 8:  pa += 3
-        elif pct_from_high <= 15: pa += 1
-
-    if len(close) >= 6:
-        ret5 = ((c - close.iloc[-6]) / close.iloc[-6]) * 100
-        if   ret5 >= 5:  pa += 3; reasons.append(f"Strong 5-day momentum (+{ret5:.1f}%)")
-        elif ret5 >= 2:  pa += 2
-        elif ret5 >= 0:  pa += 1
-
-    if c > c_open:
-        pa += 2 if ((c - c_open) / c_open) * 100 >= 1.5 else 1
-
-    if len(open_) >= 2 and c_open > close.iloc[-2] * 1.01:
-        pa += 2
-        reasons.append("Gap-up opening today")
-
-    pa = min(pa, 10)
-
-    # ── PENALTIES ──
-    penalty = 0
-    if not np.isnan(c_rsi) and c_rsi > 78:
-        penalty += 12
-    if has_200 and c_sma50 < c_sma200:
-        penalty += 8
-    if has_200 and c < c_sma200:
-        penalty += 6
-    if len(close) >= 10:
-        price_up_5 = c > close.iloc[-6]
-        vol_down_5 = volume.iloc[-5:].mean() < volume.iloc[-10:-5].mean() * 0.85
-        if price_up_5 and vol_down_5:
-            penalty += 4
-
-    # ── TOTAL ──
-    total = max(0, min(100, trend + mom + vol + brk + pa - penalty))
-
-    # Signal thresholds
-    if   total >= 75: signal, confidence = "STRONG BUY", "HIGH"
-    elif total >= 60: signal, confidence = "BUY",         "HIGH" if total >= 67 else "MEDIUM"
-    elif total >= 45: signal, confidence = "WATCH",       "MEDIUM"
-    else:             signal, confidence = "AVOID",       "LOW"
-
-    # Target / Stop via ATR
-    if not np.isnan(c_atr) and c_atr > 0:
-        target    = round(c + c_atr * 2.5, 2)
-        stop_loss = round(c - c_atr * 1.2, 2)
-        risk      = c - stop_loss
-        reward    = target - c
-        rr        = round(reward / risk, 1) if risk > 0 else 0.0
-    else:
-        pct = 0.07 if total >= 75 else 0.05
-        target    = round(c * (1 + pct), 2)
-        stop_loss = round(c * 0.96, 2)
-        rr        = round(pct / 0.04, 1)
-
-    # MACD string
-    prev_m = macd_line.iloc[-2] if len(macd_line) > 1 else c_macd
-    prev_s = signal_line.iloc[-2] if len(signal_line) > 1 else c_signal
-    if   c_macd > c_signal and prev_m <= prev_s: macd_str = "Bullish Crossover"
-    elif c_macd > c_signal:                       macd_str = "Bullish"
-    elif c_macd < c_signal:                       macd_str = "Bearish"
-    else:                                          macd_str = "Neutral"
-
-    # SMA alignment string
-    if has_200:
-        if c > c_sma20 > c_sma50 > c_sma200: sma_str = "Full Bull (Price > 20 > 50 > 200)"
-        elif c > c_sma50 > c_sma200:          sma_str = "Bull (Price > 50 > 200 SMA)"
-        elif c > c_sma200:                     sma_str = "Above 200 SMA"
-        elif c > c_sma50:                      sma_str = "Above 50 SMA only"
-        else:                                  sma_str = "Bearish"
-    else:
-        sma_str = "Bullish" if c > c_sma50 else "Bearish"
-
-    # 52W high %
-    w52_pct = None
-    if len(high) >= 252:
-        w52h = high.iloc[-252:].max()
-        w52_pct = round(((w52h - c) / w52h) * 100, 1)
-
-    # 1-day change
-    change_pct = round(((c - close.iloc[-2]) / close.iloc[-2]) * 100, 2) if len(close) >= 2 else 0.0
-    change     = round(c - close.iloc[-2], 2) if len(close) >= 2 else 0.0
+    symbol = (d.get("resolved_ticker") or "").replace(".NS", "") or d.get("name", "")
 
     return {
-        "score":        int(total),
-        "signal":       signal,
-        "confidence":   confidence,
-        "current_price": round(float(c), 2),
-        "change_pct":   change_pct,
-        "change":       change,
-        "target_price": round(float(target), 2),
-        "stop_loss":    round(float(stop_loss), 2),
-        "risk_reward":  rr,
-        "scores": {
-            "trend":        int(trend),
-            "momentum":     int(mom),
-            "volume":       int(vol),
-            "breakout":     int(brk),
-            "price_action": int(pa),
-        },
+        "rank": rank,
+        "symbol": symbol,
+        "name": d.get("name", symbol),
+        "sector": SECTOR_MAP.get(d.get("resolved_ticker") or "", "Other"),
+        "score": (tech.get("score") or 0),
+        "signal": legacy_sig,
+        "confidence": d.get("confidence", "MEDIUM"),
+        "current_price": price,
+        "change_pct": tech.get("change_pct", 0),
+        "change": 0,
+        "target_price": st_t,
+        "stop_loss": stop,
+        "risk_reward": d.get("risk_reward") or 0,
+        "holding_category": cat,
+        "scores": (tech.get("components") or {"trend":0,"momentum":0,"volume":0,"breakout":0,"price_action":0}),
         "indicators": {
-            "rsi":          round(float(c_rsi), 1) if not np.isnan(c_rsi) else None,
-            "macd_signal":  macd_str,
-            "sma_alignment": sma_str,
-            "volume_ratio": round(float(vol_ratio), 2),
-            "week52_pct":   w52_pct,
-            "atr":          round(float(c_atr), 2) if not np.isnan(c_atr) else None,
-            "bb_position":  round(float(c_bb_pos), 2) if not np.isnan(c_bb_pos) else None,
-            "adx":          round(float(c_adx), 1) if not np.isnan(c_adx) else None,
-            "stoch_k":      round(float(c_stk_k), 1) if not np.isnan(c_stk_k) else None,
+            "rsi":          tech.get("rsi"),
+            "macd_signal":  "Bullish" if (tech.get("trend_label") == "Uptrend") else
+                             "Bearish" if (tech.get("trend_label") == "Downtrend") else "Neutral",
+            "sma_alignment": tech.get("trend_label") or "—",
+            "volume_ratio": tech.get("volume_ratio"),
+            "week52_pct":   tech.get("pct_from_52h"),
+            "atr":          atr,
+            "bb_position":  None,
+            "adx":          tech.get("adx"),
         },
-        "reasons":   reasons[:6],
-        "penalty":   int(penalty),
+        "reasons": d.get("reasons", [])[:6],
+        "trade_plan": {
+            "category":  cat,
+            "cat_score": (tech.get("score") or 0),
+            "atr":       atr,
+            "atr_pct":   round(atr / price * 100, 2) if price else 0,
+            "entry": {
+                "ideal_price":    entry_p,
+                "limit_order":    round(entry_p * 0.9993, 2) if entry_p else 0,
+                "acceptable_max": round(price * 1.005, 2) if price else 0,
+                "entry_window":   {"short":  "09:15–09:45 AM IST",
+                                   "medium": "09:15–10:15 AM IST",
+                                   "long":   "09:15 AM IST (GTC)"}.get(cat, "09:15 AM IST"),
+                "order_strategy": {"short":  "Limit order, cancel if not filled by 09:45",
+                                   "medium": "Patient limit order",
+                                   "long":   "GTC limit — no urgency"}.get(cat, "Limit order"),
+                "note":           f"Engine action: {action}",
+            },
+            "exit": {
+                "target_conservative": round(st_t * 0.95, 2) if st_t else 0,
+                "target_ideal":        st_t,
+                "target_stretch":      lt_t,
+                "upside_conservative": round((st_t * 0.95 - entry_p) / entry_p * 100, 1) if entry_p else 0,
+                "upside_ideal":        round((st_t - entry_p) / entry_p * 100, 1) if entry_p else 0,
+                "upside_stretch":      round((lt_t - entry_p) / entry_p * 100, 1) if entry_p else 0,
+                "hold_min_days":       {"short": 5,  "medium": 30, "long": 180}[cat],
+                "hold_max_days":       {"short": 15, "medium": 90, "long": 540}[cat],
+                "hold_duration":       hold_dur_map[cat],
+                "sell_trigger":        d.get("narrative", "")[:160],
+                "hold_note":           {"short":"Review daily","medium":"Review weekly","long":"Review monthly"}[cat],
+            },
+        },
     }
 
 
-# ─────────────────────────────────────────────────────────────
-# SECTOR AGGREGATION
-# ─────────────────────────────────────────────────────────────
+def build_legacy_projection(engine_out: dict) -> dict:
+    """
+    Map the engine's portfolio buckets back to the legacy
+    index.html shape: top_picks, short_term, medium_term, long_term,
+    watchlist, avoid, sector_momentum.
+    """
+    all_d = engine_out.get("all_decisions", [])
+    # Separate: actionable buy-side vs hold-side vs exit-side
+    buy_side = [d for d in all_d if d["action"] in ("ADD", "WAIT_FOR_DIP")]
+    exit_side = [d for d in all_d if d["action"] in ("EXIT", "TRIM", "DO_NOT_TRADE")]
+    hold_side = [d for d in all_d if d["action"] in ("HOLD", "BLACKOUT")]
 
-def aggregate_sectors(results: list) -> list:
-    bucket: dict[str, list] = {}
-    for r in results:
-        s = r.get("sector", "Other")
-        bucket.setdefault(s, []).append(r["score"])
-    out = []
-    for sector, scores in bucket.items():
-        avg = sum(scores) / len(scores)
-        out.append({
-            "sector": sector,
-            "score":  int(avg),
-            "trend":  "up" if avg >= 62 else "down" if avg < 48 else "neutral",
-            "stocks_analyzed": len(scores),
-        })
-    return sorted(out, key=lambda x: x["score"], reverse=True)
+    # Sort buy_side by tech score descending
+    buy_side.sort(key=lambda d: (d.get("tech") or {}).get("score", 0), reverse=True)
 
+    shorts, mediums, longs, top_picks = [], [], [], []
+    for i, d in enumerate(buy_side):
+        cat = _pick_category(d.get("tech"))
+        card = _legacy_pick(d, cat, rank=len(top_picks) + 1)
+        top_picks.append(card)
+        if cat == "short" and len(shorts) < 5:
+            shorts.append(_legacy_pick(d, "short", len(shorts) + 1))
+        elif cat == "medium" and len(mediums) < 5:
+            mediums.append(_legacy_pick(d, "medium", len(mediums) + 1))
+        elif cat == "long" and len(longs) < 5:
+            longs.append(_legacy_pick(d, "long", len(longs) + 1))
+        if len(top_picks) >= 15:
+            break
 
-# ─────────────────────────────────────────────────────────────
-# MARKET BREADTH ESTIMATE
-# ─────────────────────────────────────────────────────────────
+    # Backfill any category that's light
+    def _fill(target: list, cat: str):
+        if len(target) >= 3:
+            return
+        for d in buy_side:
+            if len(target) >= 5:
+                break
+            sym = (d.get("resolved_ticker") or "").replace(".NS", "")
+            if any(x["symbol"] == sym for x in target):
+                continue
+            target.append(_legacy_pick(d, cat, len(target) + 1))
 
-def estimate_breadth(all_results: list) -> dict:
-    adv = sum(1 for r in all_results if r.get("change_pct", 0) > 0.25)
-    dec = sum(1 for r in all_results if r.get("change_pct", 0) < -0.25)
-    unch = len(all_results) - adv - dec
-    # Scale to NSE-wide estimate
-    k = 3500 / max(len(all_results), 1)
-    h52 = sum(1 for r in all_results if (r.get("indicators", {}).get("week52_pct") or 100) < 2)
-    l52 = sum(1 for r in all_results if r.get("score", 50) < 30)
+    _fill(shorts, "short"); _fill(mediums, "medium"); _fill(longs, "long")
+
+    watchlist = [{
+        "symbol": (d.get("resolved_ticker") or "").replace(".NS", ""),
+        "name":   d.get("name"),
+        "sector": SECTOR_MAP.get(d.get("resolved_ticker") or "", "Other"),
+        "current_price": d.get("current_price"),
+        "score":  (d.get("tech") or {}).get("score", 0),
+        "signal": "WATCH",
+        "reason": (d.get("reasons") or ["Monitor for entry"])[0],
+    } for d in hold_side[:10]]
+
+    avoid = [{
+        "symbol": (d.get("resolved_ticker") or "").replace(".NS", "") or d.get("name"),
+        "name":   d.get("name"),
+        "sector": SECTOR_MAP.get(d.get("resolved_ticker") or "", "Other"),
+        "current_price": d.get("current_price"),
+        "score":  (d.get("tech") or {}).get("score", 0),
+        "reason": (d.get("reasons") or ["Exit signal"])[0],
+    } for d in exit_side[:10]]
+
+    # Sector momentum from tech scores
+    sector_bucket: dict = {}
+    for d in all_d:
+        sym = d.get("resolved_ticker") or ""
+        sec = SECTOR_MAP.get(sym, "Other")
+        score = (d.get("tech") or {}).get("score")
+        if score is not None:
+            sector_bucket.setdefault(sec, []).append(score)
+    sector_momentum = sorted([
+        {"sector": s,
+         "score":  int(sum(v) / len(v)),
+         "trend":  "up" if sum(v) / len(v) >= 60 else "down" if sum(v) / len(v) < 45 else "neutral",
+         "stocks_analyzed": len(v)}
+        for s, v in sector_bucket.items() if v
+    ], key=lambda x: x["score"], reverse=True)[:12]
+
+    # Breadth estimate
+    all_scores = [(d.get("tech") or {}).get("score") for d in all_d]
+    all_scores = [s for s in all_scores if s is not None]
+    adv = sum(1 for s in all_scores if s >= 55)
+    dec = sum(1 for s in all_scores if s < 45)
+    unch = len(all_scores) - adv - dec
+    k = 3500 / max(len(all_scores), 1)
+
     return {
-        "advances":   int(adv * k),
-        "declines":   int(dec * k),
-        "unchanged":  int(unch * k),
-        "new_52w_high": int(h52 * k * 0.3),
-        "new_52w_low":  int(l52 * k * 0.15),
+        "top_picks":       top_picks,
+        "watchlist":       watchlist,
+        "avoid":           avoid,
+        "sector_momentum": sector_momentum,
+        "short_term":  {"label": "Short Term (5–15 days)",   "picks": shorts},
+        "medium_term": {"label": "Medium Term (4–12 weeks)", "picks": mediums},
+        "long_term":   {"label": "Long Term (6–18 months)",  "picks": longs},
+        "market_breadth": {
+            "advances": int(adv * k),
+            "declines": int(dec * k),
+            "unchanged": int(unch * k),
+            "new_52w_high": 0,
+            "new_52w_low": 0,
+        },
+        "indices": {
+            "NIFTY50":         {"value": 0, "change": 0, "change_pct": 0},
+            "SENSEX":          {"value": 0, "change": 0, "change_pct": 0},
+            "NIFTY_BANK":      {"value": 0, "change": 0, "change_pct": 0},
+            "NIFTY_IT":        {"value": 0, "change": 0, "change_pct": 0},
+            "NIFTY_MIDCAP100": {"value": 0, "change": 0, "change_pct": 0},
+        },
     }
 
 
-# ─────────────────────────────────────────────────────────────
-# INDEX DATA FROM DB
-# ─────────────────────────────────────────────────────────────
+# ─────────────────────────────────────────────────────────────────────────────
+# Main
+# ─────────────────────────────────────────────────────────────────────────────
 
-def build_index_snapshot(conn: sqlite3.Connection) -> dict:
-    """
-    Approximate Nifty/Sensex values from weighted avg of our stock universe.
-    (Actual index tickers require a separate yfinance fetch — done in data_fetch.py
-     if you add them to STOCKS, e.g. "^NSEI".)
-    Returns placeholder structure that index.html can display.
-    """
-    try:
-        df = pd.read_sql(
-            "SELECT stock, date, close FROM stock_prices WHERE date >= date('now','-5 days') ORDER BY date DESC",
-            conn,
-        )
-        if df.empty:
-            raise ValueError("No recent data")
-        latest = df["date"].max()
-        prev   = df[df["date"] < latest]["date"].max()
-
-        curr_avg = df[df["date"] == latest]["close"].mean()
-        prev_avg = df[df["date"] == prev]["close"].mean() if prev else curr_avg
-
-        chg = curr_avg - prev_avg
-        chg_pct = (chg / prev_avg * 100) if prev_avg else 0
-
-        # Synthetic index values (representative)
-        return {
-            "NIFTY50":        {"value": 22500.0,   "change": round(chg * 0.8,  2), "change_pct": round(chg_pct * 0.8,  2)},
-            "SENSEX":         {"value": 74100.0,   "change": round(chg * 2.6,  2), "change_pct": round(chg_pct * 0.8,  2)},
-            "NIFTY_BANK":     {"value": 48700.0,   "change": round(chg * 1.2,  2), "change_pct": round(chg_pct * 0.9,  2)},
-            "NIFTY_IT":       {"value": 35200.0,   "change": round(chg * 1.0,  2), "change_pct": round(chg_pct * 1.1,  2)},
-            "NIFTY_MIDCAP100":{"value": 50300.0,   "change": round(chg * 0.9,  2), "change_pct": round(chg_pct * 0.95, 2)},
-        }
-    except Exception as e:
-        log.warning(f"  Index snapshot: {e}")
-        return {}
+def _safe_date() -> str:
+    return date.today().strftime("%Y-%m-%d")
 
 
-# ─────────────────────────────────────────────────────────────
-# MAIN PIPELINE
-# ─────────────────────────────────────────────────────────────
-
-def main():
-    log.info("=" * 55)
-    log.info("  StockSage India — Rule-Based Analysis Engine")
+def main() -> int:
+    log.info("=" * 60)
+    log.info("  StockSage India v3 — Rule Engine Orchestrator")
     log.info(f"  {datetime.now(IST).strftime('%Y-%m-%d %H:%M:%S IST')}")
-    log.info("=" * 55)
+    log.info("=" * 60)
 
-    conn = sqlite3.connect("stock_data.db")
+    if not CONFIG_PATH.exists():
+        log.error(f"Missing config: {CONFIG_PATH}")
+        return _write_empty_output("config_missing")
 
-    # Load all stock data from DB
-    log.info("\n[1/3] Loading stock data from stock_data.db...")
-    df_all = pd.read_sql(
-        "SELECT * FROM stock_prices ORDER BY stock, date",
-        conn,
-    )
-    log.info(f"  Rows loaded: {len(df_all):,}")
+    cfg = load_config(str(CONFIG_PATH))
+    if not cfg.get("holdings"):
+        log.error("Config has no holdings")
+        return _write_empty_output("no_holdings")
 
-    # Score each stock
-    log.info(f"\n[2/3] Scoring {df_all['stock'].nunique()} stocks...")
-    all_results = []
+    log.info(f"[1/3] Loaded {len(cfg['holdings'])} focused holdings")
 
-    for ticker in df_all["stock"].unique():
-        df = df_all[df_all["stock"] == ticker].copy()
-        df = df.sort_values("date").reset_index(drop=True)
-        df = df.dropna(subset=["close"])
+    # ── Run engine on the focused portfolio ──
+    try:
+        fetcher = ResilientFetcher(db_path=DB_PATH)
+    except Exception as e:
+        log.error(f"Fetcher init failed: {e}")
+        return _write_empty_output(f"fetcher_init_error: {e}")
 
-        result = score_stock(ticker, df)
-        if result is None:
-            log.warning(f"  {ticker}: insufficient data — skipped")
-            continue
+    analyzer = PortfolioAnalyzer(cfg, fetcher)
+    log.info("[2/3] Running rule engine over focused portfolio...")
+    try:
+        engine_out = analyzer.run()
+    except Exception as e:
+        log.exception(f"Engine crashed: {e}")
+        return _write_empty_output(f"engine_error: {e}")
 
-        name, sector = STOCK_META.get(ticker, (ticker.replace(".NS", ""), "Other"))
-        result["ticker"] = ticker
-        result["symbol"] = ticker.replace(".NS", "")
-        result["name"]   = name
-        result["sector"] = sector
+    log.info(f"   regime : {engine_out['regime']['label']} "
+             f"({engine_out['regime']['breadth_pct']}% breadth)")
+    for a, n in engine_out["counts"].items():
+        if n > 0:
+            log.info(f"   {a:<14} {n}")
 
-        all_results.append(result)
+    # ── Build legacy projection for index.html compatibility ──
+    log.info("[3/3] Building legacy projection for index.html...")
+    try:
+        legacy = build_legacy_projection(engine_out)
+    except Exception as e:
+        log.warning(f"Legacy projection failed: {e}; shipping new shape only")
+        legacy = {}
 
-        rsi_str = f"RSI={result['indicators']['rsi']}" if result['indicators']['rsi'] else "RSI=n/a"
-        log.info(
-            f"  {'✓':<3} {ticker:<22} Score:{result['score']:>3} "
-            f"| {result['signal']:<12} | {rsi_str}"
-        )
-
-    log.info(f"\n  Scored: {len(all_results)} stocks")
-
-    # Classify
-    log.info("\n[3/3] Ranking and building output...")
-    ranked = sorted(all_results, key=lambda x: x["score"], reverse=True)
-
-    top_picks = []
-    watchlist = []
-    avoid     = []
-
-    for r in ranked:
-        if r["signal"] in ("STRONG BUY", "BUY") and len(top_picks) < 15:
-            r["rank"] = len(top_picks) + 1
-            top_picks.append(r)
-        elif r["signal"] == "WATCH" and len(watchlist) < 8:
-            watchlist.append({
-                "symbol":        r["symbol"],
-                "name":          r["name"],
-                "sector":        r["sector"],
-                "current_price": r["current_price"],
-                "score":         r["score"],
-                "signal":        "WATCH",
-                "reason":        r["reasons"][0] if r["reasons"] else "Monitor for entry signal",
-            })
-        elif r["signal"] == "AVOID" and len(avoid) < 5:
-            avoid.append({
-                "symbol":        r["symbol"],
-                "name":          r["name"],
-                "sector":        r["sector"],
-                "current_price": r["current_price"],
-                "score":         r["score"],
-                "reason":        r["reasons"][0] if r["reasons"] else "Bearish signals",
-            })
-
-    output = {
+    # ── Compose final predictions.json ──
+    out = {
         "generated_at":     datetime.now(IST).isoformat(),
-        "market_date":      date.today().strftime("%Y-%m-%d"),
-        "analysis_version": "2.1",
-        "stocks_analyzed":  len(all_results),
-        "indices":          build_index_snapshot(conn),
-        "market_breadth":   estimate_breadth(all_results),
-        "top_picks":        top_picks,
-        "watchlist":        watchlist,
-        "avoid":            avoid,
-        "sector_momentum":  aggregate_sectors(all_results)[:12],
+        "market_date":      _safe_date(),
+        "analysis_version": "3.0-rules",
+        "stocks_analyzed":  len(engine_out.get("all_decisions", [])),
+        "engine":           "rules_engine_v3",
+        "portfolio":        engine_out,   # ← primary shape for portfolio.html
+        **legacy,                          # ← legacy shape for index.html
     }
 
-    conn.close()
+    try:
+        with open(OUTPUT_PATH, "w", encoding="utf-8") as f:
+            json.dump(out, f, indent=2, default=str)
+        log.info(f"✅ wrote {OUTPUT_PATH}")
+    except Exception as e:
+        log.error(f"Write failed: {e}")
+        return 1
 
-    with open("predictions.json", "w", encoding="utf-8") as f:
-        json.dump(output, f, indent=2, default=str)
+    # ── Summary ──
+    actionable = (engine_out["counts"].get("ADD", 0)
+                  + engine_out["counts"].get("EXIT", 0)
+                  + engine_out["counts"].get("TRIM", 0)
+                  + engine_out["counts"].get("BLACKOUT", 0))
+    log.info(f"   actionable holdings today: {actionable}")
+    log.info(f"   engine buckets: {dict(engine_out['counts'])}")
 
-    log.info(f"\n✅ predictions.json written")
-    log.info(f"   Top picks : {len(top_picks)}")
-    log.info(f"   Watchlist : {len(watchlist)}")
-    log.info(f"   Avoid     : {len(avoid)}")
+    return 0
 
-    if top_picks:
-        log.info("\n📈 Top 5:")
-        for p in top_picks[:5]:
-            log.info(f"   #{p['rank']} {p['symbol']:<14} {p['score']:>3}/100 | {p['signal']}")
 
-    # Also write the legacy gpt_recommendation.json so any existing
-    # tooling that depends on it doesn't break
-    legacy = [
-        {
-            "stock name":       p["symbol"],
-            "reason":           " | ".join(p["reasons"][:2]),
-            "target buy price": p["target_price"],
-            "score":            p["score"],
-            "signal":           p["signal"],
-        }
-        for p in top_picks[:5]
-    ]
-    with open("gpt_recommendation.json", "w") as f:
-        json.dump(legacy, f, indent=2)
-    log.info("   gpt_recommendation.json (legacy) also updated")
+def _write_empty_output(reason: str) -> int:
+    """Graceful degradation — always write a valid file so the frontend doesn't 404."""
+    payload = {
+        "generated_at":     datetime.now(IST).isoformat(),
+        "market_date":      _safe_date(),
+        "analysis_version": "3.0-rules",
+        "stocks_analyzed":  0,
+        "engine":           "rules_engine_v3",
+        "status":           "degraded",
+        "reason":           reason,
+        "portfolio": {
+            "generated_at": datetime.now(IST).isoformat(),
+            "regime":       {"label": "UNKNOWN", "breadth_pct": 0,
+                             "momentum_pct": 0, "volatility": 0, "notes": reason},
+            "counts":       {},
+            "buckets":      {},
+            "all_decisions": [],
+        },
+        "top_picks": [], "watchlist": [], "avoid": [],
+        "sector_momentum": [],
+        "short_term": {"label": "Short Term", "picks": []},
+        "medium_term": {"label": "Medium Term", "picks": []},
+        "long_term": {"label": "Long Term", "picks": []},
+        "indices": {"NIFTY50":{"value":0,"change":0,"change_pct":0},
+                    "SENSEX":{"value":0,"change":0,"change_pct":0},
+                    "NIFTY_BANK":{"value":0,"change":0,"change_pct":0},
+                    "NIFTY_IT":{"value":0,"change":0,"change_pct":0},
+                    "NIFTY_MIDCAP100":{"value":0,"change":0,"change_pct":0}},
+        "market_breadth": {"advances":0,"declines":0,"unchanged":0,
+                           "new_52w_high":0,"new_52w_low":0},
+    }
+    try:
+        with open(OUTPUT_PATH, "w", encoding="utf-8") as f:
+            json.dump(payload, f, indent=2, default=str)
+        log.warning(f"wrote degraded predictions.json — reason: {reason}")
+    except Exception as e:
+        log.error(f"even the degraded write failed: {e}")
+        return 1
+    return 0
 
 
 if __name__ == "__main__":
-    main()
+    sys.exit(main())
