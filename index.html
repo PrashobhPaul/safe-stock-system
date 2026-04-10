@@ -405,89 +405,7 @@
     }
     .sig-sb { background: rgba(0,230,118,.12); border: 1px solid var(--grn); color: var(--grn); }
     .sig-b  { background: rgba(0,184,90,.08);  border: 1px solid var(--grnd); color: var(--grnd); }
-    .sig-accum { background: rgba(255,179,0,.10); border: 1px solid rgba(255,179,0,.45); color: #ffcc66; }
-    .sig-hold  { background: rgba(160,160,160,.08); border: 1px solid rgba(200,200,200,.35); color: #c8c8c8; }
-    .sig-exit  { background: rgba(255,68,68,.10); border: 1px solid rgba(255,68,68,.5); color: #ff9090; }
-    .sig-avoid { background: rgba(255,68,68,.06); border: 1px solid rgba(255,68,68,.35); color: #ff7878; }
     .sdot   { width: 5px; height: 5px; border-radius: 50%; background: currentColor; animation: pulse 2s infinite; }
-
-    /* ── THREE-HORIZON FORECAST BOX ── */
-    .forecast-box { background: rgba(171,71,188,.04); border: 1px solid rgba(171,71,188,.25); padding: 12px 14px; margin-bottom: 10px; }
-    .forecast-box .box-title { color: var(--pur); }
-    .fc-row { padding: 9px 0; border-top: 1px solid rgba(171,71,188,.1); font-family: var(--sans); }
-    .fc-row:first-of-type { border-top: none; padding-top: 2px; }
-    .fc-head { display: flex; align-items: center; gap: 8px; margin-bottom: 4px; }
-    .fc-label { font-size: 9px; letter-spacing: .12em; text-transform: uppercase; color: var(--pur); font-weight: 700; min-width: 58px; }
-    .fc-bias { font-size: 12px; font-weight: 700; }
-    .fc-bias.g { color: var(--grn); }
-    .fc-bias.r { color: #ff9090; }
-    .fc-bias.n { color: var(--amb); }
-    .fc-conf { font-size: 9px; color: var(--tx2); padding: 1px 6px; border: 1px solid var(--bdr); text-transform: uppercase; letter-spacing: .05em; }
-    .fc-band { font-size: 11px; color: var(--tx2); margin: 3px 0 4px; font-family: var(--mono); }
-    .fc-band b { color: var(--wht); }
-    .fc-cat { font-size: 10px; color: var(--tx2); font-weight: 300; line-height: 1.45; margin-top: 2px; }
-    .fc-risk { font-size: 10px; color: #ff9090; font-weight: 300; line-height: 1.45; opacity: .85; margin-top: 2px; }
-
-    /* ── ADVISOR NARRATIVE BOX ── */
-    .advisor-box { background: rgba(41,182,246,.04); border: 1px solid rgba(41,182,246,.25); padding: 12px 14px; margin-bottom: 10px; }
-    .advisor-box .box-title { color: var(--blu); }
-    .advisor-text { font-family: var(--serif); font-size: 13px; color: var(--tx1); line-height: 1.75; font-style: italic; }
-
-    /* ── NEWS BOX on card ── */
-    .news-box { background: rgba(0,230,118,.02); border: 1px solid var(--bdr); padding: 10px 12px; margin-bottom: 10px; }
-    .news-box .box-title { color: var(--grnd); }
-    .news-headline { font-family: var(--sans); font-size: 11px; color: var(--tx1); font-weight: 400; line-height: 1.45; margin-bottom: 3px; }
-    .news-source { font-family: var(--mono); font-size: 9px; color: var(--txd); letter-spacing: .05em; text-transform: uppercase; }
-    .news-count-pill { display: inline-block; font-size: 9px; padding: 1px 6px; border: 1px solid var(--bdr); color: var(--tx2); margin-left: 6px; }
-    .news-count-pill.bull { color: var(--grn); border-color: var(--grnd); }
-    .news-count-pill.bear { color: #ff9090; border-color: rgba(255,68,68,.4); }
-
-    /* ── NEWS HIGHLIGHTS (AI brief panel) ── */
-    .news-item { background: var(--bg); border: 1px solid var(--bdr); padding: 10px 12px; margin-bottom: 6px; border-left: 3px solid var(--txd); }
-    .news-item.BULLISH, .news-item.MILDLY_BULLISH { border-left-color: var(--grn); }
-    .news-item.BEARISH, .news-item.MILDLY_BEARISH { border-left-color: #ff9090; }
-    .news-item-title { font-family: var(--sans); font-size: 12px; color: var(--tx1); line-height: 1.45; margin-bottom: 4px; }
-    .news-item-meta { font-family: var(--mono); font-size: 9px; color: var(--txd); letter-spacing: .05em; text-transform: uppercase; }
-    .news-item-tags { margin-top: 4px; }
-    .news-item-tag { display: inline-block; font-size: 9px; color: var(--blu); background: rgba(41,182,246,.08); border: 1px solid rgba(41,182,246,.2); padding: 1px 5px; margin: 1px 3px 1px 0; }
-
-    /* ── DAILY BRIEF LAYOUT ── */
-    .db-wrap { padding: 14px 16px; }
-    .db-card { background: var(--bgc); border: 1px solid var(--bdrb); padding: 16px; margin-bottom: 14px; position: relative; overflow: hidden; }
-    .db-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px; background: linear-gradient(90deg, var(--grn), var(--blu), var(--pur)); }
-    .db-headline { font-family: var(--serif); font-size: 18px; font-weight: 600; color: var(--wht); line-height: 1.35; margin-bottom: 10px; }
-    .db-chips { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 12px; }
-    .db-chip { font-family: var(--mono); font-size: 9px; letter-spacing: .08em; padding: 4px 9px; border: 1px solid var(--bdrb); color: var(--tx2); text-transform: uppercase; }
-    .db-chip.bull { color: var(--grn); border-color: var(--grnd); background: rgba(0,230,118,.06); }
-    .db-chip.bear { color: #ff9090; border-color: rgba(255,68,68,.4); background: rgba(255,68,68,.04); }
-    .db-chip.side { color: var(--amb); border-color: rgba(255,179,0,.4); background: rgba(255,179,0,.04); }
-    .db-insight { background: var(--bg); border-left: 3px solid var(--grn); padding: 12px 14px; font-family: var(--sans); font-size: 13px; color: var(--tx1); line-height: 1.75; margin-bottom: 12px; }
-    .db-pulse { display: grid; grid-template-columns: repeat(3,1fr); gap: 8px; margin-bottom: 12px; }
-    .db-pulse-box { background: var(--bg); border: 1px solid var(--bdr); padding: 10px 8px; text-align: center; }
-    .db-pulse-n { font-family: var(--mono); font-size: 20px; font-weight: 700; color: var(--wht); line-height: 1.1; }
-    .db-pulse-n.g { color: var(--grn); }
-    .db-pulse-n.r { color: #ff9090; }
-    .db-pulse-n.a { color: var(--amb); }
-    .db-pulse-l { font-size: 9px; letter-spacing: .1em; text-transform: uppercase; color: var(--txd); margin-top: 4px; font-weight: 600; }
-    .db-stitle { font-size: 10px; letter-spacing: .12em; text-transform: uppercase; color: var(--txd); margin-bottom: 10px; font-weight: 700; padding-bottom: 6px; border-bottom: 1px solid var(--bdr); }
-    .db-conv-item { background: var(--bg); border: 1px solid var(--bdr); padding: 12px 14px; margin-bottom: 10px; }
-    .db-conv-head { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 6px; }
-    .db-conv-sym { font-family: var(--mono); font-weight: 700; color: var(--wht); font-size: 14px; }
-    .db-conv-sub { font-family: var(--sans); font-size: 10px; color: var(--tx2); font-weight: 300; }
-    .db-conv-score { font-size: 11px; color: var(--grn); font-weight: 700; text-align: right; }
-    .db-conv-narr { font-family: var(--serif); font-size: 12px; color: var(--tx1); line-height: 1.75; font-style: italic; margin-top: 8px; padding-top: 8px; border-top: 1px solid var(--bdr); }
-    .db-conv-fc { display: flex; gap: 6px; flex-wrap: wrap; margin-top: 8px; }
-    .db-fc-tag { font-size: 9px; padding: 3px 7px; border: 1px solid var(--bdr); font-family: var(--sans); }
-    .db-fc-tag b { font-weight: 700; }
-    .db-row { display: grid; grid-template-columns: 80px 1fr auto; gap: 10px; align-items: center; padding: 8px 12px; background: var(--bg); border: 1px solid var(--bdr); margin-bottom: 4px; }
-    .db-row-sym { font-family: var(--mono); font-size: 12px; font-weight: 700; color: var(--wht); }
-    .db-row-body { font-family: var(--sans); font-size: 11px; color: var(--tx2); line-height: 1.45; }
-    .db-row-meta { font-family: var(--mono); font-size: 10px; text-align: right; white-space: nowrap; }
-    .db-plan-pill { display: inline-block; font-family: var(--mono); font-size: 9px; font-weight: 700; padding: 2px 7px; letter-spacing: .08em; margin-right: 6px; }
-    .db-plan-pill.p1 { background: rgba(255,68,68,.15); color: #ff9090; border: 1px solid rgba(255,68,68,.4); }
-    .db-plan-pill.p2 { background: rgba(255,179,0,.12); color: #ffcc66; border: 1px solid rgba(255,179,0,.4); }
-    .db-plan-pill.p3 { background: rgba(0,230,118,.12); color: var(--grn); border: 1px solid var(--grnd); }
-    .db-footer { font-family: var(--sans); font-size: 10px; color: var(--txd); margin-top: 10px; padding-top: 10px; border-top: 1px solid var(--bdr); line-height: 1.5; }
 
     .score-chip {
       font-size: 11px;
@@ -1030,7 +948,9 @@
 // ── Vercel URL — update this after your Vercel deployment ──
 // Replace with your actual URL from Vercel dashboard
 // e.g. 'https://safe-stock-system-oipa.vercel.app'
-const VERCEL_URL = 'https://safe-stock-system-oipa.vercel.app';
+// Rule-based engine only — no LLM, no live Vercel API.
+// predictions.json is the single source of truth, refreshed daily by GitHub Actions.
+const VERCEL_URL = '';
 
 const DATA_URL      = './predictions.json';
 const REFRESH_MS    = 60_000;   // live score refresh (market hours)
@@ -1079,17 +999,7 @@ const fmt   = (n,d=2) => { if(n==null||isNaN(n)) return '—'; return Number(n).
 const sign  = n => n>0?'+':'';
 const cls   = n => n>0?'up':n<0?'dn':'nt';
 const scCls = s => s>=75?'h':'m';
-const sigCls= s => {
-  if (!s) return 'sig-hold';
-  const v = String(s).toUpperCase();
-  if (v === 'STRONG BUY') return 'sig-sb';
-  if (v === 'BUY') return 'sig-b';
-  if (v === 'ACCUMULATE ON DIP' || v === 'ACCUMULATE') return 'sig-accum';
-  if (v === 'HOLD' || v === 'WATCH') return 'sig-hold';
-  if (v === 'EXIT') return 'sig-exit';
-  if (v === 'AVOID') return 'sig-avoid';
-  return 'sig-hold';
-};
+const sigCls= s => s==='STRONG BUY'?'sig-sb':'sig-b';
 const fmtIST= iso => { try{ return new Date(iso).toLocaleString('en-IN',{timeZone:'Asia/Kolkata',day:'2-digit',month:'short',hour:'2-digit',minute:'2-digit',hour12:true})+' IST'; }catch{return iso;} };
 
 // ── Clock ──
@@ -1144,7 +1054,8 @@ function switchTab(tab) {
   document.getElementById('nav-'+tab).classList.add('active');
   window.scrollTo({top:0,behavior:'smooth'});
   // Load AI briefing when user navigates to AI tab
-  if (tab==='ai') { if (data && data.daily_brief) { renderAI(); } else if (!llm) { fetchBriefing(); } }
+  // AI Brief tab — render rule-based daily_brief only. Never calls any LLM.
+  if (tab === 'ai') renderAI();
 }
 
 // Hash-based deep linking
@@ -1211,73 +1122,10 @@ async function loadData() {
   };
 }
 
+// ── AI Brief is 100% rule-based. This shim exists only for any legacy
+//    call sites — it renders the deterministic brief and never hits an LLM.
 async function fetchBriefing() {
-  if (!data) return;
-  const el = document.getElementById('aiBriefingContent');
-
-  // Show loading state
-  el.innerHTML = `<div class="ai-card"><div class="ai-loading">
-    <div class="ai-spin">⟳</div>
-    <div class="ai-load-text">Asking Gemini AI…<br><span style="font-size:11px;color:var(--txd)">This takes 10–15 seconds</span></div>
-  </div></div>`;
-
-  // If no Vercel URL set, show setup message
-  if (!VERCEL_URL) {
-    el.innerHTML = `<div class="ai-card">
-      <div class="ai-card-title">📊 AI Briefing</div>
-      <div style="font-family:var(--sans);font-size:13px;color:var(--tx2);padding:16px 0;line-height:1.8">
-        ⚙️ To enable Gemini AI briefings:<br>
-        1. Deploy to <a href="https://vercel.com" style="color:var(--grn)" target="_blank">Vercel</a><br>
-        2. Add <code style="color:var(--grn)">GEMINI_API_KEY</code> in Vercel → Settings → Env Variables<br>
-        3. Set <code style="color:var(--grn)">VERCEL_URL</code> in index.html<br><br>
-        <span style="color:var(--txd);font-size:11px">Meanwhile, run GitHub Actions workflow for daily predictions with AI</span>
-      </div>
-    </div>`;
-    return;
-  }
-
-  try {
-    const r = await fetch(VERCEL_URL+'/api/briefing', {
-      method:  'POST',
-      headers: {'Content-Type':'application/json'},
-      body:    JSON.stringify({predictions:data, mode:'full'}),
-      signal:  AbortSignal.timeout(30000),
-    });
-
-    if (!r.ok) {
-      throw new Error(`Server returned ${r.status}: ${r.statusText}`);
-    }
-
-    const d = await r.json();
-
-    if (d.error) {
-      throw new Error(d.error);
-    }
-
-    if (d.llm_analysis) {
-      llm = d.llm_analysis;
-      renderAI();
-    } else {
-      throw new Error('No AI analysis returned');
-    }
-
-  } catch(e) {
-    console.warn('Briefing error:', e);
-    const msg = e.message || 'Unknown error';
-    const isKey = msg.includes('GEMINI_API_KEY') || msg.includes('API key');
-    el.innerHTML = `<div class="ai-card">
-      <div class="ai-card-title">📊 AI Briefing — Error</div>
-      <div style="background:rgba(255,68,68,.06);border:1px solid rgba(255,68,68,.2);padding:14px;margin-bottom:14px;font-family:var(--sans);font-size:12px;color:#ff9090;line-height:1.7">
-        ⚠ ${msg}
-      </div>
-      ${isKey ? `<div style="font-family:var(--sans);font-size:12px;color:var(--tx2);line-height:1.7">
-        Fix: Go to Vercel → Settings → Environment Variables → Add <code style="color:var(--grn)">GEMINI_API_KEY</code>
-      </div>` : ''}
-      <button onclick="fetchBriefing()" style="margin-top:14px;background:var(--bgc);border:1px solid var(--bdrb);color:var(--grn);font-family:var(--mono);font-size:11px;padding:8px 16px;cursor:pointer">
-        ↻ Try Again
-      </button>
-    </div>`;
-  }
+  renderAI();
 }
 
 // ── RENDER FUNCTIONS ──
@@ -1325,7 +1173,7 @@ function makeCard(p, cat) {
           </div>
         </div>
         <div class="pc-right">
-          <div class="${sigCls(p.verdict||p.signal)} sig-pill"><span class="sdot"></span>${p.verdict||p.signal}</div>
+          <div class="${sigCls(p.signal)} sig-pill"><span class="sdot"></span>${p.signal}</div>
           <div class="score-chip ${scCls(p.score)}">${p.score}/100</div>
         </div>
       </div>
@@ -1364,44 +1212,6 @@ function makeCard(p, cat) {
         </div>
         <div class="sell-trigger">${exit_.sell_trigger||'Exit on target hit'}</div>
       </div>
-
-      <!-- THREE-HORIZON FORECAST -->
-      ${p.forecasts ? `
-      <div class="forecast-box">
-        <div class="box-title">🔮 Three-Horizon Forecast</div>
-        ${['1d','1w','1m'].map(k => {
-          const fc = p.forecasts[k]; if(!fc) return '';
-          const bc = fc.bias && fc.bias.includes('Bull') ? 'g' : fc.bias && fc.bias.includes('Bear') ? 'r' : 'n';
-          const pb = fc.price_band || {};
-          return `<div class="fc-row">
-            <div class="fc-head">
-              <div class="fc-label">${fc.label||k}</div>
-              <div class="fc-bias ${bc}">${fc.bias||'Neutral'}</div>
-              <div class="fc-conf">${fc.confidence||'—'}</div>
-            </div>
-            ${pb.mid?`<div class="fc-band">₹${fmt(pb.low)} – <b>₹${fmt(pb.mid)}</b> – ₹${fmt(pb.high)}${pb.move_pct_mid!=null?` <span style="color:var(--txd)">(${sign(pb.move_pct_mid)}${pb.move_pct_mid}%)</span>`:''}</div>`:''}
-            ${fc.catalyst?`<div class="fc-cat">💡 ${fc.catalyst}</div>`:''}
-            ${fc.primary_risk?`<div class="fc-risk">⚠ ${fc.primary_risk}</div>`:''}
-          </div>`;
-        }).join('')}
-      </div>` : ''}
-
-      <!-- NEWS LAYER -->
-      ${(() => { const ni = p.news_info || p._news_info; return ni && ni.count ? `
-      <div class="news-box">
-        <div class="box-title">📰 News Flow
-          <span class="news-count-pill ${ni.label && ni.label.includes('BULL')?'bull':ni.label && ni.label.includes('BEAR')?'bear':''}">${ni.count} item${ni.count>1?'s':''} · ${(ni.label||'NEUTRAL').replace('_',' ')}</span>
-        </div>
-        ${ni.top_headline?`<div class="news-headline">${ni.top_headline}</div>`:''}
-        ${ni.top_source?`<div class="news-source">${ni.top_source}</div>`:''}
-      </div>` : ''; })()}
-
-      <!-- ADVISOR NARRATIVE -->
-      ${p.narrative ? `
-      <div class="advisor-box">
-        <div class="box-title">🎓 Advisor's View</div>
-        <div class="advisor-text">${p.narrative}</div>
-      </div>` : ''}
 
       <!-- Score mini -->
       <div class="score-mini">
@@ -1469,12 +1279,14 @@ function renderHorizon(cat) {
     }
 
     // Analysis ran but no picks in this category
+    const universeLine = analyzed > 0
+      ? `Our engine analyzed <strong style="color:${catColor}">${analyzed} NSE stocks</strong> and found no high-confidence ${catLabel} setups meeting our criteria today.`
+      : `The rules engine has not published picks for this horizon in the latest run.`;
     el.innerHTML = `<div class="empty-state">
       <div class="empty-icon">${catIcon}</div>
       <div class="empty-title" style="color:var(--wht)">No ${cat}-term picks right now</div>
       <div class="empty-text" style="max-width:340px;margin:0 auto">
-        Our engine analyzed <strong style="color:${catColor}">${analyzed} NSE stocks</strong>
-        and found no high-confidence ${catLabel} setups meeting our criteria today.<br><br>
+        ${universeLine}<br><br>
         <span style="color:var(--txd);font-size:11px">
           ${isOpen
             ? '🟢 Market open — scores refresh every 60s. Check back shortly.'
@@ -1559,210 +1371,53 @@ function renderLists() {
 function renderAI() {
   const el = document.getElementById('aiBriefingContent');
   if (!el) return;
-
   const brief = (data && data.daily_brief) || null;
-  const llmData = llm || (data && data.llm_analysis);
 
-  if (!brief && !llmData) {
+  if (!brief) {
     el.innerHTML = `<div class="db-wrap"><div class="db-card">
       <div class="db-headline">End-of-day brief not ready</div>
       <div style="font-family:var(--sans);font-size:12px;color:var(--tx2);line-height:1.7;padding:8px 0">
-        Run the daily workflow (GitHub → Actions → Daily Stock Analysis) to generate the brief.
+        The daily rules engine has not produced a brief yet. This usually means
+        the 4:15 PM IST workflow hasn't run today, or <code>predictions.json</code>
+        is stale.<br><br>
+        <span style="color:var(--txd)">Trigger it manually: GitHub → Actions → Daily Stock Analysis → Run workflow.</span>
       </div>
     </div></div>`;
     return;
   }
 
-  if (!brief) return renderAI_legacy(llmData);
-
   const regime = brief.regime || {};
-  const macro = brief.macro_context || {};
   const pulse = brief.market_pulse || {};
-  const stats = brief.news_stats || {};
-
   const regLabel = regime.label || 'UNKNOWN';
-  const regClass = regLabel === 'BULL' ? 'bull' : regLabel === 'BEAR' ? 'bear' : regLabel === 'SIDEWAYS' ? 'side' : '';
-  const macroClass = (macro.label === 'RISK_ON' || macro.label === 'MILDLY_POSITIVE') ? 'bull' :
-                     (macro.label === 'RISK_OFF' || macro.label === 'MILDLY_NEGATIVE') ? 'bear' : 'side';
 
-  // Conviction board with narratives and three-horizon forecasts
-  const convRows = (brief.conviction_board || []).map(c => {
-    const fcTags = c.forecasts ? ['1d','1w','1m'].map(k => {
-      const f = c.forecasts[k]; if (!f) return '';
-      const col = f.bias && f.bias.includes('Bull') ? 'var(--grn)' : f.bias && f.bias.includes('Bear') ? '#ff9090' : 'var(--amb)';
-      return `<span class="db-fc-tag"><span style="color:var(--txd)">${f.label||k}</span> <b style="color:${col}">${f.bias||''}</b></span>`;
-    }).join('') : '';
-    return `<div class="db-conv-item">
-      <div class="db-conv-head">
-        <div>
-          <div class="db-conv-sym">${c.symbol || '—'}</div>
-          <div class="db-conv-sub">${c.name || ''} · ${c.sector || ''}</div>
-        </div>
-        <div class="db-conv-score">${c.score || 0}/100<br><span style="font-size:9px;color:var(--tx2);font-weight:400">${c.verdict || c.action || ''}</span></div>
+  const narr = (brief.narrative || [])
+    .map(b => `<div style="font-family:var(--sans);font-size:12px;color:var(--tx2);line-height:1.75;padding-left:14px;position:relative;margin-bottom:5px"><span style="position:absolute;left:0;color:var(--grn)">▸</span>${b}</div>`)
+    .join('');
+
+  const conv = (brief.conviction_board || []).map(c => `
+    <div style="background:var(--bg);border:1px solid var(--bdr);padding:12px 14px;margin-bottom:8px">
+      <div style="display:flex;justify-content:space-between;margin-bottom:4px">
+        <strong style="color:var(--wht)">${c.symbol || '—'}</strong>
+        <span style="color:var(--grn);font-size:11px">${c.score || 0}/100 · ${c.verdict || c.action || ''}</span>
       </div>
-      ${c.narrative ? `<div class="db-conv-narr">${c.narrative}</div>` : ''}
-      ${fcTags ? `<div class="db-conv-fc">${fcTags}</div>` : ''}
-    </div>`;
-  }).join('');
-
-  // Action plan
-  const planRows = (brief.action_plan || []).map(p => `
-    <div class="db-row">
-      <div class="db-row-sym">${p.symbol || '—'}</div>
-      <div class="db-row-body">
-        <span class="db-plan-pill p${p.priority || 3}">${p.type || ''}</span>
-        ${p.instruction || ''}<span style="color:var(--txd)"> · ${(p.reason || '').slice(0, 90)}</span>
-      </div>
-      <div class="db-row-meta" style="color:var(--tx2)">${p.confidence || ''}</div>
+      <div style="font-size:11px;color:var(--tx2)">${c.sector || ''} · ${(c.reason || '').slice(0, 120)}</div>
+      ${c.narrative ? `<div style="font-family:var(--serif);font-size:12px;color:var(--tx1);line-height:1.7;font-style:italic;margin-top:8px;padding-top:8px;border-top:1px solid var(--bdr)">${c.narrative}</div>` : ''}
     </div>`).join('');
 
-  // Risk watchlist
-  const riskRows = (brief.risk_watchlist || []).map(r => `
-    <div class="db-row" style="border-color:rgba(255,68,68,.2)">
-      <div class="db-row-sym" style="color:#ff9090">${r.symbol || '—'}</div>
-      <div class="db-row-body"><strong style="color:#ff9090">${r.verdict || r.action || ''}</strong> · ${(r.flags || []).join(' · ')}</div>
-      <div class="db-row-meta" style="color:#ff9090">${r.action || ''}</div>
-    </div>`).join('');
-
-  // Breakout watch
-  const breakRows = (brief.breakout_watch || []).map(b => `
-    <div class="db-row">
-      <div class="db-row-sym">${b.symbol || '—'}</div>
-      <div class="db-row-body">${b.pct_from_52h}% from 52-week high</div>
-      <div class="db-row-meta" style="color:var(--grn)">${b.score || 0}/100</div>
-    </div>`).join('');
-
-  // Sector heatmap with news flags
-  const sectors = (brief.sector_heatmap || []).slice(0, 10);
-  const secRows = sectors.map(s => {
-    const col = s.trend === 'up' ? 'var(--grn)' : s.trend === 'down' ? '#ff9090' : 'var(--amb)';
-    const newsTag = s.news_count > 0 ? ` <span style="font-size:9px;color:${s.news_label==='BULLISH'?'var(--grn)':s.news_label==='BEARISH'?'#ff9090':'var(--tx2)'};margin-left:6px">📰 ${s.news_count}</span>` : '';
-    return `<div class="db-row">
-      <div class="db-row-sym" style="color:var(--tx1);font-family:var(--sans);font-size:12px">${s.sector}</div>
-      <div class="db-row-body">${s.count} stock${s.count>1?'s':''}${newsTag}</div>
-      <div class="db-row-meta" style="color:${col};font-weight:700">${s.avg_score}</div>
-    </div>`;
-  }).join('');
-
-  // Movers
-  const moversUp = (brief.top_movers_up || []).slice(0, 5).map(m => `
-    <div class="db-row">
-      <div class="db-row-sym">${m.symbol}</div>
-      <div class="db-row-body">${m.name || ''}</div>
-      <div class="db-row-meta" style="color:var(--grn)">+${m.change_pct}%</div>
-    </div>`).join('');
-  const moversDn = (brief.top_movers_down || []).slice(0, 5).map(m => `
-    <div class="db-row">
-      <div class="db-row-sym">${m.symbol}</div>
-      <div class="db-row-body">${m.name || ''}</div>
-      <div class="db-row-meta" style="color:#ff9090">${m.change_pct}%</div>
-    </div>`).join('');
-
-  // News highlights
-  const newsRows = (brief.news_highlights || []).slice(0, 10).map(n => `
-    <div class="news-item ${n.sentiment || ''}">
-      <div class="news-item-title">${n.title || ''}</div>
-      <div class="news-item-meta">${n.source || ''} · ${(n.sentiment || 'NEUTRAL').replace('_',' ')} · ${n.category || ''}</div>
-      ${((n.tickers && n.tickers.length) || (n.sectors && n.sectors.length)) ? `
-        <div class="news-item-tags">
-          ${(n.tickers || []).map(t => `<span class="news-item-tag">${t}</span>`).join('')}
-          ${(n.sectors || []).map(s => `<span class="news-item-tag" style="color:var(--pur);background:rgba(171,71,188,.08);border-color:rgba(171,71,188,.2)">${s}</span>`).join('')}
-        </div>` : ''}
-    </div>`).join('');
-
-  // Macro highlights
-  const macroRows = (macro.highlights || []).slice(0, 5).map(h => `
-    <div class="news-item ${h.sentiment || ''}">
-      <div class="news-item-title">${h.title || ''}</div>
-      <div class="news-item-meta">${h.source || ''} · ${h.category || ''} · ${(h.sentiment || 'NEUTRAL').replace('_',' ')}</div>
-    </div>`).join('');
-
-  // Narrative bullets
-  const narrBullets = (brief.narrative || []).map(b => `
-    <div style="font-family:var(--sans);font-size:12px;color:var(--tx2);line-height:1.75;padding-left:14px;position:relative;margin-bottom:5px">
-      <span style="position:absolute;left:0;color:var(--grn)">▸</span>${b}
-    </div>`).join('');
-
-  el.innerHTML = `<div class="db-wrap">
-    <!-- HEADLINE CARD -->
-    <div class="db-card">
-      <div class="db-headline">${brief.headline || 'End-of-day evaluation'}</div>
-      <div class="db-chips">
-        <span class="db-chip ${regClass}">REGIME ${regLabel}</span>
-        <span class="db-chip">Breadth ${regime.breadth_pct || 0}%</span>
-        <span class="db-chip">Momentum ${sign(regime.momentum_pct || 0)}${regime.momentum_pct || 0}%</span>
-        <span class="db-chip">ATR ${regime.volatility || 0}%</span>
-        <span class="db-chip ${macroClass}">MACRO ${(macro.label || 'NEUTRAL').replace('_',' ')}</span>
-      </div>
-
-      <div class="db-pulse">
-        <div class="db-pulse-box"><div class="db-pulse-n g">${pulse.actionable_buys || 0}</div><div class="db-pulse-l">Actionable Buys</div></div>
-        <div class="db-pulse-box"><div class="db-pulse-n">${pulse.holds || 0}</div><div class="db-pulse-l">Holds</div></div>
-        <div class="db-pulse-box"><div class="db-pulse-n r">${pulse.risk_alerts || 0}</div><div class="db-pulse-l">Risk Alerts</div></div>
-        <div class="db-pulse-box"><div class="db-pulse-n">${pulse.total_analyzed || 0}</div><div class="db-pulse-l">Analyzed</div></div>
-        <div class="db-pulse-box"><div class="db-pulse-n g">${pulse.strong_buys || 0}</div><div class="db-pulse-l">Strong Buys</div></div>
-        <div class="db-pulse-box"><div class="db-pulse-n a">${pulse.earnings_blackouts || 0}</div><div class="db-pulse-l">Blackouts</div></div>
-      </div>
-
-      ${brief.key_insight ? `<div class="db-insight">${brief.key_insight}</div>` : ''}
-      ${narrBullets ? `<div style="margin-top:12px">${narrBullets}</div>` : ''}
-
-      <div class="db-footer">
-        📰 ${stats.total_items || 0} news items · ${stats.sources || 0} sources · ${stats.bullish || 0} bullish / ${stats.bearish || 0} bearish
-      </div>
+  el.innerHTML = `<div class="db-wrap"><div class="db-card">
+    <div class="db-headline">${brief.headline || 'End-of-day evaluation'}</div>
+    <div class="db-chips">
+      <span class="db-chip">REGIME ${regLabel}</span>
+      <span class="db-chip">Breadth ${regime.breadth_pct || 0}%</span>
+      <span class="db-chip">Analyzed ${pulse.total_analyzed || 0}</span>
     </div>
-
-    ${planRows ? `<div class="db-card"><div class="db-stitle">📋 Tomorrow's Action Plan</div>${planRows}</div>` : ''}
-    ${convRows ? `<div class="db-card"><div class="db-stitle">🏆 Conviction Board — Advisor Narratives</div>${convRows}</div>` : ''}
-    ${breakRows ? `<div class="db-card"><div class="db-stitle">📈 Breakout Watch — Within 3.5% of 52W High</div>${breakRows}</div>` : ''}
-    ${riskRows ? `<div class="db-card"><div class="db-stitle">⚠ Risk Watchlist</div>${riskRows}</div>` : ''}
-    ${secRows ? `<div class="db-card"><div class="db-stitle">🌐 Sector Heatmap</div>${secRows}</div>` : ''}
-
-    ${(moversUp || moversDn) ? `<div class="db-card">
-      <div class="db-stitle">📊 Top Movers</div>
-      ${moversUp ? `<div style="margin-bottom:10px"><div style="font-size:9px;color:var(--grn);letter-spacing:.1em;margin-bottom:6px;font-weight:700">GAINERS</div>${moversUp}</div>` : ''}
-      ${moversDn ? `<div><div style="font-size:9px;color:#ff9090;letter-spacing:.1em;margin-bottom:6px;font-weight:700">DECLINERS</div>${moversDn}</div>` : ''}
-    </div>` : ''}
-
-    ${macroRows ? `<div class="db-card"><div class="db-stitle">🌍 Macro & Policy Flow</div>${macroRows}</div>` : ''}
-    ${newsRows ? `<div class="db-card"><div class="db-stitle">📰 News Highlights</div>${newsRows}</div>` : ''}
-
-    <div class="db-card" style="text-align:center">
-      <div class="db-footer" style="border-top:none;padding-top:0">
-        Rules Engine v5 · Deterministic · No LLM · Generated ${fmtIST(brief.generated_at || '')}
-      </div>
-    </div>
+    ${brief.key_insight ? `<div class="db-insight">${brief.key_insight}</div>` : ''}
+    ${narr}
+  </div>
+  ${conv ? `<div class="db-card"><div class="db-stitle">🏆 Conviction Board</div>${conv}</div>` : ''}
   </div>`;
 }
 
-// Legacy Gemini renderer kept as fallback
-function renderAI_legacy(llmData) {
-  const el = document.getElementById('aiBriefingContent');
-  if (!llmData) return;
-  if (llmData.provider==='placeholder' || llmData.error) {
-    el.innerHTML = `<div class="ai-card"><div class="ai-card-title">📊 AI Briefing</div>
-      <div style="font-family:var(--sans);font-size:13px;color:var(--tx2);padding:12px 0;line-height:1.8">
-        ${llmData.market_summary || 'AI briefing unavailable.'}
-      </div></div>`;
-    return;
-  }
-  const sent = (llmData.overall_sentiment||'NEUTRAL').replace(' ','_');
-  const themes=(llmData.sector_themes||[]).map(t=>`<span class="ai-tag sec">${t}</span>`).join('');
-  const risks=(llmData.risks_to_watch||[]).map(r=>`<span class="ai-tag risk">⚠ ${r}</span>`).join('');
-  const narrs=Object.entries(llmData.stock_narratives||{}).slice(0,6).map(([sym,txt])=>`
-    <div class="ai-narr"><div class="ai-narr-sym">${sym}</div><div class="ai-narr-text">${txt}</div></div>`).join('');
-  el.innerHTML=`<div class="ai-card">
-    <div class="ai-card-title">📊 Gemini AI Briefing (legacy)</div>
-    <div class="ai-meta">
-      <span class="ai-model-tag">🤖 ${llmData.provider||'gemini'}</span>
-      <span class="sent-tag sent-${sent}">${sent.replace('_',' ')}</span>
-    </div>
-    ${llmData.market_summary?`<div class="ai-summary">${llmData.market_summary}</div>`:''}
-    ${themes?`<div class="ai-tags-section"><div class="ai-tag-title">▸ Sector Themes</div>${themes}</div>`:''}
-    ${risks?`<div class="ai-tags-section"><div class="ai-tag-title">▸ Risks</div>${risks}</div>`:''}
-    ${narrs?`<div class="ai-tags-section"><div class="ai-tag-title">▸ Stocks</div><div class="ai-narr-grid">${narrs}</div></div>`:''}
-  </div>`;
-}
 
 function renderAll() {
   renderTicker();
@@ -1773,7 +1428,7 @@ function renderAll() {
   renderBreadth();
   renderSectors();
   renderLists();
-  if (data.daily_brief || data.llm_analysis) renderAI();
+  if (data.llm_analysis) renderAI();
   updateMarketStatus();
 }
 
@@ -1830,10 +1485,7 @@ async function init() {
     setTimeout(()=>s.remove(), 600);
   }, 700);
 
-  // Only fetch optional Gemini enhancement if we have no local brief
-  if (!data.daily_brief) {
-    setTimeout(() => fetchBriefing(), 1500);
-  }
+  // Fetch AI briefing in background always on load (not just on AI tab)
 }
 
 // Start immediately
