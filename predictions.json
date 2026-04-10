@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-10T22:59:43.533592+05:30",
+  "generated_at": "2026-04-10T23:08:07.194643+05:30",
   "market_date": "2026-04-10",
   "analysis_version": "5.0-rules+news+forecast+narrative",
   "engine": "rules_engine_v5_news_fusion",
@@ -62,7 +62,7 @@
   "avoid": [],
   "sector_momentum": [],
   "daily_brief": {
-    "generated_at": "2026-04-10T23:00:02.746222+05:30",
+    "generated_at": "2026-04-10T23:08:33.161912+05:30",
     "date": "2026-04-10",
     "source": "rules_engine_v4_news_fusion",
     "headline": "UNKNOWN regime \u2014 0% breadth, selective stance; macro neutral",
@@ -75,7 +75,7 @@
     },
     "macro_context": {
       "label": "NEUTRAL",
-      "score": -0.26,
+      "score": -0.25,
       "count": 146,
       "highlights": [
         {
@@ -159,6 +159,16 @@
     "action_plan": [],
     "news_highlights": [
       {
+        "title": "Groww share price rises 6% to hit its record high, surges 20% in 3 days\u2014what\u2019s driving the rally?",
+        "source": "Mint Markets",
+        "category": "market",
+        "sentiment": "BULLISH",
+        "tickers": [],
+        "sectors": [],
+        "published": "2026-04-10T08:11:25+00:00",
+        "link": "https://www.livemint.com/market/stock-market-news/groww-share-price-rose-6-to-hit-its-record-high-surges-20-in-3-days-what-s-driving-the-rally-11775806059389.html"
+      },
+      {
         "title": "\u200bAther Energy, Anand Rathi among 11 stocks that hit 52-week high; rally up to 25% in a month",
         "source": "ET Markets",
         "category": "market",
@@ -171,14 +181,16 @@
         "link": "https://economictimes.indiatimes.com/markets/stocks/news/ather-energy-anand-rathi-among-11-stocks-that-hit-52-week-high-rally-up-to-25-in-a-month/slideshow/130169667.cms"
       },
       {
-        "title": "Groww share price rises 6% to hit its record high, surges 20% in 3 days\u2014what\u2019s driving the rally?",
+        "title": "IOC, BPCL to HPCL: Oil PSU stocks gain up to 2.5% as crude oil rally loses steam ahead of US-Iran talks this weekend",
         "source": "Mint Markets",
         "category": "market",
         "sentiment": "BULLISH",
-        "tickers": [],
+        "tickers": [
+          "BPCL"
+        ],
         "sectors": [],
-        "published": "2026-04-10T08:11:25+00:00",
-        "link": "https://www.livemint.com/market/stock-market-news/groww-share-price-rose-6-to-hit-its-record-high-surges-20-in-3-days-what-s-driving-the-rally-11775806059389.html"
+        "published": "2026-04-10T04:29:11+00:00",
+        "link": "https://www.livemint.com/market/stock-market-news/ioc-bpcl-to-hpcl-oil-psu-stocks-gain-up-to-2-5-as-crude-oil-rally-loses-steam-ahead-of-us-iran-talks-this-weekend-11775795240687.html"
       },
       {
         "title": "Tata Investment, Tata Chemicals shares surge up to 8% after Mistry backs Tata Sons listing push",
@@ -201,18 +213,6 @@
         "link": "https://www.livemint.com/economy/to-raise-or-not-to-raise-interest-rates-thats-the-question-for-several-fed-policymakers-reveals-march-minutes-11775708957539.html"
       },
       {
-        "title": "IOC, BPCL to HPCL: Oil PSU stocks gain up to 2.5% as crude oil rally loses steam ahead of US-Iran talks this weekend",
-        "source": "Mint Markets",
-        "category": "market",
-        "sentiment": "BULLISH",
-        "tickers": [
-          "BPCL"
-        ],
-        "sectors": [],
-        "published": "2026-04-10T04:29:11+00:00",
-        "link": "https://www.livemint.com/market/stock-market-news/ioc-bpcl-to-hpcl-oil-psu-stocks-gain-up-to-2-5-as-crude-oil-rally-loses-steam-ahead-of-us-iran-talks-this-weekend-11775795240687.html"
-      },
-      {
         "title": "BSE shares hit 52-week high, what is driving the surge?",
         "source": "Hindu BusinessLine",
         "category": "market",
@@ -231,16 +231,6 @@
         "sectors": [],
         "published": "2026-04-09T19:37:18+00:00",
         "link": "https://economictimes.indiatimes.com/news/economy/foreign-trade/amid-west-asia-war-fy26-goods-exports-may-fall-2-3-fieo/articleshow/130153156.cms"
-      },
-      {
-        "title": "ITDC shares rally 40% in two days, skyrocket 67% in seven sessions. What\u2019s behind the surge?",
-        "source": "ET Markets",
-        "category": "market",
-        "sentiment": "BULLISH",
-        "tickers": [],
-        "sectors": [],
-        "published": "2026-04-10T08:21:50+00:00",
-        "link": "https://economictimes.indiatimes.com/markets/stocks/news/itdc-shares-rally-40-in-two-days-skyrocket-67-in-seven-sessions-whats-behind-the-surge/articleshow/130163832.cms"
       },
       {
         "title": "Pulse of the Street: Markets log best weekly gain in 5 years on global relief",
@@ -278,6 +268,16 @@
         "link": "https://www.livemint.com/market/stock-market-news/bank-nifty-nears-key-56-000-led-by-icici-hdfc-bank-sbi-shares-breakout-or-profit-booking-zone-here-s-how-to-trade-11775801554741.html"
       },
       {
+        "title": "ITDC shares rally 40% in two days, skyrocket 67% in seven sessions. What\u2019s behind the surge?",
+        "source": "ET Markets",
+        "category": "market",
+        "sentiment": "BULLISH",
+        "tickers": [],
+        "sectors": [],
+        "published": "2026-04-10T08:21:50+00:00",
+        "link": "https://economictimes.indiatimes.com/markets/stocks/news/itdc-shares-rally-40-in-two-days-skyrocket-67-in-seven-sessions-whats-behind-the-surge/articleshow/130163832.cms"
+      },
+      {
         "title": "West Asia War: Fracturing world order raises energy risks for India, ONGC chief warns",
         "source": "ET Industry",
         "category": "sector",
@@ -295,7 +295,7 @@
       "sources": 11,
       "with_tickers": 51,
       "bullish": 75,
-      "bearish": 67
+      "bearish": 66
     }
   }
 }
