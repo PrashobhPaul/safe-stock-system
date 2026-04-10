@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-04-10T23:08:07.194643+05:30",
-  "market_date": "2026-04-10",
+  "generated_at": "2026-04-11T02:15:17.417770+05:30",
+  "market_date": "2026-04-11",
   "analysis_version": "5.0-rules+news+forecast+narrative",
   "engine": "rules_engine_v5_news_fusion",
   "stocks_analyzed": 0,
@@ -62,10 +62,10 @@
   "avoid": [],
   "sector_momentum": [],
   "daily_brief": {
-    "generated_at": "2026-04-10T23:08:33.161912+05:30",
-    "date": "2026-04-10",
-    "source": "rules_engine_v4_news_fusion",
-    "headline": "UNKNOWN regime \u2014 0% breadth, selective stance; macro neutral",
+    "generated_at": "2026-04-11T02:15:17.417770+05:30",
+    "date": "2026-04-11",
+    "source": "rules_engine_v5_degraded",
+    "headline": "Data fetch failed \u2014 no picks available",
     "regime": {
       "label": "UNKNOWN",
       "breadth_pct": 0,
@@ -74,9 +74,9 @@
       "notes": "no data"
     },
     "macro_context": {
+      "score": -0.27,
       "label": "NEUTRAL",
-      "score": -0.25,
-      "count": 146,
+      "count": 145,
       "highlights": [
         {
           "title": "To raise or not to raise interest rates? \u2018Several\u2019 Fed policymakers are divided on rate hikes, March minutes show",
@@ -87,6 +87,14 @@
           "link": "https://www.livemint.com/economy/to-raise-or-not-to-raise-interest-rates-thats-the-question-for-several-fed-policymakers-reveals-march-minutes-11775708957539.html"
         },
         {
+          "title": "Wholesale rice prices up 7% as West Asia ceasefire fuels export rush",
+          "source": "ET Economy",
+          "category": "macro",
+          "sentiment": "BULLISH",
+          "sectors": [],
+          "link": "https://economictimes.indiatimes.com/news/economy/agriculture/wholesale-rice-prices-up-7-as-west-asia-ceasefire-fuels-export-rush/articleshow/130179168.cms"
+        },
+        {
           "title": "Amid West Asia war, FY26 goods exports may fall 2-3%: FIEO",
           "source": "ET Economy",
           "category": "macro",
@@ -95,14 +103,14 @@
           "link": "https://economictimes.indiatimes.com/news/economy/foreign-trade/amid-west-asia-war-fy26-goods-exports-may-fall-2-3-fieo/articleshow/130153156.cms"
         },
         {
-          "title": "India struggles to stabilise rupee as war creates depreciation pressure",
-          "source": "FT Markets",
-          "category": "global",
+          "title": "War-led supply chain strain could hit auto market: Volvo India President",
+          "source": "ET Industry",
+          "category": "sector",
           "sentiment": "BEARISH",
           "sectors": [
-            "Banking"
+            "Telecom"
           ],
-          "link": "https://www.ft.com/content/7b4ee96d-8bcb-4c75-b1db-d3b6de0bfc93"
+          "link": "https://economictimes.indiatimes.com/industry/auto/auto-news/war-led-supply-chain-strain-could-hit-auto-market-volvo-india-president/articleshow/130176937.cms"
         },
         {
           "title": "US stocks today: S&P 500, Nasdaq gain on tech boost after inflation data; Mideast tensions in focus",
@@ -121,25 +129,14 @@
           "sentiment": "BULLISH",
           "sectors": [],
           "link": "https://www.livemint.com/economy/adb-india-s-gdp-growth-global-uncertainty-west-asia-conflict-energy-prices-trade-current-account-deficit-manufacturing-11775824838764.html"
-        },
-        {
-          "title": "Rupee falls 22 paise, up for second week as US-Iran ceasefire boosts sentiment",
-          "source": "ET Markets",
-          "category": "market",
-          "sentiment": "BEARISH",
-          "sectors": [
-            "Banking",
-            "Oil & Gas"
-          ],
-          "link": "https://economictimes.indiatimes.com/markets/forex/indian-rupee-up-for-second-week-as-arbitrage-position-unwinding-us-iran-truce-boost-sentiment/articleshow/130166556.cms"
         }
       ]
     },
-    "key_insight": "UNKNOWN regime with mixed signals. Lean on stock-specific setups. Macro flow is neutral with 146 policy/global items in focus \u2014 factor this into position sizing.",
+    "key_insight": "Yahoo Finance did not return usable price data for any of the 50 tracked stocks in this run. The frontend will show a 'brief not ready' state until the next successful workflow run.",
     "narrative": [
-      "Regime: UNKNOWN \u00b7 breadth 0% \u00b7 median momentum +0.0% \u00b7 ATR 0.0%",
-      "Book: 0 ADD \u00b7 0 ACCUMULATE \u00b7 0 HOLD \u00b7 0 EXIT",
-      "Macro tone: NEUTRAL from 146 items across 11 sources"
+      "Attempted to score 50 stocks, got 0 results",
+      "News layer OK: 271 items ingested",
+      "Retry: GitHub \u2192 Actions \u2192 Daily Stock Analysis \u2192 Run workflow"
     ],
     "market_pulse": {
       "total_analyzed": 0,
@@ -157,145 +154,6 @@
     "breakout_watch": [],
     "sector_heatmap": [],
     "action_plan": [],
-    "news_highlights": [
-      {
-        "title": "Groww share price rises 6% to hit its record high, surges 20% in 3 days\u2014what\u2019s driving the rally?",
-        "source": "Mint Markets",
-        "category": "market",
-        "sentiment": "BULLISH",
-        "tickers": [],
-        "sectors": [],
-        "published": "2026-04-10T08:11:25+00:00",
-        "link": "https://www.livemint.com/market/stock-market-news/groww-share-price-rose-6-to-hit-its-record-high-surges-20-in-3-days-what-s-driving-the-rally-11775806059389.html"
-      },
-      {
-        "title": "\u200bAther Energy, Anand Rathi among 11 stocks that hit 52-week high; rally up to 25% in a month",
-        "source": "ET Markets",
-        "category": "market",
-        "sentiment": "BULLISH",
-        "tickers": [
-          "TITAN"
-        ],
-        "sectors": [],
-        "published": "2026-04-10T12:07:26+00:00",
-        "link": "https://economictimes.indiatimes.com/markets/stocks/news/ather-energy-anand-rathi-among-11-stocks-that-hit-52-week-high-rally-up-to-25-in-a-month/slideshow/130169667.cms"
-      },
-      {
-        "title": "IOC, BPCL to HPCL: Oil PSU stocks gain up to 2.5% as crude oil rally loses steam ahead of US-Iran talks this weekend",
-        "source": "Mint Markets",
-        "category": "market",
-        "sentiment": "BULLISH",
-        "tickers": [
-          "BPCL"
-        ],
-        "sectors": [],
-        "published": "2026-04-10T04:29:11+00:00",
-        "link": "https://www.livemint.com/market/stock-market-news/ioc-bpcl-to-hpcl-oil-psu-stocks-gain-up-to-2-5-as-crude-oil-rally-loses-steam-ahead-of-us-iran-talks-this-weekend-11775795240687.html"
-      },
-      {
-        "title": "Tata Investment, Tata Chemicals shares surge up to 8% after Mistry backs Tata Sons listing push",
-        "source": "ET Markets",
-        "category": "market",
-        "sentiment": "BULLISH",
-        "tickers": [],
-        "sectors": [],
-        "published": "2026-04-10T10:50:12+00:00",
-        "link": "https://economictimes.indiatimes.com/markets/stocks/news/tata-investment-tata-chemicals-shares-surge-up-to-8-after-mistry-backs-tata-sons-listing-push/articleshow/130167350.cms"
-      },
-      {
-        "title": "To raise or not to raise interest rates? \u2018Several\u2019 Fed policymakers are divided on rate hikes, March minutes show",
-        "source": "Mint Economy",
-        "category": "macro",
-        "sentiment": "BEARISH",
-        "tickers": [],
-        "sectors": [],
-        "published": "2026-04-09T05:19:11+00:00",
-        "link": "https://www.livemint.com/economy/to-raise-or-not-to-raise-interest-rates-thats-the-question-for-several-fed-policymakers-reveals-march-minutes-11775708957539.html"
-      },
-      {
-        "title": "BSE shares hit 52-week high, what is driving the surge?",
-        "source": "Hindu BusinessLine",
-        "category": "market",
-        "sentiment": "BULLISH",
-        "tickers": [],
-        "sectors": [],
-        "published": "2026-04-10T11:20:34+00:00",
-        "link": "https://www.thehindubusinessline.com/markets/stock-markets/bse-shares-hit-52-week-high-what-is-driving-the-surge/article70846202.ece"
-      },
-      {
-        "title": "Amid West Asia war, FY26 goods exports may fall 2-3%: FIEO",
-        "source": "ET Economy",
-        "category": "macro",
-        "sentiment": "BEARISH",
-        "tickers": [],
-        "sectors": [],
-        "published": "2026-04-09T19:37:18+00:00",
-        "link": "https://economictimes.indiatimes.com/news/economy/foreign-trade/amid-west-asia-war-fy26-goods-exports-may-fall-2-3-fieo/articleshow/130153156.cms"
-      },
-      {
-        "title": "Pulse of the Street: Markets log best weekly gain in 5 years on global relief",
-        "source": "Mint Markets",
-        "category": "market",
-        "sentiment": "BULLISH",
-        "tickers": [],
-        "sectors": [],
-        "published": "2026-04-10T16:40:28+00:00",
-        "link": "https://www.livemint.com/market/pulse-of-the-street-markets-log-best-weekly-gain-in-5-years-on-global-relief-11775825697244.html"
-      },
-      {
-        "title": "Small-cap green energy stock hits 10% upper circuit after order win update. Do you own?",
-        "source": "Mint Markets",
-        "category": "market",
-        "sentiment": "BULLISH",
-        "tickers": [
-          "RELIANCE"
-        ],
-        "sectors": [],
-        "published": "2026-04-10T09:01:27+00:00",
-        "link": "https://www.livemint.com/market/stock-market-news/smallcap-green-energy-stock-hits-10-upper-circuit-after-order-win-update-do-you-own-11775811158767.html"
-      },
-      {
-        "title": "Bank Nifty nears key 56,000, led by ICICI, HDFC Bank, SBI shares; Breakout or profit-booking zone? Here\u2019s how to trade",
-        "source": "Mint Markets",
-        "category": "market",
-        "sentiment": "BULLISH",
-        "tickers": [
-          "HDFCBANK",
-          "SBIN"
-        ],
-        "sectors": [],
-        "published": "2026-04-10T06:50:54+00:00",
-        "link": "https://www.livemint.com/market/stock-market-news/bank-nifty-nears-key-56-000-led-by-icici-hdfc-bank-sbi-shares-breakout-or-profit-booking-zone-here-s-how-to-trade-11775801554741.html"
-      },
-      {
-        "title": "ITDC shares rally 40% in two days, skyrocket 67% in seven sessions. What\u2019s behind the surge?",
-        "source": "ET Markets",
-        "category": "market",
-        "sentiment": "BULLISH",
-        "tickers": [],
-        "sectors": [],
-        "published": "2026-04-10T08:21:50+00:00",
-        "link": "https://economictimes.indiatimes.com/markets/stocks/news/itdc-shares-rally-40-in-two-days-skyrocket-67-in-seven-sessions-whats-behind-the-surge/articleshow/130163832.cms"
-      },
-      {
-        "title": "West Asia War: Fracturing world order raises energy risks for India, ONGC chief warns",
-        "source": "ET Industry",
-        "category": "sector",
-        "sentiment": "BEARISH",
-        "tickers": [
-          "ONGC"
-        ],
-        "sectors": [],
-        "published": "2026-04-10T13:37:41+00:00",
-        "link": "https://economictimes.indiatimes.com/industry/energy/oil-gas/west-asia-war-fracturing-world-order-raises-energy-risks-for-india-ongc-chief-warns/articleshow/130171540.cms"
-      }
-    ],
-    "news_stats": {
-      "total_items": 270,
-      "sources": 11,
-      "with_tickers": 51,
-      "bullish": 75,
-      "bearish": 66
-    }
+    "news_highlights": []
   }
 }
