@@ -813,7 +813,36 @@ def main():
 
     # ── STEP 5: Build rich daily brief ──
     print(f"\n[5/5] Building rich daily brief...")
-    daily_brief = build_rich_daily_brief(results, regime, news_items, macro_sentiment, sector_momentum)
+    if not results:
+        print("      ⚠ No stocks scored — emitting minimal brief, frontend will show 'not ready'")
+        daily_brief = {
+            "generated_at": now.isoformat(),
+            "date": now.strftime("%Y-%m-%d"),
+            "source": "rules_engine_v5_degraded",
+            "headline": "Data fetch failed — no picks available",
+            "regime": regime,
+            "macro_context": macro_sentiment,
+            "key_insight": (
+                "Yahoo Finance did not return usable price data for any of the "
+                f"{len(STOCKS)} tracked stocks in this run. The frontend will show "
+                "a 'brief not ready' state until the next successful workflow run."
+            ),
+            "narrative": [
+                f"Attempted to score {len(STOCKS)} stocks, got 0 results",
+                f"News layer OK: {len(news_items)} items ingested",
+                "Retry: GitHub → Actions → Daily Stock Analysis → Run workflow",
+            ],
+            "market_pulse": {
+                "total_analyzed": 0, "strong_buys": 0, "actionable_buys": 0,
+                "holds": 0, "risk_alerts": 0, "earnings_blackouts": 0, "do_not_trade": 0,
+            },
+            "top_movers_up": [], "top_movers_down": [],
+            "conviction_board": [], "risk_watchlist": [],
+            "breakout_watch": [], "sector_heatmap": [], "action_plan": [],
+            "news_highlights": [],
+        }
+    else:
+        daily_brief = build_rich_daily_brief(results, regime, news_items, macro_sentiment, sector_momentum)
     print(f"      → headline: {daily_brief.get('headline', '')[:80]}")
     print(f"      → conviction: {len(daily_brief.get('conviction_board', []))}")
     print(f"      → risk watch: {len(daily_brief.get('risk_watchlist', []))}")
