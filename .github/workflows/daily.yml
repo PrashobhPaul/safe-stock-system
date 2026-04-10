@@ -7,9 +7,9 @@ on:
 
 jobs:
   analyze:
-    name: Fetch · Score · Save
+    name: Fetch · Score · News · Forecast · Save
     runs-on: ubuntu-latest
-    timeout-minutes: 30
+    timeout-minutes: 15
     permissions:
       contents: write
 
@@ -24,30 +24,28 @@ jobs:
         with:
           python-version: "3.11"
 
-      - name: Install dependencies directly
+      - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
-          pip install yfinance==0.2.36 pandas numpy requests pytz
+          pip install yfinance==0.2.36 pandas numpy requests pytz feedparser
 
-      - name: Run analysis and save predictions.json
+      - name: Run integrated analysis
         run: |
           cd $GITHUB_WORKSPACE
           python api/quotes_daily.py
-        env:
-          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
 
-      - name: Commit predictions.json
+      - name: Commit predictions.json and news_cache.json
         run: |
           git config --global user.name  "stocksage-bot"
           git config --global user.email "bot@stocksage.india"
-          git add predictions.json
+          git add predictions.json news_cache.json 2>/dev/null || true
           if git diff --staged --quiet; then
             echo "No changes to commit"
           else
             IST=$(TZ='Asia/Kolkata' date '+%Y-%m-%d %H:%M IST')
-            git commit -m "📈 Daily predictions — ${IST}"
+            git commit -m "📈 Daily predictions + news — ${IST}"
             git push
-            echo "✅ predictions.json saved and pushed"
+            echo "✅ Committed and pushed"
           fi
 
       - name: Summary
@@ -59,20 +57,23 @@ jobs:
           try:
               with open("predictions.json") as f:
                   d = json.load(f)
+              brief = d.get("daily_brief", {})
               print(f"**Date:** {d.get('market_date','?')}")
-              print(f"**Stocks analyzed:** {d.get('stocks_analyzed','?')}")
+              print(f"**Engine:** {d.get('engine','?')}")
+              print(f"**Stocks:** {d.get('stocks_analyzed','?')}")
+              print(f"**Regime:** {d.get('regime',{}).get('label','?')} · breadth {d.get('regime',{}).get('breadth_pct',0)}%")
+              print(f"**Headline:** {brief.get('headline','—')}")
+              print(f"**Macro:** {brief.get('macro_context',{}).get('label','—')} ({brief.get('news_stats',{}).get('total_items',0)} news items)")
               print()
               for cat, label in [("short_term","⚡ Short"),("medium_term","📈 Medium"),("long_term","🏛 Long")]:
                   picks = d.get(cat,{}).get("picks",[])
                   if not picks: continue
                   print(f"### {label} Term")
-                  print("| # | Symbol | Score | Signal | Entry | Target | Hold |")
-                  print("|---|--------|-------|--------|-------|--------|------|")
+                  print("| # | Symbol | Score | Verdict | Tomorrow | 1 Week | 1 Month |")
+                  print("|---|--------|-------|---------|----------|--------|---------|")
                   for p in picks:
-                      ep = p.get("trade_plan",{}).get("entry",{}).get("ideal_price","—")
-                      tp = p.get("trade_plan",{}).get("exit",{}).get("target_ideal","—")
-                      hd = p.get("trade_plan",{}).get("exit",{}).get("hold_duration","—")
-                      print(f"| {p['rank']} | **{p['symbol']}** | {p['score']} | {p['signal']} | {ep} | {tp} | {hd} |")
+                      fc = p.get("forecasts", {})
+                      print(f"| {p.get('rank','?')} | **{p['symbol']}** | {p['score']} | {p.get('verdict', p.get('signal',''))} | {fc.get('1d',{}).get('bias','—')} | {fc.get('1w',{}).get('bias','—')} | {fc.get('1m',{}).get('bias','—')} |")
                   print()
           except Exception as e:
               print(f"Error: {e}")
