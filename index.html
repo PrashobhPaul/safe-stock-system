@@ -11,15 +11,15 @@
   <meta name="msapplication-TileColor" content="#060a06">
   <meta name="theme-color" content="#00e676" media="(prefers-color-scheme: dark)">
   <meta name="theme-color" content="#00e676">
-  <meta name="description" content="ProfitPilot — Your AI Assistant for Smarter Trading. Short, Medium & Long term NSE stock picks with precise entry/exit prices.">
-  <meta name="keywords" content="NSE, BSE, Indian stocks, stock predictions, Nifty, ProfitPilot, AI trading">
+  <meta name="description" content="ProfitPilot — Your AI Assistant for Smarter Investing. Short, Medium & Long term NSE stock picks with precise entry/exit prices.">
+  <meta name="keywords" content="NSE, BSE, Indian stocks, stock predictions, Nifty, ProfitPilot, AI Investing">
 
   <!-- Open Graph for sharing -->
-  <meta property="og:title" content="ProfitPilot — Your AI Assistant for Smarter Trading">
+  <meta property="og:title" content="ProfitPilot — Your AI Assistant for Smarter Investing">
   <meta property="og:description" content="AI-powered Indian stock picks with precise entry & exit prices. Short, Medium & Long term picks updated daily.">
   <meta property="og:type" content="website">
 
-  <title>ProfitPilot — Smarter Trading</title>
+  <title>ProfitPilot — Smarter Investing</title>
 
   <link rel="manifest" href="./manifest.json">
   <link rel="icon" href="./icons/icon-192.png" type="image/png">
@@ -751,7 +751,7 @@
 <!-- ── LOADING SPLASH ── -->
 <div class="splash" id="splash">
   <div class="splash-logo"><img src="./icons/icon-192.png" alt="ProfitPilot" style="width:72px;height:72px;border-radius:16px;margin-bottom:12px;display:block;margin-left:auto;margin-right:auto"><span style="color:var(--grn)">Profit</span>Pilot</div>
-  <div class="splash-sub">Your AI Assistant for Smarter Trading</div>
+  <div class="splash-sub">Your AI Assistant for Smarter Investing</div>
   <div class="splash-bar"><div class="splash-fill"></div></div>
   <div class="splash-status" id="splashStatus">Loading predictions…</div>
 </div>
@@ -764,7 +764,7 @@
          onerror="this.style.display='none'">
     <div>
       <div class="app-logo"><span style="color:var(--grn)">Profit</span>Pilot</div>
-      <div style="font-family:var(--sans);font-size:9px;color:var(--tx2);font-weight:300;letter-spacing:.05em;margin-top:1px">Your AI Assistant for Smarter Trading</div>
+      <div style="font-family:var(--sans);font-size:9px;color:var(--tx2);font-weight:300;letter-spacing:.05em;margin-top:1px">Your AI Assistant for Smarter Investing</div>
     </div>
   </div>
   <div class="header-right">
@@ -932,7 +932,7 @@
 
 <script>
 // ═══════════════════════════════════════════════════════════════
-// ProfitPilot — Your AI Assistant for Smarter Trading
+// ProfitPilot — Your AI Assistant for Smarter Investing
 // Enterprise PWA v4.0 | NSE/BSE Intelligence
 //
 // NO LOGIN. NO CONFIG POPUP. INSTANT LOAD.
@@ -1036,10 +1036,13 @@ function updateMarketStatus() {
   } else {
     dot.className='live-dot off'; ldot.className='live-dot off';
     txt.textContent='NSE CLOSED'; txt.style.color='var(--amb)';
-    llbl.textContent=data?'CACHED':'LOADING';
+    llbl.textContent = data ? 'EOD' : 'LOADING';
     llbl.style.color='var(--amb)';
     banner.className='mkt-banner closed';
-    nEl.textContent='Next open: Mon–Fri 9:15 AM IST';
+    const dow = d.getDay();
+    if (dow === 0)      nEl.textContent = 'Reopens Monday 9:15 AM IST';
+    else if (dow === 6) nEl.textContent = 'Reopens Monday 9:15 AM IST';
+    else                nEl.textContent = 'Reopens tomorrow 9:15 AM IST';
   }
   dEl.textContent='· '+dateStr;
 }
@@ -1259,19 +1262,19 @@ function renderHorizon(cat) {
     const catIcon  = cat==='short' ? '⚡' : cat==='medium' ? '📈' : '🏛';
     const catColor = cat==='short' ? 'var(--short)' : cat==='medium' ? 'var(--medium)' : 'var(--long)';
     const analyzed = data.stocks_analyzed || 0;
-    const isOpen   = isOpen_mkt();
+    const marketOpen = isOpen_mkt();
 
-    // No data at all yet
+    // No data at all yet — degraded state, today's run hasn't landed
     if (analyzed === 0) {
       el.innerHTML = `<div class="empty-state">
         <div class="empty-icon">${catIcon}</div>
-        <div class="empty-title" style="color:var(--wht)">Waiting for first analysis</div>
+        <div class="empty-title" style="color:var(--wht)">Fresh picks on the way</div>
         <div class="empty-text" style="max-width:360px;margin:0 auto">
-          The daily analysis hasn't run yet.<br><br>
-          <strong style="color:var(--amb)">To get picks now:</strong><br>
-          Go to GitHub → Actions → <strong>Daily Stock Analysis</strong> → <strong>Run workflow</strong><br><br>
+          Today's analysis hasn't landed yet. Picks are generated after market close at <strong style="color:${catColor}">4:15 PM IST</strong> on trading days.<br><br>
           <span style="color:var(--txd);font-size:11px">
-            After ~10 minutes, real picks will appear here automatically.
+            ${marketOpen
+              ? '🟢 Market is open — check back after close.'
+              : '🔴 Market is closed — picks will refresh on the next trading day.'}
           </span>
         </div>
       </div>`;
@@ -1288,9 +1291,9 @@ function renderHorizon(cat) {
       <div class="empty-text" style="max-width:340px;margin:0 auto">
         ${universeLine}<br><br>
         <span style="color:var(--txd);font-size:11px">
-          ${isOpen
+          ${marketOpen
             ? '🟢 Market open — scores refresh every 60s. Check back shortly.'
-            : '🔴 Market closed — next analysis at 4:15 PM IST on the next trading day.'}
+            : '🔴 Market closed — next analysis at 4:15 PM IST on the next Investing day.'}
         </span><br><br>
         <span style="color:var(--txd);font-size:11px">
           This is by design — we only show picks when the setup is genuinely strong.<br>
@@ -1462,13 +1465,13 @@ function startAutoRefresh() {
 
 // ── INIT — runs immediately, no user action needed ──
 async function init() {
-  const statuses = ['Connecting to live feed…','Fetching stock data…','Running analysis…','Almost ready…'];
+  const statuses = ['Loading latest picks…', 'Preparing your dashboard…', 'Almost ready…'];
   let si = 0;
-  const sid = setInterval(()=>{
-    si=(si+1)%statuses.length;
-    const e=document.getElementById('splashStatus');
-    if(e) e.textContent=statuses[si];
-  }, 700);
+  const sid = setInterval(() => {
+    si = (si + 1) % statuses.length;
+    const e = document.getElementById('splashStatus');
+    if (e) e.textContent = statuses[si];
+  }, 800);
 
   // loadData() never throws now — always returns something
   data = await loadData();
