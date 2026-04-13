@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-04-11T02:15:17.417770+05:30",
-  "market_date": "2026-04-11",
+  "generated_at": "2026-04-13T17:24:29.183068+05:30",
+  "market_date": "2026-04-13",
   "analysis_version": "5.0-rules+news+forecast+narrative",
   "engine": "rules_engine_v5_news_fusion",
   "stocks_analyzed": 0,
@@ -62,8 +62,8 @@
   "avoid": [],
   "sector_momentum": [],
   "daily_brief": {
-    "generated_at": "2026-04-11T02:15:17.417770+05:30",
-    "date": "2026-04-11",
+    "generated_at": "2026-04-13T17:24:29.183068+05:30",
+    "date": "2026-04-13",
     "source": "rules_engine_v5_degraded",
     "headline": "Data fetch failed \u2014 no picks available",
     "regime": {
@@ -74,68 +74,75 @@
       "notes": "no data"
     },
     "macro_context": {
-      "score": -0.27,
-      "label": "NEUTRAL",
-      "count": 145,
+      "score": -0.59,
+      "label": "MILDLY_NEGATIVE",
+      "count": 116,
       "highlights": [
         {
-          "title": "To raise or not to raise interest rates? \u2018Several\u2019 Fed policymakers are divided on rate hikes, March minutes show",
-          "source": "Mint Economy",
-          "category": "macro",
+          "title": "Rupee falls most in two weeks as oil spikes on US move to blockade Iran ports",
+          "source": "ET Markets",
+          "category": "market",
           "sentiment": "BEARISH",
-          "sectors": [],
-          "link": "https://www.livemint.com/economy/to-raise-or-not-to-raise-interest-rates-thats-the-question-for-several-fed-policymakers-reveals-march-minutes-11775708957539.html"
+          "sectors": [
+            "Banking",
+            "Oil & Gas"
+          ],
+          "link": "https://economictimes.indiatimes.com/markets/forex/forex-news/rupee-falls-most-in-two-weeks-as-oil-spikes-on-us-move-to-blockade-iran-ports/articleshow/130234246.cms"
         },
         {
-          "title": "Wholesale rice prices up 7% as West Asia ceasefire fuels export rush",
+          "title": "Global Markets | European shares slip as Middle East talks collapse, naval blockade looms",
+          "source": "ET Markets",
+          "category": "market",
+          "sentiment": "BEARISH",
+          "sectors": [
+            "Telecom"
+          ],
+          "link": "https://economictimes.indiatimes.com/markets/us-stocks/news/global-markets-european-shares-slip-as-middle-east-talks-collapse-naval-blockade-looms/articleshow/130231770.cms"
+        },
+        {
+          "title": "Jyoti CNC shares crash 16% as France probes subsidiary, seizes bank accounts",
+          "source": "ET Markets",
+          "category": "market",
+          "sentiment": "BEARISH",
+          "sectors": [
+            "Banking"
+          ],
+          "link": "https://economictimes.indiatimes.com/markets/stocks/news/jyoti-cnc-shares-crash-16-as-france-probes-subsidiary-seizes-bank-accounts/articleshow/130225398.cms"
+        },
+        {
+          "title": "Patent application filings in India rise 30.2% to 1.43 lakh in 2025-26: Goyal",
           "source": "ET Economy",
           "category": "macro",
           "sentiment": "BULLISH",
           "sectors": [],
-          "link": "https://economictimes.indiatimes.com/news/economy/agriculture/wholesale-rice-prices-up-7-as-west-asia-ceasefire-fuels-export-rush/articleshow/130179168.cms"
+          "link": "https://economictimes.indiatimes.com/news/economy/policy/patent-application-filings-in-india-rise-30-2-to-1-43-lakh-in-2025-26-goyal/articleshow/130206098.cms"
         },
         {
-          "title": "Amid West Asia war, FY26 goods exports may fall 2-3%: FIEO",
-          "source": "ET Economy",
-          "category": "macro",
+          "title": "Can Trump\u2019s Iran blockade plunge India into an 'everything crisis'?",
+          "source": "ET Industry",
+          "category": "sector",
           "sentiment": "BEARISH",
-          "sectors": [],
-          "link": "https://economictimes.indiatimes.com/news/economy/foreign-trade/amid-west-asia-war-fy26-goods-exports-may-fall-2-3-fieo/articleshow/130153156.cms"
+          "sectors": [
+            "Banking"
+          ],
+          "link": "https://economictimes.indiatimes.com/industry/energy/oil-gas/can-trumps-iran-blockade-plunge-india-into-an-everything-crisis/articleshow/130231532.cms"
         },
         {
-          "title": "War-led supply chain strain could hit auto market: Volvo India President",
+          "title": "The Hormuz blockade is a throwdown the US can't win",
           "source": "ET Industry",
           "category": "sector",
           "sentiment": "BEARISH",
           "sectors": [
             "Telecom"
           ],
-          "link": "https://economictimes.indiatimes.com/industry/auto/auto-news/war-led-supply-chain-strain-could-hit-auto-market-volvo-india-president/articleshow/130176937.cms"
-        },
-        {
-          "title": "US stocks today: S&P 500, Nasdaq gain on tech boost after inflation data; Mideast tensions in focus",
-          "source": "ET Markets",
-          "category": "market",
-          "sentiment": "BULLISH",
-          "sectors": [
-            "Telecom"
-          ],
-          "link": "https://economictimes.indiatimes.com/markets/us-stocks/news/us-stocks-today-us-stocks-sp-500-nasdaq-open-higher-after-inflation-data-mideast-in-focus/articleshow/130171571.cms"
-        },
-        {
-          "title": "ADB says India\u2019s GDP growth to moderate to 6.9% in current fiscal before accelerating to 7.3% next year",
-          "source": "Mint Economy",
-          "category": "macro",
-          "sentiment": "BULLISH",
-          "sectors": [],
-          "link": "https://www.livemint.com/economy/adb-india-s-gdp-growth-global-uncertainty-west-asia-conflict-energy-prices-trade-current-account-deficit-manufacturing-11775824838764.html"
+          "link": "https://economictimes.indiatimes.com/industry/energy/oil-gas/oil-prices-hormuz-blockade-is-a-throwdown-the-us-and-donald-trump-cant-win-against-iran/articleshow/130230803.cms"
         }
       ]
     },
     "key_insight": "Yahoo Finance did not return usable price data for any of the 50 tracked stocks in this run. The frontend will show a 'brief not ready' state until the next successful workflow run.",
     "narrative": [
       "Attempted to score 50 stocks, got 0 results",
-      "News layer OK: 271 items ingested",
+      "News layer OK: 213 items ingested",
       "Retry: GitHub \u2192 Actions \u2192 Daily Stock Analysis \u2192 Run workflow"
     ],
     "market_pulse": {
