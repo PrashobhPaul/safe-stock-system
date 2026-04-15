@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-04-14T17:12:05.621807+05:30",
-  "market_date": "2026-04-14",
+  "generated_at": "2026-04-15T17:08:27.461686+05:30",
+  "market_date": "2026-04-15",
   "analysis_version": "5.0-rules+news+forecast+narrative",
   "engine": "rules_engine_v5_news_fusion",
   "stocks_analyzed": 0,
@@ -62,8 +62,8 @@
   "avoid": [],
   "sector_momentum": [],
   "daily_brief": {
-    "generated_at": "2026-04-14T17:12:05.621807+05:30",
-    "date": "2026-04-14",
+    "generated_at": "2026-04-15T17:08:27.461686+05:30",
+    "date": "2026-04-15",
     "source": "rules_engine_v5_degraded",
     "headline": "Data fetch failed \u2014 no picks available",
     "regime": {
@@ -74,19 +74,17 @@
       "notes": "no data"
     },
     "macro_context": {
-      "score": -0.33,
-      "label": "MILDLY_NEGATIVE",
-      "count": 147,
+      "score": -0.29,
+      "label": "NEUTRAL",
+      "count": 159,
       "highlights": [
         {
-          "title": "India\u2019s hotel expansion gains pace, draws institutional capital into real estate fold",
-          "source": "ET Industry",
-          "category": "sector",
-          "sentiment": "BULLISH",
-          "sectors": [
-            "Realty"
-          ],
-          "link": "https://economictimes.indiatimes.com/industry/services/property-/-cstruction/indias-hotel-expansion-gains-pace-draws-institutional-capital-into-real-estate-fold/articleshow/130255696.cms"
+          "title": "Indian agricultural sector under threat by trifecta of below-Normal Monsoon, El Nino, and West Asia war: ICRA",
+          "source": "ET Economy",
+          "category": "macro",
+          "sentiment": "BEARISH",
+          "sectors": [],
+          "link": "https://economictimes.indiatimes.com/news/economy/agriculture/indian-agricultural-sector-under-threat-by-trifecta-of-below-normal-monsoon-el-nino-and-west-asia-war-icra/articleshow/130278327.cms"
         },
         {
           "title": "AI and West Asia war hit campus hiring: Firms rescind offers, delay student onboarding",
@@ -99,36 +97,12 @@
           "link": "https://www.livemint.com/companies/news/campus-hiring-hit-ai-west-asia-war-rescinded-offers-delayed-onboarding-b-schools-engineering-colleges-11776143686358.html"
         },
         {
-          "title": "India the new 'no-go' zone for FIIs? 7 brutal truths behind $18 billion exodus",
-          "source": "ET Markets",
-          "category": "market",
-          "sentiment": "BEARISH",
-          "sectors": [
-            "Oil & Gas"
-          ],
-          "link": "https://economictimes.indiatimes.com/markets/stocks/news/india-the-new-no-go-zone-for-fiis-7-brutal-truths-behind-18-billion-exodus/articleshow/130250489.cms"
-        },
-        {
-          "title": "Oil prices fall as US-Iran dialogue hopes ease supply concerns",
-          "source": "ET Markets",
-          "category": "market",
-          "sentiment": "BEARISH",
-          "sectors": [
-            "Oil & Gas",
-            "Telecom"
-          ],
-          "link": "https://economictimes.indiatimes.com/markets/commodities/news/oil-prices-fall-as-us-iran-dialogue-hopes-ease-supply-concerns/articleshow/130249796.cms"
-        },
-        {
-          "title": "Rajasthan highway modernisation project gets $225 million World Bank boost, to benefit 3 million people",
-          "source": "ET Economy",
+          "title": "IMF revises India\u2019s FY27 GDP growth a notch up to 6.5%",
+          "source": "Mint Economy",
           "category": "macro",
           "sentiment": "BULLISH",
-          "sectors": [
-            "Banking",
-            "Infrastructure"
-          ],
-          "link": "https://economictimes.indiatimes.com/news/economy/infrastructure/rajasthan-highway-modernisation-project-gets-225-million-world-bank-boost-to-benefit-3-million-people/articleshow/130236879.cms"
+          "sectors": [],
+          "link": "https://www.livemint.com/economy/india-gdp-growth-imf-forecast-fy27-economic-outlook-international-monetary-fund-11776176856171.html"
         },
         {
           "title": "US home buyers 'frozen' as sales slump over Iran war fears",
@@ -137,13 +111,31 @@
           "sentiment": "BEARISH",
           "sectors": [],
           "link": "https://www.bbc.com/news/articles/cn08ep6d5ndo?at_medium=RSS&at_campaign=rss"
+        },
+        {
+          "title": "Luxury stocks fall as Iran war weighs on earnings; Hermes sinks 14%",
+          "source": "CNBC World",
+          "category": "global",
+          "sentiment": "BEARISH",
+          "sectors": [],
+          "link": "https://www.cnbc.com/2026/04/15/kering-stock-q1-earnings-gucci-sales-iran-war-middle-east-luxury.html"
+        },
+        {
+          "title": "Banks to report steady profit rise as loans grow, treasury drags",
+          "source": "ET Markets",
+          "category": "market",
+          "sentiment": "BULLISH",
+          "sectors": [
+            "Banking"
+          ],
+          "link": "https://economictimes.indiatimes.com/markets/stocks/earnings/banks-to-report-steady-profit-rise-as-loans-grow-treasury-drags/articleshow/130276761.cms"
         }
       ]
     },
     "key_insight": "Yahoo Finance did not return usable price data for any of the 50 tracked stocks in this run. The frontend will show a 'brief not ready' state until the next successful workflow run.",
     "narrative": [
       "Attempted to score 50 stocks, got 0 results",
-      "News layer OK: 260 items ingested",
+      "News layer OK: 266 items ingested",
       "Retry: GitHub \u2192 Actions \u2192 Daily Stock Analysis \u2192 Run workflow"
     ],
     "market_pulse": {
