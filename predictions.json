@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-04-15T17:08:27.461686+05:30",
-  "market_date": "2026-04-15",
+  "generated_at": "2026-04-16T17:11:26.195369+05:30",
+  "market_date": "2026-04-16",
   "analysis_version": "5.0-rules+news+forecast+narrative",
   "engine": "rules_engine_v5_news_fusion",
   "stocks_analyzed": 0,
@@ -62,8 +62,8 @@
   "avoid": [],
   "sector_momentum": [],
   "daily_brief": {
-    "generated_at": "2026-04-15T17:08:27.461686+05:30",
-    "date": "2026-04-15",
+    "generated_at": "2026-04-16T17:11:26.195369+05:30",
+    "date": "2026-04-16",
     "source": "rules_engine_v5_degraded",
     "headline": "Data fetch failed \u2014 no picks available",
     "regime": {
@@ -74,9 +74,9 @@
       "notes": "no data"
     },
     "macro_context": {
-      "score": -0.29,
-      "label": "NEUTRAL",
-      "count": 159,
+      "score": -0.33,
+      "label": "MILDLY_NEGATIVE",
+      "count": 155,
       "highlights": [
         {
           "title": "Indian agricultural sector under threat by trifecta of below-Normal Monsoon, El Nino, and West Asia war: ICRA",
@@ -87,14 +87,22 @@
           "link": "https://economictimes.indiatimes.com/news/economy/agriculture/indian-agricultural-sector-under-threat-by-trifecta-of-below-normal-monsoon-el-nino-and-west-asia-war-icra/articleshow/130278327.cms"
         },
         {
-          "title": "AI and West Asia war hit campus hiring: Firms rescind offers, delay student onboarding",
-          "source": "Mint Companies",
-          "category": "market",
+          "title": "Up to 66% crash: How West Asia war battered India\u2019s top Gulf trade",
+          "source": "Mint Economy",
+          "category": "macro",
           "sentiment": "BEARISH",
+          "sectors": [],
+          "link": "https://www.livemint.com/economy/west-asia-war-india-trade-gulf-countries-export-import-uae-saudi-arabia-qatar-iraq-11776321025491.html"
+        },
+        {
+          "title": "Small-cap stock under \u20b950 extends rally for second straight session, rises 30% this month; do you own?",
+          "source": "Mint Markets",
+          "category": "market",
+          "sentiment": "BULLISH",
           "sectors": [
             "Telecom"
           ],
-          "link": "https://www.livemint.com/companies/news/campus-hiring-hit-ai-west-asia-war-rescinded-offers-delayed-onboarding-b-schools-engineering-colleges-11776143686358.html"
+          "link": "https://www.livemint.com/market/stock-market-news/smallcap-stock-under-rs-50-extends-rally-for-second-straight-session-rises-30-this-month-do-you-own-11776321362425.html"
         },
         {
           "title": "IMF revises India\u2019s FY27 GDP growth a notch up to 6.5%",
@@ -105,37 +113,29 @@
           "link": "https://www.livemint.com/economy/india-gdp-growth-imf-forecast-fy27-economic-outlook-international-monetary-fund-11776176856171.html"
         },
         {
-          "title": "US home buyers 'frozen' as sales slump over Iran war fears",
-          "source": "BBC Business",
+          "title": "Shares at world\u2019s biggest chocolate maker plunge as cocoa prices collapse",
+          "source": "FT Markets",
           "category": "global",
           "sentiment": "BEARISH",
           "sectors": [],
-          "link": "https://www.bbc.com/news/articles/cn08ep6d5ndo?at_medium=RSS&at_campaign=rss"
+          "link": "https://www.ft.com/content/ca630e7d-409e-459d-8a98-da3155cab074"
         },
         {
-          "title": "Luxury stocks fall as Iran war weighs on earnings; Hermes sinks 14%",
-          "source": "CNBC World",
-          "category": "global",
+          "title": "IMF chief warns of 'tough times' if oil prices stay high",
+          "source": "ET Industry",
+          "category": "sector",
           "sentiment": "BEARISH",
-          "sectors": [],
-          "link": "https://www.cnbc.com/2026/04/15/kering-stock-q1-earnings-gucci-sales-iran-war-middle-east-luxury.html"
-        },
-        {
-          "title": "Banks to report steady profit rise as loans grow, treasury drags",
-          "source": "ET Markets",
-          "category": "market",
-          "sentiment": "BULLISH",
           "sectors": [
-            "Banking"
+            "Oil & Gas"
           ],
-          "link": "https://economictimes.indiatimes.com/markets/stocks/earnings/banks-to-report-steady-profit-rise-as-loans-grow-treasury-drags/articleshow/130276761.cms"
+          "link": "https://economictimes.indiatimes.com/industry/energy/oil-gas/imf-chief-warns-of-tough-times-if-oil-prices-stay-high/articleshow/130295636.cms"
         }
       ]
     },
     "key_insight": "Yahoo Finance did not return usable price data for any of the 50 tracked stocks in this run. The frontend will show a 'brief not ready' state until the next successful workflow run.",
     "narrative": [
       "Attempted to score 50 stocks, got 0 results",
-      "News layer OK: 266 items ingested",
+      "News layer OK: 268 items ingested",
       "Retry: GitHub \u2192 Actions \u2192 Daily Stock Analysis \u2192 Run workflow"
     ],
     "market_pulse": {
