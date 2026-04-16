@@ -1095,7 +1095,10 @@ async function loadData() {
 
   // 2. Try predictions.json (committed by GitHub Actions daily)
   try {
-    const r = await fetch(DATA_URL+'?t='+Date.now(), { cache: 'no-store' });
+    const r = await fetch(DATA_URL+'?t='+Date.now(), {
+      cache: 'no-store',
+      signal: AbortSignal.timeout(8000),
+    });
     if (r.ok) {
       const d = await r.json();
       if (d && (d.top_picks || d.short_term)) {
@@ -1476,22 +1479,52 @@ async function init() {
     if (e) e.textContent = statuses[si];
   }, 800);
 
-  // loadData() never throws now — always returns something
-  data = await loadData();
-  renderAll();
-  handleHash();
-
-  clearInterval(sid);
-  startAutoRefresh();
-
-  // Hide splash
-  setTimeout(() => {
+  // FAILSAFE — splash MUST come down within 15s regardless of what happens
+  // in loadData(). If anything above throws or hangs, we still render with
+  // whatever data we have (possibly empty) so the user never sees a dead screen.
+  let splashHidden = false;
+  const hideSplash = () => {
+    if (splashHidden) return;
+    splashHidden = true;
+    clearInterval(sid);
     const s = document.getElementById('splash');
-    s.classList.add('hidden');
-    setTimeout(()=>s.remove(), 600);
-  }, 700);
+    if (s) {
+      s.classList.add('hidden');
+      setTimeout(() => s.remove(), 600);
+    }
+  };
+  const failsafe = setTimeout(() => {
+    console.error('⛑ init() failsafe tripped — forcing splash down after 15s');
+    if (!data) {
+      // Fallback: render with empty structure so tabs/nav at least appear
+      data = {
+        generated_at: new Date().toISOString(),
+        market_date: new Date().toLocaleDateString('en-CA'),
+        stocks_analyzed: 0, _source: 'failsafe',
+        indices: { NIFTY50:{value:0,change:0,change_pct:0}, SENSEX:{value:0,change:0,change_pct:0}, NIFTY_BANK:{value:0,change:0,change_pct:0}, NIFTY_IT:{value:0,change:0,change_pct:0}, NIFTY_MIDCAP100:{value:0,change:0,change_pct:0} },
+        market_breadth: { advances:0, declines:0, unchanged:0, new_52w_high:0, new_52w_low:0 },
+        short_term: { label:'Short Term', picks:[] },
+        medium_term: { label:'Medium Term', picks:[] },
+        long_term: { label:'Long Term', picks:[] },
+        top_picks: [], watchlist: [], avoid: [], sector_momentum: [],
+        daily_brief: { headline: 'Connection timed out — pull down to refresh', narrative: ['Network or service worker stalled. Tap refresh.'] }
+      };
+      try { renderAll(); } catch(e) { console.error(e); }
+    }
+    hideSplash();
+  }, 15000);
 
-  // Fetch AI briefing in background always on load (not just on AI tab)
+  try {
+    data = await loadData();
+    renderAll();
+    handleHash();
+  } catch (e) {
+    console.error('init() caught error:', e);
+  } finally {
+    clearTimeout(failsafe);
+    startAutoRefresh();
+    setTimeout(hideSplash, 700);
+  }
 }
 
 // Start immediately

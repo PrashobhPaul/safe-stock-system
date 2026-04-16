@@ -1,12 +1,13 @@
 /**
- * ProfitPilot Service Worker v5
- * Bumped from v4 to force eviction of stale index.html on returning users.
+ * ProfitPilot Service Worker v6
+ * v6: Added network timeout to staleWhileRevalidate to prevent infinite
+ *     splash-screen hang when the network stalls with no cache present.
  * Strategy: stale-while-revalidate for predictions.json; network-first for
  * the app shell so new builds propagate without a hard reload.
  */
 
-const CACHE_NAME  = 'profitpilot-v5';
-const DATA_CACHE  = 'profitpilot-data-v5';
+const CACHE_NAME  = 'profitpilot-v6';
+const DATA_CACHE  = 'profitpilot-data-v6';
 const OFFLINE_URL = './offline.html';
 
 const APP_SHELL = [
@@ -99,11 +100,30 @@ async function networkFirst(request, cacheName) {
 async function staleWhileRevalidate(request, cacheName) {
   const cache  = await caches.open(cacheName);
   const cached = await cache.match(request);
-  const fetchPromise = fetch(request).then(response => {
-    if (response.ok) cache.put(request, response.clone());
-    return response;
-  }).catch(() => null);
-  return cached || await fetchPromise || new Response('{}', {
+
+  // Network fetch with a hard 7s timeout so a stalled network never
+  // blocks the page forever when there is no cached copy to fall back to.
+  const networkWithTimeout = new Promise((resolve) => {
+    const timer = setTimeout(() => resolve(null), 7000);
+    fetch(request).then(response => {
+      clearTimeout(timer);
+      if (response && response.ok) cache.put(request, response.clone());
+      resolve(response);
+    }).catch(() => {
+      clearTimeout(timer);
+      resolve(null);
+    });
+  });
+
+  // If we have a cached copy, return it immediately and update in background.
+  if (cached) {
+    networkWithTimeout; // fire-and-forget revalidate
+    return cached;
+  }
+
+  // No cache: wait for network (bounded by the 7s timeout above).
+  const response = await networkWithTimeout;
+  return response || new Response('{}', {
     headers: { 'Content-Type': 'application/json' }
   });
 }
