@@ -1,9 +1,29 @@
 name: 📈 Daily Stock Analysis
 
+# Why multiple crons instead of once:
+#   Yahoo Finance is a free, flaky upstream. A single daily run gives us one
+#   shot — if it fails, the app is stale for 24h. Running at 4 checkpoints
+#   combined with the preserve-last-good logic in quotes_daily.py means a
+#   single success per day is enough, and we never overwrite good picks
+#   with an empty payload.
+#
+# Times (UTC → IST):
+#   10:15 UTC = 15:45 IST   pre-close pulse (markets close 15:30 IST)
+#   10:45 UTC = 16:15 IST   main EOD run
+#   12:30 UTC = 18:00 IST   post-close safety retry
+#   02:00 UTC = 07:30 IST   morning fallback (Tue–Sat, covers yesterday)
 on:
   schedule:
+    - cron: "15 10 * * 1-5"
     - cron: "45 10 * * 1-5"
+    - cron: "30 12 * * 1-5"
+    - cron: "0 2 * * 2-6"
   workflow_dispatch:
+
+# Serialize runs so two crons never race on the same git push
+concurrency:
+  group: daily-stock-analysis
+  cancel-in-progress: false
 
 jobs:
   analyze:
@@ -27,12 +47,27 @@ jobs:
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
-          pip install yfinance==0.2.36 pandas numpy requests pytz feedparser
+          # Pin to a known-good modern yfinance + curl_cffi session shim.
+          # The old 0.2.36 pin was the root cause of the Apr 2026 outage —
+          # Yahoo tightened bot detection and the old parser returned
+          # "Expecting value: line 1 column 1 (char 0)" for every ticker.
+          pip install "yfinance>=0.2.50" "curl_cffi>=0.7.0" \
+                      pandas numpy requests pytz feedparser
 
-      - name: Run integrated analysis
+      - name: Run integrated analysis (with one retry)
+        id: analysis
         run: |
           cd $GITHUB_WORKSPACE
-          python api/quotes_daily.py
+          # First attempt
+          python api/quotes_daily.py || true
+          # If fresh picks didn't land, retry once before giving up on this slot
+          STOCKS=$(python -c "import json; print(json.load(open('predictions.json')).get('stocks_analyzed', 0))" 2>/dev/null || echo 0)
+          STALE=$(python -c "import json; print(1 if json.load(open('predictions.json')).get('_stale') else 0)" 2>/dev/null || echo 0)
+          if [ "$STOCKS" = "0" ] || [ "$STALE" = "1" ]; then
+            echo "First attempt didn't produce fresh picks (stocks=$STOCKS, stale=$STALE). Retrying in 30s..."
+            sleep 30
+            python api/quotes_daily.py || true
+          fi
 
       - name: Commit predictions.json and news_cache.json
         run: |
@@ -43,27 +78,34 @@ jobs:
             echo "No changes to commit"
           else
             IST=$(TZ='Asia/Kolkata' date '+%Y-%m-%d %H:%M IST')
-            git commit -m "📈 Daily predictions + news — ${IST}"
+            STALE=$(python -c "import json; print('STALE' if json.load(open('predictions.json')).get('_stale') else 'FRESH')" 2>/dev/null || echo "FRESH")
+            git commit -m "📈 [$STALE] predictions + news — ${IST}"
             git push
-            echo "✅ Committed and pushed"
+            echo "✅ Committed and pushed ($STALE)"
           fi
 
       - name: Summary
         if: always()
         run: |
-          echo "## 📈 StockSage Daily Analysis" >> $GITHUB_STEP_SUMMARY
+          echo "## 📈 ProfitPilot Daily Analysis" >> $GITHUB_STEP_SUMMARY
           python - << 'PYEOF' >> $GITHUB_STEP_SUMMARY 2>/dev/null || echo "Summary unavailable"
           import json
           try:
               with open("predictions.json") as f:
                   d = json.load(f)
               brief = d.get("daily_brief", {})
-              print(f"**Date:** {d.get('market_date','?')}")
+              is_stale = d.get("_stale", False)
+              banner = "⚠️ **STALE** — preserved last-good picks, fetch failed this run" if is_stale else "✅ **FRESH**"
+              print(banner)
+              print(f"**Market date:** {d.get('market_date','?')}")
               print(f"**Engine:** {d.get('engine','?')}")
               print(f"**Stocks:** {d.get('stocks_analyzed','?')}")
               print(f"**Regime:** {d.get('regime',{}).get('label','?')} · breadth {d.get('regime',{}).get('breadth_pct',0)}%")
               print(f"**Headline:** {brief.get('headline','—')}")
               print(f"**Macro:** {brief.get('macro_context',{}).get('label','—')} ({brief.get('news_stats',{}).get('total_items',0)} news items)")
+              if is_stale:
+                  print(f"**Previous market date preserved:** {brief.get('_previous_market_date','?')}")
+                  print(f"**Last refresh attempt:** {d.get('_last_refresh_attempt','?')}")
               print()
               for cat, label in [("short_term","⚡ Short"),("medium_term","📈 Medium"),("long_term","🏛 Long")]:
                   picks = d.get(cat,{}).get("picks",[])
