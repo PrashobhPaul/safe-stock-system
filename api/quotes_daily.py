@@ -29,6 +29,120 @@ from advisor_narrator import build_narrative
 
 IST = pytz.timezone("Asia/Kolkata")
 
+
+# ───────────────────────────────────────────────────────────────────────────
+# RESILIENT YAHOO FETCH
+# ───────────────────────────────────────────────────────────────────────────
+# Yahoo tightened bot detection in 2025. A plain requests session (or older
+# yfinance versions) now frequently returns empty JSON bodies and the parser
+# raises "Expecting value: line 1 column 1 (char 0)". The fix is two-fold:
+#   1. Use curl_cffi to impersonate a real Chrome TLS fingerprint.
+#   2. Never trust a single batch call — fall back to per-ticker retries so
+#      one bad ticker doesn't zero out the whole run.
+def _build_session():
+    """Return a curl_cffi Chrome-impersonating session, or None if unavailable."""
+    try:
+        from curl_cffi import requests as curl_requests
+        return curl_requests.Session(impersonate="chrome")
+    except Exception as e:
+        print(f"  ⚠ curl_cffi unavailable ({e}); falling back to default yfinance session")
+        return None
+
+
+def fetch_prices_resilient(tickers, period="1y", interval="1d",
+                           batch_retries=2, per_ticker_retries=2, sleep_between=1.0):
+    """
+    Robust price fetcher.
+    Strategy:
+      A. Try batch download with a hardened session, up to batch_retries times.
+      B. For any ticker missing or empty after batch, retry per-ticker.
+      C. Return a MultiIndex DataFrame shaped like yf.download(group_by='ticker').
+    Never raises — returns whatever it could fetch. Empty DataFrame means
+    everything failed; caller must handle that gracefully.
+    """
+    session = _build_session()
+    got = {}  # ticker -> single-ticker DataFrame
+
+    # --- Phase A: batch attempts ---
+    for attempt in range(1, batch_retries + 1):
+        try:
+            kw = dict(
+                tickers=tickers, period=period, interval=interval,
+                progress=False, auto_adjust=True, group_by="ticker",
+                threads=True,
+            )
+            if session is not None:
+                kw["session"] = session
+            df_all = yf.download(**kw)
+            if df_all is not None and not df_all.empty:
+                if isinstance(df_all.columns, pd.MultiIndex):
+                    available = set(df_all.columns.get_level_values(0))
+                    for t in tickers:
+                        if t in available:
+                            sub = df_all[t].dropna(subset=["Close"])
+                            if not sub.empty:
+                                got[t] = sub
+                else:
+                    # Single-ticker shape (unlikely with multiple tickers, but defensive)
+                    sub = df_all.dropna(subset=["Close"])
+                    if not sub.empty and len(tickers) == 1:
+                        got[tickers[0]] = sub
+            print(f"      ↳ batch attempt {attempt}: {len(got)}/{len(tickers)} tickers usable")
+            if len(got) >= int(0.8 * len(tickers)):
+                break  # good enough, skip remaining batch retries
+        except Exception as e:
+            print(f"      ↳ batch attempt {attempt} failed: {e}")
+        time.sleep(sleep_between)
+
+    # --- Phase B: per-ticker retry for missing ones ---
+    missing = [t for t in tickers if t not in got]
+    if missing:
+        print(f"      ↳ retrying {len(missing)} missing tickers individually...")
+        for t in missing:
+            for attempt in range(1, per_ticker_retries + 1):
+                try:
+                    kw = dict(period=period, interval=interval, auto_adjust=True, progress=False)
+                    if session is not None:
+                        kw["session"] = session
+                    tk = yf.Ticker(t, session=session) if session is not None else yf.Ticker(t)
+                    df = tk.history(period=period, interval=interval, auto_adjust=True)
+                    if df is not None and not df.empty and "Close" in df.columns:
+                        got[t] = df.dropna(subset=["Close"])
+                        break
+                except Exception as e:
+                    if attempt == per_ticker_retries:
+                        print(f"        ✗ {t}: {e}")
+                time.sleep(0.3)
+
+    # --- Phase C: reshape back into a MultiIndex DataFrame like yf.download returns ---
+    if not got:
+        print("      ✗ All fetches failed. Returning empty frame.")
+        return pd.DataFrame()
+    frames = {t: df for t, df in got.items()}
+    combined = pd.concat(frames, axis=1)  # MultiIndex: (ticker, OHLCV)
+    print(f"      ✓ final usable tickers: {len(got)}/{len(tickers)}")
+    return combined
+
+
+def load_previous_predictions():
+    """Load the last-good predictions.json from disk, or None if absent/corrupt."""
+    try:
+        path = os.path.join(
+            os.path.dirname(os.path.dirname(os.path.abspath(__file__))),
+            "predictions.json",
+        )
+        if not os.path.exists(path):
+            return None
+        with open(path, "r", encoding="utf-8") as f:
+            prev = json.load(f)
+        # Only treat as "good" if it has real picks
+        if prev.get("stocks_analyzed", 0) > 0:
+            return prev
+        return None
+    except Exception as e:
+        print(f"  ⚠ could not load previous predictions.json: {e}")
+        return None
+
 # ───────────────────────────────────────────────────────────────────────────
 # STOCK UNIVERSE
 # ───────────────────────────────────────────────────────────────────────────
@@ -682,39 +796,60 @@ def main():
 
     # ── STEP 2: Download price data ──
     print(f"\n[2/5] Downloading price data for {len(STOCKS)} stocks...")
-    try:
-        df_all = yf.download(
-            tickers=list(STOCKS.keys()),
-            period="1y", interval="1d",
-            progress=False, auto_adjust=True, group_by="ticker",
-        )
-    except Exception as e:
-        print(f"ERROR downloading data: {e}")
-        sys.exit(1)
+    df_all = fetch_prices_resilient(list(STOCKS.keys()))
 
     # ── STEP 3: Score stocks ──
     print(f"\n[3/5] Scoring stocks...")
     results = []
-    for ticker, (name, sector) in STOCKS.items():
-        try:
-            if isinstance(df_all.columns, pd.MultiIndex):
-                if ticker not in df_all.columns.get_level_values(0):
+    if df_all is not None and not df_all.empty:
+        for ticker, (name, sector) in STOCKS.items():
+            try:
+                if isinstance(df_all.columns, pd.MultiIndex):
+                    if ticker not in df_all.columns.get_level_values(0):
+                        continue
+                    df = df_all[ticker].dropna(subset=["Close"]).copy()
+                else:
+                    df = df_all.dropna(subset=["Close"]).copy()
+                if len(df) < 30:
                     continue
-                df = df_all[ticker].dropna(subset=["Close"]).copy()
-            else:
-                df = df_all.dropna(subset=["Close"]).copy()
-            if len(df) < 30:
-                continue
-            r = score_stock(ticker, df)
-            if r:
-                r["name"] = name
-                r["sector"] = sector
-                results.append(r)
-        except Exception as e:
-            print(f"  ✗ {ticker}: {e}")
+                r = score_stock(ticker, df)
+                if r:
+                    r["name"] = name
+                    r["sector"] = sector
+                    results.append(r)
+            except Exception as e:
+                print(f"  ✗ {ticker}: {e}")
 
     results.sort(key=lambda x: x["score"], reverse=True)
     print(f"      → {len(results)} stocks scored")
+
+    # ── PRESERVE-LAST-GOOD: if this run produced zero usable stocks,
+    #    do NOT overwrite predictions.json with a degraded payload.
+    #    Instead, refresh the existing file's news + timestamps and mark _stale.
+    if not results:
+        prev = load_previous_predictions()
+        if prev is not None:
+            print("      ⚠ 0 stocks scored — preserving last-good predictions.json with refreshed news.")
+            prev["_stale"] = True
+            prev["_stale_reason"] = "Yahoo Finance fetch returned no usable data in this run"
+            prev["_last_refresh_attempt"] = now.isoformat()
+            # Refresh only the parts that don't depend on prices
+            if "daily_brief" in prev and isinstance(prev["daily_brief"], dict):
+                prev["daily_brief"]["macro_context"] = macro_sentiment
+                prev["daily_brief"]["_last_refresh_attempt"] = now.isoformat()
+                prev["daily_brief"]["_stale"] = True
+                prev["daily_brief"]["_previous_market_date"] = prev.get("market_date")
+            out_path = os.path.join(
+                os.path.dirname(os.path.dirname(os.path.abspath(__file__))),
+                "predictions.json",
+            )
+            with open(out_path, "w", encoding="utf-8") as f:
+                json.dump(prev, f, indent=2, default=str)
+            print(f"✅ predictions.json preserved (last good: {prev.get('market_date')})")
+            return
+        else:
+            print("      ⚠ 0 stocks scored AND no prior predictions.json — writing degraded payload.")
+            # Fall through to normal empty-brief path below
 
     # ── STEP 4: Detect regime, enrich with news + forecasts + narratives ──
     print(f"\n[4/5] Regime detection + news fusion + forecasts + narratives...")
