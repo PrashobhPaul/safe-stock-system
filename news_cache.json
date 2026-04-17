@@ -1,32 +1,13 @@
 {
-  "generated_at": "2026-04-17T03:19:27.830372+05:30",
-  "count": 268,
+  "generated_at": "2026-04-17T10:17:01.515905+05:30",
+  "count": 273,
   "items": [
-    {
-      "title": "91-Day, 182-Day and 364-Day T-Bill Auction Result: Cut-off",
-      "summary": "T-Bill 91-Day 182-Day 364-Day I. Total Face Value Notified \u20b912,000 Crore \u20b96,000 Crore \u20b96,000 Crore II. Cut-off Price and Implicit Yield at Cut-Off Price 98.7178 (YTM: 5.2097%) 97.3412 (YTM: 5.4779%) 94.7176 (YTM: 5.5923%) III. Total Face Value Accepted \u20b912,000 Crore \u20b96,000 Crore \u20b96,000 Crore Ajit Prasad Deputy General Manager (Communications) Press Release: 2026-2027/85",
-      "link": "https://www.rbi.org.in/scripts/BS_PressReleaseDisplay.aspx?prid=62563",
-      "published_ts": 1776376169.0499258,
-      "published_iso": "2026-04-16T21:49:29.049926+00:00",
-      "source": "RBI Press",
-      "weight": 1.6,
-      "category": "policy",
-      "sentiment": "MILDLY_BEARISH",
-      "sentiment_score": -1.6,
-      "sentiment_raw": -1,
-      "bull_terms": [],
-      "bear_terms": [
-        "cut"
-      ],
-      "matched_tickers": [],
-      "matched_sectors": []
-    },
     {
       "title": "Treasury Bills: Full Auction Result",
       "summary": "(Amount in \u20b9 crore) Auction Results 91-Day 182-Day 364-Day I. Notified Amount 12,000 6,000 6,000 II. Competitive Bids Received (i) Number 139 102 103 (ii) Amount 44,595.510 21,353.200 15,615.200 III. Cut-off price / Yield 98.7178 97.3412 94.7176 (YTM: 5.2097%) (YTM: 5.4779%) (YTM: 5.5923%) IV. Competitive Bids Accepted (i) Number 17 19 42 (ii) Amount 11,979.650 5,992.914 5,926.695 V. Partial Allotment Percentage of Competitive Bids 22.9767 % 34.2914 % 42.9900 % (1 bid) (1 bid) (1 bid) VI. Weighted Average Price/Yield 98.7209 97.3454 94.7320 (WAY: 5.1969%) (WAY: 5.4690%) (WAY: 5.5762%) VII. Non",
       "link": "https://www.rbi.org.in/scripts/BS_PressReleaseDisplay.aspx?prid=62564",
-      "published_ts": 1776376169.049862,
-      "published_iso": "2026-04-16T21:49:29.049862+00:00",
+      "published_ts": 1776401222.7356615,
+      "published_iso": "2026-04-17T04:47:02.735662+00:00",
       "source": "RBI Press",
       "weight": 1.6,
       "category": "policy",
@@ -44,8 +25,8 @@
       "title": "RBI issues Amendment Directions on \u2018Non-Banking Financial Companies \u2013 Branch Authorisation Directions\u2019",
       "summary": "The Reserve Bank had issued the draft Reserve Bank of India (Non-Banking Financial Companies \u2013 Branch Authorisation) Amendment Directions, 2026 , seeking comments from NBFCs and other stakeholders till February 27, 2026. The draft instructions proposed to modify the extant guidelines on opening of branches as applicable to various categories of NBFCs (including HFCs). 2. Feedback received on the draft instructions has been examined and consequent modifications have been suitably incorporated in the final Amendment Directions. Statement on the feedback received on the draft instructions is prov",
       "link": "https://www.rbi.org.in/scripts/BS_PressReleaseDisplay.aspx?prid=62565",
-      "published_ts": 1776376169.0497427,
-      "published_iso": "2026-04-16T21:49:29.049743+00:00",
+      "published_ts": 1776401222.735563,
+      "published_iso": "2026-04-17T04:47:02.735563+00:00",
       "source": "RBI Press",
       "weight": 1.6,
       "category": "policy",
@@ -64,8 +45,8 @@
       "title": "Conversion/Switch of Government of India Securities",
       "summary": "Government of India announces the conversion/switch of its securities through auction for an aggregate amount of \u20b930,000 crore (face value). The security-wise details of the conversion/switch are given as under: Date of Auction Source Securities Amount (FV) of Source Securities (in \u20b9 crore) Destination Securities April 20, 2026 (Monday) 5.74% GS 2026 (Maturing on Nov 15, 2026) 3,000 6.33% GS 2035 (Maturing on May 05, 2035) 8.24% GS 2027 (Maturing on Feb 15, 2027) 1,000 6.92% GS 2039 (Maturing on Nov 18, 2039) 6.79% GS 2027 (Maturing on May 15, 2027) 3,000 6.19% GS 2034 (Maturing on Sep 16, 203",
       "link": "https://www.rbi.org.in/scripts/BS_PressReleaseDisplay.aspx?prid=62566",
-      "published_ts": 1776376169.0496466,
-      "published_iso": "2026-04-16T21:49:29.049647+00:00",
+      "published_ts": 1776401222.7354934,
+      "published_iso": "2026-04-17T04:47:02.735493+00:00",
       "source": "RBI Press",
       "weight": 1.6,
       "category": "policy",
@@ -78,30 +59,11 @@
       "matched_sectors": []
     },
     {
-      "title": "Money Market Operations as on April 15, 2026",
-      "summary": "(Amount in \u20b9 crore, Rate in Per cent) MONEY MARKETS @ --> Money Markets @ Volume (One Leg) Weighted Average Rate Range A. Overnight Segment (I+II+III+IV) 6,38,856.21 4.79 0.01-6.10 I. Call Money 15,904.38 5.08 4.20-5.15 II. Triparty Repo 4,46,083.05 4.78 4.50-5.00 III. Market Repo 1,69,708.93 4.77 0.01-5.20 IV. Repo in Corporate Bond 7,159.85 5.32 5.25-6.10 B. Term Segment I. Notice Money ** 87.50 4.94 4.80-5.10 II. Term Money @@ 1,146.00 - 5.30-5.60 III. Triparty Repo 2,027.85 4.89 4.80-4.95 IV. Market Repo 1,061.99 5.27 4.95-5.40 V. Repo in Corporate Bond 0.00 - - RBI OPERATIONS @ --> RBI OP",
-      "link": "https://www.rbi.org.in/scripts/BS_PressReleaseDisplay.aspx?prid=62567",
-      "published_ts": 1776376169.04921,
-      "published_iso": "2026-04-16T21:49:29.049210+00:00",
-      "source": "RBI Press",
-      "weight": 1.6,
-      "category": "policy",
-      "sentiment": "NEUTRAL",
-      "sentiment_score": 0.0,
-      "sentiment_raw": 0,
-      "bull_terms": [],
-      "bear_terms": [],
-      "matched_tickers": [
-        "RELIANCE"
-      ],
-      "matched_sectors": []
-    },
-    {
       "title": "Underwriting Auction for sale of Government Securities for \u20b932,000 crore on April 17, 2026",
       "summary": "Government of India has announced the sale (re-issue) of Government Securities, as detailed below, through auction to be held on April 17, 2026 (Friday) . As per the extant scheme of underwriting commitment notified on November 14, 2007, the amounts of Minimum Underwriting Commitment (MUC) and the minimum bidding commitment under Additional Competitive Underwriting (ACU) auction, applicable to each Primary Dealer (PD), are as under: (\u20b9 crore) Security Notified Amount MUC amount per PD Minimum bidding commitment per PD under ACU auction 6.36% GS 2031 21,000 500 500 6.90% GS 2065 11,000 262 262 ",
       "link": "https://www.rbi.org.in/scripts/BS_PressReleaseDisplay.aspx?prid=62568",
-      "published_ts": 1776376169.0486963,
-      "published_iso": "2026-04-16T21:49:29.048696+00:00",
+      "published_ts": 1776401222.7348008,
+      "published_iso": "2026-04-17T04:47:02.734801+00:00",
       "source": "RBI Press",
       "weight": 1.6,
       "category": "policy",
@@ -119,8 +81,8 @@
       "title": "Launching of 114th Round of Quarterly Industrial Outlook Survey (IOS) \u2013 Q1:2026-27",
       "summary": "The Reserve Bank has launched the 114th round of the quarterly Industrial Outlook Survey (IOS) of the Indian manufacturing sector for the reference period April-June 2026. The survey assesses business sentiments for the current quarter (Q1:2026-27) and expectations for the ensuing quarter (Q2:2026-27), based on qualitative responses on a set of indicators pertaining to demand conditions, financial conditions, employment conditions and the price situation. The outlook on key parameters for the two subsequent quarters (Q3:2026-27 and Q4:2026-27) are also covered. 2. The survey findings are relea",
       "link": "https://www.rbi.org.in/scripts/BS_PressReleaseDisplay.aspx?prid=62569",
-      "published_ts": 1776376169.0485978,
-      "published_iso": "2026-04-16T21:49:29.048598+00:00",
+      "published_ts": 1776401222.734729,
+      "published_iso": "2026-04-17T04:47:02.734729+00:00",
       "source": "RBI Press",
       "weight": 1.6,
       "category": "policy",
@@ -138,8 +100,8 @@
       "title": "Launching of 49th Round of Quarterly Services and Infrastructure Outlook Survey (SIOS) Q1:2026-27",
       "summary": "The Reserve Bank has launched the 49th round of the quarterly Services and Infrastructure Outlook Survey (SIOS) for the reference period April-June 2026. The survey assesses the business situation for the current quarter (Q1:2026-27) from selected companies in the services and infrastructure sectors in India and their expectations for the ensuing quarter (Q2:2026-27) based on qualitative responses on a set of indicators pertaining to demand conditions, financial conditions, employment conditions and the price situation. The outlook on key parameters for the two subsequent quarters (Q3:2026-27 ",
       "link": "https://www.rbi.org.in/scripts/BS_PressReleaseDisplay.aspx?prid=62570",
-      "published_ts": 1776376169.0484846,
-      "published_iso": "2026-04-16T21:49:29.048485+00:00",
+      "published_ts": 1776401222.7346509,
+      "published_iso": "2026-04-17T04:47:02.734651+00:00",
       "source": "RBI Press",
       "weight": 1.6,
       "category": "policy",
@@ -157,8 +119,8 @@
       "title": "RBI to conduct 7-day Variable Rate Reverse Repo (VRRR) auction under LAF on April 17, 2026",
       "summary": "In view of the surplus transient liquidity conditions prevailing, it has been decided to conduct a Variable Rate Reverse Repo (VRRR) auction on Friday, April 17, 2026, as under: Sl. No. Notified Amount (\u20b9 crore) Tenor (day) Window Timing Date of Reversal 1 2,00,000 7 09:30 AM to 10:00 AM April 24, 2026 (Friday) 2. The operational guidelines for the auction as given in the Reserve Bank\u2019s Press Release 2019-2020/1947 dated February 13, 2020 will remain the same. Ajit Prasad Deputy General Manager (Communications) Press Release: 2026-2027/93",
       "link": "https://www.rbi.org.in/scripts/BS_PressReleaseDisplay.aspx?prid=62571",
-      "published_ts": 1776376169.0483432,
-      "published_iso": "2026-04-16T21:49:29.048343+00:00",
+      "published_ts": 1776401222.7345662,
+      "published_iso": "2026-04-17T04:47:02.734566+00:00",
       "source": "RBI Press",
       "weight": 1.6,
       "category": "policy",
@@ -170,6 +132,1894 @@
       "matched_tickers": [
         "RELIANCE"
       ],
+      "matched_sectors": []
+    },
+    {
+      "title": "Money Market Operations as on April 16, 2026",
+      "summary": "(Amount in \u20b9 crore, Rate in Per cent) MONEY MARKETS @ --> Money Markets @ Volume (One Leg) Weighted Average Rate Range A. Overnight Segment (I+II+III+IV) 6,35,137.81 4.79 2.00-6.05 I. Call Money 20,514.62 5.09 4.20-5.15 II. Triparty Repo 4,38,246.95 4.78 4.65-5.00 III. Market Repo 1,69,033.99 4.77 2.00-5.85 IV. Repo in Corporate Bond 7,342.25 5.27 5.00-6.05 B. Term Segment I. Notice Money ** 227.80 5.08 4.85-5.15 II. Term Money @@ 1,039.00 - 5.50-6.08 III. Triparty Repo 2,297.50 4.97 4.85-5.00 IV. Market Repo 1,620.00 5.06 5.00-5.25 V. Repo in Corporate Bond 0.00 - - RBI OPERATIONS @ --> RBI O",
+      "link": "https://www.rbi.org.in/scripts/BS_PressReleaseDisplay.aspx?prid=62572",
+      "published_ts": 1776401222.7345061,
+      "published_iso": "2026-04-17T04:47:02.734506+00:00",
+      "source": "RBI Press",
+      "weight": 1.6,
+      "category": "policy",
+      "sentiment": "NEUTRAL",
+      "sentiment_score": 0.0,
+      "sentiment_raw": 0,
+      "bull_terms": [],
+      "bear_terms": [],
+      "matched_tickers": [
+        "RELIANCE"
+      ],
+      "matched_sectors": []
+    },
+    {
+      "title": "Result of Underwriting Auction conducted on April 17, 2026",
+      "summary": "",
+      "link": "https://www.rbi.org.in/scripts/BS_PressReleaseDisplay.aspx?prid=62573",
+      "published_ts": 1776401222.7341099,
+      "published_iso": "2026-04-17T04:47:02.734110+00:00",
+      "source": "RBI Press",
+      "weight": 1.6,
+      "category": "policy",
+      "sentiment": "NEUTRAL",
+      "sentiment_score": 0.0,
+      "sentiment_raw": 0,
+      "bull_terms": [],
+      "bear_terms": [],
+      "matched_tickers": [
+        "RELIANCE"
+      ],
+      "matched_sectors": []
+    },
+    {
+      "title": "Crude oil futures fall as Trump hints at possible end to war with Iran",
+      "summary": "At 10 am on Friday, June Brent oil futures were at $98.20, down 1.23%",
+      "link": "https://www.thehindubusinessline.com/markets/commodities/crude-oil-futures-fall-as-trump-hints-at-possible-end-to-war-with-iran/article70872237.ece",
+      "published_ts": 1776400933.0,
+      "published_iso": "2026-04-17T04:42:13+00:00",
+      "source": "Hindu BusinessLine",
+      "weight": 1.1,
+      "category": "market",
+      "sentiment": "BEARISH",
+      "sentiment_score": -3.3,
+      "sentiment_raw": -3,
+      "bull_terms": [],
+      "bear_terms": [
+        "down"
+      ],
+      "matched_tickers": [],
+      "matched_sectors": [
+        "Oil & Gas"
+      ]
+    },
+    {
+      "title": "Angel One shares gain after strong Q4 earnings growth",
+      "summary": "The company reported a consolidated profit after tax of \u20b9320.2 crore in Q4FY26, up 19.2% quarter-on-quarter and 83.4% year-on-year from \u20b9174.5 crore in Q4FY25",
+      "link": "https://www.thehindubusinessline.com/markets/stock-markets/angel-one-shares-gain-after-strong-q4-earnings-growth/article70872300.ece",
+      "published_ts": 1776400862.0,
+      "published_iso": "2026-04-17T04:41:02+00:00",
+      "source": "Hindu BusinessLine",
+      "weight": 1.1,
+      "category": "market",
+      "sentiment": "BULLISH",
+      "sentiment_score": 3.3,
+      "sentiment_raw": 3,
+      "bull_terms": [
+        "up",
+        "profit",
+        "growth"
+      ],
+      "bear_terms": [],
+      "matched_tickers": [],
+      "matched_sectors": []
+    },
+    {
+      "title": "Stock Market Live: Sensex rises 200 pts, Nifty tops 24,200; Wipro shares fall 4%",
+      "summary": "Sensex, Nifty, Share Price LIVE: Benchmark indices opened flat. Sensex traded 91.06 pts or 0.12 % positive at 78,079.74 at 9.16 am after opening at 77,976.13, Nifty 50 slipped 34.55 pts or 0.14% to 24,162.20.",
+      "link": "https://www.thehindubusinessline.com/markets/stock-market-nifty-sensex-live-updates-17-april-2026/article70869774.ece",
+      "published_ts": 1776400811.0,
+      "published_iso": "2026-04-17T04:40:11+00:00",
+      "source": "Hindu BusinessLine",
+      "weight": 1.1,
+      "category": "market",
+      "sentiment": "MILDLY_BULLISH",
+      "sentiment_score": 2.2,
+      "sentiment_raw": 2,
+      "bull_terms": [
+        "rises",
+        "positive"
+      ],
+      "bear_terms": [],
+      "matched_tickers": [
+        "WIPRO"
+      ],
+      "matched_sectors": []
+    },
+    {
+      "title": "Om Power Transmission shares off to a decent start, list at 6% premium over IPO price on NSE",
+      "summary": "Om Power Transmission listing: Om Power Transmission share price debuted 6.29% higher at \u20b9186 on the NSE as against the initial public offering (IPO) price of \u20b9175. Meanwhile, on BSE, Om Power Transmission shares listed at 181.10, a premium of 3.49%.",
+      "link": "https://www.livemint.com/market/stock-market-news/om-power-transmission-shares-off-to-a-decent-start-list-at-6-premium-over-ipo-price-on-nse-11776400033093.html",
+      "published_ts": 1776400268.0,
+      "published_iso": "2026-04-17T04:31:08+00:00",
+      "source": "Mint Markets",
+      "weight": 1.2,
+      "category": "market",
+      "sentiment": "MILDLY_BULLISH",
+      "sentiment_score": 1.2,
+      "sentiment_raw": 1,
+      "bull_terms": [
+        "higher"
+      ],
+      "bear_terms": [],
+      "matched_tickers": [],
+      "matched_sectors": []
+    },
+    {
+      "title": "Rupee rises 28 paise to 92.86 against US dollar in early trade",
+      "summary": "Buying of Indian equities by foreign investors also supported the local currency even though it stayed under pressure due to a firm dollar, forex traders said",
+      "link": "https://www.thehindubusinessline.com/markets/forex/rupee-rises-28-paise-to-9286-against-us-dollar-in-early-trade/article70872285.ece",
+      "published_ts": 1776400110.0,
+      "published_iso": "2026-04-17T04:28:30+00:00",
+      "source": "Hindu BusinessLine",
+      "weight": 1.1,
+      "category": "market",
+      "sentiment": "NEUTRAL",
+      "sentiment_score": 0.0,
+      "sentiment_raw": 0,
+      "bull_terms": [
+        "rises"
+      ],
+      "bear_terms": [
+        "pressure"
+      ],
+      "matched_tickers": [],
+      "matched_sectors": []
+    },
+    {
+      "title": "Waaree Renewable shares rocket 12% as Q4 revenue soars 131%, profit up 66%. Check details",
+      "summary": "Waaree Renewable Technologies shares jumped up to 12% after reporting a strong Q4, with net profit rising 66% YoY to Rs 155.72 crore and revenue surging 131% to Rs 1,102.40 crore. EBITDA also grew 63.71%, though margins declined sharply. The company highlighted strong execution visibility backed by a 2.83 GWp order book.",
+      "link": "https://economictimes.indiatimes.com/markets/stocks/news/waaree-renewable-shares-rocket-12-as-q4-revenue-soars-131-profit-up-66-check-details/articleshow/130322767.cms",
+      "published_ts": 1776400036.0,
+      "published_iso": "2026-04-17T04:27:16+00:00",
+      "source": "ET Markets",
+      "weight": 1.2,
+      "category": "market",
+      "sentiment": "BULLISH",
+      "sentiment_score": 4.8,
+      "sentiment_raw": 4,
+      "bull_terms": [
+        "soars",
+        "up",
+        "profit"
+      ],
+      "bear_terms": [],
+      "matched_tickers": [],
+      "matched_sectors": [
+        "Power"
+      ]
+    },
+    {
+      "title": "Musk\u2019s SpaceX is shaping up as biggest IPO on record",
+      "summary": "The IPO for the company controlled by the world\u2019s richest man is targeting a total valuation of $2 trillion with Musk plans to list only a small fraction of the company to raise $75 billion from public investors",
+      "link": "https://www.thehindubusinessline.com/markets/musks-spacex-is-shaping-up-as-biggest-ipo-on-record/article70872257.ece",
+      "published_ts": 1776399886.0,
+      "published_iso": "2026-04-17T04:24:46+00:00",
+      "source": "Hindu BusinessLine",
+      "weight": 1.1,
+      "category": "market",
+      "sentiment": "MILDLY_BULLISH",
+      "sentiment_score": 1.1,
+      "sentiment_raw": 1,
+      "bull_terms": [
+        "up"
+      ],
+      "bear_terms": [],
+      "matched_tickers": [
+        "RELIANCE"
+      ],
+      "matched_sectors": []
+    },
+    {
+      "title": "Q4 Results Today Live: Jio Financial, Mastek, Bajaj Consumer Care, Aditya Birla Money to announce Q4 results, Wipro, HDFC AMC, HDFC Life, CRISIL, Angel One, Waaree Renewable in focus",
+      "summary": "Q4 Results Today, April 17, 2026, Live Updates: Catch live updates",
+      "link": "https://www.thehindubusinessline.com/markets/q4-results-today-live-updates-mastek-bajaj-consumer-care-jio-financial-wipro-hdfc-amc-hdfc-life-waaree-hathway-aditya-birla-money-results-17-april-2026/article70872157.ece",
+      "published_ts": 1776399782.0,
+      "published_iso": "2026-04-17T04:23:02+00:00",
+      "source": "Hindu BusinessLine",
+      "weight": 1.1,
+      "category": "market",
+      "sentiment": "NEUTRAL",
+      "sentiment_score": 0.0,
+      "sentiment_raw": 0,
+      "bull_terms": [],
+      "bear_terms": [],
+      "matched_tickers": [
+        "RELIANCE",
+        "WIPRO"
+      ],
+      "matched_sectors": []
+    },
+    {
+      "title": "Silver gains Rs 1,500, gold at Rs 1.53 lakh as investors eye Iran war peace talks. Key levels to watch today",
+      "summary": "Gold and silver prices opened higher on MCX as easing geopolitical tensions and US-Iran peace talk hopes influenced sentiment. Silver gained sharply while gold held near record levels. Analysts expect volatility ahead, with key support and resistance levels in focus as traders track dollar movement and crude oil trends.",
+      "link": "https://economictimes.indiatimes.com/markets/commodities/news/silver-gains-rs-1500-gold-at-rs-1-53-lakh-as-investors-eye-iran-war-peace-talks-key-levels-to-watch-today/articleshow/130322711.cms",
+      "published_ts": 1776399778.0,
+      "published_iso": "2026-04-17T04:22:58+00:00",
+      "source": "ET Markets",
+      "weight": 1.2,
+      "category": "market",
+      "sentiment": "NEUTRAL",
+      "sentiment_score": 0.0,
+      "sentiment_raw": 0,
+      "bull_terms": [
+        "gains",
+        "gained",
+        "higher"
+      ],
+      "bear_terms": [],
+      "matched_tickers": [],
+      "matched_sectors": []
+    },
+    {
+      "title": "\u200bSensex rises over 150 points, Nifty above 24,200 amid rising Iran-US war peace hopes; broader markets outperform",
+      "summary": "Indian stock indices Sensex and Nifty edged higher, with mid and small-cap stocks outperforming. Sentiment remains fragile despite rising hopes of US-Iran peace talks and a ceasefire between Lebanon and Israel. Oil prices cooled down as de-escalation hopes eased pressure on India's import bill.",
+      "link": "https://economictimes.indiatimes.com/markets/stocks/news/sensex-rises-over-150-points-nifty-above-24200-amid-rising-iran-us-war-peace-hopes-broader-markets-outperform/articleshow/130322432.cms",
+      "published_ts": 1776399048.0,
+      "published_iso": "2026-04-17T04:10:48+00:00",
+      "source": "ET Markets",
+      "weight": 1.2,
+      "category": "market",
+      "sentiment": "MILDLY_BULLISH",
+      "sentiment_score": 1.2,
+      "sentiment_raw": 1,
+      "bull_terms": [
+        "outperform",
+        "rises",
+        "higher"
+      ],
+      "bear_terms": [
+        "down"
+      ],
+      "matched_tickers": [],
+      "matched_sectors": [
+        "Oil & Gas"
+      ]
+    },
+    {
+      "title": "Nifty dips on profit booking; IT drags, defence and metals hold",
+      "summary": "Nifty 50 opened at 24,165.90, dropping to 24,149.90, a decline of 46.85 points (0.19%) by 9:16 am; Sensex opened at 77,976.13 and rose to 78,128.35, gaining 139.67 points (0.18%)",
+      "link": "https://www.thehindubusinessline.com/markets/nifty-dips-on-profit-booking-it-drags-defence-and-metals-hold/article70872227.ece",
+      "published_ts": 1776398845.0,
+      "published_iso": "2026-04-17T04:07:25+00:00",
+      "source": "Hindu BusinessLine",
+      "weight": 1.1,
+      "category": "market",
+      "sentiment": "MILDLY_BULLISH",
+      "sentiment_score": 1.1,
+      "sentiment_raw": 1,
+      "bull_terms": [
+        "rose",
+        "profit"
+      ],
+      "bear_terms": [
+        "decline"
+      ],
+      "matched_tickers": [],
+      "matched_sectors": [
+        "Defence"
+      ]
+    },
+    {
+      "title": "Wipro share price slumps nearly 4% after Q4 results. Should you buy, sell or hold?",
+      "summary": "Wipro share price fell nearly 4% after reporting a net profit of \u20b93,501.8 crore for Q4 FY26, a 1.89% decline year-on-year. Despite a challenging economic environment, the company plans a share buyback of \u20b915,000 crore and reported 7.6% revenue growth.",
+      "link": "https://www.livemint.com/market/stock-market-news/wipro-share-price-slumps-nearly-4-after-q4-results-should-you-buy-sell-or-hold-11776398219308.html",
+      "published_ts": 1776398587.0,
+      "published_iso": "2026-04-17T04:03:07+00:00",
+      "source": "Mint Markets",
+      "weight": 1.2,
+      "category": "market",
+      "sentiment": "MILDLY_BEARISH",
+      "sentiment_score": -1.2,
+      "sentiment_raw": -1,
+      "bull_terms": [
+        "profit",
+        "growth",
+        "buyback"
+      ],
+      "bear_terms": [
+        "slumps",
+        "fell",
+        "decline"
+      ],
+      "matched_tickers": [
+        "WIPRO"
+      ],
+      "matched_sectors": []
+    },
+    {
+      "title": "Europe embraces mega M&A",
+      "summary": "The EU is planning its biggest relaxation of corporate merger rules in decades",
+      "link": "https://www.ft.com/content/c4e1825f-a56f-4bd3-b402-0631458ea8f9",
+      "published_ts": 1776398440.0,
+      "published_iso": "2026-04-17T04:00:40+00:00",
+      "source": "FT Markets",
+      "weight": 0.9,
+      "category": "global",
+      "sentiment": "NEUTRAL",
+      "sentiment_score": 0.0,
+      "sentiment_raw": 0,
+      "bull_terms": [],
+      "bear_terms": [],
+      "matched_tickers": [],
+      "matched_sectors": []
+    },
+    {
+      "title": "Wall Street banks start trading derivatives to bet on pain in private credit",
+      "summary": "JPMorgan and Barclays are among those offering CDS on Apollo, Ares and Blackstone funds",
+      "link": "https://www.ft.com/content/54076a09-7a66-44f3-8e70-343f6d601e50",
+      "published_ts": 1776398440.0,
+      "published_iso": "2026-04-17T04:00:40+00:00",
+      "source": "FT Markets",
+      "weight": 0.9,
+      "category": "global",
+      "sentiment": "NEUTRAL",
+      "sentiment_score": 0.0,
+      "sentiment_raw": 0,
+      "bull_terms": [],
+      "bear_terms": [],
+      "matched_tickers": [],
+      "matched_sectors": [
+        "Banking"
+      ]
+    },
+    {
+      "title": "UK farmers face tough choices as war pushes up costs",
+      "summary": "Fertiliser and fuel prices have risen against a backdrop of depressed wheat and milk markets",
+      "link": "https://www.ft.com/content/0b9a07d1-551b-4155-bd72-0e3841fe7e3f",
+      "published_ts": 1776398432.0,
+      "published_iso": "2026-04-17T04:00:32+00:00",
+      "source": "FT Markets",
+      "weight": 0.9,
+      "category": "global",
+      "sentiment": "NEUTRAL",
+      "sentiment_score": -0.9,
+      "sentiment_raw": -1,
+      "bull_terms": [
+        "up"
+      ],
+      "bear_terms": [],
+      "matched_tickers": [],
+      "matched_sectors": []
+    },
+    {
+      "title": "US private credit firm backs loans for World Cup ticket flipping",
+      "summary": "Eagle Point Credit Management to capitalise on high prices and demand of football fans to attend the tournament",
+      "link": "https://www.ft.com/content/234f6329-1021-43a1-8d87-a9a5e8403e7b",
+      "published_ts": 1776398422.0,
+      "published_iso": "2026-04-17T04:00:22+00:00",
+      "source": "FT Markets",
+      "weight": 0.9,
+      "category": "global",
+      "sentiment": "NEUTRAL",
+      "sentiment_score": 0.0,
+      "sentiment_raw": 0,
+      "bull_terms": [],
+      "bear_terms": [],
+      "matched_tickers": [],
+      "matched_sectors": []
+    },
+    {
+      "title": "Scramble for biodiesel as price drops below regular diesel for first time",
+      "summary": "Oil squeeze driven by Iran war triggers rush to secure replacements",
+      "link": "https://www.ft.com/content/a122c6f4-f148-4bb3-98fc-0824aae43e31",
+      "published_ts": 1776398422.0,
+      "published_iso": "2026-04-17T04:00:22+00:00",
+      "source": "FT Markets",
+      "weight": 0.9,
+      "category": "global",
+      "sentiment": "MILDLY_BEARISH",
+      "sentiment_score": -2.7,
+      "sentiment_raw": -3,
+      "bull_terms": [],
+      "bear_terms": [
+        "drops"
+      ],
+      "matched_tickers": [],
+      "matched_sectors": [
+        "Oil & Gas"
+      ]
+    },
+    {
+      "title": "The white-collar defence lawyers with nothing to do",
+      "summary": "The Trump administration\u2019s approach to justice has made life quieter for those who defend alleged financial criminals",
+      "link": "https://www.ft.com/content/befa71e1-fcf1-4c02-9662-a572543ddcbf",
+      "published_ts": 1776398412.0,
+      "published_iso": "2026-04-17T04:00:12+00:00",
+      "source": "FT Markets",
+      "weight": 0.9,
+      "category": "global",
+      "sentiment": "NEUTRAL",
+      "sentiment_score": 0.0,
+      "sentiment_raw": 0,
+      "bull_terms": [],
+      "bear_terms": [],
+      "matched_tickers": [],
+      "matched_sectors": [
+        "Defence"
+      ]
+    },
+    {
+      "title": "US\u2019s status as lowest-cost dollar borrower challenged as investors shun Trump risk",
+      "summary": "Concerns over erratic White House policymaking have driven investors to \u2018very stable\u2019 development bank issuers",
+      "link": "https://www.ft.com/content/ad217964-bcc9-468a-868f-810e118a4fbc",
+      "published_ts": 1776398412.0,
+      "published_iso": "2026-04-17T04:00:12+00:00",
+      "source": "FT Markets",
+      "weight": 0.9,
+      "category": "global",
+      "sentiment": "MILDLY_BEARISH",
+      "sentiment_score": -1.8,
+      "sentiment_raw": -2,
+      "bull_terms": [],
+      "bear_terms": [
+        "concerns",
+        "risk"
+      ],
+      "matched_tickers": [],
+      "matched_sectors": [
+        "Banking"
+      ]
+    },
+    {
+      "title": "Will the energy shock change global trade imbalances? With Brad Setser",
+      "summary": "Higher oil prices may not be enough to dent the world\u2019s biggest trade surplus",
+      "link": "https://www.ft.com/content/5a6382c3-ee71-4b25-b3fe-002265f96bde",
+      "published_ts": 1776398400.0,
+      "published_iso": "2026-04-17T04:00:00+00:00",
+      "source": "FT Markets",
+      "weight": 0.9,
+      "category": "global",
+      "sentiment": "NEUTRAL",
+      "sentiment_score": 0.9,
+      "sentiment_raw": 1,
+      "bull_terms": [
+        "higher"
+      ],
+      "bear_terms": [],
+      "matched_tickers": [],
+      "matched_sectors": [
+        "Oil & Gas"
+      ]
+    },
+    {
+      "title": "Fresh challenge for US Treasuries dominance",
+      "summary": "The US\u2019s status as lowest-cost dollar borrower challenged as investors shun Trump risk",
+      "link": "https://www.ft.com/content/aa9d3b98-c8e5-49ea-9a88-36e75543b95b",
+      "published_ts": 1776398400.0,
+      "published_iso": "2026-04-17T04:00:00+00:00",
+      "source": "FT Markets",
+      "weight": 0.9,
+      "category": "global",
+      "sentiment": "NEUTRAL",
+      "sentiment_score": -0.9,
+      "sentiment_raw": -1,
+      "bull_terms": [],
+      "bear_terms": [
+        "risk"
+      ],
+      "matched_tickers": [],
+      "matched_sectors": []
+    },
+    {
+      "title": "Wipro promoters to join Rs 15,000 cr buyback. What it means for retail investors",
+      "summary": "IT major Wipro is set to buy back shares worth Rs 15,000 crore. The buyback price offers a 19% premium to the previous closing rate. Promoters and the promoter group have signaled their intention to participate in this corporate action. This move is expected to impact retail investor allocations.",
+      "link": "https://economictimes.indiatimes.com/markets/stocks/news/wipro-promoters-to-join-rs-15000-cr-buyback-what-it-means-for-retail-investors/articleshow/130322363.cms",
+      "published_ts": 1776398295.0,
+      "published_iso": "2026-04-17T03:58:15+00:00",
+      "source": "ET Markets",
+      "weight": 1.2,
+      "category": "market",
+      "sentiment": "MILDLY_BULLISH",
+      "sentiment_score": 1.2,
+      "sentiment_raw": 1,
+      "bull_terms": [
+        "buyback"
+      ],
+      "bear_terms": [],
+      "matched_tickers": [
+        "WIPRO"
+      ],
+      "matched_sectors": []
+    },
+    {
+      "title": "Wipro shares crack 4% after Q4, Rs 15,000-crore buyback. What Goldman Sachs, other brokerages are saying?",
+      "summary": "Wipro share price fell 4% after the company reported a 2% YoY decline in Q4 profit to \u20b93,502 crore, despite announcing a \u20b915,000 crore buyback. Revenue rose 8% YoY, but the core IT services business remained sluggish with minimal growth, reflecting weak demand. Margins also edged lower, signaling ongoing cost pressures, even as profit improved on a sequential basis.",
+      "link": "https://economictimes.indiatimes.com/markets/stocks/news/wipro-shares-plunge-4-after-q4-results-what-are-goldman-sachs-morgan-stanley-2-other-brokerages-saying/articleshow/130322318.cms",
+      "published_ts": 1776398071.0,
+      "published_iso": "2026-04-17T03:54:31+00:00",
+      "source": "ET Markets",
+      "weight": 1.2,
+      "category": "market",
+      "sentiment": "MILDLY_BULLISH",
+      "sentiment_score": 2.4,
+      "sentiment_raw": 2,
+      "bull_terms": [
+        "rose",
+        "profit",
+        "growth",
+        "buyback"
+      ],
+      "bear_terms": [
+        "fell",
+        "decline"
+      ],
+      "matched_tickers": [
+        "WIPRO"
+      ],
+      "matched_sectors": []
+    },
+    {
+      "title": "Asia markets mostly fall as fragile Middle East ceasefire tempers sentiment",
+      "summary": "Most Asia-Pacific markets traded lower Friday as an Israel-Lebanon ceasefire tempered risk appetite, even after Wall Street closed at fresh record highs.",
+      "link": "https://www.cnbc.com/2026/04/17/asia-markets-today-nikkei225-hang-seng-sensex-asx-ceasefire-oil.html",
+      "published_ts": 1776398041.0,
+      "published_iso": "2026-04-17T03:54:01+00:00",
+      "source": "CNBC World",
+      "weight": 0.8,
+      "category": "global",
+      "sentiment": "NEUTRAL",
+      "sentiment_score": 0.0,
+      "sentiment_raw": 0,
+      "bull_terms": [
+        "record high"
+      ],
+      "bear_terms": [
+        "lower",
+        "risk"
+      ],
+      "matched_tickers": [],
+      "matched_sectors": []
+    },
+    {
+      "title": "Jio Financial Services shares in focus ahead of Q4 results, dividend announcement: What to expect and how to trade?",
+      "summary": "Jio Financial Services is building a diversified ecosystem across lending, payments, insurance, asset management, and wealth and is still in the nascent stages of its operations.",
+      "link": "https://www.livemint.com/market/stock-market-news/jio-financial-services-shares-in-focus-ahead-of-q4-results-dividend-announcement-what-to-expect-and-how-to-trade-11776397749111.html",
+      "published_ts": 1776397972.0,
+      "published_iso": "2026-04-17T03:52:52+00:00",
+      "source": "Mint Markets",
+      "weight": 1.2,
+      "category": "market",
+      "sentiment": "MILDLY_BULLISH",
+      "sentiment_score": 1.2,
+      "sentiment_raw": 1,
+      "bull_terms": [
+        "dividend"
+      ],
+      "bear_terms": [],
+      "matched_tickers": [],
+      "matched_sectors": []
+    },
+    {
+      "title": "Gold price today: Rates volatile on MCX amid focus on US-Iran peace talks",
+      "summary": "Gold price today: Gold rates were volatile in early trade on Friday amid focus on the proposed US-Iran talks. However, dollar weakness and a fall in crude oil prices capped losses for the yellow metal.",
+      "link": "https://www.livemint.com/market/commodities/gold-price-today-rates-volatile-on-mcx-amid-focus-on-us-iran-peace-talks-11776395426691.html",
+      "published_ts": 1776396976.0,
+      "published_iso": "2026-04-17T03:36:16+00:00",
+      "source": "Mint Markets",
+      "weight": 1.2,
+      "category": "market",
+      "sentiment": "MILDLY_BEARISH",
+      "sentiment_score": -2.4,
+      "sentiment_raw": -2,
+      "bull_terms": [],
+      "bear_terms": [
+        "losses",
+        "weakness"
+      ],
+      "matched_tickers": [],
+      "matched_sectors": [
+        "Oil & Gas"
+      ]
+    },
+    {
+      "title": "Strongly urge early restoration of freedom of navigation through Strait of Hormuz: India",
+      "summary": "India has called the targeting of commercial shipping in the West Asia conflict \u201cdeplorable\u201d and urged the immediate restoration of safe and free navigation through the Strait of Hormuz, citing concerns over energy security and global trade.",
+      "link": "https://economictimes.indiatimes.com/industry/energy/oil-gas/oil-prices-strongly-urge-early-restoration-of-freedom-of-navigation-through-strait-of-hormuz-india/articleshow/130322102.cms",
+      "published_ts": 1776396867.0,
+      "published_iso": "2026-04-17T03:34:27+00:00",
+      "source": "ET Industry",
+      "weight": 1.1,
+      "category": "sector",
+      "sentiment": "MILDLY_BEARISH",
+      "sentiment_score": -2.2,
+      "sentiment_raw": -2,
+      "bull_terms": [],
+      "bear_terms": [
+        "concerns"
+      ],
+      "matched_tickers": [],
+      "matched_sectors": [
+        "Telecom"
+      ]
+    },
+    {
+      "title": "Rupee opens 25 paise higher at 92.95 against the US dollar",
+      "summary": "The Indian rupee opened higher at 92.95 against the US dollar, aided by RBI measures to curb dollar demand from oil refiners. The central bank has instructed refiners to utilize a special credit line instead of spot purchases, aiming to stabilize the currency amid rising oil prices.",
+      "link": "https://www.livemint.com/market/stock-market-news/rupee-opens-25-paise-higher-at-92-95-against-us-dollar-11776396784778.html",
+      "published_ts": 1776396859.0,
+      "published_iso": "2026-04-17T03:34:19+00:00",
+      "source": "Mint Markets",
+      "weight": 1.2,
+      "category": "market",
+      "sentiment": "MILDLY_BULLISH",
+      "sentiment_score": 1.2,
+      "sentiment_raw": 1,
+      "bull_terms": [
+        "higher"
+      ],
+      "bear_terms": [],
+      "matched_tickers": [],
+      "matched_sectors": [
+        "Banking"
+      ]
+    },
+    {
+      "title": "London Metals Index at Record High on Aluminum \u2018Black Hole\u2019 Fear",
+      "summary": "Industrial metals jumped to a record high on the London Metal Exchange, driven gains in aluminum after the Middle East war disrupted supplies, as well as a recent revival in copper.",
+      "link": "https://www.livemint.com/market/london-metals-index-at-record-high-on-aluminum-black-hole-fear-11776396732706.html",
+      "published_ts": 1776396732.0,
+      "published_iso": "2026-04-17T03:32:12+00:00",
+      "source": "Mint Markets",
+      "weight": 1.2,
+      "category": "market",
+      "sentiment": "MILDLY_BULLISH",
+      "sentiment_score": 1.2,
+      "sentiment_raw": 1,
+      "bull_terms": [
+        "record high",
+        "gains"
+      ],
+      "bear_terms": [],
+      "matched_tickers": [],
+      "matched_sectors": [
+        "Metals"
+      ]
+    },
+    {
+      "title": "Gold Steadies After Trump Expresses Optimism on US-Iran Truce",
+      "summary": "Gold was steady after President Donald Trump expressed renewed optimism that the US and Iran could agree a permanent ceasefire to end the war that\u2019s upended markets and heightened inflation fears.",
+      "link": "https://www.livemint.com/market/gold-steadies-after-trump-expresses-optimism-on-us-iran-truce-11776396716978.html",
+      "published_ts": 1776396716.0,
+      "published_iso": "2026-04-17T03:31:56+00:00",
+      "source": "Mint Markets",
+      "weight": 1.2,
+      "category": "market",
+      "sentiment": "MILDLY_BEARISH",
+      "sentiment_score": -2.4,
+      "sentiment_raw": -2,
+      "bull_terms": [],
+      "bear_terms": [],
+      "matched_tickers": [],
+      "matched_sectors": []
+    },
+    {
+      "title": "As AI-powered cyber attacks rise, 4 cybersecurity stocks come into focus",
+      "summary": "Breaches, nation-state attacks, AI-powered threats, among other things, bring these 4 cybersecurity companies in focus. Take a look.",
+      "link": "https://www.livemint.com/market/stock-market-news/as-ai-powered-cyber-attacks-rise-4-cybersecurity-stocks-come-into-focus-11776343141589.html",
+      "published_ts": 1776396659.0,
+      "published_iso": "2026-04-17T03:30:59+00:00",
+      "source": "Mint Markets",
+      "weight": 1.2,
+      "category": "market",
+      "sentiment": "NEUTRAL",
+      "sentiment_score": 0.0,
+      "sentiment_raw": 0,
+      "bull_terms": [],
+      "bear_terms": [],
+      "matched_tickers": [],
+      "matched_sectors": []
+    },
+    {
+      "title": "High conviction picks! Bharti Airtel, Kotak Bank, 3 other stocks with up to 70% upside potential",
+      "summary": "",
+      "link": "https://economictimes.indiatimes.com/markets/stocks/news/high-conviction-picks-bharti-airtel-kotak-bank-3-other-stocks-with-up-to-70-upside-potential/slideshow/130322096.cms",
+      "published_ts": 1776396584.0,
+      "published_iso": "2026-04-17T03:29:44+00:00",
+      "source": "ET Markets",
+      "weight": 1.2,
+      "category": "market",
+      "sentiment": "MILDLY_BULLISH",
+      "sentiment_score": 1.2,
+      "sentiment_raw": 1,
+      "bull_terms": [
+        "up"
+      ],
+      "bear_terms": [],
+      "matched_tickers": [
+        "KOTAKBANK",
+        "BHARTIARTL"
+      ],
+      "matched_sectors": []
+    },
+    {
+      "title": "HDFC Life Insurance shares tank 4% on Q4 results. What are Morgan Stanley and Goldman Sachs saying?",
+      "summary": "HDFC Life Insurance share price declined 4% after announcing plans to raise Rs 1,000 crore from HDFC Bank via preferential issue, alongside March quarter earnings growth. Profit rose 4% YoY, while premiums grew 9%. Brokerages remain mixed, with target prices ranging from Rs 725 to Rs 745 amid growth concerns.",
+      "link": "https://economictimes.indiatimes.com/markets/stocks/news/hdfc-life-insurance-shares-in-focus-on-strong-q4-what-are-morgan-stanley-and-goldman-sachs-saying/articleshow/130322038.cms",
+      "published_ts": 1776396526.0,
+      "published_iso": "2026-04-17T03:28:46+00:00",
+      "source": "ET Markets",
+      "weight": 1.2,
+      "category": "market",
+      "sentiment": "BULLISH",
+      "sentiment_score": 3.6,
+      "sentiment_raw": 3,
+      "bull_terms": [
+        "rose",
+        "profit",
+        "growth"
+      ],
+      "bear_terms": [],
+      "matched_tickers": [
+        "HDFCBANK"
+      ],
+      "matched_sectors": []
+    },
+    {
+      "title": "Mutual funds bought 505 smallcap stocks in March crash. Two weeks later, they're winning big",
+      "summary": "Indian mutual funds bought smallcap stocks in March when retail investors sold. This strategy paid off as the Nifty Smallcap 250 index rose in April. Fund managers invested heavily in companies like Urban Company, Manappuram Finance, and Amber Enterprises. This broad buying across sectors indicates strong conviction.",
+      "link": "https://economictimes.indiatimes.com/markets/stocks/news/mutual-funds-bought-505-smallcap-stocks-in-march-crash-two-weeks-later-theyre-winning-big/articleshow/130322005.cms",
+      "published_ts": 1776396329.0,
+      "published_iso": "2026-04-17T03:25:29+00:00",
+      "source": "ET Markets",
+      "weight": 1.2,
+      "category": "market",
+      "sentiment": "MILDLY_BEARISH",
+      "sentiment_score": -1.2,
+      "sentiment_raw": -1,
+      "bull_terms": [
+        "rose"
+      ],
+      "bear_terms": [
+        "crash"
+      ],
+      "matched_tickers": [
+        "RELIANCE"
+      ],
+      "matched_sectors": []
+    },
+    {
+      "title": "Ellison takes Paramount, Warner Bros case straight to theater owners",
+      "summary": "Paramount Skydance CEO David Ellison has assured cinema owners that the company will maintain a minimum release slate of 30 films a year if regulators approve its proposed $110 billion acquisition of Warner Bros Discovery.",
+      "link": "https://economictimes.indiatimes.com/industry/media/entertainment/media/ellison-takes-paramount-warner-bros-case-straight-to-theater-owners/articleshow/130321991.cms",
+      "published_ts": 1776396247.0,
+      "published_iso": "2026-04-17T03:24:07+00:00",
+      "source": "ET Industry",
+      "weight": 1.1,
+      "category": "sector",
+      "sentiment": "MILDLY_BULLISH",
+      "sentiment_score": 1.1,
+      "sentiment_raw": 1,
+      "bull_terms": [
+        "acquisition"
+      ],
+      "bear_terms": [],
+      "matched_tickers": [],
+      "matched_sectors": [
+        "Telecom"
+      ]
+    },
+    {
+      "title": "CNBC Daily Open: A fragile peace, but a firm market rally",
+      "summary": "Markets march on to new records as the warring sides in the Middle East come seem to move toward peace.",
+      "link": "https://www.cnbc.com/2026/04/17/cnbc-daily-market-rally-oil-iran-war.html",
+      "published_ts": 1776396020.0,
+      "published_iso": "2026-04-17T03:20:20+00:00",
+      "source": "CNBC World",
+      "weight": 0.8,
+      "category": "global",
+      "sentiment": "MILDLY_BULLISH",
+      "sentiment_score": 1.6,
+      "sentiment_raw": 2,
+      "bull_terms": [
+        "rally"
+      ],
+      "bear_terms": [],
+      "matched_tickers": [],
+      "matched_sectors": []
+    },
+    {
+      "title": "Stock market today: Gift Nifty trades flat; US-Iran news, India VIX to gold, silver rates \u2014 eight stocks to buy or sell",
+      "summary": "Stock market today: Experts recommend eight stocks to buy today \u2014 NALCO, Tata Power, ABSLAMC, MCX, Bank of Baroda (BoB), HPL Electric &amp; Power, Gabriel India, and Tilaknagar Industries",
+      "link": "https://www.livemint.com/market/stock-market-news/stock-market-today-17-april-2026-gift-nifty-flat-us-iran-news-india-vix-gold-silver-rates-eight-stocks-to-buy-or-sell-11776389990001.html",
+      "published_ts": 1776395844.0,
+      "published_iso": "2026-04-17T03:17:24+00:00",
+      "source": "Mint Markets",
+      "weight": 1.2,
+      "category": "market",
+      "sentiment": "NEUTRAL",
+      "sentiment_score": 0.0,
+      "sentiment_raw": 0,
+      "bull_terms": [],
+      "bear_terms": [],
+      "matched_tickers": [
+        "TATAPOWER",
+        "BANKBARODA"
+      ],
+      "matched_sectors": []
+    },
+    {
+      "title": "Unwinding of call writers signals bullish setup in Larsen & Toubro: Shivangi Sarda",
+      "summary": "",
+      "link": "https://economictimes.indiatimes.com/markets/stocks/unwinding-of-call-writers-signals-bullish-setup-in-larsen-toubro-shivangi-sarda/videoshow/130321842.cms",
+      "published_ts": 1776395612.0,
+      "published_iso": "2026-04-17T03:13:32+00:00",
+      "source": "ET Markets",
+      "weight": 1.2,
+      "category": "market",
+      "sentiment": "MILDLY_BULLISH",
+      "sentiment_score": 1.2,
+      "sentiment_raw": 1,
+      "bull_terms": [
+        "bullish"
+      ],
+      "bear_terms": [],
+      "matched_tickers": [
+        "LT"
+      ],
+      "matched_sectors": []
+    },
+    {
+      "title": "GMDC among 5 stocks flashing bullish signals, hinting at a possible uptrend",
+      "summary": "Five Nifty 500 stocks appeared in the White Marubozu bullish scan on April 16, signalling strong buying interest throughout the session. The pattern reflects sustained upward momentum and positive sentiment, highlighting potential trend continuation and near-term opportunities in select stocks showing strong intraday strength and bullish price action.",
+      "link": "https://economictimes.indiatimes.com/markets/stocks/news/gmdc-among-5-stocks-flashing-bullish-signals-hinting-at-a-possible-uptrend/slideshow/130321750.cms",
+      "published_ts": 1776395078.0,
+      "published_iso": "2026-04-17T03:04:38+00:00",
+      "source": "ET Markets",
+      "weight": 1.2,
+      "category": "market",
+      "sentiment": "MILDLY_BULLISH",
+      "sentiment_score": 2.4,
+      "sentiment_raw": 2,
+      "bull_terms": [
+        "positive",
+        "bullish"
+      ],
+      "bear_terms": [],
+      "matched_tickers": [
+        "RELIANCE"
+      ],
+      "matched_sectors": []
+    },
+    {
+      "title": "Infosys among 4 stocks showing bullish RSI upswing",
+      "summary": "Four Nifty 200 stocks were highlighted in the RSI Trending Up scan on April 16, based on StockEdge data. The signal is generated when RSI crosses above 50 from lower levels, indicating improving momentum and sentiment, highlighting early technical strength and potential short-term buying interest in select counters.",
+      "link": "https://economictimes.indiatimes.com/markets/stocks/news/infosys-among-4-stocks-showing-bullish-rsi-upswing/slideshow/130321671.cms",
+      "published_ts": 1776394812.0,
+      "published_iso": "2026-04-17T03:00:12+00:00",
+      "source": "ET Markets",
+      "weight": 1.2,
+      "category": "market",
+      "sentiment": "MILDLY_BULLISH",
+      "sentiment_score": 1.2,
+      "sentiment_raw": 1,
+      "bull_terms": [
+        "up",
+        "bullish"
+      ],
+      "bear_terms": [
+        "lower"
+      ],
+      "matched_tickers": [
+        "RELIANCE",
+        "INFY"
+      ],
+      "matched_sectors": []
+    },
+    {
+      "title": "Angel One shares rise over 4% after Q4 net profit jumps 84% to Rs 320 crore",
+      "summary": "Angel One share price gained over 4% after it reported a robust March quarter, with profits soaring 84% year-on-year to Rs 320 crore, fueled by a 13% surge in total orders to 43.1 crore and a growing client base. The company's expansion into wealth management and asset management also showed positive traction, underscoring its digital financial services evolution.",
+      "link": "https://economictimes.indiatimes.com/markets/stocks/news/angel-one-shares-in-focus-after-q4-net-profit-jumps-84-to-rs-320-crore/articleshow/130321611.cms",
+      "published_ts": 1776394746.0,
+      "published_iso": "2026-04-17T02:59:06+00:00",
+      "source": "ET Markets",
+      "weight": 1.2,
+      "category": "market",
+      "sentiment": "BULLISH",
+      "sentiment_score": 8.4,
+      "sentiment_raw": 7,
+      "bull_terms": [
+        "surge",
+        "gained",
+        "jumps",
+        "profit"
+      ],
+      "bear_terms": [],
+      "matched_tickers": [],
+      "matched_sectors": []
+    },
+    {
+      "title": "Stock Market Today LIVE: Sensex, Nifty 50 trade flat amid volatility; Wipro, HDFC Life fall over 3%",
+      "summary": "Stock Market Today LIVE: Among sectors, gains were seen in Nifty FMCG, Nifty Oil & Gas, Nifty Auto, Nifty Realty and Nifty Media gained, while Nifty Metals and Nifty Pharma declined.",
+      "link": "https://www.livemint.com/market/stock-market-news/stock-market-today-live-gift-nifty-signals-muted-start-for-nifty-50-sensex-today-wipro-rvnl-waaree-in-focus-11776393674477.html",
+      "published_ts": 1776394517.0,
+      "published_iso": "2026-04-17T02:55:17+00:00",
+      "source": "Mint Markets",
+      "weight": 1.2,
+      "category": "market",
+      "sentiment": "MILDLY_BULLISH",
+      "sentiment_score": 2.4,
+      "sentiment_raw": 2,
+      "bull_terms": [
+        "gains",
+        "gained"
+      ],
+      "bear_terms": [],
+      "matched_tickers": [
+        "WIPRO"
+      ],
+      "matched_sectors": []
+    },
+    {
+      "title": "Maruti Suzuki Share Price Live Updates: Maruti Suzuki's Price and Performance Snapshot",
+      "summary": "",
+      "link": "https://economictimes.indiatimes.com/markets/stocks/stock-liveblog/maruti-suzuki-stock-price-livestock-price-today-live-updates-17-apr-2026/liveblog/130321415.cms",
+      "published_ts": 1776393966.0,
+      "published_iso": "2026-04-17T02:46:06+00:00",
+      "source": "ET Markets",
+      "weight": 1.2,
+      "category": "market",
+      "sentiment": "NEUTRAL",
+      "sentiment_score": 0.0,
+      "sentiment_raw": 0,
+      "bull_terms": [],
+      "bear_terms": [],
+      "matched_tickers": [
+        "MARUTI"
+      ],
+      "matched_sectors": []
+    },
+    {
+      "title": "IndusInd Bank Share Price Live Updates: IndusInd Bank's Market Update",
+      "summary": "",
+      "link": "https://economictimes.indiatimes.com/markets/stocks/stock-liveblog/indusind-bank-share-price-live-updates-17-apr-2026/liveblog/130321398.cms",
+      "published_ts": 1776393892.0,
+      "published_iso": "2026-04-17T02:44:52+00:00",
+      "source": "ET Markets",
+      "weight": 1.2,
+      "category": "market",
+      "sentiment": "NEUTRAL",
+      "sentiment_score": 0.0,
+      "sentiment_raw": 0,
+      "bull_terms": [],
+      "bear_terms": [],
+      "matched_tickers": [
+        "INDUSINDBK"
+      ],
+      "matched_sectors": []
+    },
+    {
+      "title": "Coal India Share Price Live Updates: Coal India Current Market Status",
+      "summary": "",
+      "link": "https://economictimes.indiatimes.com/markets/stocks/stock-liveblog/coal-india-ltd-stock-price-live-updates-17-apr-2026/liveblog/130321369.cms",
+      "published_ts": 1776393819.0,
+      "published_iso": "2026-04-17T02:43:39+00:00",
+      "source": "ET Markets",
+      "weight": 1.2,
+      "category": "market",
+      "sentiment": "NEUTRAL",
+      "sentiment_score": 0.0,
+      "sentiment_raw": 0,
+      "bull_terms": [],
+      "bear_terms": [],
+      "matched_tickers": [
+        "COALINDIA"
+      ],
+      "matched_sectors": []
+    },
+    {
+      "title": "Britannia Share Price Live Updates: Britannia's Market Update",
+      "summary": "",
+      "link": "https://economictimes.indiatimes.com/markets/stocks/stock-liveblog/britannia-stock-price-today-live-17-apr-2026/liveblog/130321359.cms",
+      "published_ts": 1776393785.0,
+      "published_iso": "2026-04-17T02:43:05+00:00",
+      "source": "ET Markets",
+      "weight": 1.2,
+      "category": "market",
+      "sentiment": "NEUTRAL",
+      "sentiment_score": 0.0,
+      "sentiment_raw": 0,
+      "bull_terms": [],
+      "bear_terms": [],
+      "matched_tickers": [
+        "BRITANNIA"
+      ],
+      "matched_sectors": []
+    },
+    {
+      "title": "Bharti Airtel Share Price Live Updates: Bharti Airtel's Stock Update",
+      "summary": "",
+      "link": "https://economictimes.indiatimes.com/markets/stocks/stock-liveblog/bharti-airtel-stock-price-today-live-17-apr-2026/liveblog/130321333.cms",
+      "published_ts": 1776393738.0,
+      "published_iso": "2026-04-17T02:42:18+00:00",
+      "source": "ET Markets",
+      "weight": 1.2,
+      "category": "market",
+      "sentiment": "NEUTRAL",
+      "sentiment_score": 0.0,
+      "sentiment_raw": 0,
+      "bull_terms": [],
+      "bear_terms": [],
+      "matched_tickers": [
+        "BHARTIARTL"
+      ],
+      "matched_sectors": []
+    },
+    {
+      "title": "Mehul Telecom IPO opens for subscription. Check GMP, price band, and other details",
+      "summary": "Mehul Telecom's SME IPO is now open, seeking growth capital with a modest grey market premium suggesting a slight listing gain. The Rs 28 crore issue, priced at Rs 96-98, aims to boost working capital and general corporate needs.",
+      "link": "https://economictimes.indiatimes.com/markets/ipos/fpos/mehul-telecom-ipo-opens-for-subscription-check-gmp-price-band-and-other-details/articleshow/130321331.cms",
+      "published_ts": 1776393734.0,
+      "published_iso": "2026-04-17T02:42:14+00:00",
+      "source": "ET Markets",
+      "weight": 1.2,
+      "category": "market",
+      "sentiment": "MILDLY_BULLISH",
+      "sentiment_score": 2.4,
+      "sentiment_raw": 2,
+      "bull_terms": [
+        "growth",
+        "boost"
+      ],
+      "bear_terms": [],
+      "matched_tickers": [
+        "HINDUNILVR"
+      ],
+      "matched_sectors": []
+    },
+    {
+      "title": "Citius Transnet InvIT IPO opens today. Check price band, subscription and other details",
+      "summary": "Citius Transnet InvIT IPO is now open. The company aims to raise Rs 1,105 crore. Investors are showing interest in infrastructure assets that generate income. The IPO offers units at a price band of Rs 99-100. Proceeds will fund asset acquisitions. The trust operates road infrastructure across nine states. This offering targets yield-focused investors.",
+      "link": "https://economictimes.indiatimes.com/markets/ipos/fpos/citius-transnet-invit-ipo-opens-today-check-price-band-subscription-and-other-details/articleshow/130321296.cms",
+      "published_ts": 1776393562.0,
+      "published_iso": "2026-04-17T02:39:22+00:00",
+      "source": "ET Markets",
+      "weight": 1.2,
+      "category": "market",
+      "sentiment": "NEUTRAL",
+      "sentiment_score": 0.0,
+      "sentiment_raw": 0,
+      "bull_terms": [],
+      "bear_terms": [],
+      "matched_tickers": [],
+      "matched_sectors": [
+        "Infrastructure"
+      ]
+    },
+    {
+      "title": "Tata Motors PV Share Price Live Updates: Tata Motors PV's six-month beta indicates volatility",
+      "summary": "",
+      "link": "https://economictimes.indiatimes.com/markets/stocks/stock-liveblog/tata-motors-pv-stock-price-live-updates-17-apr-2026/liveblog/130321268.cms",
+      "published_ts": 1776393399.0,
+      "published_iso": "2026-04-17T02:36:39+00:00",
+      "source": "ET Markets",
+      "weight": 1.2,
+      "category": "market",
+      "sentiment": "NEUTRAL",
+      "sentiment_score": 0.0,
+      "sentiment_raw": 0,
+      "bull_terms": [],
+      "bear_terms": [],
+      "matched_tickers": [
+        "TATAMOTORS"
+      ],
+      "matched_sectors": []
+    },
+    {
+      "title": "HDFC Life Share Price Live Updates: HDFC Life showcases a beta of 0.8781 over six months",
+      "summary": "",
+      "link": "https://economictimes.indiatimes.com/markets/stocks/stock-liveblog/hdfc-life-share-price-live-updates-17-apr-2026/liveblog/130321261.cms",
+      "published_ts": 1776393377.0,
+      "published_iso": "2026-04-17T02:36:17+00:00",
+      "source": "ET Markets",
+      "weight": 1.2,
+      "category": "market",
+      "sentiment": "NEUTRAL",
+      "sentiment_score": 0.0,
+      "sentiment_raw": 0,
+      "bull_terms": [],
+      "bear_terms": [],
+      "matched_tickers": [],
+      "matched_sectors": []
+    },
+    {
+      "title": "Bajaj Auto Share Price Live Updates: Bajaj Auto's six-month beta reflects stability",
+      "summary": "",
+      "link": "https://economictimes.indiatimes.com/markets/stocks/stock-liveblog/bajaj-auto-share-price-live-17-apr-2026/liveblog/130321258.cms",
+      "published_ts": 1776393369.0,
+      "published_iso": "2026-04-17T02:36:09+00:00",
+      "source": "ET Markets",
+      "weight": 1.2,
+      "category": "market",
+      "sentiment": "NEUTRAL",
+      "sentiment_score": 0.0,
+      "sentiment_raw": 0,
+      "bull_terms": [],
+      "bear_terms": [],
+      "matched_tickers": [
+        "BAJAJ-AUTO"
+      ],
+      "matched_sectors": []
+    },
+    {
+      "title": "Adani Ent Share Price Live Updates: Market dynamics of Adani Enterprises",
+      "summary": "",
+      "link": "https://economictimes.indiatimes.com/markets/stocks/stock-liveblog/adani-ent-share-price-live-17-apr-2026/liveblog/130321253.cms",
+      "published_ts": 1776393347.0,
+      "published_iso": "2026-04-17T02:35:47+00:00",
+      "source": "ET Markets",
+      "weight": 1.2,
+      "category": "market",
+      "sentiment": "NEUTRAL",
+      "sentiment_score": 0.0,
+      "sentiment_raw": 0,
+      "bull_terms": [],
+      "bear_terms": [],
+      "matched_tickers": [],
+      "matched_sectors": []
+    },
+    {
+      "title": "Wipro Share Price Live Updates: Wipro's beta indicates consistent performance",
+      "summary": "",
+      "link": "https://economictimes.indiatimes.com/markets/stocks/stock-liveblog/wipro-share-price-live-17-apr-2026/liveblog/130321252.cms",
+      "published_ts": 1776393346.0,
+      "published_iso": "2026-04-17T02:35:46+00:00",
+      "source": "ET Markets",
+      "weight": 1.2,
+      "category": "market",
+      "sentiment": "NEUTRAL",
+      "sentiment_score": 0.0,
+      "sentiment_raw": 0,
+      "bull_terms": [],
+      "bear_terms": [],
+      "matched_tickers": [
+        "WIPRO"
+      ],
+      "matched_sectors": []
+    },
+    {
+      "title": "Dr Reddys Share Price Live Updates: Dr. Reddy's Laboratories shows low beta, indicating stability.",
+      "summary": "",
+      "link": "https://economictimes.indiatimes.com/markets/stocks/stock-liveblog/dr-reddys-stock-price-livestock-price-today-live-updates-17-apr-2026/liveblog/130321228.cms",
+      "published_ts": 1776393295.0,
+      "published_iso": "2026-04-17T02:34:55+00:00",
+      "source": "ET Markets",
+      "weight": 1.2,
+      "category": "market",
+      "sentiment": "NEUTRAL",
+      "sentiment_score": 0.0,
+      "sentiment_raw": 0,
+      "bull_terms": [],
+      "bear_terms": [],
+      "matched_tickers": [
+        "DRREDDY"
+      ],
+      "matched_sectors": []
+    },
+    {
+      "title": "LTIMindtree Share Price Live Updates: LTIMindtree's beta value highlights market resilience",
+      "summary": "",
+      "link": "https://economictimes.indiatimes.com/markets/stocks/stock-liveblog/ltimindtree-stock-price-livestock-price-today-live-updates-17-apr-2026/liveblog/130321226.cms",
+      "published_ts": 1776393291.0,
+      "published_iso": "2026-04-17T02:34:51+00:00",
+      "source": "ET Markets",
+      "weight": 1.2,
+      "category": "market",
+      "sentiment": "NEUTRAL",
+      "sentiment_score": 0.0,
+      "sentiment_raw": 0,
+      "bull_terms": [],
+      "bear_terms": [],
+      "matched_tickers": [
+        "LTIM"
+      ],
+      "matched_sectors": []
+    },
+    {
+      "title": "HDFC Bank Share Price Live Updates: HDFC Bank's volatility metrics",
+      "summary": "",
+      "link": "https://economictimes.indiatimes.com/markets/stocks/stock-liveblog/hdfc-bank-stock-price-today-live-17-apr-2026/liveblog/130321220.cms",
+      "published_ts": 1776393282.0,
+      "published_iso": "2026-04-17T02:34:42+00:00",
+      "source": "ET Markets",
+      "weight": 1.2,
+      "category": "market",
+      "sentiment": "NEUTRAL",
+      "sentiment_score": 0.0,
+      "sentiment_raw": 0,
+      "bull_terms": [],
+      "bear_terms": [],
+      "matched_tickers": [
+        "HDFCBANK"
+      ],
+      "matched_sectors": []
+    },
+    {
+      "title": "Nestle India Share Price Live Updates: Nestle India's beta suggests stable market behavior",
+      "summary": "",
+      "link": "https://economictimes.indiatimes.com/markets/stocks/stock-liveblog/nestle-india-share-price-live-updates-17-apr-2026/liveblog/130321216.cms",
+      "published_ts": 1776393272.0,
+      "published_iso": "2026-04-17T02:34:32+00:00",
+      "source": "ET Markets",
+      "weight": 1.2,
+      "category": "market",
+      "sentiment": "NEUTRAL",
+      "sentiment_score": 0.0,
+      "sentiment_raw": 0,
+      "bull_terms": [],
+      "bear_terms": [],
+      "matched_tickers": [
+        "NESTLEIND"
+      ],
+      "matched_sectors": []
+    },
+    {
+      "title": "Infosys Share Price Live Updates: Infosys's beta suggests a defensive stock choice",
+      "summary": "",
+      "link": "https://economictimes.indiatimes.com/markets/stocks/stock-liveblog/infosys-share-price-live-updates-17-apr-2026/liveblog/130321214.cms",
+      "published_ts": 1776393269.0,
+      "published_iso": "2026-04-17T02:34:29+00:00",
+      "source": "ET Markets",
+      "weight": 1.2,
+      "category": "market",
+      "sentiment": "NEUTRAL",
+      "sentiment_score": 0.0,
+      "sentiment_raw": 0,
+      "bull_terms": [],
+      "bear_terms": [],
+      "matched_tickers": [
+        "INFY"
+      ],
+      "matched_sectors": []
+    },
+    {
+      "title": "Stocks to buy for short term: From BEL to SAIL - Ajit Mishra of Religare Broking suggests 3 stock picks; do you own any?",
+      "summary": "Stocks to buy for short term: Ajit Mishra of Religare Broking recommends three stocks, including BEL and SAIL, for the next 1-2 weeks, highlighting bullish tecnical signals in them.&nbsp;",
+      "link": "https://www.livemint.com/market/stock-market-news/stocks-to-buy-for-short-term-bel-sail-power-ajit-mishra-of-religare-broking-suggests-3-stock-picks-do-you-own-any-11776347527471.html",
+      "published_ts": 1776393058.0,
+      "published_iso": "2026-04-17T02:30:58+00:00",
+      "source": "Mint Markets",
+      "weight": 1.2,
+      "category": "market",
+      "sentiment": "MILDLY_BULLISH",
+      "sentiment_score": 1.2,
+      "sentiment_raw": 1,
+      "bull_terms": [
+        "bullish"
+      ],
+      "bear_terms": [],
+      "matched_tickers": [
+        "BEL"
+      ],
+      "matched_sectors": []
+    },
+    {
+      "title": "Netflix stock sinks after streamer reiterates guidance, says Reed Hastings to exit board",
+      "summary": "Netflix beat expectations for Q1 revenue and reported a big jump in earnings per share thanks in part to a termination fee related to its proposed WBD deal.",
+      "link": "https://www.cnbc.com/2026/04/16/netflix-nflx-earnings-q1-2026.html",
+      "published_ts": 1776392571.0,
+      "published_iso": "2026-04-17T02:22:51+00:00",
+      "source": "CNBC World",
+      "weight": 0.8,
+      "category": "global",
+      "sentiment": "NEUTRAL",
+      "sentiment_score": -0.8,
+      "sentiment_raw": -1,
+      "bull_terms": [
+        "jump"
+      ],
+      "bear_terms": [
+        "sinks"
+      ],
+      "matched_tickers": [],
+      "matched_sectors": []
+    },
+    {
+      "title": "Shares to buy or sell: Chandan Taparia of Motilal Oswal recommends three stocks to buy today - 17 April 2026",
+      "summary": "Shares to buy or sell: Chandan Taparia has recommended three stocks to buy today, 17 April 2026 - Eternal, Crompton Greaves Consumer Electricals and PB Fintech shares.",
+      "link": "https://www.livemint.com/market/stock-market-news/shares-to-buy-or-sell-chandan-taparia-of-motilal-oswal-recommends-three-stocks-to-buy-today-17-april-2026-11776391246764.html",
+      "published_ts": 1776392532.0,
+      "published_iso": "2026-04-17T02:22:12+00:00",
+      "source": "Mint Markets",
+      "weight": 1.2,
+      "category": "market",
+      "sentiment": "NEUTRAL",
+      "sentiment_score": 0.0,
+      "sentiment_raw": 0,
+      "bull_terms": [],
+      "bear_terms": [],
+      "matched_tickers": [
+        "RELIANCE"
+      ],
+      "matched_sectors": []
+    },
+    {
+      "title": "Raja Venkatraman, MarketSmith recommend four stocks for 17 April",
+      "summary": "he Indian stock market closed lower on April 16 as profit-taking occurred after recent gains. Despite global markets rallying, the Nifty 50 and Sensex experienced declines. Investors remain cautious ahead of earnings season and geopolitical developments in the Middle East.",
+      "link": "https://www.livemint.com/market/stock-market-news/raja-venkatraman-marketsmith-recommend-four-stocks-for-17-april-11776390160427.html",
+      "published_ts": 1776392339.0,
+      "published_iso": "2026-04-17T02:18:59+00:00",
+      "source": "Mint Markets",
+      "weight": 1.2,
+      "category": "market",
+      "sentiment": "MILDLY_BEARISH",
+      "sentiment_score": -2.4,
+      "sentiment_raw": -2,
+      "bull_terms": [
+        "gains",
+        "profit"
+      ],
+      "bear_terms": [
+        "declines",
+        "lower",
+        "cautious"
+      ],
+      "matched_tickers": [
+        "RELIANCE"
+      ],
+      "matched_sectors": []
+    },
+    {
+      "title": "Oil prices fall as Israel-Lebanon ceasefire comes into effect, Trump says \u2018very close\u2019 to Iran deal",
+      "summary": "Oil prices fell as a 10-day Israel\u2013Lebanon ceasefire took effect and Donald Trump hinted at an imminent Iran deal, even as Hormuz disruptions keep global energy markets on edge.",
+      "link": "https://www.livemint.com/economy/oil-prices-israel-lebanon-ceasefire-donald-trump-iran-deal-west-asia-war-strait-of-hormuz-energy-crisis-global-oil-11776389576576.html",
+      "published_ts": 1776391997.0,
+      "published_iso": "2026-04-17T02:13:17+00:00",
+      "source": "Mint Economy",
+      "weight": 1.2,
+      "category": "macro",
+      "sentiment": "MILDLY_BEARISH",
+      "sentiment_score": -1.2,
+      "sentiment_raw": -1,
+      "bull_terms": [],
+      "bear_terms": [
+        "fell"
+      ],
+      "matched_tickers": [],
+      "matched_sectors": [
+        "Oil & Gas"
+      ]
+    },
+    {
+      "title": "Dalal Street set for dull start on Friday amid mixed global cues",
+      "summary": "Gift Nifty at 24,153 signals a marginal decline at open",
+      "link": "https://www.thehindubusinessline.com/markets/dalal-street-set-for-dull-start-on-friday-amid-mixed-global-cues/article70872108.ece",
+      "published_ts": 1776390980.0,
+      "published_iso": "2026-04-17T01:56:20+00:00",
+      "source": "Hindu BusinessLine",
+      "weight": 1.1,
+      "category": "market",
+      "sentiment": "MILDLY_BEARISH",
+      "sentiment_score": -1.1,
+      "sentiment_raw": -1,
+      "bull_terms": [],
+      "bear_terms": [
+        "decline"
+      ],
+      "matched_tickers": [],
+      "matched_sectors": []
+    },
+    {
+      "title": "Nifty 50, Sensex prediction today: Check how Indian stock market is expected to trade on 17 April",
+      "summary": "Nifty 50, Sensex prediction today: The trends on Gift Nifty also indicate a tepid start for the Indian benchmark index. The Gift Nifty was trading around 24,170 level, a discount of nearly 25 points from the Nifty futures\u2019 previous close.",
+      "link": "https://www.livemint.com/market/stock-market-news/nifty-50-sensex-prediction-today-check-how-indian-stock-market-is-expected-to-trade-on-17-april-11776390303690.html",
+      "published_ts": 1776390799.0,
+      "published_iso": "2026-04-17T01:53:19+00:00",
+      "source": "Mint Markets",
+      "weight": 1.2,
+      "category": "market",
+      "sentiment": "NEUTRAL",
+      "sentiment_score": 0.0,
+      "sentiment_raw": 0,
+      "bull_terms": [],
+      "bear_terms": [],
+      "matched_tickers": [
+        "RELIANCE"
+      ],
+      "matched_sectors": []
+    },
+    {
+      "title": "Jet fuel supplies are lagging. What does that mean for airlines and travelers?",
+      "summary": "A looming jet fuel shortage in Europe and Asia, triggered by the Iran war and the closure of the Strait of Hormuz, could significantly disrupt global travel within weeks. Airlines face higher airfares and potential flight cancellations as jet fuel prices have doubled, impacting the summer travel season.",
+      "link": "https://economictimes.indiatimes.com/industry/transportation/airlines-/-aviation/jet-fuel-supplies-are-lagging-what-does-that-mean-for-airlines-and-travelers/articleshow/130320727.cms",
+      "published_ts": 1776390388.0,
+      "published_iso": "2026-04-17T01:46:28+00:00",
+      "source": "ET Industry",
+      "weight": 1.1,
+      "category": "sector",
+      "sentiment": "MILDLY_BEARISH",
+      "sentiment_score": -1.1,
+      "sentiment_raw": -1,
+      "bull_terms": [
+        "higher"
+      ],
+      "bear_terms": [],
+      "matched_tickers": [],
+      "matched_sectors": [
+        "Telecom"
+      ]
+    },
+    {
+      "title": "From Gift Nifty, Iran war to Wipro Q4 results: 7 key things that changed for Indian stock market overnight",
+      "summary": "Gift Nifty was trading around 24,140 level, a discount of nearly 56 points from the Nifty futures\u2019 previous close, indicating a negative start for the Indian stock market indices.",
+      "link": "https://www.livemint.com/market/stock-market-news/from-gift-nifty-iran-war-to-wipro-q4-results-7-key-things-that-changed-for-indian-stock-market-overnight-11776388849029.html",
+      "published_ts": 1776389976.0,
+      "published_iso": "2026-04-17T01:39:36+00:00",
+      "source": "Mint Markets",
+      "weight": 1.2,
+      "category": "market",
+      "sentiment": "BEARISH",
+      "sentiment_score": -3.6,
+      "sentiment_raw": -3,
+      "bull_terms": [],
+      "bear_terms": [
+        "negative"
+      ],
+      "matched_tickers": [
+        "WIPRO"
+      ],
+      "matched_sectors": []
+    },
+    {
+      "title": "Trump administration urges US oil bosses to increase drilling",
+      "summary": "Energy and interior secretaries hold call with executives to encourage more production",
+      "link": "https://www.ft.com/content/0f41cbd9-58e5-4f0c-b975-3e6b919f1431",
+      "published_ts": 1776389899.0,
+      "published_iso": "2026-04-17T01:38:19+00:00",
+      "source": "FT Markets",
+      "weight": 0.9,
+      "category": "global",
+      "sentiment": "NEUTRAL",
+      "sentiment_score": 0.0,
+      "sentiment_raw": 0,
+      "bull_terms": [],
+      "bear_terms": [],
+      "matched_tickers": [
+        "RELIANCE"
+      ],
+      "matched_sectors": []
+    },
+    {
+      "title": "Around 10.10 lakh passengers travelled to India since February 28 from region amid West Asia tensions, says Govt",
+      "summary": "India is ensuring smooth functioning across key sectors amidst the West Asia situation. The Petroleum Ministry guarantees uninterrupted fuel and LPG supply. Commercial LPG prioritizes essential services. Refineries operate at high capacity with adequate crude. Indian vessels and seafarers are safe. Flights continue to operate, with many passengers returning. The government is actively monitoring and coordinating efforts.",
+      "link": "https://economictimes.indiatimes.com/industry/services/travel/around-10-10-lakh-passengers-travelled-to-india-since-february-28-from-region-amid-west-asia-tensions-says-govt/articleshow/130320647.cms",
+      "published_ts": 1776389882.0,
+      "published_iso": "2026-04-17T01:38:02+00:00",
+      "source": "ET Industry",
+      "weight": 1.1,
+      "category": "sector",
+      "sentiment": "NEUTRAL",
+      "sentiment_score": 0.0,
+      "sentiment_raw": 0,
+      "bull_terms": [],
+      "bear_terms": [],
+      "matched_tickers": [],
+      "matched_sectors": [
+        "Oil & Gas"
+      ]
+    },
+    {
+      "title": "Today\u2019s picks: Dozen stocks including Wipro, BPCL, DCM Shriram, DCX Systems, Aditya Infotech will be in focus on Friday",
+      "summary": "",
+      "link": "https://www.thehindubusinessline.com/markets/todays-picks-dozen-stocks-including-wipro-bpcl-dcm-shriram-dcx-systems-aditya-infotech-will-be-in-focus-on-friday/article70872098.ece",
+      "published_ts": 1776389759.0,
+      "published_iso": "2026-04-17T01:35:59+00:00",
+      "source": "Hindu BusinessLine",
+      "weight": 1.1,
+      "category": "market",
+      "sentiment": "NEUTRAL",
+      "sentiment_score": 0.0,
+      "sentiment_raw": 0,
+      "bull_terms": [],
+      "bear_terms": [],
+      "matched_tickers": [
+        "WIPRO",
+        "BPCL"
+      ],
+      "matched_sectors": []
+    },
+    {
+      "title": "Finance ministers and top bankers raise serious concerns about Mythos AI model",
+      "summary": "Experts say Mythos potentially has an unprecedented ability to identify and exploit cybersecurity weaknesses.",
+      "link": "https://www.bbc.com/news/articles/c2ev24yx4rmo?at_medium=RSS&at_campaign=rss",
+      "published_ts": 1776389662.0,
+      "published_iso": "2026-04-17T01:34:22+00:00",
+      "source": "BBC Business",
+      "weight": 0.8,
+      "category": "global",
+      "sentiment": "NEUTRAL",
+      "sentiment_score": -0.8,
+      "sentiment_raw": -1,
+      "bull_terms": [],
+      "bear_terms": [
+        "concerns"
+      ],
+      "matched_tickers": [],
+      "matched_sectors": [
+        "Banking"
+      ]
+    },
+    {
+      "title": "Buy or sell: Gift Nifty signals muted opening; Vaishali Parekh recommends three stocks to buy today \u2014 17 April 2026",
+      "summary": "Buy or sell stocks on 17 April 2026: Vaishali Parekh recommends three stocks to buy today \u2014 MGL, NCC, SJVN",
+      "link": "https://www.livemint.com/market/stock-market-news/buy-or-sell-gift-nifty-signals-muted-opening-vaishali-parekh-recommends-three-stocks-to-buy-today-17-april-2026-11776387605423.html",
+      "published_ts": 1776389653.0,
+      "published_iso": "2026-04-17T01:34:13+00:00",
+      "source": "Mint Markets",
+      "weight": 1.2,
+      "category": "market",
+      "sentiment": "NEUTRAL",
+      "sentiment_score": 0.0,
+      "sentiment_raw": 0,
+      "bull_terms": [],
+      "bear_terms": [],
+      "matched_tickers": [
+        "RELIANCE"
+      ],
+      "matched_sectors": []
+    },
+    {
+      "title": "LIV CEO claims business as usual amid reports of demise",
+      "summary": "GOLF-LIV-ONEIL-LIV/",
+      "link": "https://www.livemint.com/companies/liv-ceo-claims-business-as-usual-amid-reports-of-demise-11776389475109.html",
+      "published_ts": 1776389474.0,
+      "published_iso": "2026-04-17T01:31:14+00:00",
+      "source": "Mint Companies",
+      "weight": 1.1,
+      "category": "market",
+      "sentiment": "NEUTRAL",
+      "sentiment_score": 0.0,
+      "sentiment_raw": 0,
+      "bull_terms": [],
+      "bear_terms": [],
+      "matched_tickers": [],
+      "matched_sectors": []
+    },
+    {
+      "title": "Crude oil falls on prospects for talks to end Iran war and revive supply",
+      "summary": "Brent crude futures declined by $1.34, \u200cor 1.35%, to $98.05 a barrel at 0021 GMT. U.S. West Texas Intermediate crude futures \u200cfell $1.65, or 1.74%, to $93.40 a barrel, trimming \u200cgains \u2060from the previous session.",
+      "link": "https://www.thehindubusinessline.com/markets/commodities/crude-oil-falls-on-prospects-for-talks-to-end-iran-war-and-revive-supply/article70872097.ece",
+      "published_ts": 1776389237.0,
+      "published_iso": "2026-04-17T01:27:17+00:00",
+      "source": "Hindu BusinessLine",
+      "weight": 1.1,
+      "category": "market",
+      "sentiment": "BEARISH",
+      "sentiment_score": -3.3,
+      "sentiment_raw": -3,
+      "bull_terms": [
+        "gains"
+      ],
+      "bear_terms": [
+        "falls",
+        "fell"
+      ],
+      "matched_tickers": [],
+      "matched_sectors": [
+        "Oil & Gas"
+      ]
+    },
+    {
+      "title": "Oil falls as Trump reiterates Iran war \u2018should\u2019 end soon and Israel-Lebanon truce lifts hopes",
+      "summary": "Oil prices fell after Donald Trump said Israel and Lebanon had agreed to a 10-day ceasefire following talks in Washington.",
+      "link": "https://www.cnbc.com/2026/04/17/oil-prices-wti-brent-israel-lebanon-ceasefire-trump.html",
+      "published_ts": 1776387456.0,
+      "published_iso": "2026-04-17T00:57:36+00:00",
+      "source": "CNBC World",
+      "weight": 0.8,
+      "category": "global",
+      "sentiment": "BEARISH",
+      "sentiment_score": -3.2,
+      "sentiment_raw": -4,
+      "bull_terms": [],
+      "bear_terms": [
+        "falls",
+        "fell"
+      ],
+      "matched_tickers": [],
+      "matched_sectors": [
+        "Oil & Gas"
+      ]
+    },
+    {
+      "title": "Breakout stocks to buy or sell: Sumeet Bagadia recommends five shares to buy today - 17 April 2026",
+      "summary": "The Indian stock market ended April 16 with minor losses; the Nifty 50 fell 0.14%. Sumeet Bagadia highlight the importance of resistance levels and suggest caution. Stocks like Neogen Chemicals and Astra Microwave are recommended for their bullish trends and favorable technical analysis.",
+      "link": "https://www.livemint.com/market/stock-market-news/breakout-stocks-to-buy-or-sell-sumeet-bagadia-recommends-five-shares-to-buy-today-17-april-2026-11776355605006.html",
+      "published_ts": 1776387357.0,
+      "published_iso": "2026-04-17T00:55:57+00:00",
+      "source": "Mint Markets",
+      "weight": 1.2,
+      "category": "market",
+      "sentiment": "NEUTRAL",
+      "sentiment_score": 0.0,
+      "sentiment_raw": 0,
+      "bull_terms": [
+        "breakout",
+        "bullish"
+      ],
+      "bear_terms": [
+        "fell",
+        "losses",
+        "caution"
+      ],
+      "matched_tickers": [
+        "RELIANCE"
+      ],
+      "matched_sectors": []
+    },
+    {
+      "title": "Netflix co-founder Hastings exits as streaming pioneer hunts for growth",
+      "summary": "Netflix Chairman Reed Hastings has announced he will step down from the streaming company he co-founded 29 years ago, at a time when the firm is facing slowing growth, rising competition and investor pressure after a failed merger attempt with Warner Bros Discovery.",
+      "link": "https://economictimes.indiatimes.com/industry/media/entertainment/media/netflix-co-founder-hastings-exits-as-streaming-pioneer-hunts-for-growth/articleshow/130320371.cms",
+      "published_ts": 1776387171.0,
+      "published_iso": "2026-04-17T00:52:51+00:00",
+      "source": "ET Industry",
+      "weight": 1.1,
+      "category": "sector",
+      "sentiment": "MILDLY_BEARISH",
+      "sentiment_score": -2.2,
+      "sentiment_raw": -2,
+      "bull_terms": [
+        "growth"
+      ],
+      "bear_terms": [
+        "down",
+        "pressure",
+        "slowing"
+      ],
+      "matched_tickers": [],
+      "matched_sectors": []
+    },
+    {
+      "title": "Trump says war in Iran is going 'swimmingly' and 'should be ending pretty soon'",
+      "summary": "President Donald Trump's latest prediction on the end of the war against Iran came hours after Israel announced a ceasefire with Lebanon.",
+      "link": "https://www.cnbc.com/2026/04/16/trump-iran-war-predicts-end-soon.html",
+      "published_ts": 1776386977.0,
+      "published_iso": "2026-04-17T00:49:37+00:00",
+      "source": "CNBC World",
+      "weight": 0.8,
+      "category": "global",
+      "sentiment": "MILDLY_BEARISH",
+      "sentiment_score": -1.6,
+      "sentiment_raw": -2,
+      "bull_terms": [],
+      "bear_terms": [],
+      "matched_tickers": [],
+      "matched_sectors": []
+    },
+    {
+      "title": "Om Power Transmission IPO listing date today. GMP, experts signal muted debut of shares in Indian stock market",
+      "summary": "Om Power Transmission IPO listing date is today, 17 April 2026, Friday. Ahead of the share debut, Om Power Transmission IPO GMP today and analysts signal a muted listing of shares.",
+      "link": "https://www.livemint.com/market/ipo/om-power-transmission-ipo-listing-date-today-gmp-experts-signal-muted-debut-of-shares-in-indian-stock-market-11776362075803.html",
+      "published_ts": 1776386215.0,
+      "published_iso": "2026-04-17T00:36:55+00:00",
+      "source": "Mint Markets",
+      "weight": 1.2,
+      "category": "market",
+      "sentiment": "NEUTRAL",
+      "sentiment_score": 0.0,
+      "sentiment_raw": 0,
+      "bull_terms": [],
+      "bear_terms": [],
+      "matched_tickers": [
+        "RELIANCE"
+      ],
+      "matched_sectors": []
+    },
+    {
+      "title": "Stock recommendations for 17 April from MarketSmith India",
+      "summary": "MarketSmith India reveals its top stock recommendations for today, 17 April. Get expert insights into the best-performing stocks to guide your investment decisions.",
+      "link": "https://www.livemint.com/market/stock-market-news/stock-recommendations-for-17-april-from-marketsmith-india-11776342221698.html",
+      "published_ts": 1776386136.0,
+      "published_iso": "2026-04-17T00:35:36+00:00",
+      "source": "Mint Markets",
+      "weight": 1.2,
+      "category": "market",
+      "sentiment": "NEUTRAL",
+      "sentiment_score": 0.0,
+      "sentiment_raw": 0,
+      "bull_terms": [],
+      "bear_terms": [],
+      "matched_tickers": [
+        "RELIANCE"
+      ],
+      "matched_sectors": []
+    },
+    {
+      "title": "India to continue buying Russian crude, LPG despite end of US sanctions waiver",
+      "summary": "Waiver on sanctions is the US\u2019s prerogative, and India\u2019s imports would not depend on it, said a person aware of the developments. \u201cEfforts are on for further LPG purchases from Russia. Also, import of both crude and LPG is likely to continue from non-sanctioned entities,\u201d this person said.",
+      "link": "https://www.livemint.com/economy/india-to-continue-buying-russian-crude-oil-lpg-despite-end-of-us-sanctions-waiver-11776337035100.html",
+      "published_ts": 1776385876.0,
+      "published_iso": "2026-04-17T00:31:16+00:00",
+      "source": "Mint Economy",
+      "weight": 1.2,
+      "category": "macro",
+      "sentiment": "MILDLY_BEARISH",
+      "sentiment_score": -1.2,
+      "sentiment_raw": -1,
+      "bull_terms": [],
+      "bear_terms": [],
+      "matched_tickers": [],
+      "matched_sectors": [
+        "Oil & Gas"
+      ]
+    },
+    {
+      "title": "India is one of our fastest-growing markets in Asia, says CTO of analytics platform Clickhouse",
+      "summary": "Co-founder and chief technology officer Alexey Milovidov said the company's ability to compete on price in India is part of the reason for this.&nbsp;",
+      "link": "https://www.livemint.com/companies/news/analytics-platform-clickhouse-co-founder-and-chief-technology-officer-alexey-milovidov-database-startup-new-age-tech-11776347493139.html",
+      "published_ts": 1776385856.0,
+      "published_iso": "2026-04-17T00:30:56+00:00",
+      "source": "Mint Companies",
+      "weight": 1.1,
+      "category": "market",
+      "sentiment": "NEUTRAL",
+      "sentiment_score": 0.0,
+      "sentiment_raw": 0,
+      "bull_terms": [],
+      "bear_terms": [],
+      "matched_tickers": [],
+      "matched_sectors": []
+    },
+    {
+      "title": "Derivatives trade: Sebi asks top brokers to share Q4 profit-and-loss data of clients",
+      "summary": "Data will help regulator assess full year impact of measures to tighten retail frenzy, especially in index options &nbsp;",
+      "link": "https://www.livemint.com/market/stock-market-news/sebi-top-brokers-q4-data-stock-markets-equity-derivatives-trading-india-11776339084137.html",
+      "published_ts": 1776385855.0,
+      "published_iso": "2026-04-17T00:30:55+00:00",
+      "source": "Mint Markets",
+      "weight": 1.2,
+      "category": "market",
+      "sentiment": "NEUTRAL",
+      "sentiment_score": 0.0,
+      "sentiment_raw": 0,
+      "bull_terms": [
+        "profit"
+      ],
+      "bear_terms": [
+        "loss"
+      ],
+      "matched_tickers": [],
+      "matched_sectors": []
+    },
+    {
+      "title": "HDFC Bank, ICICI Bank likely to post steady Q4; focus on commentary",
+      "summary": "Investors will closely monitor commentary on the second-order impact of the West Asia war.",
+      "link": "https://www.livemint.com/companies/company-results/hdfc-bank-icici-bank-q4-earnings-commentary-margins-growth-outlook-11776329114906.html",
+      "published_ts": 1776385815.0,
+      "published_iso": "2026-04-17T00:30:15+00:00",
+      "source": "Mint Companies",
+      "weight": 1.1,
+      "category": "market",
+      "sentiment": "MILDLY_BEARISH",
+      "sentiment_score": -2.2,
+      "sentiment_raw": -2,
+      "bull_terms": [],
+      "bear_terms": [],
+      "matched_tickers": [
+        "HDFCBANK",
+        "ICICIBANK"
+      ],
+      "matched_sectors": []
+    },
+    {
+      "title": "Stocks to trade: Raja Venkatraman recommends two stocks for 17 April",
+      "summary": "Market expert Raja Venkatraman shares his top stock picks for 17 April. Here\u2019s his technical outlook and trade strategy.",
+      "link": "https://www.livemint.com/market/stock-market-news/stocks-to-trade-raja-venkatraman-stock-recommendations-16-april-sensex-nifty-11776353068320.html",
+      "published_ts": 1776385755.0,
+      "published_iso": "2026-04-17T00:29:15+00:00",
+      "source": "Mint Markets",
+      "weight": 1.2,
+      "category": "market",
+      "sentiment": "NEUTRAL",
+      "sentiment_score": 0.0,
+      "sentiment_raw": 0,
+      "bull_terms": [],
+      "bear_terms": [],
+      "matched_tickers": [
+        "RELIANCE"
+      ],
+      "matched_sectors": []
+    },
+    {
+      "title": "From protests to paychecks: How state unrest triggered a wage rethink",
+      "summary": "Once a national floor is set, states will be compelled to revise their minimum wages accordingly, as wages cannot be set below the national floor. The monthly payout will be 26 times the final daily wage.",
+      "link": "https://www.livemint.com/economy/govt-plans-to-more-than-double-floor-cap-on-minimum-wages-following-workers-unrest-11776341195355.html",
+      "published_ts": 1776384035.0,
+      "published_iso": "2026-04-17T00:00:35+00:00",
+      "source": "Mint Economy",
+      "weight": 1.2,
+      "category": "macro",
+      "sentiment": "NEUTRAL",
+      "sentiment_score": 0.0,
+      "sentiment_raw": 0,
+      "bull_terms": [],
+      "bear_terms": [],
+      "matched_tickers": [],
+      "matched_sectors": []
+    },
+    {
+      "title": "Faster insolvency process proposed with creditor-led resolution framework",
+      "summary": "A new Creditor-initiated Insolvency Resolution Process (CIIRP) aims to expedite debt resolution, allowing financial creditors with 51% debt share to initiate proceedings. This bypasses the NCLT admission process, with the tribunal's role limited to moratorium and plan approval. The entire process is targeted for completion within 150 days, a significant reduction from the current 330 days.",
+      "link": "https://economictimes.indiatimes.com/news/economy/policy/faster-insolvency-process-proposed-with-creditor-led-resolution-framework/articleshow/130317246.cms",
+      "published_ts": 1776384000.0,
+      "published_iso": "2026-04-17T00:00:00+00:00",
+      "source": "ET Economy",
+      "weight": 1.2,
+      "category": "macro",
+      "sentiment": "MILDLY_BEARISH",
+      "sentiment_score": -2.4,
+      "sentiment_raw": -2,
+      "bull_terms": [],
+      "bear_terms": [
+        "insolvency"
+      ],
+      "matched_tickers": [],
+      "matched_sectors": []
+    },
+    {
+      "title": "Could a digital twin make you into a 'superworker'?",
+      "summary": "Firms say digital twins make staff more productive, but are they a potential legal minefield?",
+      "link": "https://www.bbc.com/news/articles/c1d907lq6nyo?at_medium=RSS&at_campaign=rss",
+      "published_ts": 1776380655.0,
+      "published_iso": "2026-04-16T23:04:15+00:00",
+      "source": "BBC Business",
+      "weight": 0.8,
+      "category": "global",
+      "sentiment": "NEUTRAL",
+      "sentiment_score": 0.0,
+      "sentiment_raw": 0,
+      "bull_terms": [],
+      "bear_terms": [],
+      "matched_tickers": [],
+      "matched_sectors": []
+    },
+    {
+      "title": "Rising value of Pok\u00e9mon cards sparks smash and grab crime spree",
+      "summary": "Small shops across the UK are being targeted by thieves stealing collectibles worth thousands of pounds.",
+      "link": "https://www.bbc.com/news/articles/c4gvvnpl5kno?at_medium=RSS&at_campaign=rss",
+      "published_ts": 1776380519.0,
+      "published_iso": "2026-04-16T23:01:59+00:00",
+      "source": "BBC Business",
+      "weight": 0.8,
+      "category": "global",
+      "sentiment": "NEUTRAL",
+      "sentiment_score": 0.0,
+      "sentiment_raw": 0,
+      "bull_terms": [],
+      "bear_terms": [],
+      "matched_tickers": [],
+      "matched_sectors": []
+    },
+    {
+      "title": "Netflix co-founder Reed Hastings to step down as chairman",
+      "summary": "Hastings set up the company in 1997, when it rented DVDs to customers and delivered by post.",
+      "link": "https://www.bbc.com/news/articles/cvglzn9e82eo?at_medium=RSS&at_campaign=rss",
+      "published_ts": 1776376796.0,
+      "published_iso": "2026-04-16T21:59:56+00:00",
+      "source": "BBC Business",
+      "weight": 0.8,
+      "category": "global",
+      "sentiment": "NEUTRAL",
+      "sentiment_score": 0.0,
+      "sentiment_raw": 0,
+      "bull_terms": [
+        "up"
+      ],
+      "bear_terms": [
+        "down"
+      ],
+      "matched_tickers": [],
       "matched_sectors": []
     },
     {
@@ -186,27 +2036,6 @@
       "sentiment_raw": 0,
       "bull_terms": [],
       "bear_terms": [],
-      "matched_tickers": [],
-      "matched_sectors": []
-    },
-    {
-      "title": "Netflix co-founder Reed Hastings to step down as chairman",
-      "summary": "Hastings set up the company in 1997, when it rented DVDs to customers and delivered by post.",
-      "link": "https://www.bbc.com/news/articles/cvglzn9e82eo?at_medium=RSS&at_campaign=rss",
-      "published_ts": 1776372317.0,
-      "published_iso": "2026-04-16T20:45:17+00:00",
-      "source": "BBC Business",
-      "weight": 0.8,
-      "category": "global",
-      "sentiment": "NEUTRAL",
-      "sentiment_score": 0.0,
-      "sentiment_raw": 0,
-      "bull_terms": [
-        "up"
-      ],
-      "bear_terms": [
-        "down"
-      ],
       "matched_tickers": [],
       "matched_sectors": []
     },
@@ -314,28 +2143,6 @@
       ]
     },
     {
-      "title": "US stocks today: S&P 500, Nasdaq edge up to new records with Middle East truce hopes in focus",
-      "summary": "US stocks closed at fresh record highs for a second straight session, with the S&P 500 and Nasdaq gaining modestly as investors reacted to easing Middle East tensions after a temporary Israel-Lebanon ceasefire and hopes of US-Iran talks. Sentiment was supported by steady labor data, though trading remained choppy.",
-      "link": "https://economictimes.indiatimes.com/markets/us-stocks/news/us-stocks-today-sp-500-nasdaq-edge-up-to-new-records-with-middle-east-hopes-in-focus/articleshow/130317556.cms",
-      "published_ts": 1776369929.0,
-      "published_iso": "2026-04-16T20:05:29+00:00",
-      "source": "ET Markets",
-      "weight": 1.2,
-      "category": "market",
-      "sentiment": "BULLISH",
-      "sentiment_score": 3.6,
-      "sentiment_raw": 3,
-      "bull_terms": [
-        "record high",
-        "up"
-      ],
-      "bear_terms": [],
-      "matched_tickers": [],
-      "matched_sectors": [
-        "Telecom"
-      ]
-    },
-    {
       "title": "In search of predictable returns, pvt equity funds step up office asset play in Q1",
       "summary": "Institutional investors focused on office properties in India during the first quarter of 2026. Private equity inflows increased significantly, with office assets attracting the majority of the capital. Investors preferred leased and near-stabilized properties for predictable cash flows. Residential investments also saw activity, primarily through debt structures.",
       "link": "https://economictimes.indiatimes.com/industry/services/property-/-cstruction/in-search-of-predictable-returns-pvt-equity-funds-step-up-office-asset-play-in-q1/articleshow/130317489.cms",
@@ -371,6 +2178,23 @@
       "matched_tickers": [
         "RELIANCE"
       ],
+      "matched_sectors": []
+    },
+    {
+      "title": "Boing! Springtime for the markets",
+      "summary": "Investors seem delighted, but why?",
+      "link": "https://www.ft.com/content/c889465f-c070-4d4a-8cb9-3af35fe79668",
+      "published_ts": 1776369600.0,
+      "published_iso": "2026-04-16T20:00:00+00:00",
+      "source": "FT Markets",
+      "weight": 0.9,
+      "category": "global",
+      "sentiment": "NEUTRAL",
+      "sentiment_score": 0.0,
+      "sentiment_raw": 0,
+      "bull_terms": [],
+      "bear_terms": [],
+      "matched_tickers": [],
       "matched_sectors": []
     },
     {
@@ -533,26 +2357,6 @@
       ],
       "matched_tickers": [],
       "matched_sectors": []
-    },
-    {
-      "title": "Brent oil price near $100 again with U.S.-Iran talks uncertain and Hormuz still blocked",
-      "summary": "Just a few tankers are passing through the Strait of Hormuz, as the U.S. Navy blocks Iran's coast and Tehran threatens to retaliate against ships in the Gulf.",
-      "link": "https://www.cnbc.com/2026/04/16/iran-war-oil-price-strait-hormuz.html",
-      "published_ts": 1776367910.0,
-      "published_iso": "2026-04-16T19:31:50+00:00",
-      "source": "CNBC World",
-      "weight": 0.8,
-      "category": "global",
-      "sentiment": "NEUTRAL",
-      "sentiment_score": 0.0,
-      "sentiment_raw": 0,
-      "bull_terms": [],
-      "bear_terms": [],
-      "matched_tickers": [],
-      "matched_sectors": [
-        "Oil & Gas",
-        "Telecom"
-      ]
     },
     {
       "title": "'Hospital infra isn't sole determinant of better care, outcomes also matter,' says Max Healthcare Chairman",
@@ -844,25 +2648,6 @@
       "matched_sectors": []
     },
     {
-      "title": "US oil bosses warn Trump to stand firm against Iran\u2019s Hormuz toll",
-      "summary": "Executives step up lobbying to convince White House that Tehran controlling the strategic waterway sets dangerous precedent",
-      "link": "https://www.ft.com/content/0f41cbd9-58e5-4f0c-b975-3e6b919f1431",
-      "published_ts": 1776366325.0,
-      "published_iso": "2026-04-16T19:05:25+00:00",
-      "source": "FT Markets",
-      "weight": 0.9,
-      "category": "global",
-      "sentiment": "NEUTRAL",
-      "sentiment_score": 0.9,
-      "sentiment_raw": 1,
-      "bull_terms": [
-        "up"
-      ],
-      "bear_terms": [],
-      "matched_tickers": [],
-      "matched_sectors": []
-    },
-    {
       "title": "Reeves vows to cut link between gas and electricity prices in UK",
       "summary": "Chancellor says she will look at ways of ensuring the wholesale price of electricity is set more often by renewables",
       "link": "https://www.ft.com/content/2adcdded-778d-4197-9462-edfe769861a1",
@@ -962,27 +2747,6 @@
       "matched_sectors": []
     },
     {
-      "title": "Stock market bulls see signs rally could endure after S&P 500 back at highs",
-      "summary": "US stocks have rebounded to record highs after the Iran war-driven selloff, with momentum indicators suggesting further upside. Hedge fund buying, bullish options positioning, and volatility-linked inflows are supporting the rally. Historical data shows the S&P 500 often extends gains after recovering from 5\u201310% pullbacks, reinforcing bullish sentiment.",
-      "link": "https://economictimes.indiatimes.com/markets/us-stocks/news/stock-market-bulls-see-signs-rally-could-endure-after-sp-500-back-at-highs/articleshow/130315854.cms",
-      "published_ts": 1776363558.0,
-      "published_iso": "2026-04-16T18:19:18+00:00",
-      "source": "ET Markets",
-      "weight": 1.2,
-      "category": "market",
-      "sentiment": "BULLISH",
-      "sentiment_score": 3.6,
-      "sentiment_raw": 3,
-      "bull_terms": [
-        "rally",
-        "record high",
-        "bullish"
-      ],
-      "bear_terms": [],
-      "matched_tickers": [],
-      "matched_sectors": []
-    },
-    {
       "title": "TSMC and ASML post-earnings stock moves could be a sign of what's to come from chip companies",
       "summary": "Two of the biggest chipmakers, TSMC and ASML, failed to catch major tail winds from strong earnings. It could be a bellwether for the chip industry as a whole.",
       "link": "https://www.cnbc.com/2026/04/16/taiwan-semi-tsm-asml-stock-earnings-ai-chips.html",
@@ -1039,26 +2803,6 @@
       "matched_tickers": [
         "VEDL"
       ],
-      "matched_sectors": []
-    },
-    {
-      "title": "Airflow products maker Madison Air valued at $15.7 billion as shares rise on NYSE debut",
-      "summary": "Madison Air Solutions debuted on Thursday with an 18.5% stock surge, reaching a $15.65 billion valuation. The HVAC firm's successful IPO, the largest in the U.S. this year, highlights strong investor interest in AI-driven data center growth. The company, which provides air quality solutions for various sectors including data centers, raised $2.23 billion in its offering.",
-      "link": "https://economictimes.indiatimes.com/markets/us-stocks/news/airflow-products-maker-madison-air-valued-at-15-7-billion-as-shares-rise-on-nyse-debut/articleshow/130314502.cms",
-      "published_ts": 1776361052.0,
-      "published_iso": "2026-04-16T17:37:32+00:00",
-      "source": "ET Markets",
-      "weight": 1.2,
-      "category": "market",
-      "sentiment": "BULLISH",
-      "sentiment_score": 3.6,
-      "sentiment_raw": 3,
-      "bull_terms": [
-        "surge",
-        "growth"
-      ],
-      "bear_terms": [],
-      "matched_tickers": [],
       "matched_sectors": []
     },
     {
@@ -1134,23 +2878,6 @@
       "matched_sectors": []
     },
     {
-      "title": "Birla Estates enters JV with M S Ramaiah Realty, targets Rs 3000 cr revenue",
-      "summary": "Birla Estates is developing a large integrated township in Devanahalli, North Bengaluru. This project has a revenue potential of \u20b93,000 crore. The company has already seen strong bookings for its Birla Trimaya project. Bengaluru's residential market shows sustained momentum with a focus on premium developments. North Bengaluru is a key growth corridor.",
-      "link": "https://economictimes.indiatimes.com/industry/services/property-/-cstruction/birla-estates-enters-jv-with-m-s-ramaiah-realty-targets-rs-3000-cr-revenue/articleshow/130312881.cms",
-      "published_ts": 1776357743.0,
-      "published_iso": "2026-04-16T16:42:23+00:00",
-      "source": "ET Industry",
-      "weight": 1.1,
-      "category": "sector",
-      "sentiment": "NEUTRAL",
-      "sentiment_score": 0.0,
-      "sentiment_raw": 0,
-      "bull_terms": [],
-      "bear_terms": [],
-      "matched_tickers": [],
-      "matched_sectors": []
-    },
-    {
       "title": "Wipro announces \u20b915,000 crore buyback amid revenue decline, weak outlook",
       "summary": "The Bengaluru-based firm said it will repurchase 600 million shares at \u20b9250 apiece, a 19% premium to Thursday\u2019s closing price of \u20b9210.2. The buyback comes even as analysts flag weak near-term growth, despite a strong deal pipeline.",
       "link": "https://www.livemint.com/companies/wipro-announces-15-000-crore-buyback-amid-revenue-decline-weak-outlook-11776348245243.html",
@@ -1173,6 +2900,61 @@
       "matched_tickers": [
         "WIPRO"
       ],
+      "matched_sectors": []
+    },
+    {
+      "title": "Gold rally boosts ETFs; jewellery stocks see mixed returns",
+      "summary": "While organised jewellers remain operationally strong, stock performance has been mixed, with leaders like Titan outperforming and mid-tier players showing volatility",
+      "link": "https://www.thehindubusinessline.com/markets/gold-rally-boosts-etfs-jewellery-stocks-see-mixed-returns/article70866315.ece",
+      "published_ts": 1776357463.0,
+      "published_iso": "2026-04-16T16:37:43+00:00",
+      "source": "Hindu BusinessLine",
+      "weight": 1.1,
+      "category": "market",
+      "sentiment": "MILDLY_BULLISH",
+      "sentiment_score": 2.2,
+      "sentiment_raw": 2,
+      "bull_terms": [
+        "rally"
+      ],
+      "bear_terms": [],
+      "matched_tickers": [
+        "TITAN"
+      ],
+      "matched_sectors": []
+    },
+    {
+      "title": "Nifty 50 outperforms peers amid West Asia shock, remains over-valued",
+      "summary": "In terms of valuation, however, Nifty 50 continues to trade at considerable premium to its emerging market peers",
+      "link": "https://www.thehindubusinessline.com/data-stories/data-focus/nifty-50-outperforms-peers-during-west-asia-shock-remains-over-valued/article70869712.ece",
+      "published_ts": 1776357263.0,
+      "published_iso": "2026-04-16T16:34:23+00:00",
+      "source": "Hindu BusinessLine",
+      "weight": 1.1,
+      "category": "market",
+      "sentiment": "NEUTRAL",
+      "sentiment_score": 0.0,
+      "sentiment_raw": 0,
+      "bull_terms": [],
+      "bear_terms": [],
+      "matched_tickers": [],
+      "matched_sectors": []
+    },
+    {
+      "title": "China resumes buying broken rice from India",
+      "summary": "India\u2019s prices most competitive; Beijing\u2019s imports come when it has alleged the presence of GMO in New Delhi\u2019s shipments",
+      "link": "https://www.thehindubusinessline.com/economy/agri-business/china-resumes-buying-broken-rice-from-india/article70867489.ece",
+      "published_ts": 1776357142.0,
+      "published_iso": "2026-04-16T16:32:22+00:00",
+      "source": "Hindu BusinessLine",
+      "weight": 1.1,
+      "category": "market",
+      "sentiment": "NEUTRAL",
+      "sentiment_score": 0.0,
+      "sentiment_raw": 0,
+      "bull_terms": [],
+      "bear_terms": [],
+      "matched_tickers": [],
       "matched_sectors": []
     },
     {
@@ -1233,24 +3015,24 @@
       "matched_sectors": []
     },
     {
-      "title": "Wipro taps deal momentum to arrest revenue slide, but growth elusive for now",
-      "summary": "Wipro's revenue declined for the third consecutive year, though the drop moderated in FY26. Large deal wins offer hope for future growth. However, the June quarter is expected to be flat or see a revenue drop. Profitability was impacted by client issues and salary hikes. The company is cautiously approaching campus hiring as attrition rates fall.",
-      "link": "https://economictimes.indiatimes.com/markets/stocks/news/wipro-taps-deal-momentum-to-arrest-revenue-slide-but-growth-elusive-for-now/articleshow/130312418.cms",
-      "published_ts": 1776355920.0,
-      "published_iso": "2026-04-16T16:12:00+00:00",
-      "source": "ET Markets",
-      "weight": 1.2,
+      "title": "Basmati exporters urge govt to suspend \u20b983/tonne levy amid delayed payment, shrinking margin",
+      "summary": "With payment delays, skyrocketing shipping costs and shrinking profits, small and medium-sized exporters are worried that this extra financial burden could threaten their place in the competitive global market",
+      "link": "https://www.thehindubusinessline.com/economy/agri-business/basmati-exporters-urge-govt-to-suspend-83tonne-levy-amid-delayed-payment-shrinking-margin/article70869866.ece",
+      "published_ts": 1776356450.0,
+      "published_iso": "2026-04-16T16:20:50+00:00",
+      "source": "Hindu BusinessLine",
+      "weight": 1.1,
       "category": "market",
-      "sentiment": "MILDLY_BULLISH",
-      "sentiment_score": 1.2,
-      "sentiment_raw": 1,
+      "sentiment": "NEUTRAL",
+      "sentiment_score": 0.0,
+      "sentiment_raw": 0,
       "bull_terms": [
-        "growth"
+        "profits"
       ],
-      "bear_terms": [],
-      "matched_tickers": [
-        "WIPRO"
+      "bear_terms": [
+        "delays"
       ],
+      "matched_tickers": [],
       "matched_sectors": []
     },
     {
@@ -1315,31 +3097,6 @@
       "matched_sectors": []
     },
     {
-      "title": "Ahead of Market: 10 things that will decide stock market action on Friday",
-      "summary": "Sensex and Nifty ended lower in a volatile session as profit booking in banking stocks erased early gains. Despite easing volatility and supportive global cues, caution persists due to geopolitical uncertainties, while technical indicators suggest a bullish trend with near-term consolidation likely.",
-      "link": "https://economictimes.indiatimes.com/markets/stocks/news/ahead-of-market-10-things-that-will-decide-stock-market-action-on-friday/articleshow/130312087.cms",
-      "published_ts": 1776355061.0,
-      "published_iso": "2026-04-16T15:57:41+00:00",
-      "source": "ET Markets",
-      "weight": 1.2,
-      "category": "market",
-      "sentiment": "MILDLY_BEARISH",
-      "sentiment_score": -1.2,
-      "sentiment_raw": -1,
-      "bull_terms": [
-        "gains",
-        "profit"
-      ],
-      "bear_terms": [
-        "lower",
-        "caution"
-      ],
-      "matched_tickers": [],
-      "matched_sectors": [
-        "Banking"
-      ]
-    },
-    {
       "title": "DHL staff at Jaguar Land Rover vote to strike",
       "summary": "Up to 300 DHL logistics workers based at Jaguar Land Rover in Solihull vote to strike indefinitely.",
       "link": "https://www.bbc.com/news/articles/c2082r38gr6o?at_medium=RSS&at_campaign=rss",
@@ -1382,42 +3139,6 @@
       "matched_sectors": []
     },
     {
-      "title": "US SEC seeks comment on contentious trading database",
-      "summary": "The U.S. Securities and \u200bExchange Commission \u200bsaid on Thursday it is seeking \u200bpublic comment on whether it should comprehensively review the so-called Consolidated Audit Trail (CAT), potentially re-opening \u200ca \u2060decade-long dispute \u2060over the trading database.",
-      "link": "https://economictimes.indiatimes.com/markets/us-stocks/news/us-sec-seeks-comment-on-contentious-trading-database/articleshow/130311991.cms",
-      "published_ts": 1776354664.0,
-      "published_iso": "2026-04-16T15:51:04+00:00",
-      "source": "ET Markets",
-      "weight": 1.2,
-      "category": "market",
-      "sentiment": "NEUTRAL",
-      "sentiment_score": 0.0,
-      "sentiment_raw": 0,
-      "bull_terms": [],
-      "bear_terms": [],
-      "matched_tickers": [],
-      "matched_sectors": [
-        "Telecom"
-      ]
-    },
-    {
-      "title": "Nifty 50 outperforms peers during West Asia shock, remains over-valued",
-      "summary": "In terms of valuation, however, Nifty 50 continues to trade at considerable premium to its emerging market peers",
-      "link": "https://www.thehindubusinessline.com/data-stories/data-focus/nifty-50-outperforms-peers-during-west-asia-shock-remains-over-valued/article70869712.ece",
-      "published_ts": 1776354652.0,
-      "published_iso": "2026-04-16T15:50:52+00:00",
-      "source": "Hindu BusinessLine",
-      "weight": 1.1,
-      "category": "market",
-      "sentiment": "NEUTRAL",
-      "sentiment_score": 0.0,
-      "sentiment_raw": 0,
-      "bull_terms": [],
-      "bear_terms": [],
-      "matched_tickers": [],
-      "matched_sectors": []
-    },
-    {
       "title": "Coal Ministry to launch 15th round of commercial mine auctions",
       "summary": "The event will be held in Mumbai and will be graced by Vikram Dev Dutt Secretary, Ministry of Coal, as the Chief Guest",
       "link": "https://www.thehindubusinessline.com/news/coal-ministry-to-launch-15th-round-of-commercial-mine-auctions/article70870032.ece",
@@ -1450,46 +3171,6 @@
       "sentiment_raw": 0,
       "bull_terms": [],
       "bear_terms": [],
-      "matched_tickers": [],
-      "matched_sectors": []
-    },
-    {
-      "title": "Arohan Financial Services in final lap to file DRHP for Rs 1400 crore IPO",
-      "summary": "Arohan Financial Services plans a Rs 1,400 crore IPO, combining fresh issue and OFS, amid improving microfinance sector conditions. With better asset quality, stable growth outlook, and recovering loan portfolios, the company aims to capitalise on renewed investor confidence.",
-      "link": "https://economictimes.indiatimes.com/markets/ipos/fpos/arohan-financial-services-in-final-lap-to-file-drhp-for-rs-1400-crore-ipo/articleshow/130311657.cms",
-      "published_ts": 1776353700.0,
-      "published_iso": "2026-04-16T15:35:00+00:00",
-      "source": "ET Markets",
-      "weight": 1.2,
-      "category": "market",
-      "sentiment": "MILDLY_BULLISH",
-      "sentiment_score": 1.2,
-      "sentiment_raw": 1,
-      "bull_terms": [
-        "growth"
-      ],
-      "bear_terms": [],
-      "matched_tickers": [],
-      "matched_sectors": []
-    },
-    {
-      "title": "Basmati exporters urge govt to suspend \u20b983/tonne levy amid delayed payment, shrinking margin",
-      "summary": "With payment delays, skyrocketing shipping costs, and shrinking profits, small and medium-sized exporters are worried that this extra financial burden could threaten their place in the competitive global market",
-      "link": "https://www.thehindubusinessline.com/economy/agri-business/basmati-exporters-urge-govt-to-suspend-83tonne-levy-amid-delayed-payment-shrinking-margin/article70869866.ece",
-      "published_ts": 1776353364.0,
-      "published_iso": "2026-04-16T15:29:24+00:00",
-      "source": "Hindu BusinessLine",
-      "weight": 1.1,
-      "category": "market",
-      "sentiment": "NEUTRAL",
-      "sentiment_score": 0.0,
-      "sentiment_raw": 0,
-      "bull_terms": [
-        "profits"
-      ],
-      "bear_terms": [
-        "delays"
-      ],
       "matched_tickers": [],
       "matched_sectors": []
     },
@@ -1532,86 +3213,6 @@
         "RELIANCE"
       ],
       "matched_sectors": []
-    },
-    {
-      "title": "Angel One Q4 Results: Profit soars 84% YoY in a quarter of stock market crash",
-      "summary": "Angel One reported strong March quarter results with profit rising 84% YoY, driven by higher trading volumes, improved monetisation, and operating leverage. Client activity rebounded, boosting orders and revenue while wealth management grew, though lending activity saw a sequential decline.",
-      "link": "https://economictimes.indiatimes.com/markets/stocks/earnings/angel-one-q4-results-profit-soars-84-yoy-in-a-quarter-of-stock-market-crash/articleshow/130311584.cms",
-      "published_ts": 1776353103.0,
-      "published_iso": "2026-04-16T15:25:03+00:00",
-      "source": "ET Markets",
-      "weight": 1.2,
-      "category": "market",
-      "sentiment": "MILDLY_BULLISH",
-      "sentiment_score": 2.4,
-      "sentiment_raw": 2,
-      "bull_terms": [
-        "soars",
-        "higher",
-        "profit"
-      ],
-      "bear_terms": [
-        "crash"
-      ],
-      "matched_tickers": [],
-      "matched_sectors": []
-    },
-    {
-      "title": "US derivatives regulator will make rules when he is only sitting member, chairman says",
-      "summary": "Michael Selig, \u200bchair of the U.S. \u200bCommodity Futures Trading Commission, told Congress on Thursday \u200cthe agency \u2060would \u2060continue issuing \u200bregulations even though he is the \u200bfive-member agency's only sitting commissioner.",
-      "link": "https://economictimes.indiatimes.com/markets/us-stocks/news/us-derivatives-regulator-will-make-rules-when-he-is-only-sitting-member-chairman-says/articleshow/130311377.cms",
-      "published_ts": 1776352897.0,
-      "published_iso": "2026-04-16T15:21:37+00:00",
-      "source": "ET Markets",
-      "weight": 1.2,
-      "category": "market",
-      "sentiment": "NEUTRAL",
-      "sentiment_score": 0.0,
-      "sentiment_raw": 0,
-      "bull_terms": [],
-      "bear_terms": [],
-      "matched_tickers": [],
-      "matched_sectors": []
-    },
-    {
-      "title": "Govt notifies India\u2019s first chip fab plant: Rs 91,000 cr Tata Semicon plant",
-      "summary": "India's first chip fabrication plant SEZ is notified in Dholera, Gujarat. Tata Semiconductor Manufacturing Private Limited will invest Rs 91,000 crore. This project aims to boost domestic value chains and create jobs. Other semiconductor and electronics component SEZ proposals have also received approvals. These include plans by Micron Semiconductor Technology India Ltd, Kaynes Semicon Ltd, and CG Semi Ltd.",
-      "link": "https://economictimes.indiatimes.com/industry/cons-products/electronics/govt-notifies-indias-first-chip-fab-plant-rs-91000-cr-tata-semicon-plant/articleshow/130311359.cms",
-      "published_ts": 1776352609.0,
-      "published_iso": "2026-04-16T15:16:49+00:00",
-      "source": "ET Industry",
-      "weight": 1.1,
-      "category": "sector",
-      "sentiment": "MILDLY_BULLISH",
-      "sentiment_score": 1.1,
-      "sentiment_raw": 1,
-      "bull_terms": [
-        "boost"
-      ],
-      "bear_terms": [],
-      "matched_tickers": [],
-      "matched_sectors": []
-    },
-    {
-      "title": "US Fed's John Williams says Iran war is already driving up inflation pressures",
-      "summary": "Federal Reserve Bank of New York \u200bPresident John Williams said Thursday that the Middle East war is already driving up inflationary pressures, and uncertainty over the outlook is \u200blimiting how much the central bank can say about what's next for interest rate policy.",
-      "link": "https://economictimes.indiatimes.com/markets/us-stocks/news/us-feds-john-williams-says-iran-war-is-already-driving-up-inflation-pressures/articleshow/130311248.cms",
-      "published_ts": 1776352525.0,
-      "published_iso": "2026-04-16T15:15:25+00:00",
-      "source": "ET Markets",
-      "weight": 1.2,
-      "category": "market",
-      "sentiment": "MILDLY_BEARISH",
-      "sentiment_score": -1.2,
-      "sentiment_raw": -1,
-      "bull_terms": [
-        "up"
-      ],
-      "bear_terms": [],
-      "matched_tickers": [],
-      "matched_sectors": [
-        "Banking"
-      ]
     },
     {
       "title": "End of sanctions waiver to tighten crude supply, push up costs",
@@ -1747,49 +3348,6 @@
       "matched_sectors": []
     },
     {
-      "title": "IndianOil triples auto LPG supply in Bengaluru amid disruption, doubles dispatches to Karnataka",
-      "summary": "IndianOil has significantly increased Auto LPG supplies in Bengaluru by nearly 300 percent. This action addresses a sharp surge in demand caused by disruptions in private sector supply chains. The company is working to stabilize fuel availability for the city's transport system. Supplies across Karnataka have also doubled. IndianOil's outlets are operating without interruption to meet the elevated demand.",
-      "link": "https://economictimes.indiatimes.com/industry/energy/oil-gas/indianoil-triples-auto-lpg-supply-in-bengaluru-amid-disruption-doubles-dispatches-to-karnataka/articleshow/130310686.cms",
-      "published_ts": 1776350839.0,
-      "published_iso": "2026-04-16T14:47:19+00:00",
-      "source": "ET Industry",
-      "weight": 1.1,
-      "category": "sector",
-      "sentiment": "MILDLY_BULLISH",
-      "sentiment_score": 2.2,
-      "sentiment_raw": 2,
-      "bull_terms": [
-        "surge"
-      ],
-      "bear_terms": [],
-      "matched_tickers": [],
-      "matched_sectors": [
-        "Oil & Gas"
-      ]
-    },
-    {
-      "title": "RBI asks state oil refiners to curb spot dollar buying, sources say",
-      "summary": "India's central bank is taking action to support the rupee. State-run oil refiners are being asked to use a special credit line for dollar needs instead of buying on the spot market. This move aims to reduce pressure on the Indian currency. The Reserve Bank of India is employing measures similar to those used during the Ukraine war.",
-      "link": "https://economictimes.indiatimes.com/industry/energy/oil-gas/rbi-asks-state-oil-refiners-to-curb-spot-dollar-buying-sources-say/articleshow/130310569.cms",
-      "published_ts": 1776350653.0,
-      "published_iso": "2026-04-16T14:44:13+00:00",
-      "source": "ET Industry",
-      "weight": 1.1,
-      "category": "sector",
-      "sentiment": "MILDLY_BEARISH",
-      "sentiment_score": -2.2,
-      "sentiment_raw": -2,
-      "bull_terms": [],
-      "bear_terms": [
-        "pressure",
-        "reduce"
-      ],
-      "matched_tickers": [],
-      "matched_sectors": [
-        "Banking"
-      ]
-    },
-    {
       "title": "Treasury Secretary Scott Bessent is preparing banks to collect citizenship data",
       "summary": "Treasury Secretary Scott Bessent says the Trump administration expects banks to comply in collecting citizenship information from customers.",
       "link": "https://www.cnbc.com/2026/04/15/banks-citizenship-data-collection-customer-accounts.html",
@@ -1873,27 +3431,6 @@
       "matched_sectors": []
     },
     {
-      "title": "JM Financial Private Equity, family offices invest Rs 150 cr in NG Electro Products",
-      "summary": "Consumer goods-focused NG Electro Products has secured Rs 150 crore in funding from JM Financial Private Equity and family offices. The capital infusion will fuel expansion of manufacturing capacity, accelerate R&D and product innovation, and bolster quality and compliance infrastructure. This investment aims to strengthen the company's footprint and deepen its product innovation capabilities.",
-      "link": "https://economictimes.indiatimes.com/industry/banking/finance/jm-financial-private-equity-family-offices-invest-rs-150-cr-in-ng-electro-products/articleshow/130310184.cms",
-      "published_ts": 1776349463.0,
-      "published_iso": "2026-04-16T14:24:23+00:00",
-      "source": "ET Industry",
-      "weight": 1.1,
-      "category": "sector",
-      "sentiment": "MILDLY_BULLISH",
-      "sentiment_score": 1.1,
-      "sentiment_raw": 1,
-      "bull_terms": [
-        "expansion"
-      ],
-      "bear_terms": [],
-      "matched_tickers": [],
-      "matched_sectors": [
-        "FMCG"
-      ]
-    },
-    {
       "title": "ECB keeps markets guessing on rates with two weeks to go, warns of \u2018layer cake of shocks\u2019",
       "summary": "One policymaker said officials were worried about a \"layer cake of shocks.\"",
       "link": "https://www.cnbc.com/2026/04/16/ecb-interest-rates-hike-inflation-iran-washington.html",
@@ -1956,33 +3493,6 @@
       ],
       "bear_terms": [],
       "matched_tickers": [],
-      "matched_sectors": []
-    },
-    {
-      "title": "'Weak and lacklustre': Why Jefferies is disappointed with Wipro earnings as ADRs fall nearly 3%",
-      "summary": "Wipro\u2019s March quarter results missed expectations, with weak revenue growth, declining profit, and soft guidance. Jefferies highlighted slowing deal momentum, weakness in BFSI and healthcare, and client-specific declines, raising concerns over near-term growth despite stable margins and a buyback announcement.",
-      "link": "https://economictimes.indiatimes.com/markets/stocks/news/weak-and-lacklustre-why-jefferies-is-disappointed-with-wipro-earnings-as-adrs-fall-nearly-3/articleshow/130309687.cms",
-      "published_ts": 1776348181.0,
-      "published_iso": "2026-04-16T14:03:01+00:00",
-      "source": "ET Markets",
-      "weight": 1.2,
-      "category": "market",
-      "sentiment": "BEARISH",
-      "sentiment_score": -3.6,
-      "sentiment_raw": -3,
-      "bull_terms": [
-        "profit",
-        "growth"
-      ],
-      "bear_terms": [
-        "declines",
-        "weak",
-        "weakness",
-        "concerns"
-      ],
-      "matched_tickers": [
-        "WIPRO"
-      ],
       "matched_sectors": []
     },
     {
@@ -2074,50 +3584,6 @@
       ]
     },
     {
-      "title": "Big Money Moves: 11 large-cap stocks where institutional investors raised stakes in Q4FY26",
-      "summary": "Institutional investors increased stakes across major NSE large-cap stocks in March 2026, signaling confidence in fundamentals and future growth. Companies like Adani Power, Axis Bank, NTPC, and Coal India saw modest rises, supporting improved governance, liquidity, and price stability trends.",
-      "link": "https://economictimes.indiatimes.com/markets/stocks/news/big-money-moves-11-large-cap-stocks-where-institutional-investors-raised-stakes-in-q4fy26/slideshow/130309599.cms",
-      "published_ts": 1776346898.0,
-      "published_iso": "2026-04-16T13:41:38+00:00",
-      "source": "ET Markets",
-      "weight": 1.2,
-      "category": "market",
-      "sentiment": "MILDLY_BULLISH",
-      "sentiment_score": 2.4,
-      "sentiment_raw": 2,
-      "bull_terms": [
-        "rises",
-        "growth"
-      ],
-      "bear_terms": [],
-      "matched_tickers": [
-        "AXISBANK",
-        "NTPC",
-        "COALINDIA"
-      ],
-      "matched_sectors": []
-    },
-    {
-      "title": "US stocks today: S&P 500, Nasdaq retreat as rally momentum begins to fade",
-      "summary": "Wall Street\u2019s main indexes retreated after hitting intraday record highs as investors weighed Middle East developments and a fresh wave of earnings. Optimism over potential diplomacy with Iran supported sentiment, but analysts warned the rally remains largely sentiment-driven without strong economic backing.",
-      "link": "https://economictimes.indiatimes.com/markets/us-stocks/news/us-stocks-today-sp-500-nasdaq-retreat-as-rally-momentum-begins-to-fade/articleshow/130308985.cms",
-      "published_ts": 1776346483.0,
-      "published_iso": "2026-04-16T13:34:43+00:00",
-      "source": "ET Markets",
-      "weight": 1.2,
-      "category": "market",
-      "sentiment": "BULLISH",
-      "sentiment_score": 4.8,
-      "sentiment_raw": 4,
-      "bull_terms": [
-        "rally",
-        "record high"
-      ],
-      "bear_terms": [],
-      "matched_tickers": [],
-      "matched_sectors": []
-    },
-    {
       "title": "Mark Mobius, global voice of emerging market investing, dies at 89",
       "summary": "Known for his on-ground approach, Mobius built one of the earliest emerging market funds and consistently delivered strong returns",
       "link": "https://www.thehindubusinessline.com/markets/mark-mobius-global-voice-of-emerging-market-investing-dies-at-89/article70866488.ece",
@@ -2135,27 +3601,6 @@
       "matched_sectors": []
     },
     {
-      "title": "Indian bonds seen rising on optimism over US-Iran peace deal",
-      "summary": "Indian government bonds are expected to extend \u200bgains in early deals \u200bon Thursday, as oil prices remain steady and market \u200bsentiment improves amid growing optimism over a U.S.-Iran peace deal.",
-      "link": "https://economictimes.indiatimes.com/markets/bonds/indian-bonds-seen-rising-on-optimism-over-us-iran-peace-deal/articleshow/130308730.cms",
-      "published_ts": 1776345785.0,
-      "published_iso": "2026-04-16T13:23:05+00:00",
-      "source": "ET Markets",
-      "weight": 1.2,
-      "category": "market",
-      "sentiment": "MILDLY_BULLISH",
-      "sentiment_score": 1.2,
-      "sentiment_raw": 1,
-      "bull_terms": [
-        "gains"
-      ],
-      "bear_terms": [],
-      "matched_tickers": [],
-      "matched_sectors": [
-        "Oil & Gas"
-      ]
-    },
-    {
       "title": "UK eases rules for hedge funds in sweeping overhaul of short selling rules",
       "summary": "The U.K.'s Financial Conduct Authority has overhauled its rules on short-selling.",
       "link": "https://www.cnbc.com/2026/04/16/fca-uk-hedge-funds-investors-short-sellers-red-tape-rules-regulation-financial-conduct-authority.html",
@@ -2164,23 +3609,6 @@
       "source": "CNBC World",
       "weight": 0.8,
       "category": "global",
-      "sentiment": "NEUTRAL",
-      "sentiment_score": 0.0,
-      "sentiment_raw": 0,
-      "bull_terms": [],
-      "bear_terms": [],
-      "matched_tickers": [],
-      "matched_sectors": []
-    },
-    {
-      "title": "Market fall sparks buy call: Prateek Agrawal on why this dip may be an opportunity",
-      "summary": "",
-      "link": "https://economictimes.indiatimes.com/markets/expert-view/market-fall-sparks-buy-call-prateek-agrawal-on-why-this-dip-may-be-an-opportunity/videoshow/130308513.cms",
-      "published_ts": 1776344995.0,
-      "published_iso": "2026-04-16T13:09:55+00:00",
-      "source": "ET Markets",
-      "weight": 1.2,
-      "category": "market",
       "sentiment": "NEUTRAL",
       "sentiment_score": 0.0,
       "sentiment_raw": 0,
@@ -2271,28 +3699,6 @@
       "matched_sectors": []
     },
     {
-      "title": "Quote of the day by Paul Tudor Jones: \"The most important rule of trading is to play great defence, not great offence.\"",
-      "summary": "Seasoned traders prioritize survival and consistency over aggressive bets, a principle championed by Paul Tudor Jones. This defensive mindset focuses on capital preservation and risk management, ensuring traders can endure losses and capitalize on opportunities over time. Avoiding strikeouts, not hitting home runs, is the key to long-term success in volatile markets.",
-      "link": "https://economictimes.indiatimes.com/markets/us-stocks/news/quote-of-the-day-by-paul-tudor-jones-the-most-important-rule-of-trading-is-to-play-great-defence-not-great-offence-/articleshow/130306990.cms",
-      "published_ts": 1776342600.0,
-      "published_iso": "2026-04-16T12:30:00+00:00",
-      "source": "ET Markets",
-      "weight": 1.2,
-      "category": "market",
-      "sentiment": "MILDLY_BEARISH",
-      "sentiment_score": -2.4,
-      "sentiment_raw": -2,
-      "bull_terms": [],
-      "bear_terms": [
-        "losses",
-        "risk"
-      ],
-      "matched_tickers": [],
-      "matched_sectors": [
-        "Defence"
-      ]
-    },
-    {
       "title": "\u20b925,620 crore foregone! Nithin Kamath shares why Zerodha stuck to the hard path of zero brokerage",
       "summary": "Zerodha founder Nithin Kamath emphasized the firm's commitment to customer trust by avoiding fees and revenue extraction tactics. This philosophy has resulted in significant costs but allows them to maintain zero brokerage on equity trades, contrasting with industry norms.",
       "link": "https://www.livemint.com/market/stock-market-news/25620-crore-foregone-nithin-kamath-shares-why-zerodha-stuck-to-the-hard-path-of-zero-brokerage-11776341933172.html",
@@ -2306,30 +3712,6 @@
       "sentiment_raw": 0,
       "bull_terms": [],
       "bear_terms": [],
-      "matched_tickers": [],
-      "matched_sectors": []
-    },
-    {
-      "title": "GMDC, Gujarat Alkalies among 8 commodities stocks that hit 52-week high; rally up to 65% in a month",
-      "summary": "Despite a weak broader market, commodity stocks stood out on Thursday, with eight names from the BSE commodities index hitting fresh 52-week highs. Stocks like Gujarat Alkalies, GMDC, and Indian Metals led the rally with gains of up to 65% in a month, signalling strong momentum and continued investor interest in the commodities space.",
-      "link": "https://economictimes.indiatimes.com/markets/stocks/news/gmdc-gujarat-alkalies-among-8-commodities-stocks-that-hit-52-week-high-rally-up-to-65-in-a-month/slideshow/130307508.cms",
-      "published_ts": 1776341749.0,
-      "published_iso": "2026-04-16T12:15:49+00:00",
-      "source": "ET Markets",
-      "weight": 1.2,
-      "category": "market",
-      "sentiment": "BULLISH",
-      "sentiment_score": 6.0,
-      "sentiment_raw": 5,
-      "bull_terms": [
-        "rally",
-        "52-week high",
-        "gains",
-        "up"
-      ],
-      "bear_terms": [
-        "weak"
-      ],
       "matched_tickers": [],
       "matched_sectors": []
     },
@@ -2365,25 +3747,6 @@
       "sentiment_score": 0.0,
       "sentiment_raw": 0,
       "bull_terms": [],
-      "bear_terms": [],
-      "matched_tickers": [],
-      "matched_sectors": []
-    },
-    {
-      "title": "US Stock Market Today | Dow Jones | Nasdaq Highlights: S&P 500, Nasdaq edge up to new records with Middle East truce hopes in focus",
-      "summary": "",
-      "link": "https://economictimes.indiatimes.com/markets/us-stocks/news/us-stock-market-live-dow-jones-sp-500-nasdaq-trump-iran-war-ceasefire-talks-brent-crude-oil-inflation-earnings-tech-stock-price-news/liveblog/130306797.cms",
-      "published_ts": 1776341325.0,
-      "published_iso": "2026-04-16T12:08:45+00:00",
-      "source": "ET Markets",
-      "weight": 1.2,
-      "category": "market",
-      "sentiment": "MILDLY_BULLISH",
-      "sentiment_score": 1.2,
-      "sentiment_raw": 1,
-      "bull_terms": [
-        "up"
-      ],
       "bear_terms": [],
       "matched_tickers": [],
       "matched_sectors": []
@@ -2442,30 +3805,6 @@
       "matched_sectors": [
         "Power"
       ]
-    },
-    {
-      "title": "LIVE | Wipro Q4 results: Profit drops 1.89% on yearly basis | Earnings under pressure",
-      "summary": "",
-      "link": "https://economictimes.indiatimes.com/markets/stocks/news/live-wipro-q4-results-profit-drops-1-89-on-yearly-basis-earnings-under-pressure/videoshow/130306527.cms",
-      "published_ts": 1776340640.0,
-      "published_iso": "2026-04-16T11:57:20+00:00",
-      "source": "ET Markets",
-      "weight": 1.2,
-      "category": "market",
-      "sentiment": "MILDLY_BEARISH",
-      "sentiment_score": -1.2,
-      "sentiment_raw": -1,
-      "bull_terms": [
-        "profit"
-      ],
-      "bear_terms": [
-        "drops",
-        "pressure"
-      ],
-      "matched_tickers": [
-        "WIPRO"
-      ],
-      "matched_sectors": []
     },
     {
       "title": "Subscriber webinar: how big are the risks in private credit?",
@@ -2529,30 +3868,6 @@
       "matched_sectors": []
     },
     {
-      "title": "HDFC Life Q4 Results: HDFC Bank to increase stake in the company as profit rises 4% YoY",
-      "summary": "HDFC Life Insurance will issue shares worth one thousand crore rupees to promoter HDFC Bank. This move aims to strengthen the insurer's solvency and support future growth. The company reported a modest profit rise in the March quarter. Net premium income also saw an increase. The board recommended a final dividend for FY26.",
-      "link": "https://economictimes.indiatimes.com/markets/stocks/earnings/hdfc-life-q4-results-profit-climbs-4-yoy-hdfc-bank-to-hike-stake-buy-shares-worth-rs-1000-crore/articleshow/130305866.cms",
-      "published_ts": 1776339639.0,
-      "published_iso": "2026-04-16T11:40:39+00:00",
-      "source": "ET Markets",
-      "weight": 1.2,
-      "category": "market",
-      "sentiment": "BULLISH",
-      "sentiment_score": 4.8,
-      "sentiment_raw": 4,
-      "bull_terms": [
-        "rises",
-        "profit",
-        "growth",
-        "stake"
-      ],
-      "bear_terms": [],
-      "matched_tickers": [
-        "HDFCBANK"
-      ],
-      "matched_sectors": []
-    },
-    {
       "title": "The costly voting structure for US funds needs an overhaul",
       "summary": "The current outdated system was designed for a very different era",
       "link": "https://www.ft.com/content/db73e856-b75b-440e-a5d8-4397090c03a1",
@@ -2590,72 +3905,6 @@
       "matched_sectors": []
     },
     {
-      "title": "Sensex, Nifty pare gains to end marginally lower, Adani Enterprises, Hindalco lead gainers",
-      "summary": "Sensex declines 122 points to close at 77,988; Nifty slips 34 points to 24,196",
-      "link": "https://www.thehindubusinessline.com/markets/stock-markets-close-lower-on-profit-taking-in-financial-shares/article70868922.ece",
-      "published_ts": 1776339084.0,
-      "published_iso": "2026-04-16T11:31:24+00:00",
-      "source": "Hindu BusinessLine",
-      "weight": 1.1,
-      "category": "market",
-      "sentiment": "MILDLY_BEARISH",
-      "sentiment_score": -2.2,
-      "sentiment_raw": -2,
-      "bull_terms": [
-        "gains"
-      ],
-      "bear_terms": [
-        "declines",
-        "slips",
-        "lower"
-      ],
-      "matched_tickers": [
-        "HINDALCO"
-      ],
-      "matched_sectors": []
-    },
-    {
-      "title": "Gautam Duggad on why midcaps will keep beating Nifty and his top bets for FY27",
-      "summary": "Gautam Duggad of Motilal Oswal Financial Services anticipates a sharp earnings slowdown in the fourth quarter. He strongly recommends PSU banks, defence stocks, and capital market plays for the upcoming fiscal year 2027. Duggad believes midcap companies will continue to outperform large caps due to structural growth differences. His strategy favors discretionary consumption over traditional FMCG.",
-      "link": "https://economictimes.indiatimes.com/markets/expert-view/gautam-duggad-on-why-midcaps-will-keep-beating-nifty-and-his-top-bets-for-fy27/articleshow/130305481.cms",
-      "published_ts": 1776338624.0,
-      "published_iso": "2026-04-16T11:23:44+00:00",
-      "source": "ET Markets",
-      "weight": 1.2,
-      "category": "market",
-      "sentiment": "MILDLY_BEARISH",
-      "sentiment_score": -1.2,
-      "sentiment_raw": -1,
-      "bull_terms": [],
-      "bear_terms": [
-        "slowdown"
-      ],
-      "matched_tickers": [],
-      "matched_sectors": [
-        "Banking",
-        "Defence"
-      ]
-    },
-    {
-      "title": "India strengthens AML framework as FIU-IND, SEBI ink pact",
-      "summary": "The agreement aims to improve monitoring of suspicious transactions, enhance compliance, and align with global standards, while also enabling training and international cooperation.",
-      "link": "https://www.thehindubusinessline.com/money-and-banking/india-strengthens-aml-framework-as-fiu-ind-sebi-ink-pact/article70868890.ece",
-      "published_ts": 1776338153.0,
-      "published_iso": "2026-04-16T11:15:53+00:00",
-      "source": "Hindu BusinessLine",
-      "weight": 1.1,
-      "category": "market",
-      "sentiment": "NEUTRAL",
-      "sentiment_score": 0.0,
-      "sentiment_raw": 0,
-      "bull_terms": [],
-      "bear_terms": [],
-      "matched_tickers": [],
-      "matched_sectors": [
-        "Telecom"
-      ]
-    },
-    {
       "title": "Wipro announces share buyback worth \u20b915,000 crore. Check price, record date and other details",
       "summary": "Wipro buyback: Wipro's board at its meeting today approved the proposal to buyback up to 60,00,00,000 fully paid-up equity shares or 5.7% of the total paid-up equity share capital, for an aggregate amount not exceeding \u20b915,000 crore.",
       "link": "https://www.livemint.com/market/stock-market-news/wipro-buyback-wipro-announces-share-buyback-worth-rs-15-000-crore-check-price-record-date-and-other-details-11776337746028.html",
@@ -2679,26 +3928,6 @@
       "matched_sectors": []
     },
     {
-      "title": "Stock Market Highlights: Sensex, Nifty settle marginally lower; Sensex closes down 122 points at 77,988, Nifty50 dips 34 points to 24,196",
-      "summary": "Sensex, Nifty, Share Price Updates: Benchmarks settled marginally lower. Sensex declined 122.56 pts or 0.16% to 77,988.68, and Nifty 50 dipped 34.55 pts or 0.14% to 24,196.75.",
-      "link": "https://www.thehindubusinessline.com/markets/share-market-nifty-sensex-highlights-16-april-2026/article70865685.ece",
-      "published_ts": 1776337902.0,
-      "published_iso": "2026-04-16T11:11:42+00:00",
-      "source": "Hindu BusinessLine",
-      "weight": 1.1,
-      "category": "market",
-      "sentiment": "MILDLY_BEARISH",
-      "sentiment_score": -2.2,
-      "sentiment_raw": -2,
-      "bull_terms": [],
-      "bear_terms": [
-        "lower",
-        "down"
-      ],
-      "matched_tickers": [],
-      "matched_sectors": []
-    },
-    {
       "title": "EU's proposed CBAM expansion may impact Indian exporters: GTRI",
       "summary": "The European Union is set to broaden its Carbon Border Adjustment Mechanism, which could lead to a spike in carbon tax expenses for Indian goods shipped to Europe. Exporters in India must quickly adapt by enhancing their emissions tracking and implementing decarbonisation strategies.",
       "link": "https://economictimes.indiatimes.com/news/economy/foreign-trade/eus-proposed-cbam-expansion-may-impact-indian-exporters-gtri/articleshow/130305156.cms",
@@ -2715,101 +3944,6 @@
       ],
       "bear_terms": [],
       "matched_tickers": [],
-      "matched_sectors": []
-    },
-    {
-      "title": "HDFC Life Q4 results: Profit rises 4% YoY; declares final dividend of \u20b92.10 for FY26",
-      "summary": "HDFC Life Q4 results: HDFC Life reported a 4% year-on-year (YoY) rise in its standalone net profit after tax to \u20b9495.65 crore for the March quarter of the financial year 2025-26.",
-      "link": "https://www.livemint.com/market/stock-market-news/hdfc-life-q4-results-profit-rises-4-yoy-declares-final-dividend-of-2-10-for-fy26-11776337290501.html",
-      "published_ts": 1776337831.0,
-      "published_iso": "2026-04-16T11:10:31+00:00",
-      "source": "Mint Markets",
-      "weight": 1.2,
-      "category": "market",
-      "sentiment": "BULLISH",
-      "sentiment_score": 3.6,
-      "sentiment_raw": 3,
-      "bull_terms": [
-        "rises",
-        "profit",
-        "dividend"
-      ],
-      "bear_terms": [],
-      "matched_tickers": [],
-      "matched_sectors": []
-    },
-    {
-      "title": "Wipro Q4 Results: Net profit falls 2% YoY to \u20b93,502 crore; Board approves \u20b915,000 crore share buyback",
-      "summary": "Wipro reported Q4FY26 net profit of \u20b93,502 crore, down 1.85% YoY, but up 12.27% sequentially. Revenue reached \u20b924,236.3 crore, a 9.77% YoY increase. Full fiscal year profit was \u20b913,197.4 crore, with total bookings at $3,455 million, reflecting a 3.6% QoQ rise.",
-      "link": "https://www.livemint.com/market/stock-market-news/wipro-q4-results-net-profit-falls-2-yoy-to-rs-3-521-crore-board-approves-rs-15-000-crore-share-buyback-11776334697603.html",
-      "published_ts": 1776337759.0,
-      "published_iso": "2026-04-16T11:09:19+00:00",
-      "source": "Mint Markets",
-      "weight": 1.2,
-      "category": "market",
-      "sentiment": "MILDLY_BULLISH",
-      "sentiment_score": 2.4,
-      "sentiment_raw": 2,
-      "bull_terms": [
-        "up",
-        "profit",
-        "buyback",
-        "approves"
-      ],
-      "bear_terms": [
-        "falls",
-        "down"
-      ],
-      "matched_tickers": [
-        "WIPRO"
-      ],
-      "matched_sectors": []
-    },
-    {
-      "title": "Nifty's roadmap to 24,800: Rahul Sharma of JM Financial explains why he\u2019s buying the dip",
-      "summary": "Rahul Sharma of JM Financial remains bullish on Nifty, advising investors to \u201cbuy the dip\u201d with 24,800 as the next key resistance. He believes support around 24,100\u201323,700 remains intact, backed by strong sector leadership in PSU, metals, and IT, with PSU banks likely to drive the next leg higher.",
-      "link": "https://economictimes.indiatimes.com/markets/expert-view/niftys-roadmap-to-24800-rahul-sharma-of-jm-financial-explains-why-hes-buying-the-dip/articleshow/130305120.cms",
-      "published_ts": 1776337646.0,
-      "published_iso": "2026-04-16T11:07:26+00:00",
-      "source": "ET Markets",
-      "weight": 1.2,
-      "category": "market",
-      "sentiment": "MILDLY_BULLISH",
-      "sentiment_score": 1.2,
-      "sentiment_raw": 1,
-      "bull_terms": [
-        "bullish"
-      ],
-      "bear_terms": [],
-      "matched_tickers": [
-        "HINDUNILVR"
-      ],
-      "matched_sectors": []
-    },
-    {
-      "title": "Wipro Q4 Results: Profit falls 2% YoY to Rs 3,502 crore; revenue rises 8%",
-      "summary": "Wipro Q4 Results: Wipro's net profit dipped 2% to Rs 3,502 crore in the March quarter, despite an 8% revenue increase to Rs 24,236 crore. The IT services segment saw sluggish growth, with revenue up only 0.6% sequentially. The company announced a significant Rs 15,000 crore share buyback, signaling confidence amidst cost pressures and declining operating margins.",
-      "link": "https://economictimes.indiatimes.com/markets/stocks/earnings/wipro-q4-results-profit-falls-2-yoy-to-rs-3502-crore-but-revenue-rises-8/articleshow/130305068.cms",
-      "published_ts": 1776337586.0,
-      "published_iso": "2026-04-16T11:06:26+00:00",
-      "source": "ET Markets",
-      "weight": 1.2,
-      "category": "market",
-      "sentiment": "BULLISH",
-      "sentiment_score": 3.6,
-      "sentiment_raw": 3,
-      "bull_terms": [
-        "rises",
-        "up",
-        "profit",
-        "growth"
-      ],
-      "bear_terms": [
-        "falls"
-      ],
-      "matched_tickers": [
-        "WIPRO"
-      ],
       "matched_sectors": []
     },
     {
@@ -2851,28 +3985,6 @@
       ]
     },
     {
-      "title": "Wipro share buyback: IT major announces Rs 15,000 crore offer at 19% premium. Key things to know",
-      "summary": "Wipro share buyback: IT services giant Wipro announced a significant Rs 15,000 crore share buyback at Rs 250 per share, a 19% premium over the last closing price. This marks the company's first buyback in over three years, involving up to 60 crore shares, representing 5.7% of its paid-up capital. Promoters have indicated their intention to participate in the tender route buyback.",
-      "link": "https://economictimes.indiatimes.com/markets/stocks/earnings/wipro-q4-results-company-announces-rs-15000-crore-share-buyback-at-19-premium-check-key-things-to-know/articleshow/130305008.cms",
-      "published_ts": 1776337406.0,
-      "published_iso": "2026-04-16T11:03:26+00:00",
-      "source": "ET Markets",
-      "weight": 1.2,
-      "category": "market",
-      "sentiment": "MILDLY_BULLISH",
-      "sentiment_score": 2.4,
-      "sentiment_raw": 2,
-      "bull_terms": [
-        "up",
-        "buyback"
-      ],
-      "bear_terms": [],
-      "matched_tickers": [
-        "WIPRO"
-      ],
-      "matched_sectors": []
-    },
-    {
       "title": "How to finance geothermal energy",
       "summary": "Zanskar Geothermal secures a $40mn development capital facility that could serve as a model for other developers",
       "link": "https://www.ft.com/content/bb68668a-69b9-455a-bc77-35ef71bf9f2b",
@@ -2909,111 +4021,12 @@
       "matched_sectors": []
     },
     {
-      "title": "Zerodha traders saved Rs 25,620 crore brokerage: Nithin Kamath shows the calculation",
-      "summary": "Zerodha traders saved Rs 25,620 crore in brokerage between 2016 and 2025 due to the firm\u2019s zero-delivery brokerage model, founder Nithin Kamath said. He credited the bootstrapped structure for enabling a customer-first approach, avoiding aggressive monetisation, ads, and cross-selling while maintaining low-cost trading and high user trust.",
-      "link": "https://economictimes.indiatimes.com/markets/stocks/news/zerodha-traders-saved-rs-25620-crore-brokerage-nithin-kamath-shows-the-calculation/articleshow/130304748.cms",
-      "published_ts": 1776337006.0,
-      "published_iso": "2026-04-16T10:56:46+00:00",
-      "source": "ET Markets",
-      "weight": 1.2,
-      "category": "market",
-      "sentiment": "NEUTRAL",
-      "sentiment_score": 0.0,
-      "sentiment_raw": 0,
-      "bull_terms": [],
-      "bear_terms": [],
-      "matched_tickers": [],
-      "matched_sectors": []
-    },
-    {
       "title": "EU proposes that Google allow third-party search engines access to data \u2014 What we know",
       "summary": "The European Commission proposed measures for Google to comply with the Digital Markets Act, by allowing third-party search engines access to search data. A final decision is expected in July this year.",
       "link": "https://www.livemint.com/companies/news/eu-proposes-that-google-allow-third-party-search-engines-access-to-data-ai-chatbot-optimise-services-what-we-know-11776334792348.html",
       "published_ts": 1776336779.0,
       "published_iso": "2026-04-16T10:52:59+00:00",
       "source": "Mint Companies",
-      "weight": 1.1,
-      "category": "market",
-      "sentiment": "NEUTRAL",
-      "sentiment_score": 0.0,
-      "sentiment_raw": 0,
-      "bull_terms": [],
-      "bear_terms": [],
-      "matched_tickers": [],
-      "matched_sectors": []
-    },
-    {
-      "title": "Rupee edges higher as optimism over Iran peace deal firms",
-      "summary": "The Indian rupee closed slightly stronger on \u200bThursday on growing optimism over \u200ba potential deal to end the Iran war, \u200bwhich kept oil prices below $100 a barrel and lifted global equities to record highs.",
-      "link": "https://economictimes.indiatimes.com/markets/forex/rupee-edges-higher-as-optimism-over-iran-peace-deal-firms/articleshow/130304642.cms",
-      "published_ts": 1776336348.0,
-      "published_iso": "2026-04-16T10:45:48+00:00",
-      "source": "ET Markets",
-      "weight": 1.2,
-      "category": "market",
-      "sentiment": "MILDLY_BULLISH",
-      "sentiment_score": 1.2,
-      "sentiment_raw": 1,
-      "bull_terms": [
-        "record high",
-        "higher"
-      ],
-      "bear_terms": [],
-      "matched_tickers": [],
-      "matched_sectors": [
-        "Oil & Gas"
-      ]
-    },
-    {
-      "title": "Bosch gets pumped up with group company acquisition. Can it drive a valuation re-rating?",
-      "summary": "Bosch Ltd's shares surged nearly 30% in April after a low in March. The planned acquisition of Bosch Chassis Systems India is expected to enhance its offerings and improve EPS. The deal, valued at \u20b99,069 crore, is funded through internal accruals, maintaining Bosch's debt-free status.",
-      "link": "https://www.livemint.com/market/mark-to-market/bosch-group-company-acquisition-bosch-chassis-systems-india-valuation-re-rating-braking-systems-electric-vehicles-11776332185506.html",
-      "published_ts": 1776336260.0,
-      "published_iso": "2026-04-16T10:44:20+00:00",
-      "source": "Mint Markets",
-      "weight": 1.2,
-      "category": "market",
-      "sentiment": "MILDLY_BULLISH",
-      "sentiment_score": 2.4,
-      "sentiment_raw": 2,
-      "bull_terms": [
-        "up",
-        "acquisition"
-      ],
-      "bear_terms": [],
-      "matched_tickers": [
-        "RELIANCE"
-      ],
-      "matched_sectors": []
-    },
-    {
-      "title": "Gold rally boosts ETFs; jewellery stocks see mixed returns",
-      "summary": "While organised jewellers remain operationally strong, stock performance has been mixed, with leaders like Titan outperforming and mid-tier players showing volatility",
-      "link": "https://www.thehindubusinessline.com/markets/gold-rally-boosts-etfs-jewellery-stocks-see-mixed-returns/article70866315.ece",
-      "published_ts": 1776336254.0,
-      "published_iso": "2026-04-16T10:44:14+00:00",
-      "source": "Hindu BusinessLine",
-      "weight": 1.1,
-      "category": "market",
-      "sentiment": "MILDLY_BULLISH",
-      "sentiment_score": 2.2,
-      "sentiment_raw": 2,
-      "bull_terms": [
-        "rally"
-      ],
-      "bear_terms": [],
-      "matched_tickers": [
-        "TITAN"
-      ],
-      "matched_sectors": []
-    },
-    {
-      "title": "China resumes buying broken rice from India",
-      "summary": "India\u2019s prices most competitive; Beijing\u2019s imports come when it has alleged the presence of GMO in New Delhi\u2019s shipments",
-      "link": "https://www.thehindubusinessline.com/economy/agri-business/china-resumes-buying-broken-rice-from-india/article70867489.ece",
-      "published_ts": 1776336190.0,
-      "published_iso": "2026-04-16T10:43:10+00:00",
-      "source": "Hindu BusinessLine",
       "weight": 1.1,
       "category": "market",
       "sentiment": "NEUTRAL",
@@ -3067,29 +4080,6 @@
       "matched_sectors": []
     },
     {
-      "title": "Gold prices soar 50% since last Akshaya Tritiya: 5 key reasons behind the surge and what investors should do now",
-      "summary": "The gold rally has intensified over the last year, with prices surging more than 50% since last Akshaya Tritiya, driven by geopolitical tensions, inflation fears, ETF inflows, and currency weakness. These developments call for prudence in future gold-related investments.&nbsp;",
-      "link": "https://www.livemint.com/market/commodities/gold-prices-soar-50-since-last-akshaya-tritiya-5-key-reasons-behind-the-surge-and-what-investors-should-do-now-11776329122996.html",
-      "published_ts": 1776335277.0,
-      "published_iso": "2026-04-16T10:27:57+00:00",
-      "source": "Mint Markets",
-      "weight": 1.2,
-      "category": "market",
-      "sentiment": "BULLISH",
-      "sentiment_score": 4.8,
-      "sentiment_raw": 4,
-      "bull_terms": [
-        "surge",
-        "soar",
-        "rally"
-      ],
-      "bear_terms": [
-        "weakness"
-      ],
-      "matched_tickers": [],
-      "matched_sectors": []
-    },
-    {
       "title": "UK economy grew faster than expected in February ahead of Iran war",
       "summary": "The economy saw its biggest monthly rise in more than two years just before the outbreak of the US-Israeli war with Iran.",
       "link": "https://www.bbc.com/news/articles/cz0e23r0993o?at_medium=RSS&at_campaign=rss",
@@ -3103,97 +4093,6 @@
       "sentiment_raw": -2,
       "bull_terms": [],
       "bear_terms": [],
-      "matched_tickers": [],
-      "matched_sectors": []
-    },
-    {
-      "title": "GMDC shares surge 18% to 52-week high, trading volumes spike amid metal rally",
-      "summary": "Market activity in GMDC remained robust, with traded volume at 377.19 lakh shares and traded value at \u20b92,650.08 crore, indicating heightened investor participation",
-      "link": "https://www.thehindubusinessline.com/markets/stock-markets/gmdc-shares-surge-18-to-52-week-high-trading-volumes-spike-amid-metal-rally/article70868026.ece",
-      "published_ts": 1776334754.0,
-      "published_iso": "2026-04-16T10:19:14+00:00",
-      "source": "Hindu BusinessLine",
-      "weight": 1.1,
-      "category": "market",
-      "sentiment": "BULLISH",
-      "sentiment_score": 6.6,
-      "sentiment_raw": 6,
-      "bull_terms": [
-        "surge",
-        "rally",
-        "52-week high"
-      ],
-      "bear_terms": [],
-      "matched_tickers": [],
-      "matched_sectors": []
-    },
-    {
-      "title": "Gold, silver prices rise on weak dollar, geopolitical cues; analysts see near-term volatility",
-      "summary": "Gold gained as the dollar softened and crude oil prices slipped below $100 per barrel amid optimism around potential peace talks between the US and Iran",
-      "link": "https://www.thehindubusinessline.com/markets/gold/gold-silver-prices-rise-on-weak-dollar-geopolitical-cues-analysts-see-near-term-volatility/article70868399.ece",
-      "published_ts": 1776334577.0,
-      "published_iso": "2026-04-16T10:16:17+00:00",
-      "source": "Hindu BusinessLine",
-      "weight": 1.1,
-      "category": "market",
-      "sentiment": "MILDLY_BEARISH",
-      "sentiment_score": -1.1,
-      "sentiment_raw": -1,
-      "bull_terms": [
-        "gained"
-      ],
-      "bear_terms": [
-        "weak"
-      ],
-      "matched_tickers": [],
-      "matched_sectors": [
-        "Oil & Gas"
-      ]
-    },
-    {
-      "title": "Top Gainers & Losers on April 16: GMDC, Netweb Tech, Adani Power, Sonata Software, YES Bank among top gainers",
-      "summary": "On April 16, the Indian stock market closed with modest losses after a recent rally. The Nifty 50 fell 0.18% while the Sensex dropped 0.21%. Broader markets showed gains, indicating a bullish tone, amid improving sentiment from potential US-Iran negotiations.",
-      "link": "https://www.livemint.com/market/stock-market-news/top-gainers-losers-on-april-16-gmdc-netweb-tech-adani-power-sonata-software-swiggy-yes-bank-among-top-gainer-11776331754800.html",
-      "published_ts": 1776334435.0,
-      "published_iso": "2026-04-16T10:13:55+00:00",
-      "source": "Mint Markets",
-      "weight": 1.2,
-      "category": "market",
-      "sentiment": "MILDLY_BULLISH",
-      "sentiment_score": 1.2,
-      "sentiment_raw": 1,
-      "bull_terms": [
-        "rally",
-        "gains",
-        "bullish"
-      ],
-      "bear_terms": [
-        "fell",
-        "dropped",
-        "losses"
-      ],
-      "matched_tickers": [
-        "RELIANCE"
-      ],
-      "matched_sectors": []
-    },
-    {
-      "title": "Sensex falls 123 points, Nifty 50 ends below 24,200: Key highlights from the Indian stock market today",
-      "summary": "The Sensex declined 123 points, or 0.16%, to end at 77,988.68, while the Nifty 50 ended with a loss of 35 points, or 0.14%, at 24,196.75.",
-      "link": "https://www.livemint.com/market/stock-market-news/sensex-falls-123-points-nifty-50-ends-below-24-200-key-highlights-from-the-indian-stock-market-today-11776333343823.html",
-      "published_ts": 1776333841.0,
-      "published_iso": "2026-04-16T10:04:01+00:00",
-      "source": "Mint Markets",
-      "weight": 1.2,
-      "category": "market",
-      "sentiment": "MILDLY_BEARISH",
-      "sentiment_score": -2.4,
-      "sentiment_raw": -2,
-      "bull_terms": [],
-      "bear_terms": [
-        "falls",
-        "loss"
-      ],
       "matched_tickers": [],
       "matched_sectors": []
     },
@@ -3269,28 +4168,6 @@
       "matched_sectors": []
     },
     {
-      "title": "PPFAS Portfolio Churn: Rajeev Thakkar-led fund house laps up large-cap banks, sells these two RIL group stocks in March",
-      "summary": "PPFAS Mutual Fund increased its holdings in HDFC Bank amid market volatility, while offloading Reliance Group stocks worth \u20b9730 crore. Check key portfolio changes in March.",
-      "link": "https://www.livemint.com/market/stock-market-news/ppfas-portfolio-churn-rajeev-thakkar-led-fund-house-laps-up-large-cap-banks-sells-these-two-ril-group-stocks-in-march-11776331593089.html",
-      "published_ts": 1776332449.0,
-      "published_iso": "2026-04-16T09:40:49+00:00",
-      "source": "Mint Markets",
-      "weight": 1.2,
-      "category": "market",
-      "sentiment": "MILDLY_BULLISH",
-      "sentiment_score": 1.2,
-      "sentiment_raw": 1,
-      "bull_terms": [
-        "up"
-      ],
-      "bear_terms": [],
-      "matched_tickers": [
-        "RELIANCE",
-        "HDFCBANK"
-      ],
-      "matched_sectors": []
-    },
-    {
       "title": "Iran war sparks 'fundamental energy transition' in Seoul toward renewables: Energy minister",
       "summary": "Kim said South Korea will focus on wind and solar power to achieve its goal of reaching 100 gigawatts renewable energy capacity",
       "link": "https://www.cnbc.com/2026/04/16/iran-war-energy-transition-south-korea-toward-renewable-energy-energy-minister.html",
@@ -3310,25 +4187,6 @@
       ]
     },
     {
-      "title": "Global Markets | European shares inch higher on Middle East peace prospects; earnings in focus",
-      "summary": "European \u200bshares edged higher on Thursday as growing optimism about a potential resolution to the Middle East conflict lifted market sentiment, while investors assessed corporate earnings reports across the region.",
-      "link": "https://economictimes.indiatimes.com/markets/us-stocks/news/global-markets-european-shares-inch-higher-on-middle-east-peace-prospects-earnings-in-focus/articleshow/130302829.cms",
-      "published_ts": 1776331714.0,
-      "published_iso": "2026-04-16T09:28:34+00:00",
-      "source": "ET Markets",
-      "weight": 1.2,
-      "category": "market",
-      "sentiment": "NEUTRAL",
-      "sentiment_score": 0.0,
-      "sentiment_raw": 0,
-      "bull_terms": [
-        "higher"
-      ],
-      "bear_terms": [],
-      "matched_tickers": [],
-      "matched_sectors": []
-    },
-    {
       "title": "Lamborghini heir checks into India\u2019s branded homes market with \u20b94,000 crore Gurugram project",
       "summary": "Tonino Lamborghini has partnered Signature Global for a 812-unit luxury development, as global brands tap rising demand for high-end residences",
       "link": "https://www.livemint.com/companies/news/lamborghini-heir-checks-into-india-s-branded-homes-market-with-4-000-crore-gurugram-project-11776326197451.html",
@@ -3343,25 +4201,6 @@
       "bull_terms": [],
       "bear_terms": [],
       "matched_tickers": [],
-      "matched_sectors": []
-    },
-    {
-      "title": "Silver Price Today April 16: Latest rates in Delhi, Mumbai, Kolkata, Chennai & Bengaluru",
-      "summary": "1 kg Silver price as reported today, April 16, 2026 across Indian cities",
-      "link": "https://www.thehindubusinessline.com/markets/gold/silver-rate-today-in-mumbai-chennai-ahmedabad-delhi-hyderabad-bengaluru-kolkata-silve-prices-6-february-2026/article70868405.ece",
-      "published_ts": 1776331624.0,
-      "published_iso": "2026-04-16T09:27:04+00:00",
-      "source": "Hindu BusinessLine",
-      "weight": 1.1,
-      "category": "market",
-      "sentiment": "NEUTRAL",
-      "sentiment_score": 0.0,
-      "sentiment_raw": 0,
-      "bull_terms": [],
-      "bear_terms": [],
-      "matched_tickers": [
-        "RELIANCE"
-      ],
       "matched_sectors": []
     },
     {
@@ -3384,180 +4223,6 @@
       "matched_sectors": []
     },
     {
-      "title": "RailTel shares extend winning run to fourth session, hit two-month high; surge 40% in April",
-      "summary": "RailTel Corporation's shares rose 5% to \u20b9353, marking a four-day gain of 25.31%. This increase is fueled by positive sentiment and significant order wins, including a \u20b9564.54 crore contract for tunnel communication systems, despite a recent order withdrawal worth \u20b917.12 crore.",
-      "link": "https://www.livemint.com/market/stock-market-news/railtel-shares-extend-winning-run-to-fourth-session-hit-two-month-high-surge-40-in-april-11776329508216.html",
-      "published_ts": 1776331191.0,
-      "published_iso": "2026-04-16T09:19:51+00:00",
-      "source": "Mint Markets",
-      "weight": 1.2,
-      "category": "market",
-      "sentiment": "BULLISH",
-      "sentiment_score": 6.0,
-      "sentiment_raw": 5,
-      "bull_terms": [
-        "surge",
-        "rose",
-        "positive",
-        "order win"
-      ],
-      "bear_terms": [],
-      "matched_tickers": [
-        "RELIANCE"
-      ],
-      "matched_sectors": []
-    },
-    {
-      "title": "China economic growth accelerates to 5% in first quarter \u2014 but Iran war clouds outlook",
-      "summary": "Beijing had lowered its growth target this year to a range of 4.5% to 5%, the least ambitious goal on record going back to the early 1990s.",
-      "link": "https://www.cnbc.com/2026/04/16/china-gdp-growth-first-quarter-exports-property-retail-sales-iran-war.html",
-      "published_ts": 1776331066.0,
-      "published_iso": "2026-04-16T09:17:46+00:00",
-      "source": "CNBC World",
-      "weight": 0.8,
-      "category": "global",
-      "sentiment": "NEUTRAL",
-      "sentiment_score": -0.8,
-      "sentiment_raw": -1,
-      "bull_terms": [
-        "growth"
-      ],
-      "bear_terms": [],
-      "matched_tickers": [],
-      "matched_sectors": []
-    },
-    {
-      "title": "Vikas Khemani bets big on IndiGo, BHEL, and PSU banks amid market volatility",
-      "summary": "Vikas Khemani of Carnelian Asset Management outlines his investment strategy amid market volatility. He favors mid and large-cap stocks, with selective contra plays like IndiGo. Khemani prefers conventional power enablers over renewables and emphasizes company selection in banking. He maintains his market cap mix and avoids fads and unproven businesses. His approach centers on conviction, quality, and patience.",
-      "link": "https://economictimes.indiatimes.com/markets/expert-view/vikas-khemani-bets-big-on-indigo-bhel-and-psu-banks-amid-market-volatility/articleshow/130302459.cms",
-      "published_ts": 1776330704.0,
-      "published_iso": "2026-04-16T09:11:44+00:00",
-      "source": "ET Markets",
-      "weight": 1.2,
-      "category": "market",
-      "sentiment": "NEUTRAL",
-      "sentiment_score": 0.0,
-      "sentiment_raw": 0,
-      "bull_terms": [],
-      "bear_terms": [],
-      "matched_tickers": [],
-      "matched_sectors": [
-        "Banking",
-        "Power"
-      ]
-    },
-    {
-      "title": "Indian fund outperforming 98% of peers bets on defense stocks",
-      "summary": "A $3 billion fund at Kotak Mahindra Asset Management Co. is backing Indian defense stocks, wagering that geopolitical tensions will boost local arms production and support the government\u2019s efforts to lower reliance on imports.",
-      "link": "https://economictimes.indiatimes.com/markets/stocks/news/indian-fund-outperforming-98-of-peers-bets-on-defense-stocks/articleshow/130302440.cms",
-      "published_ts": 1776330440.0,
-      "published_iso": "2026-04-16T09:07:20+00:00",
-      "source": "ET Markets",
-      "weight": 1.2,
-      "category": "market",
-      "sentiment": "MILDLY_BEARISH",
-      "sentiment_score": -1.2,
-      "sentiment_raw": -1,
-      "bull_terms": [
-        "boost"
-      ],
-      "bear_terms": [
-        "lower"
-      ],
-      "matched_tickers": [],
-      "matched_sectors": [
-        "Defence"
-      ]
-    },
-    {
-      "title": "Shares at world\u2019s biggest chocolate maker plunge as cocoa prices collapse",
-      "summary": "Company cuts profit forecast and warns about industry overcapacity and supply disruptions",
-      "link": "https://www.ft.com/content/ca630e7d-409e-459d-8a98-da3155cab074",
-      "published_ts": 1776330270.0,
-      "published_iso": "2026-04-16T09:04:30+00:00",
-      "source": "FT Markets",
-      "weight": 0.9,
-      "category": "global",
-      "sentiment": "BEARISH",
-      "sentiment_score": -4.5,
-      "sentiment_raw": -5,
-      "bull_terms": [
-        "profit"
-      ],
-      "bear_terms": [
-        "plunge",
-        "collapse",
-        "cuts",
-        "warns"
-      ],
-      "matched_tickers": [],
-      "matched_sectors": []
-    },
-    {
-      "title": "Gold vs Silver: What should investors buy on Akshaya Tritiya for better returns?",
-      "summary": "Since Akshaya Tritiya last year, both gold and silver prices have witnessed a sharp rally, generating strong returns for investors. Historical data over the past nine years indicates that purchases made on the festival day have consistently delivered gains.",
-      "link": "https://www.livemint.com/market/commodities/gold-vs-silver-what-should-investors-buy-on-akshaya-tritiya-for-better-returns-11776328677315.html",
-      "published_ts": 1776330163.0,
-      "published_iso": "2026-04-16T09:02:43+00:00",
-      "source": "Mint Markets",
-      "weight": 1.2,
-      "category": "market",
-      "sentiment": "MILDLY_BULLISH",
-      "sentiment_score": 2.4,
-      "sentiment_raw": 2,
-      "bull_terms": [
-        "rally"
-      ],
-      "bear_terms": [],
-      "matched_tickers": [],
-      "matched_sectors": []
-    },
-    {
-      "title": "Earnings may drop but opportunity bigger; Vikas Khemani makes bullish call on India markets",
-      "summary": "Indian markets are rallying after a sell-off. Vikas Khemani of Carnelian Asset Management believes India's investment case remains strong. He sees short-term earnings disruptions as opportunities. Khemani has increased exposure to banking, financial services, and aviation. He also believes the narrative around Indian IT is exaggerated, with AI presenting new opportunities.",
-      "link": "https://economictimes.indiatimes.com/markets/expert-view/earnings-may-drop-but-opportunity-is-bigger-vikas-khemani-makes-bullish-call-on-india-markets/articleshow/130302186.cms",
-      "published_ts": 1776329754.0,
-      "published_iso": "2026-04-16T08:55:54+00:00",
-      "source": "ET Markets",
-      "weight": 1.2,
-      "category": "market",
-      "sentiment": "MILDLY_BULLISH",
-      "sentiment_score": 1.2,
-      "sentiment_raw": 1,
-      "bull_terms": [
-        "bullish"
-      ],
-      "bear_terms": [],
-      "matched_tickers": [],
-      "matched_sectors": [
-        "Banking"
-      ]
-    },
-    {
-      "title": "Indian stock market: Nifty 50 retreats after facing resistance at 24,400. Can it reclaim 25,000 level?",
-      "summary": "The Indian stock market saw a brief rally on April 16 before falling back due to selling pressure. Analysts believe the Nifty 50's recent recovery indicates resilience, despite mixed performance data and potential challenges ahead in the medium-term.",
-      "link": "https://www.livemint.com/market/stock-market-news/indian-stock-market-nifty-50-retreats-after-facing-resistance-at-24-400-can-it-reclaim-25-000-level-11776328395512.html",
-      "published_ts": 1776329551.0,
-      "published_iso": "2026-04-16T08:52:31+00:00",
-      "source": "Mint Markets",
-      "weight": 1.2,
-      "category": "market",
-      "sentiment": "MILDLY_BULLISH",
-      "sentiment_score": 2.4,
-      "sentiment_raw": 2,
-      "bull_terms": [
-        "rally",
-        "recovery"
-      ],
-      "bear_terms": [
-        "pressure"
-      ],
-      "matched_tickers": [
-        "RELIANCE"
-      ],
-      "matched_sectors": []
-    },
-    {
       "title": "More big energy users to get help as support plan expanded",
       "summary": "A scheme to cut bills for firms that are heavy energy users is being extended to cover an additional 3,000 businesses.",
       "link": "https://www.bbc.com/news/articles/c0lee3j122go?at_medium=RSS&at_campaign=rss",
@@ -3574,44 +4239,6 @@
         "cut"
       ],
       "matched_tickers": [],
-      "matched_sectors": []
-    },
-    {
-      "title": "Nuvoco Vistas turns to price hikes as cost headwinds intensify",
-      "summary": "Nuvoco is not keen on sacrificing profitability for market share, so if costs continue to rise, it may need to raise prices further.",
-      "link": "https://www.livemint.com/market/mark-to-market/nuvoco-vistas-q4fy26-west-asia-war-nuvoco-vistas-share-price-cement-price-india-11776323484976.html",
-      "published_ts": 1776327837.0,
-      "published_iso": "2026-04-16T08:23:57+00:00",
-      "source": "Mint Markets",
-      "weight": 1.2,
-      "category": "market",
-      "sentiment": "MILDLY_BEARISH",
-      "sentiment_score": -1.2,
-      "sentiment_raw": -1,
-      "bull_terms": [],
-      "bear_terms": [
-        "headwinds"
-      ],
-      "matched_tickers": [],
-      "matched_sectors": []
-    },
-    {
-      "title": "Gold price today April 16: Gold rates rise in Mumbai, Delhi, Chennai, Kolkata, Ahmedabad and Bengaluru",
-      "summary": "22K & 24K gold price today, April 16, 2026 across Indian cities",
-      "link": "https://www.thehindubusinessline.com/gold-rate-today/gold-price-today-in-mumbai-chennai-ahmedabad-delhi-hyderabad-bengaluru-kolkata-gold-rates-april-16-2026/article70868382.ece",
-      "published_ts": 1776327625.0,
-      "published_iso": "2026-04-16T08:20:25+00:00",
-      "source": "Hindu BusinessLine",
-      "weight": 1.1,
-      "category": "market",
-      "sentiment": "NEUTRAL",
-      "sentiment_score": 0.0,
-      "sentiment_raw": 0,
-      "bull_terms": [],
-      "bear_terms": [],
-      "matched_tickers": [
-        "RELIANCE"
-      ],
       "matched_sectors": []
     },
     {
@@ -3673,109 +4300,6 @@
       "matched_sectors": []
     },
     {
-      "title": "Gold on Akshaya Tritiya: 9 years of strong returns \u2014 Where can gold prices go in the next 12 months?",
-      "summary": "Gold on Akshaya Tritiya: Historically, gold has provided meaningful protection from the monetary and financial effects of prolonged conflict. With the core trends of de-dollarisation, central bank buying and US debt sustainability concerns still in play, gold continues to look strong.",
-      "link": "https://www.livemint.com/market/commodities/gold-on-akshaya-tritiya-9-years-of-strong-returns-where-can-gold-prices-go-in-the-next-12-months-11776325099621.html",
-      "published_ts": 1776326156.0,
-      "published_iso": "2026-04-16T07:55:56+00:00",
-      "source": "Mint Markets",
-      "weight": 1.2,
-      "category": "market",
-      "sentiment": "MILDLY_BEARISH",
-      "sentiment_score": -2.4,
-      "sentiment_raw": -2,
-      "bull_terms": [],
-      "bear_terms": [
-        "concerns"
-      ],
-      "matched_tickers": [],
-      "matched_sectors": [
-        "Banking"
-      ]
-    },
-    {
-      "title": "HDFC AMC Q4 results: Profit drops 2.5% YoY to \u20b9623 crore; declares final dividend of \u20b954 for FY26",
-      "summary": "HDFC AMC Q4 results 2026: HDFC Asset Management Company announced a 2.5% year-on-year (YoY) drop in its consolidated profit for Q4FY26 to \u20b9622.66 crore.",
-      "link": "https://www.livemint.com/market/stock-market-news/hdfc-amc-q4-results-2026-profit-drops-2-5-yoy-to-623-crore-declares-final-dividend-of-54-for-fy26-11776325847752.html",
-      "published_ts": 1776325987.0,
-      "published_iso": "2026-04-16T07:53:07+00:00",
-      "source": "Mint Markets",
-      "weight": 1.2,
-      "category": "market",
-      "sentiment": "MILDLY_BULLISH",
-      "sentiment_score": 1.2,
-      "sentiment_raw": 1,
-      "bull_terms": [
-        "profit",
-        "dividend"
-      ],
-      "bear_terms": [
-        "drops"
-      ],
-      "matched_tickers": [],
-      "matched_sectors": []
-    },
-    {
-      "title": "Japan's Nikkei 225 hits record high as hopes for U.S.-Iran deal fuel broader rally in Asia stocks",
-      "summary": "Asia markets opened higher, with Nikkei at an all-time high after Wall Street hit record levels on growing expectations of a U.S.-Iran deal to end the war.",
-      "link": "https://www.cnbc.com/2026/04/16/asia-markets-today-nikkei225-hang-seng-sensex-kospi-iran-us-deal-trump.html",
-      "published_ts": 1776325949.0,
-      "published_iso": "2026-04-16T07:52:29+00:00",
-      "source": "CNBC World",
-      "weight": 0.8,
-      "category": "global",
-      "sentiment": "BULLISH",
-      "sentiment_score": 4.0,
-      "sentiment_raw": 5,
-      "bull_terms": [
-        "rally",
-        "record high",
-        "all-time high",
-        "higher"
-      ],
-      "bear_terms": [],
-      "matched_tickers": [],
-      "matched_sectors": []
-    },
-    {
-      "title": "Sensex, Nifty pare early gains, metal stocks shine amid volatility",
-      "summary": "Asian markets traded higher. Meanwhile, safe-haven demand pushed precious metals higher, with gold and silver prices witnessing a sharp surge amid volatility and currency movements",
-      "link": "https://www.thehindubusinessline.com/markets/sensex-nifty-pare-early-gains-metal-stocks-shine-amid-volatility/article70868171.ece",
-      "published_ts": 1776325797.0,
-      "published_iso": "2026-04-16T07:49:57+00:00",
-      "source": "Hindu BusinessLine",
-      "weight": 1.1,
-      "category": "market",
-      "sentiment": "BULLISH",
-      "sentiment_score": 4.4,
-      "sentiment_raw": 4,
-      "bull_terms": [
-        "surge",
-        "gains",
-        "higher"
-      ],
-      "bear_terms": [],
-      "matched_tickers": [],
-      "matched_sectors": []
-    },
-    {
-      "title": "Who\u2019s managing all the sovereign wealth?",
-      "summary": "We tried a hard thing and came away with more questions than answers",
-      "link": "https://www.ft.com/content/c411f0ef-ef8e-40ed-a75e-ba7c073d0467",
-      "published_ts": 1776325605.0,
-      "published_iso": "2026-04-16T07:46:45+00:00",
-      "source": "FT Markets",
-      "weight": 0.9,
-      "category": "global",
-      "sentiment": "NEUTRAL",
-      "sentiment_score": 0.0,
-      "sentiment_raw": 0,
-      "bull_terms": [],
-      "bear_terms": [],
-      "matched_tickers": [],
-      "matched_sectors": []
-    },
-    {
       "title": "Planning a trip to Vietnam? Akasa Air launches weekly Mumbai\u2013Hanoi flights \u2013 Check date, frequency and other details",
       "summary": "\u2018The launch of direct flights to Hanoi strengthens our presence in South Asia and marks another step in our effort to build a network that connects India with dynamic global destinations\u2019",
       "link": "https://www.livemint.com/companies/news/planning-a-trip-to-vietnam-akasa-air-launches-weekly-mumbai-hanoi-flights-check-date-frequency-and-other-details-11776322552996.html",
@@ -3818,29 +4342,6 @@
       "matched_sectors": []
     },
     {
-      "title": "Gold and silver price today, 16 April: Check live rates of 24K, 22K gold and 999 silver in Delhi, Mumbai, other cities",
-      "summary": "On April 16, gold prices in India gained slightly due to the US dollar's weakness. Check retail rates of gold and silver in major cities of the country.",
-      "link": "https://www.livemint.com/market/commodities/gold-and-silver-price-today-16-april-check-live-rates-of-24k-22k-gold-and-999-silver-in-delhi-mumbai-kolkata-pune-11776311731948.html",
-      "published_ts": 1776324670.0,
-      "published_iso": "2026-04-16T07:31:10+00:00",
-      "source": "Mint Markets",
-      "weight": 1.2,
-      "category": "market",
-      "sentiment": "NEUTRAL",
-      "sentiment_score": 0.0,
-      "sentiment_raw": 0,
-      "bull_terms": [
-        "gained"
-      ],
-      "bear_terms": [
-        "weakness"
-      ],
-      "matched_tickers": [
-        "RELIANCE"
-      ],
-      "matched_sectors": []
-    },
-    {
       "title": "Lenskart\u2019s viral style guide row: Bindi, tilak banned but hijab allowed? Peyush Bansal responds",
       "summary": "Peyush Bansal has dismissed allegations that Lenkart allows employees to wear a hijab and turban, but restricts symbols such as a bindi, tilak or a kalawa. Details here.&nbsp;",
       "link": "https://www.livemint.com/companies/news/lenskarts-viral-style-guide-row-bindi-tilak-banned-but-hijab-allowed-peyush-bansal-responds-11776319876088.html",
@@ -3877,25 +4378,6 @@
       "matched_sectors": []
     },
     {
-      "title": "New focus to be on attracting domestic capital, says IVCA chair Srini Srinivasan",
-      "summary": "New IVCA chair Srini Srinivasan outlines plans to channel pension and insurance money into AIFs, ease accreditation norms, and address private credit risks amid industry shifts.",
-      "link": "https://www.livemint.com/market/new-focus-to-be-on-attracting-domestic-capital-says-ivca-chair-srini-srinivasan-11776316913414.html",
-      "published_ts": 1776323522.0,
-      "published_iso": "2026-04-16T07:12:02+00:00",
-      "source": "Mint Markets",
-      "weight": 1.2,
-      "category": "market",
-      "sentiment": "MILDLY_BEARISH",
-      "sentiment_score": -1.2,
-      "sentiment_raw": -1,
-      "bull_terms": [],
-      "bear_terms": [
-        "risks"
-      ],
-      "matched_tickers": [],
-      "matched_sectors": []
-    },
-    {
       "title": "China's economy grows faster than expected despite Iran war",
       "summary": "The better-than-expected GDP data comes as Asian countries have been hit hard by the impact of the conflict.",
       "link": "https://www.bbc.com/news/articles/c4gxjpekk19o?at_medium=RSS&at_campaign=rss",
@@ -3913,69 +4395,6 @@
       "matched_sectors": []
     },
     {
-      "title": "Small-cap stock under \u20b950 extends rally for second straight session, rises 30% this month; do you own?",
-      "summary": "MIC Electronics have delivered a strong short-term performance. Over the past one week, the stock has gained 7.28%, while in the last 2 weeks it has surged 25.22%. The upward momentum has remained intact over a one-month period as well, with the stock rising 29.41%.",
-      "link": "https://www.livemint.com/market/stock-market-news/smallcap-stock-under-rs-50-extends-rally-for-second-straight-session-rises-30-this-month-do-you-own-11776321362425.html",
-      "published_ts": 1776323264.0,
-      "published_iso": "2026-04-16T07:07:44+00:00",
-      "source": "Mint Markets",
-      "weight": 1.2,
-      "category": "market",
-      "sentiment": "BULLISH",
-      "sentiment_score": 4.8,
-      "sentiment_raw": 4,
-      "bull_terms": [
-        "rally",
-        "rises",
-        "gained"
-      ],
-      "bear_terms": [],
-      "matched_tickers": [],
-      "matched_sectors": [
-        "Telecom"
-      ]
-    },
-    {
-      "title": "Vedanta shares hit an all-time high, rising eleven days in a row; brokerages predict strong Q4 results",
-      "summary": "Vedanta share price today touched an all-time high of \u20b9787.85 apiece on the NSE, rising for the 11th straight session",
-      "link": "https://www.livemint.com/market/stock-market-news/stocks-to-buy-today-vedanta-share-hit-an-all-time-high-rising-eleven-days-in-a-row-brokerages-predict-strong-q4-results-11776318770473.html",
-      "published_ts": 1776323027.0,
-      "published_iso": "2026-04-16T07:03:47+00:00",
-      "source": "Mint Markets",
-      "weight": 1.2,
-      "category": "market",
-      "sentiment": "MILDLY_BULLISH",
-      "sentiment_score": 2.4,
-      "sentiment_raw": 2,
-      "bull_terms": [
-        "all-time high"
-      ],
-      "bear_terms": [],
-      "matched_tickers": [
-        "VEDL"
-      ],
-      "matched_sectors": []
-    },
-    {
-      "title": "Taiwan overtakes UK in stock market value on AI chip boom",
-      "summary": "Crossover comes as chipmaker TSMC reports record first-quarter profit",
-      "link": "https://www.ft.com/content/4e647b69-f130-4864-944c-3b4c0fcb1dbc",
-      "published_ts": 1776323016.0,
-      "published_iso": "2026-04-16T07:03:36+00:00",
-      "source": "FT Markets",
-      "weight": 0.9,
-      "category": "global",
-      "sentiment": "NEUTRAL",
-      "sentiment_score": 0.9,
-      "sentiment_raw": 1,
-      "bull_terms": [
-        "profit"
-      ],
-      "bear_terms": [],
-      "matched_tickers": [],
-      "matched_sectors": []
-    },
-    {
       "title": "UK economy grew 0.5% in February, beating economists' expectations by a long shot",
       "summary": "Economists polled by Reuters expected U.K. gross domestic product (GDP) to have expanded by 0.1% month-on-month.",
       "link": "https://www.cnbc.com/2026/04/16/uk-gdp-march-2026-iran-war.html",
@@ -3988,46 +4407,6 @@
       "sentiment_score": 0.0,
       "sentiment_raw": 0,
       "bull_terms": [],
-      "bear_terms": [],
-      "matched_tickers": [],
-      "matched_sectors": []
-    },
-    {
-      "title": "Vodafone Idea, JP Power, Ola Electric, Reliance Power among most traded stocks on NSE today, 16 April 2026",
-      "summary": "Vodafone Idea, Jaiprakash Power Ventures (JP Power), Ola Electric Mobility, Reliance Power, YES Bank, and Suzlon Energy were among the most traded stocks, or most active stocks in terms of volume, on the NSE.",
-      "link": "https://www.livemint.com/market/stock-market-news/vodafone-idea-jp-power-ola-electric-reliance-power-among-most-traded-stocks-on-nse-today-16-april-2026-11776320085037.html",
-      "published_ts": 1776322553.0,
-      "published_iso": "2026-04-16T06:55:53+00:00",
-      "source": "Mint Markets",
-      "weight": 1.2,
-      "category": "market",
-      "sentiment": "NEUTRAL",
-      "sentiment_score": 0.0,
-      "sentiment_raw": 0,
-      "bull_terms": [],
-      "bear_terms": [],
-      "matched_tickers": [
-        "RELIANCE",
-        "SUZLON",
-        "OLAELEC"
-      ],
-      "matched_sectors": []
-    },
-    {
-      "title": "TSMC Q1 Results: World's largest contract chipmaker posts 58% YoY rise in profit to record $18.2 billion",
-      "summary": "Taiwan Semiconductor Manufacturing Co , whose customers include Nvidia and Apple, saw January-March net profit rise to T$572.5 billion ($18.2 billion).",
-      "link": "https://www.livemint.com/market/stock-market-news/tsmc-q1-results-worlds-largest-contract-chipmaker-posts-58-yoy-rise-in-profit-to-record-18-2-billion-11776321974174.html",
-      "published_ts": 1776322103.0,
-      "published_iso": "2026-04-16T06:48:23+00:00",
-      "source": "Mint Markets",
-      "weight": 1.2,
-      "category": "market",
-      "sentiment": "MILDLY_BULLISH",
-      "sentiment_score": 1.2,
-      "sentiment_raw": 1,
-      "bull_terms": [
-        "profit"
-      ],
       "bear_terms": [],
       "matched_tickers": [],
       "matched_sectors": []
@@ -4071,47 +4450,6 @@
       ]
     },
     {
-      "title": "Indian LNG importers scoop up spot shipments after prices recede",
-      "summary": "The purchases mark a turnaround after Indian buyers had earlier limited spot purchases and canceled tenders because offers were too expensive",
-      "link": "https://www.thehindubusinessline.com/markets/commodities/indian-lng-importers-scoop-up-spot-shipments-after-prices-recede/article70867991.ece",
-      "published_ts": 1776321760.0,
-      "published_iso": "2026-04-16T06:42:40+00:00",
-      "source": "Hindu BusinessLine",
-      "weight": 1.1,
-      "category": "market",
-      "sentiment": "MILDLY_BULLISH",
-      "sentiment_score": 1.1,
-      "sentiment_raw": 1,
-      "bull_terms": [
-        "up"
-      ],
-      "bear_terms": [],
-      "matched_tickers": [],
-      "matched_sectors": []
-    },
-    {
-      "title": "Up 3000% in five years! Multibagger stock hits upper circuit after receipt of \u20b9202 crore order",
-      "summary": "Elitecon International share price has fallen by over 22% in one month, and has declined by nearly 60% on a year-to-date (YTD) basis amid a volatile stock market. The small-cap stock has dropped 75% in six months, while it has risen 5% in one year.",
-      "link": "https://www.livemint.com/market/stock-market-news/up-3000-in-five-years-multibagger-stock-elitecon-international-hits-upper-circuit-after-receipt-of-rs-202-crore-order-11776321372128.html",
-      "published_ts": 1776321727.0,
-      "published_iso": "2026-04-16T06:42:07+00:00",
-      "source": "Mint Markets",
-      "weight": 1.2,
-      "category": "market",
-      "sentiment": "MILDLY_BULLISH",
-      "sentiment_score": 2.4,
-      "sentiment_raw": 2,
-      "bull_terms": [
-        "multibagger",
-        "up"
-      ],
-      "bear_terms": [
-        "dropped"
-      ],
-      "matched_tickers": [],
-      "matched_sectors": []
-    },
-    {
       "title": "Tejas Networks flags \u2018disappointing\u2019 FY26 as BSNL slowdown, order delays hit revenue",
       "summary": "Completion of the 4G rollout and delayed orders pushed the Tata-backed firm into losses in FY26, with inventory overhang and a pending BSNL add-on weighing on recovery.",
       "link": "https://www.livemint.com/companies/company-results/tejas-networks-flags-disappointing-fy26-bsnl-slowdown-order-delays-hit-revenue-11776316895411.html",
@@ -4136,31 +4474,11 @@
       "matched_sectors": []
     },
     {
-      "title": "Stocks to buy: Nagaraj Shetti recommends Syrma, Transformers and Rectifiers shares to buy",
-      "summary": "According to Nagaraj Shetti, Nifty 50 could reach towards the next hurdle of 24,800 levels in the near term. Immediate support is placed at 24,100 levels. Today, The Nifty 50 rose 0.13% to 24,263.85, while the Sensex gained 0.15% to 78,228.08 as of 11:41 IST.",
-      "link": "https://www.livemint.com/market/stock-market-news/stocks-to-buy-nagaraj-shetti-recommends-syrma-transformers-and-rectifiers-shares-to-buy-11776317769477.html",
-      "published_ts": 1776320339.0,
-      "published_iso": "2026-04-16T06:18:59+00:00",
-      "source": "Mint Markets",
-      "weight": 1.2,
-      "category": "market",
-      "sentiment": "MILDLY_BULLISH",
-      "sentiment_score": 2.4,
-      "sentiment_raw": 2,
-      "bull_terms": [
-        "rose",
-        "gained"
-      ],
-      "bear_terms": [],
-      "matched_tickers": [],
-      "matched_sectors": []
-    },
-    {
-      "title": "CNBC Daily Open: Trading the truce and the Lebanon dilemma",
-      "summary": "The S&P, Nasdaq and Nikkei all top new record highs on optimism of an extended truce between the U.S. and Israel, as well as talks with Lebanon.",
-      "link": "https://www.cnbc.com/2026/04/16/cnbc-daily-open-trading-the-truce-and-the-lebanon-dilemma-.html",
-      "published_ts": 1776319051.0,
-      "published_iso": "2026-04-16T05:57:31+00:00",
+      "title": "Inside India newsletter: Small towns are powering e-commerce's fastest-growing market, dominated by Amazon, Walmart unit",
+      "summary": "Small towns are fueling India\u2019s e\u2011commerce surge, with Amazon and Flipkart chasing new shoppers, faster delivery and rising aspirational demand.",
+      "link": "https://www.cnbc.com/2026/04/15/inside-india-newsletter-small-towns-amazon-walmart-ecommerce.html",
+      "published_ts": 1776317863.0,
+      "published_iso": "2026-04-16T05:37:43+00:00",
       "source": "CNBC World",
       "weight": 0.8,
       "category": "global",
@@ -4168,7 +4486,7 @@
       "sentiment_score": 1.6,
       "sentiment_raw": 2,
       "bull_terms": [
-        "record high"
+        "surge"
       ],
       "bear_terms": [],
       "matched_tickers": [],
@@ -4197,59 +4515,6 @@
       ]
     },
     {
-      "title": "Does AI want to be free?",
-      "summary": "Plus, global imbalances and global crises",
-      "link": "https://www.ft.com/content/4ce24508-b146-417f-a0ca-749c2ed39ffa",
-      "published_ts": 1776317401.0,
-      "published_iso": "2026-04-16T05:30:01+00:00",
-      "source": "FT Markets",
-      "weight": 0.9,
-      "category": "global",
-      "sentiment": "NEUTRAL",
-      "sentiment_score": 0.0,
-      "sentiment_raw": 0,
-      "bull_terms": [],
-      "bear_terms": [],
-      "matched_tickers": [],
-      "matched_sectors": []
-    },
-    {
-      "title": "Limelight Lab Grown Diamonds plans 25 stores in first quarter",
-      "summary": "A media statement said this aggressive scale-up reinforces Limelight\u2019s leadership in the lab grown diamond category and its mission to make sustainable, future-forward luxury accessible to a wider audience",
-      "link": "https://www.thehindubusinessline.com/companies/limelight-lab-grown-diamonds-plans-25-stores-in-first-quarter/article70867665.ece",
-      "published_ts": 1776317383.0,
-      "published_iso": "2026-04-16T05:29:43+00:00",
-      "source": "Hindu BusinessLine",
-      "weight": 1.1,
-      "category": "market",
-      "sentiment": "MILDLY_BULLISH",
-      "sentiment_score": 1.1,
-      "sentiment_raw": 1,
-      "bull_terms": [
-        "up"
-      ],
-      "bear_terms": [],
-      "matched_tickers": [],
-      "matched_sectors": []
-    },
-    {
-      "title": "China\u2019s battery champion pushes deeper into mining",
-      "summary": "CATL puts $4.4bn into new subsidiary to strengthen supply chain self-sufficiency",
-      "link": "https://www.ft.com/content/d3d721cf-7f38-4d39-ac31-995697d6e8c3",
-      "published_ts": 1776316924.0,
-      "published_iso": "2026-04-16T05:22:04+00:00",
-      "source": "FT Markets",
-      "weight": 0.9,
-      "category": "global",
-      "sentiment": "NEUTRAL",
-      "sentiment_score": 0.0,
-      "sentiment_raw": 0,
-      "bull_terms": [],
-      "bear_terms": [],
-      "matched_tickers": [],
-      "matched_sectors": []
-    },
-    {
       "title": "Fake damage and imaginary watches - how AI images are being used in insurance scams",
       "summary": "An insurer reports a 71% rise in fraudulent claims, driven partly by an increase in faked images.",
       "link": "https://www.bbc.com/news/articles/cm2rr9pg4jzo?at_medium=RSS&at_campaign=rss",
@@ -4261,23 +4526,6 @@
       "sentiment": "NEUTRAL",
       "sentiment_score": 0.0,
       "sentiment_raw": 0,
-      "bull_terms": [],
-      "bear_terms": [],
-      "matched_tickers": [],
-      "matched_sectors": []
-    },
-    {
-      "title": "UK finance minister Rachel Reeves blasts Trump administration over economic impact of Iran war",
-      "summary": "U.K. Finance Minister Rachel Reeves called for an immediate de-escalation to the Middle East conflict on Wednesday.",
-      "link": "https://www.cnbc.com/2026/04/15/iran-war-trump-us-uk-rachel-reeves-uk-imf-oil-energy.html",
-      "published_ts": 1776315907.0,
-      "published_iso": "2026-04-16T05:05:07+00:00",
-      "source": "CNBC World",
-      "weight": 0.8,
-      "category": "global",
-      "sentiment": "MILDLY_BEARISH",
-      "sentiment_score": -2.4,
-      "sentiment_raw": -3,
       "bull_terms": [],
       "bear_terms": [],
       "matched_tickers": [],
@@ -4301,95 +4549,6 @@
       "matched_sectors": [
         "Oil & Gas"
       ]
-    },
-    {
-      "title": "Spain\u2019s Repsol wins back control of Venezuelan oil operations",
-      "summary": "Deal with South American nation\u2019s government includes guaranteed payment system and plan to triple production",
-      "link": "https://www.ft.com/content/622a60db-6e0f-40bb-835c-8542bd83d72a",
-      "published_ts": 1776312041.0,
-      "published_iso": "2026-04-16T04:00:41+00:00",
-      "source": "FT Markets",
-      "weight": 0.9,
-      "category": "global",
-      "sentiment": "NEUTRAL",
-      "sentiment_score": 0.0,
-      "sentiment_raw": 0,
-      "bull_terms": [],
-      "bear_terms": [],
-      "matched_tickers": [],
-      "matched_sectors": []
-    },
-    {
-      "title": "DR Congo to stockpile critical minerals with new reserves",
-      "summary": "Strategic holdings of cobalt, coltan and germanium are latest step by African countries for greater leverage over metals",
-      "link": "https://www.ft.com/content/d0f19c7c-2f5c-4865-a326-e4765bbcec58",
-      "published_ts": 1776312034.0,
-      "published_iso": "2026-04-16T04:00:34+00:00",
-      "source": "FT Markets",
-      "weight": 0.9,
-      "category": "global",
-      "sentiment": "NEUTRAL",
-      "sentiment_score": 0.0,
-      "sentiment_raw": 0,
-      "bull_terms": [],
-      "bear_terms": [],
-      "matched_tickers": [],
-      "matched_sectors": []
-    },
-    {
-      "title": "Gulf states turn to private deals in $10bn wartime borrowing spree",
-      "summary": "Abu Dhabi, Qatar and Kuwait avoid public markets for fundraising as Iran conflict delivers economic hit",
-      "link": "https://www.ft.com/content/3b927d8b-4c6b-414a-bb85-3d6070495df7",
-      "published_ts": 1776312022.0,
-      "published_iso": "2026-04-16T04:00:22+00:00",
-      "source": "FT Markets",
-      "weight": 0.9,
-      "category": "global",
-      "sentiment": "NEUTRAL",
-      "sentiment_score": -0.9,
-      "sentiment_raw": -1,
-      "bull_terms": [],
-      "bear_terms": [],
-      "matched_tickers": [],
-      "matched_sectors": []
-    },
-    {
-      "title": "How the Strait of Hormuz will change Iran\u2019s regime",
-      "summary": "A system fixated on building up military deterrents has discovered its most important point of leverage over the world",
-      "link": "https://www.ft.com/content/f3c8decc-0c59-49fa-9854-ddd9103279f4",
-      "published_ts": 1776312022.0,
-      "published_iso": "2026-04-16T04:00:22+00:00",
-      "source": "FT Markets",
-      "weight": 0.9,
-      "category": "global",
-      "sentiment": "NEUTRAL",
-      "sentiment_score": 0.9,
-      "sentiment_raw": 1,
-      "bull_terms": [
-        "up"
-      ],
-      "bear_terms": [],
-      "matched_tickers": [],
-      "matched_sectors": [
-        "Telecom"
-      ]
-    },
-    {
-      "title": "Pensions drawdown: can the 4 Per Cent Rule survive stagflation?",
-      "summary": "Ensuring a fund lasts at least 30 years is trickier with asset values falling and prices soaring",
-      "link": "https://www.ft.com/content/d6a0aaca-949c-420d-9431-ec9c170e6a05",
-      "published_ts": 1776312022.0,
-      "published_iso": "2026-04-16T04:00:22+00:00",
-      "source": "FT Markets",
-      "weight": 0.9,
-      "category": "global",
-      "sentiment": "NEUTRAL",
-      "sentiment_score": 0.0,
-      "sentiment_raw": 0,
-      "bull_terms": [],
-      "bear_terms": [],
-      "matched_tickers": [],
-      "matched_sectors": []
     },
     {
       "title": "'Unprecedented' fire at Australian oil refinery to affect nation's petrol supplies",
@@ -4771,26 +4930,6 @@
       "matched_sectors": []
     },
     {
-      "title": "World Bank president: Prepare for months of disruption, even after Hormuz Strait reopens",
-      "summary": "It will take \"a few months for things to come back\" once the Strait of Hormuz is no longer effectively closed, Banga said.",
-      "link": "https://www.cnbc.com/2026/04/15/world-bank-ajay-banga-iran-war-hormuz-strait.html",
-      "published_ts": 1776277428.0,
-      "published_iso": "2026-04-15T18:23:48+00:00",
-      "source": "CNBC World",
-      "weight": 0.8,
-      "category": "global",
-      "sentiment": "NEUTRAL",
-      "sentiment_score": 0.0,
-      "sentiment_raw": 0,
-      "bull_terms": [],
-      "bear_terms": [],
-      "matched_tickers": [],
-      "matched_sectors": [
-        "Banking",
-        "Telecom"
-      ]
-    },
-    {
       "title": "US\u2019 301 probes: India denies allegations, seeks termination of both investigations",
       "summary": "India has rejected allegations by the US Trade Representative under its Section 301 probe, denying claims of \u201cstructural excess capacity\u201d in sectors such as petrochemicals and textiles. It argued that its $42 billion trade surplus with the US is a macroeconomic outcome shaped by multiple factors and not due to unfair practices.",
       "link": "https://economictimes.indiatimes.com/news/economy/foreign-trade/us-301-probes-india-denies-allegations-seeks-termination-of-both-investigations/articleshow/130291361.cms",
@@ -5114,23 +5253,6 @@
       "matched_sectors": []
     },
     {
-      "title": "India\u2019s unemployment hits five-month high of 5.1% in March: PLFS",
-      "summary": "In March, India's unemployment rate surged to 5.1%, reaching its highest level in five months. Urban areas experienced a notable increase in joblessness, contributing to the rise in the overall unemployment figure. Women continue to face greater unemployment challenges than men, while the youth demographic also showed a troubling uptick in joblessness.",
-      "link": "https://economictimes.indiatimes.com/news/economy/indicators/indias-unemployment-hits-five-month-high-of-5-1-in-march-plfs/articleshow/130282341.cms",
-      "published_ts": 1776252408.0,
-      "published_iso": "2026-04-15T11:26:48+00:00",
-      "source": "ET Economy",
-      "weight": 1.2,
-      "category": "macro",
-      "sentiment": "NEUTRAL",
-      "sentiment_score": 0.0,
-      "sentiment_raw": 0,
-      "bull_terms": [],
-      "bear_terms": [],
-      "matched_tickers": [],
-      "matched_sectors": []
-    },
-    {
       "title": "AA and BSM ordered to refund learner drivers for hidden fees",
       "summary": "The owner of the driving schools has been fined for failing to disclose fees upfront online.",
       "link": "https://www.bbc.com/news/articles/c07000dzg9do?at_medium=RSS&at_campaign=rss",
@@ -5246,63 +5368,6 @@
         "up"
       ],
       "bear_terms": [],
-      "matched_tickers": [],
-      "matched_sectors": []
-    },
-    {
-      "title": "Racing driver Jehan Daruvala changes lanes, joins Sterling and Wilson Group to redefine his 'fast track' career",
-      "summary": "The fourth-generation scion, 27, has swapped race suits for a corporate role, embracing a new kind of 'fast track' by securing deals and driving projects in his family's growing renewable energy and data centre empire.",
-      "link": "https://www.livemint.com/companies/news/racing-driver-jehan-daruvala-sterling-and-wilson-group-fourth-generation-scion-solar-plants-data-centres-11776164617271.html",
-      "published_ts": 1776212824.0,
-      "published_iso": "2026-04-15T00:27:04+00:00",
-      "source": "Mint Companies",
-      "weight": 1.1,
-      "category": "market",
-      "sentiment": "NEUTRAL",
-      "sentiment_score": 0.0,
-      "sentiment_raw": 0,
-      "bull_terms": [],
-      "bear_terms": [],
-      "matched_tickers": [],
-      "matched_sectors": [
-        "Power"
-      ]
-    },
-    {
-      "title": "Rising digital ad costs push brands to rethink e-commerce growth strategy",
-      "summary": "Brands are moving beyond marketplace-led growth, focusing on retention and efficiency as declining ad returns and rising costs push a shift towards more sustainable business models.",
-      "link": "https://www.livemint.com/companies/rising-digital-ad-costs-push-brands-to-rethink-e-commerce-growth-strategy-11776158925396.html",
-      "published_ts": 1776209443.0,
-      "published_iso": "2026-04-14T23:30:43+00:00",
-      "source": "Mint Companies",
-      "weight": 1.1,
-      "category": "market",
-      "sentiment": "MILDLY_BULLISH",
-      "sentiment_score": 1.1,
-      "sentiment_raw": 1,
-      "bull_terms": [
-        "growth"
-      ],
-      "bear_terms": [],
-      "matched_tickers": [],
-      "matched_sectors": []
-    },
-    {
-      "title": "Help to Buy mostly helped high earners, IFS says",
-      "summary": "People with lower incomes benefitted less from the house-buying scheme than those with high incomes, the influential think tank says.",
-      "link": "https://www.bbc.com/news/articles/cy511kd5lkwo?at_medium=RSS&at_campaign=rss",
-      "published_ts": 1776207805.0,
-      "published_iso": "2026-04-14T23:03:25+00:00",
-      "source": "BBC Business",
-      "weight": 0.8,
-      "category": "global",
-      "sentiment": "NEUTRAL",
-      "sentiment_score": -0.8,
-      "sentiment_raw": -1,
-      "bull_terms": [],
-      "bear_terms": [
-        "lower"
-      ],
       "matched_tickers": [],
       "matched_sectors": []
     }
