@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-17T17:04:36.784743+05:30",
+  "generated_at": "2026-04-17T19:31:51.984653+05:30",
   "market_date": "2026-04-17",
   "analysis_version": "5.0-rules+news+forecast+narrative",
   "engine": "rules_engine_v5_news_fusion",
@@ -3470,10 +3470,10 @@
     }
   ],
   "daily_brief": {
-    "generated_at": "2026-04-17T17:04:53.868103+05:30",
+    "generated_at": "2026-04-17T19:32:09.478989+05:30",
     "date": "2026-04-17",
     "source": "rules_engine_v4_news_fusion",
-    "headline": "SIDEWAYS tape \u2014 3 ADDs, 0 cautious; 157 macro items in focus",
+    "headline": "SIDEWAYS tape \u2014 3 ADDs, 1 cautious; 159 macro items in focus",
     "regime": {
       "label": "SIDEWAYS",
       "breadth_pct": 42.9,
@@ -3483,9 +3483,19 @@
     },
     "macro_context": {
       "label": "NEUTRAL",
-      "score": -0.26,
-      "count": 157,
+      "score": -0.07,
+      "count": 159,
       "highlights": [
+        {
+          "title": "Lloyds Metals among 8 midcap-cap stocks that hit 52-week highs & rallied up to 31% in a month",
+          "source": "ET Markets",
+          "category": "market",
+          "sentiment": "BULLISH",
+          "sectors": [
+            "Metals"
+          ],
+          "link": "https://economictimes.indiatimes.com/markets/stocks/news/lloyds-metals-among-8-midcap-cap-stocks-that-hit-52-week-highs-amp-rallied-up-to-31-in-a-month/slideshow/130332943.cms"
+        },
         {
           "title": "YES Bank Q4 preview: NII to grow up to 12%; PAT estimates diverge. 8 things to watch",
           "source": "ET Markets",
@@ -3523,36 +3533,30 @@
           "link": "https://www.cnbc.com/2026/04/16/chocolate-barry-callebaut-profit-earnings-cocoa-prices-switzerland.html"
         },
         {
-          "title": "Seed industry seeks policy support amid input cost increase",
-          "source": "ET Economy",
-          "category": "macro",
+          "title": "US stocks today: Dow soars over 600 points as Iran announces opening of Strait of Hormuz",
+          "source": "ET Markets",
+          "category": "market",
           "sentiment": "BULLISH",
-          "sectors": [],
-          "link": "https://economictimes.indiatimes.com/news/economy/agriculture/seed-industry-seeks-policy-support-amid-input-cost-increase/articleshow/130317391.cms"
-        },
-        {
-          "title": "Europe to face fuel shortage? Energy agency head warns \u2018maybe 6 weeks of jet fuel left\u2019 \u2014 Here's all we know",
-          "source": "Mint Economy",
-          "category": "macro",
-          "sentiment": "BEARISH",
-          "sectors": [],
-          "link": "https://www.livemint.com/economy/europe-fuel-shortage-iea-energy-agency-head-warn-maybe-6-weeks-jet-fuel-left-west-asia-war-strait-of-hormuz-block-supply-11776350929365.html"
+          "sectors": [
+            "Telecom"
+          ],
+          "link": "https://economictimes.indiatimes.com/markets/us-stocks/news/us-stocks-today-dow-soars-over-600-points-as-iran-announces-opening-of-strait-of-hormuz/articleshow/130334726.cms"
         }
       ]
     },
-    "key_insight": "Range-bound tape with 43% breadth. No directional edge \u2014 let existing positions work, avoid fresh breakout trades, save dry powder for the next regime shift. Macro flow is neutral with 157 policy/global items in focus \u2014 factor this into position sizing. Sector dispersion is wide: Power leads at 58 while Conglomerate lags at 9 \u2014 a stock-picker's tape.",
+    "key_insight": "Range-bound tape with 43% breadth. No directional edge \u2014 let existing positions work, avoid fresh breakout trades, save dry powder for the next regime shift. Macro flow is neutral with 159 policy/global items in focus \u2014 factor this into position sizing. Sector dispersion is wide: Power leads at 58 while Conglomerate lags at 9 \u2014 a stock-picker's tape.",
     "narrative": [
       "Regime: SIDEWAYS \u00b7 breadth 43% \u00b7 median momentum +0.8% \u00b7 ATR 3.0%",
-      "Book: 3 ADD \u00b7 0 ACCUMULATE \u00b7 46 HOLD \u00b7 0 EXIT",
-      "Macro tone: NEUTRAL from 157 items across 11 sources",
+      "Book: 3 ADD \u00b7 0 ACCUMULATE \u00b7 45 HOLD \u00b7 1 EXIT",
+      "Macro tone: NEUTRAL from 159 items across 11 sources",
       "Strongest sector: Power (avg score 58)"
     ],
     "market_pulse": {
       "total_analyzed": 49,
       "strong_buys": 0,
       "actionable_buys": 3,
-      "holds": 46,
-      "risk_alerts": 0,
+      "holds": 45,
+      "risk_alerts": 1,
       "earnings_blackouts": 0,
       "do_not_trade": 0
     },
@@ -4100,20 +4104,21 @@
         "verdict": "HOLD"
       },
       {
+        "symbol": "HDFCBANK",
+        "name": "HDFC Bank",
+        "action": "EXIT",
+        "flags": [
+          "rule \u2192 EXIT",
+          "negative news (1)"
+        ],
+        "verdict": "EXIT"
+      },
+      {
         "symbol": "TRENT",
         "name": "Trent",
         "action": "HOLD",
         "flags": [
           "RSI 78 overbought"
-        ],
-        "verdict": "HOLD"
-      },
-      {
-        "symbol": "HAL",
-        "name": "Hindustan Aeronautics",
-        "action": "HOLD",
-        "flags": [
-          "RSI 83 overbought"
         ],
         "verdict": "HOLD"
       }
@@ -4187,7 +4192,7 @@
         "avg_score": 39.0,
         "count": 1,
         "trend": "down",
-        "news_count": 14,
+        "news_count": 13,
         "news_label": "BEARISH"
       },
       {
@@ -4195,24 +4200,24 @@
         "avg_score": 35.7,
         "count": 3,
         "trend": "down",
-        "news_count": 1,
-        "news_label": "NEUTRAL"
+        "news_count": 3,
+        "news_label": "BULLISH"
       },
       {
         "sector": "FMCG",
         "avg_score": 32.2,
         "count": 5,
         "trend": "down",
-        "news_count": 0,
-        "news_label": "NEUTRAL"
+        "news_count": 1,
+        "news_label": "BULLISH"
       },
       {
         "sector": "Banking",
-        "avg_score": 32.0,
+        "avg_score": 31.5,
         "count": 6,
         "trend": "down",
-        "news_count": 20,
-        "news_label": "NEUTRAL"
+        "news_count": 22,
+        "news_label": "BULLISH"
       },
       {
         "sector": "NBFC",
@@ -4240,6 +4245,17 @@
       }
     ],
     "action_plan": [
+      {
+        "priority": 1,
+        "type": "EXIT",
+        "symbol": "HDFCBANK",
+        "name": "HDFC Bank",
+        "price": 799.9,
+        "instruction": "Market order at open \u2014 rule ladder triggered.",
+        "reason": "RSI ideal zone (57.5)",
+        "confidence": "LOW",
+        "verdict": "EXIT"
+      },
       {
         "priority": 3,
         "type": "ADD",
@@ -4275,6 +4291,18 @@
       }
     ],
     "news_highlights": [
+      {
+        "title": "Lloyds Metals among 8 midcap-cap stocks that hit 52-week highs & rallied up to 31% in a month",
+        "source": "ET Markets",
+        "category": "market",
+        "sentiment": "BULLISH",
+        "tickers": [],
+        "sectors": [
+          "Metals"
+        ],
+        "published": "2026-04-17T12:20:41+00:00",
+        "link": "https://economictimes.indiatimes.com/markets/stocks/news/lloyds-metals-among-8-midcap-cap-stocks-that-hit-52-week-highs-amp-rallied-up-to-31-in-a-month/slideshow/130332943.cms"
+      },
       {
         "title": "YES Bank Q4 preview: NII to grow up to 12%; PAT estimates diverge. 8 things to watch",
         "source": "ET Markets",
@@ -4320,6 +4348,16 @@
         "link": "https://economictimes.indiatimes.com/markets/stocks/news/windlas-biotech-announces-rs-47-crore-buyback-at-rs-1000/share-sets-april-24-as-record-date/articleshow/130329363.cms"
       },
       {
+        "title": "Up to 66% crash: How West Asia war battered India\u2019s top Gulf trade",
+        "source": "Mint Economy",
+        "category": "macro",
+        "sentiment": "BEARISH",
+        "tickers": [],
+        "sectors": [],
+        "published": "2026-04-16T07:34:03+00:00",
+        "link": "https://www.livemint.com/economy/west-asia-war-india-trade-gulf-countries-export-import-uae-saudi-arabia-qatar-iraq-11776321025491.html"
+      },
+      {
         "title": "VST Industries shares surge 19%: What's behind the rally in this Radhakishan Damani-owned stock?",
         "source": "Mint Markets",
         "category": "market",
@@ -4358,39 +4396,7 @@
         "link": "https://www.livemint.com/market/stock-market-news/rajesh-palviya-of-axis-sec-suggests-tata-power-polycab-bel-shares-to-buy-on-april-17-11776399821026.html"
       },
       {
-        "title": "Up to 66% crash: How West Asia war battered India\u2019s top Gulf trade",
-        "source": "Mint Economy",
-        "category": "macro",
-        "sentiment": "BEARISH",
-        "tickers": [],
-        "sectors": [],
-        "published": "2026-04-16T07:34:03+00:00",
-        "link": "https://www.livemint.com/economy/west-asia-war-india-trade-gulf-countries-export-import-uae-saudi-arabia-qatar-iraq-11776321025491.html"
-      },
-      {
-        "title": "Tejas Networks flags \u2018disappointing\u2019 FY26 as BSNL slowdown, order delays hit revenue",
-        "source": "Mint Companies",
-        "category": "market",
-        "sentiment": "BEARISH",
-        "tickers": [],
-        "sectors": [],
-        "published": "2026-04-17T11:34:37.393507+00:00",
-        "link": "https://www.livemint.com/companies/company-results/tejas-networks-flags-disappointing-fy26-bsnl-slowdown-order-delays-hit-revenue-11776316895411.html"
-      },
-      {
-        "title": "After a decade of bankruptcy law, top conglomerates Adani, JSW, Reliance, Tata emerge as biggest winners",
-        "source": "Mint Companies",
-        "category": "market",
-        "sentiment": "BEARISH",
-        "tickers": [
-          "RELIANCE"
-        ],
-        "sectors": [],
-        "published": "2026-04-17T11:34:37.393611+00:00",
-        "link": "https://www.livemint.com/companies/after-a-decade-of-bankruptcy-law-top-conglomerates-adani-jsw-reliance-tata-emerge-as-biggest-winners-11776247875439.html"
-      },
-      {
-        "title": "Q4 Results Today Live: Mastek Q4 profit up y-o-y, Bajaj Consumer Care Q4 profit soars, Jio Financial, Aditya Birla Money to announce Q4 results, Wipro & HDFC Life top losers",
+        "title": "Q4 Results Today Highlights: Mastek Q4 profit up y-o-y, Bajaj Consumer Care Q4 profit soars, Jio Financial, Aditya Birla Money to announce Q4 results, Wipro & HDFC Life top losers",
         "source": "Hindu BusinessLine",
         "category": "market",
         "sentiment": "BULLISH",
@@ -4399,8 +4405,18 @@
           "WIPRO"
         ],
         "sectors": [],
-        "published": "2026-04-17T10:35:56+00:00",
+        "published": "2026-04-17T12:55:23+00:00",
         "link": "https://www.thehindubusinessline.com/markets/q4-results-today-live-updates-mastek-bajaj-consumer-care-jio-financial-wipro-hdfc-amc-hdfc-life-waaree-hathway-aditya-birla-money-results-17-april-2026/article70872157.ece"
+      },
+      {
+        "title": "Angel One shares jump 10% after strong Q4 earnings growth",
+        "source": "Hindu BusinessLine",
+        "category": "market",
+        "sentiment": "BULLISH",
+        "tickers": [],
+        "sectors": [],
+        "published": "2026-04-17T11:35:11+00:00",
+        "link": "https://www.thehindubusinessline.com/markets/stock-markets/angel-one-shares-gain-after-strong-q4-earnings-growth/article70872300.ece"
       },
       {
         "title": "Waaree Renewable shares rally 13% on strong Q4 earnings",
@@ -4416,11 +4432,11 @@
       }
     ],
     "news_stats": {
-      "total_items": 271,
+      "total_items": 273,
       "sources": 11,
       "with_tickers": 56,
-      "bullish": 80,
-      "bearish": 69
+      "bullish": 81,
+      "bearish": 68
     }
   }
 }
