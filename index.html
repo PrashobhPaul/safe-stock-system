@@ -2,6 +2,53 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <script>
+    /*
+     * SW SELF-HEAL — runs before anything else.
+     * If a previous service worker is stuck (e.g. the v5 deadlock that
+     * caused infinite "Loading predictions…"), this detects it and
+     * force-unregisters, then reloads once so the new SW can install.
+     *
+     * Trigger conditions:
+     *   1. ?reset=1 in the URL (manual escape hatch for users)
+     *   2. A marker in sessionStorage indicating last load hung
+     *
+     * The marker strategy: we set "pp_loading" on page load and clear it
+     * once the app successfully renders. If it's still set when we load
+     * again, the previous session hung — unregister the SW.
+     */
+    (function () {
+      try {
+        var params = new URLSearchParams(location.search);
+        var manualReset = params.get('reset') === '1';
+        var prevHung = sessionStorage.getItem('pp_loading') === '1';
+
+        if ((manualReset || prevHung) && 'serviceWorker' in navigator) {
+          console.warn('[SW-heal] Detected stuck state (manual=' + manualReset + ', hung=' + prevHung + '). Unregistering SW and clearing caches.');
+          sessionStorage.removeItem('pp_loading');
+          navigator.serviceWorker.getRegistrations().then(function (regs) {
+            return Promise.all(regs.map(function (r) { return r.unregister(); }));
+          }).then(function () {
+            if (window.caches) {
+              return caches.keys().then(function (keys) {
+                return Promise.all(keys.map(function (k) { return caches.delete(k); }));
+              });
+            }
+          }).then(function () {
+            // Strip ?reset=1 and hard reload
+            var clean = location.origin + location.pathname;
+            location.replace(clean);
+          });
+          return;
+        }
+
+        // Mark this load as "in progress"; cleared by app on successful render.
+        sessionStorage.setItem('pp_loading', '1');
+        // Failsafe: if 20s pass and we never cleared it, user is stuck.
+        // On the NEXT load we'll auto-heal.
+      } catch (e) { /* swallow — don't block page */ }
+    })();
+  </script>
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
   <meta name="mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -1486,6 +1533,8 @@ async function init() {
   const hideSplash = () => {
     if (splashHidden) return;
     splashHidden = true;
+    // Clear the hang detector — app rendered successfully
+    try { sessionStorage.removeItem('pp_loading'); } catch(e) {}
     clearInterval(sid);
     const s = document.getElementById('splash');
     if (s) {
