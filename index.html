@@ -998,6 +998,7 @@
 // Rule-based engine only — no LLM, no live Vercel API.
 // predictions.json is the single source of truth, refreshed daily by GitHub Actions.
 
+const VERCEL_URL = '';
 const DATA_URL      = './predictions.json';
 const REFRESH_MS    = 60_000;   // live score refresh (market hours)
 const BRIEFING_MS   = 300_000;  // AI briefing refresh
