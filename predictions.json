@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-04-18T10:00:24.894677+05:30",
-  "market_date": "2026-04-18",
+  "generated_at": "2026-04-19T04:01:17.246042+05:30",
+  "market_date": "2026-04-19",
   "analysis_version": "5.0-rules+news+forecast+narrative",
   "engine": "rules_engine_v5_news_fusion",
   "stocks_analyzed": 49,
@@ -162,7 +162,7 @@
             "primary_risk": "Macro shocks or earnings surprises are the biggest swing factor"
           }
         },
-        "narrative": "POWERGRID is holding a constructive setup at 60/100 with full bull (>20>50>200). Momentum is hot \u2014 RSI is at 71, meaning buyers are in control but the name is stretched. The broader tape is range-bound with 43% breadth, so stock selection matters more than direction, with Power sector performing in-line. The verdict is BUY \u2014 deploy on pullbacks toward \u20b9319 if you don't already own it. Our three-horizon read: Mildly Bullish tomorrow, Mildly Bullish over the next week, Mildly Bullish through the month.",
+        "narrative": "POWERGRID scores 60/100 on our engine. Structurally, this is textbook. Every major moving average is lined up, and dip-buyers have been rewarded consistently. Buyers are in control (RSI 71), but the stock is getting ahead of itself. Best entries come after a pause. The tape is chopping sideways with 43% breadth. Stock-picking matters more than market direction here. Power is one of the stronger sectors right now (score 58). Bull case: sustains above \u20b9318 and pushes towards \u20b9342 as trend followers pile in. Bear case: a slip below \u20b9303 triggers trailing stops and dents the short-term thesis. Above \u20b9318, the setup stays alive. \u20b9326 is the next hurdle. Verdict: BUY. Entry zone near \u20b9319 \u2014 speed matters. Outlook: Mildly Bullish \u2192 Mildly Bullish \u2192 Mildly Bullish.",
         "rank": 1
       },
       {
@@ -279,7 +279,7 @@
             "primary_risk": "Macro shocks or earnings surprises are the biggest swing factor"
           }
         },
-        "narrative": "NTPC is holding a constructive setup at 56/100 with full bull (>20>50>200). Momentum is healthy with RSI at 65, leaving room before overbought territory. The broader tape is range-bound with 43% breadth, so stock selection matters more than direction, with Power sector performing in-line. The verdict is BUY \u2014 deploy on pullbacks toward \u20b9395 if you don't already own it. Our three-horizon read: Mildly Bullish tomorrow, Mildly Bullish over the next week, Mildly Bullish through the month.",
+        "narrative": "NTPC scores 56/100 on our engine. Moving averages are bullish. Not pristine, but the kind of structure where you buy dips rather than sell rallies. The momentum profile is constructive. RSI at 65 means the move is early-to-mid phase, not late innings. The tape is chopping sideways with 43% breadth. Stock-picking matters more than market direction here. Power is one of the stronger sectors right now (score 58). Bull case: sustains above \u20b9394 and pushes towards \u20b9424 as trend followers pile in. Bear case: a slip below \u20b9375 triggers trailing stops and dents the short-term thesis. Look for a close above \u20b9403 as confirmation. Verdict: BUY. Entry zone near \u20b9395 \u2014 speed matters. Outlook: Mildly Bullish \u2192 Mildly Bullish \u2192 Mildly Bullish.",
         "rank": 2
       },
       {
@@ -396,7 +396,7 @@
             "primary_risk": "Overbought (RSI 78) \u2014 chase risk high"
           }
         },
-        "narrative": "ADANIPORTS is holding a constructive setup at 56/100 with bull (>50>200). Momentum is hot \u2014 RSI is at 78, meaning buyers are in control but the name is stretched on above-average volume (1.7\u00d7). The broader tape is range-bound with 43% breadth, so stock selection matters more than direction, with Infrastructure sector performing in-line. The verdict is BUY \u2014 deploy on pullbacks toward \u20b91,578 if you don't already own it. Our three-horizon read: Mildly Bullish tomorrow, Mildly Bullish over the next week, Mildly Bullish through the month.",
+        "narrative": "ADANIPORTS is on fire \u2014 RSI at 78 with volume running 1.7x average. Buyers are aggressive. Trend-following signals are turning positive. Not enough for an aggressive bet, but enough to stay constructive. The tape is chopping sideways with 43% breadth. Stock-picking matters more than market direction here. Bull case: momentum carries to \u20b91,729 if volume confirms. Bear case: fades below \u20b91,475 \u2014 failed rally territory. Above \u20b91,573, the setup stays alive. \u20b91,611 is the next hurdle. Verdict: BUY. Entry zone near \u20b91,578 \u2014 speed matters. Outlook: Mildly Bullish \u2192 Mildly Bullish \u2192 Mildly Bullish.",
         "rank": 3
       },
       {
@@ -513,7 +513,7 @@
             "primary_risk": "Macro shocks or earnings surprises are the biggest swing factor"
           }
         },
-        "narrative": "APOLLOHOSP sits in the middle of the pack with a 54/100 read with bull (>50>200). Momentum is healthy with RSI at 63, leaving room before overbought territory. The broader tape is range-bound with 43% breadth, so stock selection matters more than direction, with Healthcare sector performing in-line. The verdict is HOLD \u2014 if you own it, let it work; if you don't, there are cleaner setups elsewhere. Our three-horizon read: Neutral tomorrow, Neutral over the next week, Neutral through the month.",
+        "narrative": "The move higher is happening on thin volume. Low-conviction rallies have a habit of fading just when you commit. Trend-following signals are turning positive. Not enough for an aggressive bet, but enough to stay constructive. The momentum profile is constructive. RSI at 63 means the move is early-to-mid phase, not late innings. The tape is chopping sideways with 43% breadth. Stock-picking matters more than market direction here. Bull case: momentum carries to \u20b98,140 if volume confirms. Bear case: fades below \u20b97,258 \u2014 failed rally territory. Range-bound between \u20b97,468 and \u20b97,884. Patience over conviction. Verdict: HOLD. Own it? Let it work. Don't own it? Cleaner entries exist elsewhere. Outlook: Neutral \u2192 Neutral \u2192 Neutral.",
         "rank": 4
       },
       {
@@ -630,7 +630,7 @@
             "primary_risk": "Macro shocks or earnings surprises are the biggest swing factor"
           }
         },
-        "narrative": "POLYCAB sits in the middle of the pack with a 52/100 read with bull (>50>200). Momentum is hot \u2014 RSI is at 76, meaning buyers are in control but the name is stretched on above-average volume (1.3\u00d7). The broader tape is range-bound with 43% breadth, so stock selection matters more than direction, with Electricals sector performing in-line. The verdict is HOLD \u2014 if you own it, let it work; if you don't, there are cleaner setups elsewhere. Our three-horizon read: Neutral tomorrow, Neutral over the next week, Neutral through the month.",
+        "narrative": "POLYCAB's momentum is running hot with RSI at 76. The question is whether this leg has more room or needs a breather. The setup is building. Price is above the 50 and 200-day averages \u2014 the foundation is there, it just needs follow-through. The tape is chopping sideways with 43% breadth. Stock-picking matters more than market direction here. Bull case: momentum carries to \u20b98,826 if volume confirms. Bear case: fades below \u20b97,539 \u2014 failed rally territory. Range-bound between \u20b97,937 and \u20b98,379. Patience over conviction. Verdict: HOLD. Own it? Let it work. Don't own it? Cleaner entries exist elsewhere. Outlook: Neutral \u2192 Neutral \u2192 Neutral.",
         "rank": 5
       }
     ]
@@ -638,6 +638,240 @@
   "medium_term": {
     "label": "Medium Term (4\u201312 weeks)",
     "picks": [
+      {
+        "symbol": "NESTLEIND",
+        "score": 50,
+        "signal": "WATCH",
+        "confidence": "MEDIUM",
+        "current_price": 1285.6,
+        "change_pct": 2.24,
+        "change": 28.2,
+        "target_price": 1371.66,
+        "stop_loss": 1208.46,
+        "risk_reward": 1.2,
+        "holding_category": "medium",
+        "sector": "FMCG",
+        "penalty": 0,
+        "scores": {
+          "trend": 16,
+          "momentum": 9,
+          "volume": 8,
+          "breakout": 10,
+          "price_action": 7
+        },
+        "indicators": {
+          "rsi": 72.7,
+          "macd_signal": "Bullish",
+          "sma_alignment": "Bull (>50>200)",
+          "volume_ratio": 1.43,
+          "week52_pct": 3.7,
+          "bb_position": 1.09,
+          "adx": null
+        },
+        "reasons": [
+          "Bullish SMA alignment",
+          "EMA 12/26 bullish",
+          "MACD bullish",
+          "MACD histogram expanding",
+          "OBV trending up",
+          "Near upper BB"
+        ],
+        "trade_plan": {
+          "category": "short",
+          "cat_score": 12,
+          "atr": 30.74,
+          "atr_pct": 2.39,
+          "entry": {
+            "ideal_price": 1276.99,
+            "limit_order": 1276.1,
+            "acceptable_max": 1289.46,
+            "entry_window": "09:15\u201310:15 AM IST",
+            "order_strategy": "Place limit order before 9:14 AM",
+            "note": "Prev close \u20b91,285.60 | Dip ~\u20b98.61"
+          },
+          "exit": {
+            "target_conservative": 1340.92,
+            "target_ideal": 1371.66,
+            "target_stretch": 1408.54,
+            "upside_conservative": 5.0,
+            "upside_ideal": 7.4,
+            "upside_stretch": 10.3,
+            "hold_min_days": 5,
+            "hold_max_days": 15,
+            "hold_duration": "4\u201312 weeks",
+            "sell_trigger": "Exit when RSI > 72 or price hits \u20b91,371.66",
+            "hold_note": "Review daily"
+          }
+        },
+        "name": "Nestle India",
+        "verdict": "HOLD",
+        "forecasts": {
+          "1d": {
+            "label": "Tomorrow",
+            "days": 1,
+            "bias": "Neutral",
+            "confidence": "Low",
+            "composite": 50.0,
+            "price_band": {
+              "low": 1251.79,
+              "mid": 1285.6,
+              "high": 1319.41,
+              "move_pct_mid": 0.0
+            },
+            "catalyst": "RSI at 73 \u2014 momentum carryover likely",
+            "primary_risk": "Gap risk at open; size positions accordingly"
+          },
+          "1w": {
+            "label": "1 Week",
+            "days": 5,
+            "bias": "Neutral",
+            "confidence": "Low",
+            "composite": 50.0,
+            "price_band": {
+              "low": 1209.99,
+              "mid": 1285.6,
+              "high": 1361.21,
+              "move_pct_mid": 0.0
+            },
+            "catalyst": "Range-bound week; Bull (>50>200) bias",
+            "primary_risk": "Regime shift or sector rotation could invalidate setup"
+          },
+          "1m": {
+            "label": "1 Month",
+            "days": 21,
+            "bias": "Neutral",
+            "confidence": "Low",
+            "composite": 50.0,
+            "price_band": {
+              "low": 1130.64,
+              "mid": 1285.6,
+              "high": 1440.56,
+              "move_pct_mid": 0.0
+            },
+            "catalyst": "Consolidation phase in SIDEWAYS regime",
+            "primary_risk": "Macro shocks or earnings surprises are the biggest swing factor"
+          }
+        },
+        "narrative": "NESTLEIND scores 50/100 on our engine. Trend-following signals are turning positive. Not enough for an aggressive bet, but enough to stay constructive. RSI at 73 with 1.4x volume \u2014 buyers mean business. Above-average volume (1.4x) adds weight to the move. The tape is chopping sideways with 43% breadth. Stock-picking matters more than market direction here. FMCG is lagging the broader tape (score 32) \u2014 an extra headwind. Bull case: momentum carries to \u20b91,361 if volume confirms. Bear case: fades below \u20b91,210 \u2014 failed rally territory. Needs to resolve \u20b91,247\u2013\u20b91,316 before a directional bet pays. Verdict: HOLD. Own it? Let it work. Don't own it? Cleaner entries exist elsewhere. Outlook: Neutral \u2192 Neutral \u2192 Neutral.",
+        "rank": 1
+      },
+      {
+        "symbol": "SBIN",
+        "score": 50,
+        "signal": "WATCH",
+        "confidence": "MEDIUM",
+        "current_price": 1080.25,
+        "change_pct": 1.23,
+        "change": 13.1,
+        "target_price": 1271.18,
+        "stop_loss": 1015.43,
+        "risk_reward": 3.2,
+        "holding_category": "medium",
+        "sector": "Banking",
+        "penalty": 0,
+        "scores": {
+          "trend": 11,
+          "momentum": 21,
+          "volume": 4,
+          "breakout": 5,
+          "price_action": 5
+        },
+        "indicators": {
+          "rsi": 59.1,
+          "macd_signal": "Bullish",
+          "sma_alignment": "Above 200 SMA",
+          "volume_ratio": 0.88,
+          "week52_pct": 12.5,
+          "bb_position": 0.84,
+          "adx": null
+        },
+        "reasons": [
+          "Above 200 SMA",
+          "RSI ideal zone (59.1)",
+          "MACD bullish",
+          "MACD histogram expanding",
+          "OBV trending up",
+          "Near upper BB"
+        ],
+        "trade_plan": {
+          "category": "medium",
+          "cat_score": 9,
+          "atr": 34.71,
+          "atr_pct": 3.21,
+          "entry": {
+            "ideal_price": 1062.89,
+            "limit_order": 1062.15,
+            "acceptable_max": 1085.65,
+            "entry_window": "09:15\u201310:15 AM IST",
+            "order_strategy": "Patient limit order",
+            "note": "Prev close \u20b91,080.25 | Dip ~\u20b917.36"
+          },
+          "exit": {
+            "target_conservative": 1201.75,
+            "target_ideal": 1271.18,
+            "target_stretch": 1357.96,
+            "upside_conservative": 13.1,
+            "upside_ideal": 19.6,
+            "upside_stretch": 27.8,
+            "hold_min_days": 30,
+            "hold_max_days": 90,
+            "hold_duration": "4\u201312 weeks",
+            "sell_trigger": "Exit on weekly MACD bearish cross or \u20b91,271.18",
+            "hold_note": "Review weekly"
+          }
+        },
+        "name": "State Bank of India",
+        "verdict": "HOLD",
+        "forecasts": {
+          "1d": {
+            "label": "Tomorrow",
+            "days": 1,
+            "bias": "Mildly Bullish",
+            "confidence": "Medium",
+            "composite": 56.0,
+            "price_band": {
+              "low": 1050.75,
+              "mid": 1088.93,
+              "high": 1127.11,
+              "move_pct_mid": 0.8
+            },
+            "catalyst": "News flow: F&O Talk: Midcaps, smallcaps stage sharp comeback, trade above key moving averages. What's",
+            "primary_risk": "News-driven spike may fade without volume confirmation"
+          },
+          "1w": {
+            "label": "1 Week",
+            "days": 5,
+            "bias": "Neutral",
+            "confidence": "Medium",
+            "composite": 53.6,
+            "price_band": {
+              "low": 994.87,
+              "mid": 1080.25,
+              "high": 1165.63,
+              "move_pct_mid": 0.0
+            },
+            "catalyst": "News flow: F&O Talk: Midcaps, smallcaps stage sharp comeback, trade above key moving averages. What's",
+            "primary_risk": "News-driven spike may fade without volume confirmation"
+          },
+          "1m": {
+            "label": "1 Month",
+            "days": 21,
+            "bias": "Neutral",
+            "confidence": "Medium",
+            "composite": 51.8,
+            "price_band": {
+              "low": 905.28,
+              "mid": 1080.25,
+              "high": 1255.22,
+              "move_pct_mid": 0.0
+            },
+            "catalyst": "News flow: F&O Talk: Midcaps, smallcaps stage sharp comeback, trade above key moving averages. What's",
+            "primary_risk": "News-driven spike may fade without volume confirmation"
+          }
+        },
+        "narrative": "The newsflow around SBIN is constructive \u2014 'F&O Talk: Midcaps, smallcaps stage sharp comeback, trade above key moving averages.' is the lead story driving sentiment. Price has reclaimed its 200-day average \u2014 the first hurdle for any recovery. But the 50-day hasn't confirmed yet, so this is early days. Momentum is picking up nicely \u2014 RSI at 59 has room to run before hitting overbought territory. The tape is chopping sideways with 43% breadth. Stock-picking matters more than market direction here. Banking is lagging the broader tape (score 32) \u2014 an extra headwind. Bull case: momentum carries to \u20b91,166 if volume confirms. Bear case: fades below \u20b9995 \u2014 failed rally territory. Above \u20b91,080, the setup stays alive. \u20b91,106 is the next hurdle. Verdict: HOLD. Own it? Let it work. Don't own it? Cleaner entries exist elsewhere. Outlook: Mildly Bullish \u2192 Neutral \u2192 Neutral.",
+        "rank": 2
+      },
       {
         "symbol": "TITAN",
         "score": 49,
@@ -752,241 +986,7 @@
             "primary_risk": "Macro shocks or earnings surprises are the biggest swing factor"
           }
         },
-        "narrative": "TITAN sits in the middle of the pack with a 49/100 read with full bull (>20>50>200). Momentum is hot \u2014 RSI is at 76, meaning buyers are in control but the name is stretched on above-average volume (1.6\u00d7). The broader tape is range-bound with 43% breadth, so stock selection matters more than direction, with Consumer Disc. sector performing in-line. The verdict is HOLD \u2014 if you own it, let it work; if you don't, there are cleaner setups elsewhere. Our three-horizon read: Neutral tomorrow, Neutral over the next week, Neutral through the month.",
-        "rank": 1
-      },
-      {
-        "symbol": "NESTLEIND",
-        "score": 47,
-        "signal": "WATCH",
-        "confidence": "MEDIUM",
-        "current_price": 1285.6,
-        "change_pct": 2.24,
-        "change": 28.2,
-        "target_price": 1371.66,
-        "stop_loss": 1208.46,
-        "risk_reward": 1.2,
-        "holding_category": "medium",
-        "sector": "FMCG",
-        "penalty": 0,
-        "scores": {
-          "trend": 16,
-          "momentum": 9,
-          "volume": 8,
-          "breakout": 10,
-          "price_action": 7
-        },
-        "indicators": {
-          "rsi": 72.7,
-          "macd_signal": "Bullish",
-          "sma_alignment": "Bull (>50>200)",
-          "volume_ratio": 1.43,
-          "week52_pct": 3.7,
-          "bb_position": 1.09,
-          "adx": null
-        },
-        "reasons": [
-          "Bullish SMA alignment",
-          "EMA 12/26 bullish",
-          "MACD bullish",
-          "MACD histogram expanding",
-          "OBV trending up",
-          "Near upper BB"
-        ],
-        "trade_plan": {
-          "category": "short",
-          "cat_score": 12,
-          "atr": 30.74,
-          "atr_pct": 2.39,
-          "entry": {
-            "ideal_price": 1276.99,
-            "limit_order": 1276.1,
-            "acceptable_max": 1289.46,
-            "entry_window": "09:15\u201310:15 AM IST",
-            "order_strategy": "Place limit order before 9:14 AM",
-            "note": "Prev close \u20b91,285.60 | Dip ~\u20b98.61"
-          },
-          "exit": {
-            "target_conservative": 1340.92,
-            "target_ideal": 1371.66,
-            "target_stretch": 1408.54,
-            "upside_conservative": 5.0,
-            "upside_ideal": 7.4,
-            "upside_stretch": 10.3,
-            "hold_min_days": 5,
-            "hold_max_days": 15,
-            "hold_duration": "4\u201312 weeks",
-            "sell_trigger": "Exit when RSI > 72 or price hits \u20b91,371.66",
-            "hold_note": "Review daily"
-          }
-        },
-        "name": "Nestle India",
-        "verdict": "HOLD",
-        "forecasts": {
-          "1d": {
-            "label": "Tomorrow",
-            "days": 1,
-            "bias": "Mildly Bearish",
-            "confidence": "Medium",
-            "composite": 42.5,
-            "price_band": {
-              "low": 1244.1,
-              "mid": 1277.91,
-              "high": 1311.73,
-              "move_pct_mid": -0.6
-            },
-            "catalyst": "News flow: Sensex, Nifty hold steady at midday; HUL, Nestle lead gains as IT, Financials weigh",
-            "primary_risk": "Negative news flow could accelerate downside"
-          },
-          "1w": {
-            "label": "1 Week",
-            "days": 5,
-            "bias": "Mildly Bearish",
-            "confidence": "Medium",
-            "composite": 44.3,
-            "price_band": {
-              "low": 1192.81,
-              "mid": 1268.42,
-              "high": 1344.03,
-              "move_pct_mid": -1.34
-            },
-            "catalyst": "News flow: Sensex, Nifty hold steady at midday; HUL, Nestle lead gains as IT, Financials weigh",
-            "primary_risk": "Negative news flow could accelerate downside"
-          },
-          "1m": {
-            "label": "1 Month",
-            "days": 21,
-            "bias": "Neutral",
-            "confidence": "Medium",
-            "composite": 45.6,
-            "price_band": {
-              "low": 1130.64,
-              "mid": 1285.6,
-              "high": 1440.56,
-              "move_pct_mid": 0.0
-            },
-            "catalyst": "News flow: Sensex, Nifty hold steady at midday; HUL, Nestle lead gains as IT, Financials weigh",
-            "primary_risk": "Negative news flow could accelerate downside"
-          }
-        },
-        "narrative": "NESTLEIND sits in the middle of the pack with a 47/100 read with bull (>50>200). Momentum is hot \u2014 RSI is at 73, meaning buyers are in control but the name is stretched on above-average volume (1.4\u00d7). News flow is a headwind \u2014 1 item in the last 48 hours skew negative, with the most prominent being 'Sensex, Nifty hold steady at midday; HUL, Nestle lead gains as IT, Financials weigh' (Hindu BusinessLine). The broader tape is range-bound with 43% breadth, so stock selection matters more than direction, and FMCG is lagging (score 32, trend down). The verdict is HOLD \u2014 if you own it, let it work; if you don't, there are cleaner setups elsewhere. Our three-horizon read: Mildly Bearish tomorrow, Mildly Bearish over the next week, Neutral through the month.",
-        "rank": 2
-      },
-      {
-        "symbol": "SBIN",
-        "score": 46,
-        "signal": "WATCH",
-        "confidence": "MEDIUM",
-        "current_price": 1080.25,
-        "change_pct": 1.23,
-        "change": 13.1,
-        "target_price": 1271.18,
-        "stop_loss": 1015.43,
-        "risk_reward": 3.2,
-        "holding_category": "medium",
-        "sector": "Banking",
-        "penalty": 0,
-        "scores": {
-          "trend": 11,
-          "momentum": 21,
-          "volume": 4,
-          "breakout": 5,
-          "price_action": 5
-        },
-        "indicators": {
-          "rsi": 59.1,
-          "macd_signal": "Bullish",
-          "sma_alignment": "Above 200 SMA",
-          "volume_ratio": 0.88,
-          "week52_pct": 12.5,
-          "bb_position": 0.84,
-          "adx": null
-        },
-        "reasons": [
-          "Above 200 SMA",
-          "RSI ideal zone (59.1)",
-          "MACD bullish",
-          "MACD histogram expanding",
-          "OBV trending up",
-          "Near upper BB"
-        ],
-        "trade_plan": {
-          "category": "medium",
-          "cat_score": 9,
-          "atr": 34.71,
-          "atr_pct": 3.21,
-          "entry": {
-            "ideal_price": 1062.89,
-            "limit_order": 1062.15,
-            "acceptable_max": 1085.65,
-            "entry_window": "09:15\u201310:15 AM IST",
-            "order_strategy": "Patient limit order",
-            "note": "Prev close \u20b91,080.25 | Dip ~\u20b917.36"
-          },
-          "exit": {
-            "target_conservative": 1201.75,
-            "target_ideal": 1271.18,
-            "target_stretch": 1357.96,
-            "upside_conservative": 13.1,
-            "upside_ideal": 19.6,
-            "upside_stretch": 27.8,
-            "hold_min_days": 30,
-            "hold_max_days": 90,
-            "hold_duration": "4\u201312 weeks",
-            "sell_trigger": "Exit on weekly MACD bearish cross or \u20b91,271.18",
-            "hold_note": "Review weekly"
-          }
-        },
-        "name": "State Bank of India",
-        "verdict": "HOLD",
-        "forecasts": {
-          "1d": {
-            "label": "Tomorrow",
-            "days": 1,
-            "bias": "Neutral",
-            "confidence": "Low",
-            "composite": 46.0,
-            "price_band": {
-              "low": 1042.07,
-              "mid": 1080.25,
-              "high": 1118.43,
-              "move_pct_mid": 0.0
-            },
-            "catalyst": "Above 200 SMA setup, score 46/100",
-            "primary_risk": "Gap risk at open; size positions accordingly"
-          },
-          "1w": {
-            "label": "1 Week",
-            "days": 5,
-            "bias": "Neutral",
-            "confidence": "Low",
-            "composite": 46.0,
-            "price_band": {
-              "low": 994.87,
-              "mid": 1080.25,
-              "high": 1165.63,
-              "move_pct_mid": 0.0
-            },
-            "catalyst": "Range-bound week; Above 200 SMA bias",
-            "primary_risk": "Regime shift or sector rotation could invalidate setup"
-          },
-          "1m": {
-            "label": "1 Month",
-            "days": 21,
-            "bias": "Neutral",
-            "confidence": "Low",
-            "composite": 46.0,
-            "price_band": {
-              "low": 905.28,
-              "mid": 1080.25,
-              "high": 1255.22,
-              "move_pct_mid": 0.0
-            },
-            "catalyst": "Consolidation phase in SIDEWAYS regime",
-            "primary_risk": "Macro shocks or earnings surprises are the biggest swing factor"
-          }
-        },
-        "narrative": "SBIN sits in the middle of the pack with a 46/100 read with above 200 sma. Momentum is healthy with RSI at 59, leaving room before overbought territory. The broader tape is range-bound with 43% breadth, so stock selection matters more than direction, and Banking is lagging (score 32, trend down). The verdict is HOLD \u2014 if you own it, let it work; if you don't, there are cleaner setups elsewhere. Our three-horizon read: Neutral tomorrow, Neutral over the next week, Neutral through the month.",
+        "narrative": "TITAN is on fire \u2014 RSI at 76 with volume running 1.6x average. Buyers are aggressive. Moving averages are bullish. Not pristine, but the kind of structure where you buy dips rather than sell rallies. The tape is chopping sideways with 43% breadth. Stock-picking matters more than market direction here. Range-bound between \u20b94,390 and \u20b94,635. Patience over conviction. Verdict: HOLD. Own it? Let it work. Don't own it? Cleaner entries exist elsewhere. Outlook: Neutral \u2192 Neutral \u2192 Neutral.",
         "rank": 3
       },
       {
@@ -1103,12 +1103,12 @@
             "primary_risk": "Macro shocks or earnings surprises are the biggest swing factor"
           }
         },
-        "narrative": "INDUSINDBK sits in the middle of the pack with a 45/100 read with above 200 sma. Momentum is healthy with RSI at 60, leaving room before overbought territory on light volume (0.5\u00d7) \u2014 any move here should be taken with a pinch of salt. The broader tape is range-bound with 43% breadth, so stock selection matters more than direction, and Banking is lagging (score 32, trend down). The verdict is HOLD \u2014 if you own it, let it work; if you don't, there are cleaner setups elsewhere. Our three-horizon read: Neutral tomorrow, Neutral over the next week, Neutral through the month.",
+        "narrative": "INDUSINDBK scores 45/100 on our engine. Price has reclaimed its 200-day average \u2014 the first hurdle for any recovery. But the 50-day hasn't confirmed yet, so this is early days. The momentum profile is constructive. RSI at 60 means the move is early-to-mid phase, not late innings. Volume is thin (0.5x) \u2014 take any move with a pinch of salt. The tape is chopping sideways with 43% breadth. Stock-picking matters more than market direction here. Banking is lagging the broader tape (score 32) \u2014 an extra headwind. Needs to resolve \u20b9828\u2013\u20b9874 before a directional bet pays. Verdict: HOLD. Own it? Let it work. Don't own it? Cleaner entries exist elsewhere. Outlook: Neutral \u2192 Neutral \u2192 Neutral.",
         "rank": 4
       },
       {
         "symbol": "JSWSTEEL",
-        "score": 42,
+        "score": 43,
         "signal": "WATCH",
         "confidence": "MEDIUM",
         "current_price": 1240.3,
@@ -1179,7 +1179,7 @@
             "days": 1,
             "bias": "Mildly Bearish",
             "confidence": "Medium",
-            "composite": 42.0,
+            "composite": 44.5,
             "price_band": {
               "low": 1195.47,
               "mid": 1232.0,
@@ -1194,14 +1194,14 @@
             "days": 5,
             "bias": "Mildly Bearish",
             "confidence": "Medium",
-            "composite": 42.0,
+            "composite": 43.9,
             "price_band": {
               "low": 1140.05,
               "mid": 1221.74,
               "high": 1303.42,
               "move_pct_mid": -1.5
             },
-            "catalyst": "Weak setup (42/100) \u2014 expect continued pressure",
+            "catalyst": "Weak setup (43/100) \u2014 expect continued pressure",
             "primary_risk": "Regime shift or sector rotation could invalidate setup"
           },
           "1m": {
@@ -1209,7 +1209,7 @@
             "days": 21,
             "bias": "Mildly Bearish",
             "confidence": "Medium",
-            "composite": 42.0,
+            "composite": 43.5,
             "price_band": {
               "low": 1034.85,
               "mid": 1202.25,
@@ -1220,7 +1220,7 @@
             "primary_risk": "Macro shocks or earnings surprises are the biggest swing factor"
           }
         },
-        "narrative": "JSWSTEEL sits in the middle of the pack with a 42/100 read with bull (>50>200). Momentum is hot \u2014 RSI is at 74, meaning buyers are in control but the name is stretched. The broader tape is range-bound with 43% breadth, so stock selection matters more than direction, and Metals is lagging (score 35, trend down). The verdict is HOLD \u2014 if you own it, let it work; if you don't, there are cleaner setups elsewhere. Our three-horizon read: Mildly Bearish tomorrow, Mildly Bearish over the next week, Mildly Bearish through the month.",
+        "narrative": "A word of caution \u2014 momentum is surging but the moving average structure hasn't confirmed. This could be a counter-trend bounce rather than a genuine reversal. Directionless. Neither bulls nor bears have control, and that won't change without a catalyst. RSI is at 74 \u2014 momentum is real but getting stretched. A consolidation here would be healthy, not alarming. Newsflow is mildly positive \u2014 2 items in the last 48 hours \u2014 'JSW Steel, Posco to set up 6 mtpa greenfield plant in Odisha' (Mint Companies) is the headline to watch. The tape is chopping sideways with 43% breadth. Stock-picking matters more than market direction here. Metals is lagging the broader tape (score 35) \u2014 an extra headwind. Watch \u20b91,203 \u2014 a break below opens further downside. Verdict: HOLD. Own it? Let it work. Don't own it? Cleaner entries exist elsewhere. Outlook: Mildly Bearish \u2192 Mildly Bearish \u2192 Mildly Bearish.",
         "rank": 5
       }
     ]
@@ -1341,7 +1341,7 @@
             "primary_risk": "Macro shocks or earnings surprises are the biggest swing factor"
           }
         },
-        "narrative": "EICHERMOT sits in the middle of the pack with a 41/100 read with above 200 sma. Momentum is healthy with RSI at 57, leaving room before overbought territory. The broader tape is range-bound with 43% breadth, so stock selection matters more than direction, and Automobiles is lagging (score 27, trend down). The verdict is HOLD \u2014 if you own it, let it work; if you don't, there are cleaner setups elsewhere. Our three-horizon read: Mildly Bearish tomorrow, Mildly Bearish over the next week, Mildly Bearish through the month.",
+        "narrative": "EICHERMOT scores 41/100 on our engine. Price has reclaimed its 200-day average \u2014 the first hurdle for any recovery. But the 50-day hasn't confirmed yet, so this is early days. The momentum profile is constructive. RSI at 57 means the move is early-to-mid phase, not late innings. The tape is chopping sideways with 43% breadth. Stock-picking matters more than market direction here. Automobiles is lagging the broader tape (score 27) \u2014 an extra headwind. \u20b96,974 is the line in the sand. Verdict: HOLD. Own it? Let it work. Don't own it? Cleaner entries exist elsewhere. Outlook: Mildly Bearish \u2192 Mildly Bearish \u2192 Mildly Bearish.",
         "rank": 1
       },
       {
@@ -1458,7 +1458,7 @@
             "primary_risk": "Macro shocks or earnings surprises are the biggest swing factor"
           }
         },
-        "narrative": "PFC sits in the middle of the pack with a 41/100 read with full bull (>20>50>200). Momentum is hot \u2014 RSI is at 78, meaning buyers are in control but the name is stretched. The broader tape is range-bound with 43% breadth, so stock selection matters more than direction, and NBFC is lagging (score 31, trend down). The verdict is HOLD \u2014 if you own it, let it work; if you don't, there are cleaner setups elsewhere. Our three-horizon read: Mildly Bearish tomorrow, Mildly Bearish over the next week, Mildly Bearish through the month.",
+        "narrative": "PFC's momentum is running hot with RSI at 78. The question is whether this leg has more room or needs a breather. The trend is solidly positive \u2014 price sits above all key averages, though alignment isn't perfect. The tape is chopping sideways with 43% breadth. Stock-picking matters more than market direction here. NBFC is lagging the broader tape (score 31) \u2014 an extra headwind. \u20b9451 is the line in the sand. Verdict: HOLD. Own it? Let it work. Don't own it? Cleaner entries exist elsewhere. Outlook: Mildly Bearish \u2192 Mildly Bearish \u2192 Mildly Bearish.",
         "rank": 2
       },
       {
@@ -1575,7 +1575,7 @@
             "primary_risk": "Macro shocks or earnings surprises are the biggest swing factor"
           }
         },
-        "narrative": "RECLTD sits in the middle of the pack with a 41/100 read with above 200 sma. Momentum is hot \u2014 RSI is at 75, meaning buyers are in control but the name is stretched on above-average volume (1.6\u00d7). The broader tape is range-bound with 43% breadth, so stock selection matters more than direction, and NBFC is lagging (score 31, trend down). The verdict is HOLD \u2014 if you own it, let it work; if you don't, there are cleaner setups elsewhere. Our three-horizon read: Mildly Bearish tomorrow, Mildly Bearish over the next week, Mildly Bearish through the month.",
+        "narrative": "RECLTD is on fire \u2014 RSI at 75 with volume running 1.6x average. Buyers are aggressive. Price has reclaimed its 200-day average \u2014 the first hurdle for any recovery. But the 50-day hasn't confirmed yet, so this is early days. The tape is chopping sideways with 43% breadth. Stock-picking matters more than market direction here. NBFC is lagging the broader tape (score 31) \u2014 an extra headwind. \u20b9362 is the line in the sand. Verdict: HOLD. Own it? Let it work. Don't own it? Cleaner entries exist elsewhere. Outlook: Mildly Bearish \u2192 Mildly Bearish \u2192 Mildly Bearish.",
         "rank": 3
       },
       {
@@ -1692,7 +1692,7 @@
             "primary_risk": "Macro shocks or earnings surprises are the biggest swing factor"
           }
         },
-        "narrative": "BEL sits in the middle of the pack with a 40/100 read with bull (>50>200). Momentum is hot \u2014 RSI is at 81, meaning buyers are in control but the name is stretched. News flow is mixed across 1 recent item, with the most prominent being 'Berkshire CEO Abel sold stocks managed by ex-portfolio manager Combs, WSJ reports' (ET Markets). The broader tape is range-bound with 43% breadth, so stock selection matters more than direction, and Defence is lagging (score 27, trend down). The verdict is HOLD \u2014 if you own it, let it work; if you don't, there are cleaner setups elsewhere. Our three-horizon read: Mildly Bearish tomorrow, Mildly Bearish over the next week, Mildly Bearish through the month.",
+        "narrative": "Overbought on declining volume \u2014 a classic combination for a pullback or at minimum a breather. There's no discernible trend. The stock is range-bound and waiting for direction. RSI at 81 \u2014 that's overcooked. The easy gains are behind you on this leg. The tape is chopping sideways with 43% breadth. Stock-picking matters more than market direction here. Defence is lagging the broader tape (score 27) \u2014 an extra headwind. \u20b9449 is the line in the sand. Verdict: HOLD. Own it? Let it work. Don't own it? Cleaner entries exist elsewhere. Outlook: Mildly Bearish \u2192 Mildly Bearish \u2192 Mildly Bearish.",
         "rank": 4
       }
     ]
@@ -1812,7 +1812,7 @@
           "primary_risk": "Macro shocks or earnings surprises are the biggest swing factor"
         }
       },
-      "narrative": "POWERGRID is holding a constructive setup at 60/100 with full bull (>20>50>200). Momentum is hot \u2014 RSI is at 71, meaning buyers are in control but the name is stretched. The broader tape is range-bound with 43% breadth, so stock selection matters more than direction, with Power sector performing in-line. The verdict is BUY \u2014 deploy on pullbacks toward \u20b9319 if you don't already own it. Our three-horizon read: Mildly Bullish tomorrow, Mildly Bullish over the next week, Mildly Bullish through the month.",
+      "narrative": "POWERGRID scores 60/100 on our engine. Structurally, this is textbook. Every major moving average is lined up, and dip-buyers have been rewarded consistently. Buyers are in control (RSI 71), but the stock is getting ahead of itself. Best entries come after a pause. The tape is chopping sideways with 43% breadth. Stock-picking matters more than market direction here. Power is one of the stronger sectors right now (score 58). Bull case: sustains above \u20b9318 and pushes towards \u20b9342 as trend followers pile in. Bear case: a slip below \u20b9303 triggers trailing stops and dents the short-term thesis. Above \u20b9318, the setup stays alive. \u20b9326 is the next hurdle. Verdict: BUY. Entry zone near \u20b9319 \u2014 speed matters. Outlook: Mildly Bullish \u2192 Mildly Bullish \u2192 Mildly Bullish.",
       "rank": 1
     },
     {
@@ -1929,7 +1929,7 @@
           "primary_risk": "Macro shocks or earnings surprises are the biggest swing factor"
         }
       },
-      "narrative": "NTPC is holding a constructive setup at 56/100 with full bull (>20>50>200). Momentum is healthy with RSI at 65, leaving room before overbought territory. The broader tape is range-bound with 43% breadth, so stock selection matters more than direction, with Power sector performing in-line. The verdict is BUY \u2014 deploy on pullbacks toward \u20b9395 if you don't already own it. Our three-horizon read: Mildly Bullish tomorrow, Mildly Bullish over the next week, Mildly Bullish through the month.",
+      "narrative": "NTPC scores 56/100 on our engine. Moving averages are bullish. Not pristine, but the kind of structure where you buy dips rather than sell rallies. The momentum profile is constructive. RSI at 65 means the move is early-to-mid phase, not late innings. The tape is chopping sideways with 43% breadth. Stock-picking matters more than market direction here. Power is one of the stronger sectors right now (score 58). Bull case: sustains above \u20b9394 and pushes towards \u20b9424 as trend followers pile in. Bear case: a slip below \u20b9375 triggers trailing stops and dents the short-term thesis. Look for a close above \u20b9403 as confirmation. Verdict: BUY. Entry zone near \u20b9395 \u2014 speed matters. Outlook: Mildly Bullish \u2192 Mildly Bullish \u2192 Mildly Bullish.",
       "rank": 2
     },
     {
@@ -2046,7 +2046,7 @@
           "primary_risk": "Overbought (RSI 78) \u2014 chase risk high"
         }
       },
-      "narrative": "ADANIPORTS is holding a constructive setup at 56/100 with bull (>50>200). Momentum is hot \u2014 RSI is at 78, meaning buyers are in control but the name is stretched on above-average volume (1.7\u00d7). The broader tape is range-bound with 43% breadth, so stock selection matters more than direction, with Infrastructure sector performing in-line. The verdict is BUY \u2014 deploy on pullbacks toward \u20b91,578 if you don't already own it. Our three-horizon read: Mildly Bullish tomorrow, Mildly Bullish over the next week, Mildly Bullish through the month.",
+      "narrative": "ADANIPORTS is on fire \u2014 RSI at 78 with volume running 1.7x average. Buyers are aggressive. Trend-following signals are turning positive. Not enough for an aggressive bet, but enough to stay constructive. The tape is chopping sideways with 43% breadth. Stock-picking matters more than market direction here. Bull case: momentum carries to \u20b91,729 if volume confirms. Bear case: fades below \u20b91,475 \u2014 failed rally territory. Above \u20b91,573, the setup stays alive. \u20b91,611 is the next hurdle. Verdict: BUY. Entry zone near \u20b91,578 \u2014 speed matters. Outlook: Mildly Bullish \u2192 Mildly Bullish \u2192 Mildly Bullish.",
       "rank": 3
     },
     {
@@ -2163,7 +2163,7 @@
           "primary_risk": "Macro shocks or earnings surprises are the biggest swing factor"
         }
       },
-      "narrative": "APOLLOHOSP sits in the middle of the pack with a 54/100 read with bull (>50>200). Momentum is healthy with RSI at 63, leaving room before overbought territory. The broader tape is range-bound with 43% breadth, so stock selection matters more than direction, with Healthcare sector performing in-line. The verdict is HOLD \u2014 if you own it, let it work; if you don't, there are cleaner setups elsewhere. Our three-horizon read: Neutral tomorrow, Neutral over the next week, Neutral through the month.",
+      "narrative": "The move higher is happening on thin volume. Low-conviction rallies have a habit of fading just when you commit. Trend-following signals are turning positive. Not enough for an aggressive bet, but enough to stay constructive. The momentum profile is constructive. RSI at 63 means the move is early-to-mid phase, not late innings. The tape is chopping sideways with 43% breadth. Stock-picking matters more than market direction here. Bull case: momentum carries to \u20b98,140 if volume confirms. Bear case: fades below \u20b97,258 \u2014 failed rally territory. Range-bound between \u20b97,468 and \u20b97,884. Patience over conviction. Verdict: HOLD. Own it? Let it work. Don't own it? Cleaner entries exist elsewhere. Outlook: Neutral \u2192 Neutral \u2192 Neutral.",
       "rank": 4
     },
     {
@@ -2280,8 +2280,242 @@
           "primary_risk": "Macro shocks or earnings surprises are the biggest swing factor"
         }
       },
-      "narrative": "POLYCAB sits in the middle of the pack with a 52/100 read with bull (>50>200). Momentum is hot \u2014 RSI is at 76, meaning buyers are in control but the name is stretched on above-average volume (1.3\u00d7). The broader tape is range-bound with 43% breadth, so stock selection matters more than direction, with Electricals sector performing in-line. The verdict is HOLD \u2014 if you own it, let it work; if you don't, there are cleaner setups elsewhere. Our three-horizon read: Neutral tomorrow, Neutral over the next week, Neutral through the month.",
+      "narrative": "POLYCAB's momentum is running hot with RSI at 76. The question is whether this leg has more room or needs a breather. The setup is building. Price is above the 50 and 200-day averages \u2014 the foundation is there, it just needs follow-through. The tape is chopping sideways with 43% breadth. Stock-picking matters more than market direction here. Bull case: momentum carries to \u20b98,826 if volume confirms. Bear case: fades below \u20b97,539 \u2014 failed rally territory. Range-bound between \u20b97,937 and \u20b98,379. Patience over conviction. Verdict: HOLD. Own it? Let it work. Don't own it? Cleaner entries exist elsewhere. Outlook: Neutral \u2192 Neutral \u2192 Neutral.",
       "rank": 5
+    },
+    {
+      "symbol": "NESTLEIND",
+      "score": 50,
+      "signal": "WATCH",
+      "confidence": "MEDIUM",
+      "current_price": 1285.6,
+      "change_pct": 2.24,
+      "change": 28.2,
+      "target_price": 1371.66,
+      "stop_loss": 1208.46,
+      "risk_reward": 1.2,
+      "holding_category": "short",
+      "sector": "FMCG",
+      "penalty": 0,
+      "scores": {
+        "trend": 16,
+        "momentum": 9,
+        "volume": 8,
+        "breakout": 10,
+        "price_action": 7
+      },
+      "indicators": {
+        "rsi": 72.7,
+        "macd_signal": "Bullish",
+        "sma_alignment": "Bull (>50>200)",
+        "volume_ratio": 1.43,
+        "week52_pct": 3.7,
+        "bb_position": 1.09,
+        "adx": null
+      },
+      "reasons": [
+        "Bullish SMA alignment",
+        "EMA 12/26 bullish",
+        "MACD bullish",
+        "MACD histogram expanding",
+        "OBV trending up",
+        "Near upper BB"
+      ],
+      "trade_plan": {
+        "category": "short",
+        "cat_score": 12,
+        "atr": 30.74,
+        "atr_pct": 2.39,
+        "entry": {
+          "ideal_price": 1276.99,
+          "limit_order": 1276.1,
+          "acceptable_max": 1289.46,
+          "entry_window": "09:15\u201310:15 AM IST",
+          "order_strategy": "Place limit order before 9:14 AM",
+          "note": "Prev close \u20b91,285.60 | Dip ~\u20b98.61"
+        },
+        "exit": {
+          "target_conservative": 1340.92,
+          "target_ideal": 1371.66,
+          "target_stretch": 1408.54,
+          "upside_conservative": 5.0,
+          "upside_ideal": 7.4,
+          "upside_stretch": 10.3,
+          "hold_min_days": 5,
+          "hold_max_days": 15,
+          "hold_duration": "4\u201312 weeks",
+          "sell_trigger": "Exit when RSI > 72 or price hits \u20b91,371.66",
+          "hold_note": "Review daily"
+        }
+      },
+      "name": "Nestle India",
+      "verdict": "HOLD",
+      "forecasts": {
+        "1d": {
+          "label": "Tomorrow",
+          "days": 1,
+          "bias": "Neutral",
+          "confidence": "Low",
+          "composite": 50.0,
+          "price_band": {
+            "low": 1251.79,
+            "mid": 1285.6,
+            "high": 1319.41,
+            "move_pct_mid": 0.0
+          },
+          "catalyst": "RSI at 73 \u2014 momentum carryover likely",
+          "primary_risk": "Gap risk at open; size positions accordingly"
+        },
+        "1w": {
+          "label": "1 Week",
+          "days": 5,
+          "bias": "Neutral",
+          "confidence": "Low",
+          "composite": 50.0,
+          "price_band": {
+            "low": 1209.99,
+            "mid": 1285.6,
+            "high": 1361.21,
+            "move_pct_mid": 0.0
+          },
+          "catalyst": "Range-bound week; Bull (>50>200) bias",
+          "primary_risk": "Regime shift or sector rotation could invalidate setup"
+        },
+        "1m": {
+          "label": "1 Month",
+          "days": 21,
+          "bias": "Neutral",
+          "confidence": "Low",
+          "composite": 50.0,
+          "price_band": {
+            "low": 1130.64,
+            "mid": 1285.6,
+            "high": 1440.56,
+            "move_pct_mid": 0.0
+          },
+          "catalyst": "Consolidation phase in SIDEWAYS regime",
+          "primary_risk": "Macro shocks or earnings surprises are the biggest swing factor"
+        }
+      },
+      "narrative": "NESTLEIND scores 50/100 on our engine. Trend-following signals are turning positive. Not enough for an aggressive bet, but enough to stay constructive. RSI at 73 with 1.4x volume \u2014 buyers mean business. Above-average volume (1.4x) adds weight to the move. The tape is chopping sideways with 43% breadth. Stock-picking matters more than market direction here. FMCG is lagging the broader tape (score 32) \u2014 an extra headwind. Bull case: momentum carries to \u20b91,361 if volume confirms. Bear case: fades below \u20b91,210 \u2014 failed rally territory. Needs to resolve \u20b91,247\u2013\u20b91,316 before a directional bet pays. Verdict: HOLD. Own it? Let it work. Don't own it? Cleaner entries exist elsewhere. Outlook: Neutral \u2192 Neutral \u2192 Neutral.",
+      "rank": 6
+    },
+    {
+      "symbol": "SBIN",
+      "score": 50,
+      "signal": "WATCH",
+      "confidence": "MEDIUM",
+      "current_price": 1080.25,
+      "change_pct": 1.23,
+      "change": 13.1,
+      "target_price": 1271.18,
+      "stop_loss": 1015.43,
+      "risk_reward": 3.2,
+      "holding_category": "medium",
+      "sector": "Banking",
+      "penalty": 0,
+      "scores": {
+        "trend": 11,
+        "momentum": 21,
+        "volume": 4,
+        "breakout": 5,
+        "price_action": 5
+      },
+      "indicators": {
+        "rsi": 59.1,
+        "macd_signal": "Bullish",
+        "sma_alignment": "Above 200 SMA",
+        "volume_ratio": 0.88,
+        "week52_pct": 12.5,
+        "bb_position": 0.84,
+        "adx": null
+      },
+      "reasons": [
+        "Above 200 SMA",
+        "RSI ideal zone (59.1)",
+        "MACD bullish",
+        "MACD histogram expanding",
+        "OBV trending up",
+        "Near upper BB"
+      ],
+      "trade_plan": {
+        "category": "medium",
+        "cat_score": 9,
+        "atr": 34.71,
+        "atr_pct": 3.21,
+        "entry": {
+          "ideal_price": 1062.89,
+          "limit_order": 1062.15,
+          "acceptable_max": 1085.65,
+          "entry_window": "09:15\u201310:15 AM IST",
+          "order_strategy": "Patient limit order",
+          "note": "Prev close \u20b91,080.25 | Dip ~\u20b917.36"
+        },
+        "exit": {
+          "target_conservative": 1201.75,
+          "target_ideal": 1271.18,
+          "target_stretch": 1357.96,
+          "upside_conservative": 13.1,
+          "upside_ideal": 19.6,
+          "upside_stretch": 27.8,
+          "hold_min_days": 30,
+          "hold_max_days": 90,
+          "hold_duration": "4\u201312 weeks",
+          "sell_trigger": "Exit on weekly MACD bearish cross or \u20b91,271.18",
+          "hold_note": "Review weekly"
+        }
+      },
+      "name": "State Bank of India",
+      "verdict": "HOLD",
+      "forecasts": {
+        "1d": {
+          "label": "Tomorrow",
+          "days": 1,
+          "bias": "Mildly Bullish",
+          "confidence": "Medium",
+          "composite": 56.0,
+          "price_band": {
+            "low": 1050.75,
+            "mid": 1088.93,
+            "high": 1127.11,
+            "move_pct_mid": 0.8
+          },
+          "catalyst": "News flow: F&O Talk: Midcaps, smallcaps stage sharp comeback, trade above key moving averages. What's",
+          "primary_risk": "News-driven spike may fade without volume confirmation"
+        },
+        "1w": {
+          "label": "1 Week",
+          "days": 5,
+          "bias": "Neutral",
+          "confidence": "Medium",
+          "composite": 53.6,
+          "price_band": {
+            "low": 994.87,
+            "mid": 1080.25,
+            "high": 1165.63,
+            "move_pct_mid": 0.0
+          },
+          "catalyst": "News flow: F&O Talk: Midcaps, smallcaps stage sharp comeback, trade above key moving averages. What's",
+          "primary_risk": "News-driven spike may fade without volume confirmation"
+        },
+        "1m": {
+          "label": "1 Month",
+          "days": 21,
+          "bias": "Neutral",
+          "confidence": "Medium",
+          "composite": 51.8,
+          "price_band": {
+            "low": 905.28,
+            "mid": 1080.25,
+            "high": 1255.22,
+            "move_pct_mid": 0.0
+          },
+          "catalyst": "News flow: F&O Talk: Midcaps, smallcaps stage sharp comeback, trade above key moving averages. What's",
+          "primary_risk": "News-driven spike may fade without volume confirmation"
+        }
+      },
+      "narrative": "The newsflow around SBIN is constructive \u2014 'F&O Talk: Midcaps, smallcaps stage sharp comeback, trade above key moving averages.' is the lead story driving sentiment. Price has reclaimed its 200-day average \u2014 the first hurdle for any recovery. But the 50-day hasn't confirmed yet, so this is early days. Momentum is picking up nicely \u2014 RSI at 59 has room to run before hitting overbought territory. The tape is chopping sideways with 43% breadth. Stock-picking matters more than market direction here. Banking is lagging the broader tape (score 32) \u2014 an extra headwind. Bull case: momentum carries to \u20b91,166 if volume confirms. Bear case: fades below \u20b9995 \u2014 failed rally territory. Above \u20b91,080, the setup stays alive. \u20b91,106 is the next hurdle. Verdict: HOLD. Own it? Let it work. Don't own it? Cleaner entries exist elsewhere. Outlook: Mildly Bullish \u2192 Neutral \u2192 Neutral.",
+      "rank": 7
     },
     {
       "symbol": "TITAN",
@@ -2397,241 +2631,7 @@
           "primary_risk": "Macro shocks or earnings surprises are the biggest swing factor"
         }
       },
-      "narrative": "TITAN sits in the middle of the pack with a 49/100 read with full bull (>20>50>200). Momentum is hot \u2014 RSI is at 76, meaning buyers are in control but the name is stretched on above-average volume (1.6\u00d7). The broader tape is range-bound with 43% breadth, so stock selection matters more than direction, with Consumer Disc. sector performing in-line. The verdict is HOLD \u2014 if you own it, let it work; if you don't, there are cleaner setups elsewhere. Our three-horizon read: Neutral tomorrow, Neutral over the next week, Neutral through the month.",
-      "rank": 6
-    },
-    {
-      "symbol": "NESTLEIND",
-      "score": 47,
-      "signal": "WATCH",
-      "confidence": "MEDIUM",
-      "current_price": 1285.6,
-      "change_pct": 2.24,
-      "change": 28.2,
-      "target_price": 1371.66,
-      "stop_loss": 1208.46,
-      "risk_reward": 1.2,
-      "holding_category": "short",
-      "sector": "FMCG",
-      "penalty": 0,
-      "scores": {
-        "trend": 16,
-        "momentum": 9,
-        "volume": 8,
-        "breakout": 10,
-        "price_action": 7
-      },
-      "indicators": {
-        "rsi": 72.7,
-        "macd_signal": "Bullish",
-        "sma_alignment": "Bull (>50>200)",
-        "volume_ratio": 1.43,
-        "week52_pct": 3.7,
-        "bb_position": 1.09,
-        "adx": null
-      },
-      "reasons": [
-        "Bullish SMA alignment",
-        "EMA 12/26 bullish",
-        "MACD bullish",
-        "MACD histogram expanding",
-        "OBV trending up",
-        "Near upper BB"
-      ],
-      "trade_plan": {
-        "category": "short",
-        "cat_score": 12,
-        "atr": 30.74,
-        "atr_pct": 2.39,
-        "entry": {
-          "ideal_price": 1276.99,
-          "limit_order": 1276.1,
-          "acceptable_max": 1289.46,
-          "entry_window": "09:15\u201310:15 AM IST",
-          "order_strategy": "Place limit order before 9:14 AM",
-          "note": "Prev close \u20b91,285.60 | Dip ~\u20b98.61"
-        },
-        "exit": {
-          "target_conservative": 1340.92,
-          "target_ideal": 1371.66,
-          "target_stretch": 1408.54,
-          "upside_conservative": 5.0,
-          "upside_ideal": 7.4,
-          "upside_stretch": 10.3,
-          "hold_min_days": 5,
-          "hold_max_days": 15,
-          "hold_duration": "4\u201312 weeks",
-          "sell_trigger": "Exit when RSI > 72 or price hits \u20b91,371.66",
-          "hold_note": "Review daily"
-        }
-      },
-      "name": "Nestle India",
-      "verdict": "HOLD",
-      "forecasts": {
-        "1d": {
-          "label": "Tomorrow",
-          "days": 1,
-          "bias": "Mildly Bearish",
-          "confidence": "Medium",
-          "composite": 42.5,
-          "price_band": {
-            "low": 1244.1,
-            "mid": 1277.91,
-            "high": 1311.73,
-            "move_pct_mid": -0.6
-          },
-          "catalyst": "News flow: Sensex, Nifty hold steady at midday; HUL, Nestle lead gains as IT, Financials weigh",
-          "primary_risk": "Negative news flow could accelerate downside"
-        },
-        "1w": {
-          "label": "1 Week",
-          "days": 5,
-          "bias": "Mildly Bearish",
-          "confidence": "Medium",
-          "composite": 44.3,
-          "price_band": {
-            "low": 1192.81,
-            "mid": 1268.42,
-            "high": 1344.03,
-            "move_pct_mid": -1.34
-          },
-          "catalyst": "News flow: Sensex, Nifty hold steady at midday; HUL, Nestle lead gains as IT, Financials weigh",
-          "primary_risk": "Negative news flow could accelerate downside"
-        },
-        "1m": {
-          "label": "1 Month",
-          "days": 21,
-          "bias": "Neutral",
-          "confidence": "Medium",
-          "composite": 45.6,
-          "price_band": {
-            "low": 1130.64,
-            "mid": 1285.6,
-            "high": 1440.56,
-            "move_pct_mid": 0.0
-          },
-          "catalyst": "News flow: Sensex, Nifty hold steady at midday; HUL, Nestle lead gains as IT, Financials weigh",
-          "primary_risk": "Negative news flow could accelerate downside"
-        }
-      },
-      "narrative": "NESTLEIND sits in the middle of the pack with a 47/100 read with bull (>50>200). Momentum is hot \u2014 RSI is at 73, meaning buyers are in control but the name is stretched on above-average volume (1.4\u00d7). News flow is a headwind \u2014 1 item in the last 48 hours skew negative, with the most prominent being 'Sensex, Nifty hold steady at midday; HUL, Nestle lead gains as IT, Financials weigh' (Hindu BusinessLine). The broader tape is range-bound with 43% breadth, so stock selection matters more than direction, and FMCG is lagging (score 32, trend down). The verdict is HOLD \u2014 if you own it, let it work; if you don't, there are cleaner setups elsewhere. Our three-horizon read: Mildly Bearish tomorrow, Mildly Bearish over the next week, Neutral through the month.",
-      "rank": 7
-    },
-    {
-      "symbol": "SBIN",
-      "score": 46,
-      "signal": "WATCH",
-      "confidence": "MEDIUM",
-      "current_price": 1080.25,
-      "change_pct": 1.23,
-      "change": 13.1,
-      "target_price": 1271.18,
-      "stop_loss": 1015.43,
-      "risk_reward": 3.2,
-      "holding_category": "medium",
-      "sector": "Banking",
-      "penalty": 0,
-      "scores": {
-        "trend": 11,
-        "momentum": 21,
-        "volume": 4,
-        "breakout": 5,
-        "price_action": 5
-      },
-      "indicators": {
-        "rsi": 59.1,
-        "macd_signal": "Bullish",
-        "sma_alignment": "Above 200 SMA",
-        "volume_ratio": 0.88,
-        "week52_pct": 12.5,
-        "bb_position": 0.84,
-        "adx": null
-      },
-      "reasons": [
-        "Above 200 SMA",
-        "RSI ideal zone (59.1)",
-        "MACD bullish",
-        "MACD histogram expanding",
-        "OBV trending up",
-        "Near upper BB"
-      ],
-      "trade_plan": {
-        "category": "medium",
-        "cat_score": 9,
-        "atr": 34.71,
-        "atr_pct": 3.21,
-        "entry": {
-          "ideal_price": 1062.89,
-          "limit_order": 1062.15,
-          "acceptable_max": 1085.65,
-          "entry_window": "09:15\u201310:15 AM IST",
-          "order_strategy": "Patient limit order",
-          "note": "Prev close \u20b91,080.25 | Dip ~\u20b917.36"
-        },
-        "exit": {
-          "target_conservative": 1201.75,
-          "target_ideal": 1271.18,
-          "target_stretch": 1357.96,
-          "upside_conservative": 13.1,
-          "upside_ideal": 19.6,
-          "upside_stretch": 27.8,
-          "hold_min_days": 30,
-          "hold_max_days": 90,
-          "hold_duration": "4\u201312 weeks",
-          "sell_trigger": "Exit on weekly MACD bearish cross or \u20b91,271.18",
-          "hold_note": "Review weekly"
-        }
-      },
-      "name": "State Bank of India",
-      "verdict": "HOLD",
-      "forecasts": {
-        "1d": {
-          "label": "Tomorrow",
-          "days": 1,
-          "bias": "Neutral",
-          "confidence": "Low",
-          "composite": 46.0,
-          "price_band": {
-            "low": 1042.07,
-            "mid": 1080.25,
-            "high": 1118.43,
-            "move_pct_mid": 0.0
-          },
-          "catalyst": "Above 200 SMA setup, score 46/100",
-          "primary_risk": "Gap risk at open; size positions accordingly"
-        },
-        "1w": {
-          "label": "1 Week",
-          "days": 5,
-          "bias": "Neutral",
-          "confidence": "Low",
-          "composite": 46.0,
-          "price_band": {
-            "low": 994.87,
-            "mid": 1080.25,
-            "high": 1165.63,
-            "move_pct_mid": 0.0
-          },
-          "catalyst": "Range-bound week; Above 200 SMA bias",
-          "primary_risk": "Regime shift or sector rotation could invalidate setup"
-        },
-        "1m": {
-          "label": "1 Month",
-          "days": 21,
-          "bias": "Neutral",
-          "confidence": "Low",
-          "composite": 46.0,
-          "price_band": {
-            "low": 905.28,
-            "mid": 1080.25,
-            "high": 1255.22,
-            "move_pct_mid": 0.0
-          },
-          "catalyst": "Consolidation phase in SIDEWAYS regime",
-          "primary_risk": "Macro shocks or earnings surprises are the biggest swing factor"
-        }
-      },
-      "narrative": "SBIN sits in the middle of the pack with a 46/100 read with above 200 sma. Momentum is healthy with RSI at 59, leaving room before overbought territory. The broader tape is range-bound with 43% breadth, so stock selection matters more than direction, and Banking is lagging (score 32, trend down). The verdict is HOLD \u2014 if you own it, let it work; if you don't, there are cleaner setups elsewhere. Our three-horizon read: Neutral tomorrow, Neutral over the next week, Neutral through the month.",
+      "narrative": "TITAN is on fire \u2014 RSI at 76 with volume running 1.6x average. Buyers are aggressive. Moving averages are bullish. Not pristine, but the kind of structure where you buy dips rather than sell rallies. The tape is chopping sideways with 43% breadth. Stock-picking matters more than market direction here. Range-bound between \u20b94,390 and \u20b94,635. Patience over conviction. Verdict: HOLD. Own it? Let it work. Don't own it? Cleaner entries exist elsewhere. Outlook: Neutral \u2192 Neutral \u2192 Neutral.",
       "rank": 8
     },
     {
@@ -2748,12 +2748,12 @@
           "primary_risk": "Macro shocks or earnings surprises are the biggest swing factor"
         }
       },
-      "narrative": "INDUSINDBK sits in the middle of the pack with a 45/100 read with above 200 sma. Momentum is healthy with RSI at 60, leaving room before overbought territory on light volume (0.5\u00d7) \u2014 any move here should be taken with a pinch of salt. The broader tape is range-bound with 43% breadth, so stock selection matters more than direction, and Banking is lagging (score 32, trend down). The verdict is HOLD \u2014 if you own it, let it work; if you don't, there are cleaner setups elsewhere. Our three-horizon read: Neutral tomorrow, Neutral over the next week, Neutral through the month.",
+      "narrative": "INDUSINDBK scores 45/100 on our engine. Price has reclaimed its 200-day average \u2014 the first hurdle for any recovery. But the 50-day hasn't confirmed yet, so this is early days. The momentum profile is constructive. RSI at 60 means the move is early-to-mid phase, not late innings. Volume is thin (0.5x) \u2014 take any move with a pinch of salt. The tape is chopping sideways with 43% breadth. Stock-picking matters more than market direction here. Banking is lagging the broader tape (score 32) \u2014 an extra headwind. Needs to resolve \u20b9828\u2013\u20b9874 before a directional bet pays. Verdict: HOLD. Own it? Let it work. Don't own it? Cleaner entries exist elsewhere. Outlook: Neutral \u2192 Neutral \u2192 Neutral.",
       "rank": 9
     },
     {
       "symbol": "JSWSTEEL",
-      "score": 42,
+      "score": 43,
       "signal": "WATCH",
       "confidence": "MEDIUM",
       "current_price": 1240.3,
@@ -2824,7 +2824,7 @@
           "days": 1,
           "bias": "Mildly Bearish",
           "confidence": "Medium",
-          "composite": 42.0,
+          "composite": 44.5,
           "price_band": {
             "low": 1195.47,
             "mid": 1232.0,
@@ -2839,14 +2839,14 @@
           "days": 5,
           "bias": "Mildly Bearish",
           "confidence": "Medium",
-          "composite": 42.0,
+          "composite": 43.9,
           "price_band": {
             "low": 1140.05,
             "mid": 1221.74,
             "high": 1303.42,
             "move_pct_mid": -1.5
           },
-          "catalyst": "Weak setup (42/100) \u2014 expect continued pressure",
+          "catalyst": "Weak setup (43/100) \u2014 expect continued pressure",
           "primary_risk": "Regime shift or sector rotation could invalidate setup"
         },
         "1m": {
@@ -2854,7 +2854,7 @@
           "days": 21,
           "bias": "Mildly Bearish",
           "confidence": "Medium",
-          "composite": 42.0,
+          "composite": 43.5,
           "price_band": {
             "low": 1034.85,
             "mid": 1202.25,
@@ -2865,7 +2865,7 @@
           "primary_risk": "Macro shocks or earnings surprises are the biggest swing factor"
         }
       },
-      "narrative": "JSWSTEEL sits in the middle of the pack with a 42/100 read with bull (>50>200). Momentum is hot \u2014 RSI is at 74, meaning buyers are in control but the name is stretched. The broader tape is range-bound with 43% breadth, so stock selection matters more than direction, and Metals is lagging (score 35, trend down). The verdict is HOLD \u2014 if you own it, let it work; if you don't, there are cleaner setups elsewhere. Our three-horizon read: Mildly Bearish tomorrow, Mildly Bearish over the next week, Mildly Bearish through the month.",
+      "narrative": "A word of caution \u2014 momentum is surging but the moving average structure hasn't confirmed. This could be a counter-trend bounce rather than a genuine reversal. Directionless. Neither bulls nor bears have control, and that won't change without a catalyst. RSI is at 74 \u2014 momentum is real but getting stretched. A consolidation here would be healthy, not alarming. Newsflow is mildly positive \u2014 2 items in the last 48 hours \u2014 'JSW Steel, Posco to set up 6 mtpa greenfield plant in Odisha' (Mint Companies) is the headline to watch. The tape is chopping sideways with 43% breadth. Stock-picking matters more than market direction here. Metals is lagging the broader tape (score 35) \u2014 an extra headwind. Watch \u20b91,203 \u2014 a break below opens further downside. Verdict: HOLD. Own it? Let it work. Don't own it? Cleaner entries exist elsewhere. Outlook: Mildly Bearish \u2192 Mildly Bearish \u2192 Mildly Bearish.",
       "rank": 10
     },
     {
@@ -2981,7 +2981,7 @@
           "primary_risk": "Macro shocks or earnings surprises are the biggest swing factor"
         }
       },
-      "narrative": "EICHERMOT sits in the middle of the pack with a 41/100 read with above 200 sma. Momentum is healthy with RSI at 57, leaving room before overbought territory. The broader tape is range-bound with 43% breadth, so stock selection matters more than direction, and Automobiles is lagging (score 27, trend down). The verdict is HOLD \u2014 if you own it, let it work; if you don't, there are cleaner setups elsewhere. Our three-horizon read: Mildly Bearish tomorrow, Mildly Bearish over the next week, Mildly Bearish through the month.",
+      "narrative": "EICHERMOT scores 41/100 on our engine. Price has reclaimed its 200-day average \u2014 the first hurdle for any recovery. But the 50-day hasn't confirmed yet, so this is early days. The momentum profile is constructive. RSI at 57 means the move is early-to-mid phase, not late innings. The tape is chopping sideways with 43% breadth. Stock-picking matters more than market direction here. Automobiles is lagging the broader tape (score 27) \u2014 an extra headwind. \u20b96,974 is the line in the sand. Verdict: HOLD. Own it? Let it work. Don't own it? Cleaner entries exist elsewhere. Outlook: Mildly Bearish \u2192 Mildly Bearish \u2192 Mildly Bearish.",
       "rank": 11
     },
     {
@@ -3098,7 +3098,7 @@
           "primary_risk": "Macro shocks or earnings surprises are the biggest swing factor"
         }
       },
-      "narrative": "PFC sits in the middle of the pack with a 41/100 read with full bull (>20>50>200). Momentum is hot \u2014 RSI is at 78, meaning buyers are in control but the name is stretched. The broader tape is range-bound with 43% breadth, so stock selection matters more than direction, and NBFC is lagging (score 31, trend down). The verdict is HOLD \u2014 if you own it, let it work; if you don't, there are cleaner setups elsewhere. Our three-horizon read: Mildly Bearish tomorrow, Mildly Bearish over the next week, Mildly Bearish through the month.",
+      "narrative": "PFC's momentum is running hot with RSI at 78. The question is whether this leg has more room or needs a breather. The trend is solidly positive \u2014 price sits above all key averages, though alignment isn't perfect. The tape is chopping sideways with 43% breadth. Stock-picking matters more than market direction here. NBFC is lagging the broader tape (score 31) \u2014 an extra headwind. \u20b9451 is the line in the sand. Verdict: HOLD. Own it? Let it work. Don't own it? Cleaner entries exist elsewhere. Outlook: Mildly Bearish \u2192 Mildly Bearish \u2192 Mildly Bearish.",
       "rank": 12
     },
     {
@@ -3215,7 +3215,7 @@
           "primary_risk": "Macro shocks or earnings surprises are the biggest swing factor"
         }
       },
-      "narrative": "RECLTD sits in the middle of the pack with a 41/100 read with above 200 sma. Momentum is hot \u2014 RSI is at 75, meaning buyers are in control but the name is stretched on above-average volume (1.6\u00d7). The broader tape is range-bound with 43% breadth, so stock selection matters more than direction, and NBFC is lagging (score 31, trend down). The verdict is HOLD \u2014 if you own it, let it work; if you don't, there are cleaner setups elsewhere. Our three-horizon read: Mildly Bearish tomorrow, Mildly Bearish over the next week, Mildly Bearish through the month.",
+      "narrative": "RECLTD is on fire \u2014 RSI at 75 with volume running 1.6x average. Buyers are aggressive. Price has reclaimed its 200-day average \u2014 the first hurdle for any recovery. But the 50-day hasn't confirmed yet, so this is early days. The tape is chopping sideways with 43% breadth. Stock-picking matters more than market direction here. NBFC is lagging the broader tape (score 31) \u2014 an extra headwind. \u20b9362 is the line in the sand. Verdict: HOLD. Own it? Let it work. Don't own it? Cleaner entries exist elsewhere. Outlook: Mildly Bearish \u2192 Mildly Bearish \u2192 Mildly Bearish.",
       "rank": 13
     },
     {
@@ -3332,7 +3332,7 @@
           "primary_risk": "Macro shocks or earnings surprises are the biggest swing factor"
         }
       },
-      "narrative": "BEL sits in the middle of the pack with a 40/100 read with bull (>50>200). Momentum is hot \u2014 RSI is at 81, meaning buyers are in control but the name is stretched. News flow is mixed across 1 recent item, with the most prominent being 'Berkshire CEO Abel sold stocks managed by ex-portfolio manager Combs, WSJ reports' (ET Markets). The broader tape is range-bound with 43% breadth, so stock selection matters more than direction, and Defence is lagging (score 27, trend down). The verdict is HOLD \u2014 if you own it, let it work; if you don't, there are cleaner setups elsewhere. Our three-horizon read: Mildly Bearish tomorrow, Mildly Bearish over the next week, Mildly Bearish through the month.",
+      "narrative": "Overbought on declining volume \u2014 a classic combination for a pullback or at minimum a breather. There's no discernible trend. The stock is range-bound and waiting for direction. RSI at 81 \u2014 that's overcooked. The easy gains are behind you on this leg. The tape is chopping sideways with 43% breadth. Stock-picking matters more than market direction here. Defence is lagging the broader tape (score 27) \u2014 an extra headwind. \u20b9449 is the line in the sand. Verdict: HOLD. Own it? Let it work. Don't own it? Cleaner entries exist elsewhere. Outlook: Mildly Bearish \u2192 Mildly Bearish \u2192 Mildly Bearish.",
       "rank": 14
     },
     {
@@ -3447,7 +3447,7 @@
           "primary_risk": "Macro shocks or earnings surprises are the biggest swing factor"
         }
       },
-      "narrative": "ONGC is flashing weakness, scoring just 39/100 with full bull (>20>50>200). Momentum is healthy with RSI at 68, leaving room before overbought territory. The broader tape is range-bound with 43% breadth, so stock selection matters more than direction, and Oil & Gas is lagging (score 39, trend down). The verdict is HOLD \u2014 if you own it, let it work; if you don't, there are cleaner setups elsewhere. Our three-horizon read: Mildly Bearish tomorrow, Mildly Bearish over the next week, Mildly Bearish through the month.",
+      "narrative": "ONGC scores 39/100 on our engine. Moving averages are bullish. Not pristine, but the kind of structure where you buy dips rather than sell rallies. The momentum profile is constructive. RSI at 68 means the move is early-to-mid phase, not late innings. The tape is chopping sideways with 43% breadth. Stock-picking matters more than market direction here. \u20b9276 is the line in the sand. Verdict: HOLD. Own it? Let it work. Don't own it? Cleaner entries exist elsewhere. Outlook: Mildly Bearish \u2192 Mildly Bearish \u2192 Mildly Bearish.",
       "rank": 15
     }
   ],
@@ -3471,20 +3471,11 @@
       "reason": "Bullish SMA alignment"
     },
     {
-      "symbol": "TITAN",
-      "name": "Titan Company",
-      "sector": "Consumer Disc.",
-      "current_price": 4525.9,
-      "score": 49,
-      "signal": "WATCH",
-      "reason": "Full bullish SMA alignment"
-    },
-    {
       "symbol": "NESTLEIND",
       "name": "Nestle India",
       "sector": "FMCG",
       "current_price": 1285.6,
-      "score": 47,
+      "score": 50,
       "signal": "WATCH",
       "reason": "Bullish SMA alignment"
     },
@@ -3493,9 +3484,18 @@
       "name": "State Bank of India",
       "sector": "Banking",
       "current_price": 1080.25,
-      "score": 46,
+      "score": 50,
       "signal": "WATCH",
       "reason": "Above 200 SMA"
+    },
+    {
+      "symbol": "TITAN",
+      "name": "Titan Company",
+      "sector": "Consumer Disc.",
+      "current_price": 4525.9,
+      "score": 49,
+      "signal": "WATCH",
+      "reason": "Full bullish SMA alignment"
     }
   ],
   "avoid": [
@@ -3587,10 +3587,10 @@
     }
   ],
   "daily_brief": {
-    "generated_at": "2026-04-18T10:00:45.143374+05:30",
-    "date": "2026-04-18",
+    "generated_at": "2026-04-19T04:01:28.644089+05:30",
+    "date": "2026-04-19",
     "source": "rules_engine_v4_news_fusion",
-    "headline": "SIDEWAYS tape \u2014 3 ADDs, 0 cautious; 159 macro items in focus",
+    "headline": "SIDEWAYS tape \u2014 3 ADDs, 0 cautious; 136 macro items in focus",
     "regime": {
       "label": "SIDEWAYS",
       "breadth_pct": 42.9,
@@ -3600,69 +3600,77 @@
     },
     "macro_context": {
       "label": "NEUTRAL",
-      "score": -0.29,
-      "count": 159,
+      "score": -0.04,
+      "count": 136,
       "highlights": [
         {
-          "title": "How 50 days of the Iran war led to the loss of $50 billion worth of oil",
+          "title": "Yes Bank Q4 Results: Net profit rises 45% to Rs 1,068 crore, NII up 16% YoY",
           "source": "ET Markets",
           "category": "market",
-          "sentiment": "BEARISH",
+          "sentiment": "BULLISH",
           "sectors": [
-            "Telecom"
+            "Banking"
           ],
-          "link": "https://economictimes.indiatimes.com/markets/commodities/news/how-50-days-of-the-iran-war-led-to-the-loss-of-50-billion-worth-of-oil/articleshow/130338646.cms"
+          "link": "https://economictimes.indiatimes.com/markets/stocks/earnings/yes-bank-q4-results-net-profit-rises-45-to-rs-1068-crore-nii-up-16-yoy/articleshow/130350246.cms"
         },
         {
-          "title": "Up to 66% crash: How West Asia war battered India\u2019s top Gulf trade",
-          "source": "Mint Economy",
-          "category": "macro",
-          "sentiment": "BEARISH",
-          "sectors": [],
-          "link": "https://www.livemint.com/economy/west-asia-war-india-trade-gulf-countries-export-import-uae-saudi-arabia-qatar-iraq-11776321025491.html"
-        },
-        {
-          "title": "World's biggest chocolate maker issues profit warning as cocoa prices collapse; shares plunge 17%",
-          "source": "CNBC World",
-          "category": "global",
-          "sentiment": "BEARISH",
-          "sectors": [],
-          "link": "https://www.cnbc.com/2026/04/16/chocolate-barry-callebaut-profit-earnings-cocoa-prices-switzerland.html"
-        },
-        {
-          "title": "US stocks today: S&P 500, Nasdaq end at fresh records as oil prices tumble",
-          "source": "ET Markets",
+          "title": "Yes Bank Q4 results: Net profit jumps 45% to \u20b91,068 crore, NII up 16% YoY; asset quality improves",
+          "source": "Mint Markets",
           "category": "market",
+          "sentiment": "BULLISH",
+          "sectors": [
+            "Banking"
+          ],
+          "link": "https://www.livemint.com/market/stock-market-news/yes-bank-q4-results-net-profit-jumps-45-to-rs-1-068-crore-nii-up-16-yoy-11776500820893.html"
+        },
+        {
+          "title": "Yes Bank Q4 Results 2026 Highlights: Net profit jumps 45% to \u20b91,068 crore, NII up 16% YoY",
+          "source": "Mint Markets",
+          "category": "market",
+          "sentiment": "BULLISH",
+          "sectors": [
+            "Banking"
+          ],
+          "link": "https://www.livemint.com/market/stock-market-news/yes-bank-q4-results-2026-live-yes-bank-q4-earnings-yes-bank-share-price-yes-bank-profit-npa-18-april-2026-11776493736366.html"
+        },
+        {
+          "title": "SMBC-backed Yes Bank poised for balance sheet expansion: MD Tonse",
+          "source": "Mint Companies",
+          "category": "market",
+          "sentiment": "BULLISH",
+          "sectors": [
+            "Banking"
+          ],
+          "link": "https://www.livemint.com/companies/company-results/yes-bank-q4-results-smbc-md-tonse-banking-industry-india-11776520973789.html"
+        },
+        {
+          "title": "Oil prices retreat while stock indices surge following US-Iran ceasefire",
+          "source": "Hindu BusinessLine",
+          "category": "market",
+          "sentiment": "BULLISH",
+          "sectors": [
+            "Oil & Gas"
+          ],
+          "link": "https://www.thehindubusinessline.com/markets/commodities/oil-prices-retreat-while-stock-indices-surge-following-us-iran-ceasefire/article70876509.ece"
+        },
+        {
+          "title": "US move on Russian oil waiver adds pressure as Iran war strains energy markets, India engaged in talks: Sources",
+          "source": "ET Industry",
+          "category": "sector",
           "sentiment": "BEARISH",
           "sectors": [
             "Oil & Gas",
             "Telecom"
           ],
-          "link": "https://economictimes.indiatimes.com/markets/us-stocks/news/us-stocks-today-sp-500-nasdaq-end-at-fresh-records-as-oil-prices-tumble/articleshow/130342793.cms"
-        },
-        {
-          "title": "Seed industry seeks policy support amid input cost increase",
-          "source": "ET Economy",
-          "category": "macro",
-          "sentiment": "BULLISH",
-          "sectors": [],
-          "link": "https://economictimes.indiatimes.com/news/economy/agriculture/seed-industry-seeks-policy-support-amid-input-cost-increase/articleshow/130317391.cms"
-        },
-        {
-          "title": "Europe to face fuel shortage? Energy agency head warns \u2018maybe 6 weeks of jet fuel left\u2019 \u2014 Here's all we know",
-          "source": "Mint Economy",
-          "category": "macro",
-          "sentiment": "BEARISH",
-          "sectors": [],
-          "link": "https://www.livemint.com/economy/europe-fuel-shortage-iea-energy-agency-head-warn-maybe-6-weeks-jet-fuel-left-west-asia-war-strait-of-hormuz-block-supply-11776350929365.html"
+          "link": "https://economictimes.indiatimes.com/industry/energy/oil-gas/us-move-on-russian-oil-waiver-adds-pressure-as-iran-war-strains-energy-markets-india-engaged-in-talks-sources/articleshow/130341055.cms"
         }
       ]
     },
-    "key_insight": "Range-bound tape with 43% breadth. No directional edge \u2014 let existing positions work, avoid fresh breakout trades, save dry powder for the next regime shift. Macro flow is neutral with 159 policy/global items in focus \u2014 factor this into position sizing. Sector dispersion is wide: Power leads at 58 while Conglomerate lags at 9 \u2014 a stock-picker's tape.",
+    "key_insight": "Range-bound tape with 43% breadth. No directional edge \u2014 let existing positions work, avoid fresh breakout trades, save dry powder for the next regime shift. Macro flow is neutral with 136 policy/global items in focus \u2014 factor this into position sizing. Sector dispersion is wide: Power leads at 58 while Conglomerate lags at 9 \u2014 a stock-picker's tape.",
     "narrative": [
       "Regime: SIDEWAYS \u00b7 breadth 43% \u00b7 median momentum +0.8% \u00b7 ATR 3.0%",
       "Book: 3 ADD \u00b7 0 ACCUMULATE \u00b7 46 HOLD \u00b7 0 EXIT",
-      "Macro tone: NEUTRAL from 159 items across 11 sources",
+      "Macro tone: NEUTRAL from 136 items across 11 sources",
       "Strongest sector: Power (avg score 58)"
     ],
     "market_pulse": {
@@ -3681,7 +3689,7 @@
         "change_pct": 4.75,
         "price": 2240.8,
         "action": "HOLD",
-        "score": 33
+        "score": 35
       },
       {
         "symbol": "POLYCAB",
@@ -3713,7 +3721,7 @@
         "change_pct": 2.24,
         "price": 1285.6,
         "action": "HOLD",
-        "score": 47
+        "score": 50
       }
     ],
     "top_movers_down": [
@@ -3769,7 +3777,7 @@
         "rsi": 70.9,
         "trend": "Full Bull (>20>50>200)",
         "reason": "Full bullish SMA alignment",
-        "narrative": "POWERGRID is holding a constructive setup at 60/100 with full bull (>20>50>200). Momentum is hot \u2014 RSI is at 71, meaning buyers are in control but the name is stretched. The broader tape is range-bound with 43% breadth, so stock selection matters more than direction, with Power sector performing in-line. The verdict is BUY \u2014 deploy on pullbacks toward \u20b9319 if you don't already own it. Our three-horizon read: Mildly Bullish tomorrow, Mildly Bullish over the next week, Mildly Bullish through the month.",
+        "narrative": "POWERGRID scores 60/100 on our engine. Structurally, this is textbook. Every major moving average is lined up, and dip-buyers have been rewarded consistently. Buyers are in control (RSI 71), but the stock is getting ahead of itself. Best entries come after a pause. The tape is chopping sideways with 43% breadth. Stock-picking matters more than market direction here. Power is one of the stronger sectors right now (score 58). Bull case: sustains above \u20b9318 and pushes towards \u20b9342 as trend followers pile in. Bear case: a slip below \u20b9303 triggers trailing stops and dents the short-term thesis. Above \u20b9318, the setup stays alive. \u20b9326 is the next hurdle. Verdict: BUY. Entry zone near \u20b9319 \u2014 speed matters. Outlook: Mildly Bullish \u2192 Mildly Bullish \u2192 Mildly Bullish.",
         "forecasts": {
           "1d": {
             "label": "Tomorrow",
@@ -3835,7 +3843,7 @@
         "rsi": 65.3,
         "trend": "Full Bull (>20>50>200)",
         "reason": "Full bullish SMA alignment",
-        "narrative": "NTPC is holding a constructive setup at 56/100 with full bull (>20>50>200). Momentum is healthy with RSI at 65, leaving room before overbought territory. The broader tape is range-bound with 43% breadth, so stock selection matters more than direction, with Power sector performing in-line. The verdict is BUY \u2014 deploy on pullbacks toward \u20b9395 if you don't already own it. Our three-horizon read: Mildly Bullish tomorrow, Mildly Bullish over the next week, Mildly Bullish through the month.",
+        "narrative": "NTPC scores 56/100 on our engine. Moving averages are bullish. Not pristine, but the kind of structure where you buy dips rather than sell rallies. The momentum profile is constructive. RSI at 65 means the move is early-to-mid phase, not late innings. The tape is chopping sideways with 43% breadth. Stock-picking matters more than market direction here. Power is one of the stronger sectors right now (score 58). Bull case: sustains above \u20b9394 and pushes towards \u20b9424 as trend followers pile in. Bear case: a slip below \u20b9375 triggers trailing stops and dents the short-term thesis. Look for a close above \u20b9403 as confirmation. Verdict: BUY. Entry zone near \u20b9395 \u2014 speed matters. Outlook: Mildly Bullish \u2192 Mildly Bullish \u2192 Mildly Bullish.",
         "forecasts": {
           "1d": {
             "label": "Tomorrow",
@@ -3901,7 +3909,7 @@
         "rsi": 77.6,
         "trend": "Bull (>50>200)",
         "reason": "Bullish SMA alignment",
-        "narrative": "ADANIPORTS is holding a constructive setup at 56/100 with bull (>50>200). Momentum is hot \u2014 RSI is at 78, meaning buyers are in control but the name is stretched on above-average volume (1.7\u00d7). The broader tape is range-bound with 43% breadth, so stock selection matters more than direction, with Infrastructure sector performing in-line. The verdict is BUY \u2014 deploy on pullbacks toward \u20b91,578 if you don't already own it. Our three-horizon read: Mildly Bullish tomorrow, Mildly Bullish over the next week, Mildly Bullish through the month.",
+        "narrative": "ADANIPORTS is on fire \u2014 RSI at 78 with volume running 1.7x average. Buyers are aggressive. Trend-following signals are turning positive. Not enough for an aggressive bet, but enough to stay constructive. The tape is chopping sideways with 43% breadth. Stock-picking matters more than market direction here. Bull case: momentum carries to \u20b91,729 if volume confirms. Bear case: fades below \u20b91,475 \u2014 failed rally territory. Above \u20b91,573, the setup stays alive. \u20b91,611 is the next hurdle. Verdict: BUY. Entry zone near \u20b91,578 \u2014 speed matters. Outlook: Mildly Bullish \u2192 Mildly Bullish \u2192 Mildly Bullish.",
         "forecasts": {
           "1d": {
             "label": "Tomorrow",
@@ -3967,7 +3975,7 @@
         "rsi": 62.9,
         "trend": "Bull (>50>200)",
         "reason": "Bullish SMA alignment",
-        "narrative": "APOLLOHOSP sits in the middle of the pack with a 54/100 read with bull (>50>200). Momentum is healthy with RSI at 63, leaving room before overbought territory. The broader tape is range-bound with 43% breadth, so stock selection matters more than direction, with Healthcare sector performing in-line. The verdict is HOLD \u2014 if you own it, let it work; if you don't, there are cleaner setups elsewhere. Our three-horizon read: Neutral tomorrow, Neutral over the next week, Neutral through the month.",
+        "narrative": "The move higher is happening on thin volume. Low-conviction rallies have a habit of fading just when you commit. Trend-following signals are turning positive. Not enough for an aggressive bet, but enough to stay constructive. The momentum profile is constructive. RSI at 63 means the move is early-to-mid phase, not late innings. The tape is chopping sideways with 43% breadth. Stock-picking matters more than market direction here. Bull case: momentum carries to \u20b98,140 if volume confirms. Bear case: fades below \u20b97,258 \u2014 failed rally territory. Range-bound between \u20b97,468 and \u20b97,884. Patience over conviction. Verdict: HOLD. Own it? Let it work. Don't own it? Cleaner entries exist elsewhere. Outlook: Neutral \u2192 Neutral \u2192 Neutral.",
         "forecasts": {
           "1d": {
             "label": "Tomorrow",
@@ -4033,7 +4041,7 @@
         "rsi": 75.7,
         "trend": "Bull (>50>200)",
         "reason": "Bullish SMA alignment",
-        "narrative": "POLYCAB sits in the middle of the pack with a 52/100 read with bull (>50>200). Momentum is hot \u2014 RSI is at 76, meaning buyers are in control but the name is stretched on above-average volume (1.3\u00d7). The broader tape is range-bound with 43% breadth, so stock selection matters more than direction, with Electricals sector performing in-line. The verdict is HOLD \u2014 if you own it, let it work; if you don't, there are cleaner setups elsewhere. Our three-horizon read: Neutral tomorrow, Neutral over the next week, Neutral through the month.",
+        "narrative": "POLYCAB's momentum is running hot with RSI at 76. The question is whether this leg has more room or needs a breather. The setup is building. Price is above the 50 and 200-day averages \u2014 the foundation is there, it just needs follow-through. The tape is chopping sideways with 43% breadth. Stock-picking matters more than market direction here. Bull case: momentum carries to \u20b98,826 if volume confirms. Bear case: fades below \u20b97,539 \u2014 failed rally territory. Range-bound between \u20b97,937 and \u20b98,379. Patience over conviction. Verdict: HOLD. Own it? Let it work. Don't own it? Cleaner entries exist elsewhere. Outlook: Neutral \u2192 Neutral \u2192 Neutral.",
         "forecasts": {
           "1d": {
             "label": "Tomorrow",
@@ -4090,30 +4098,30 @@
         }
       },
       {
-        "symbol": "TITAN",
-        "name": "Titan Company",
-        "sector": "Consumer Disc.",
+        "symbol": "NESTLEIND",
+        "name": "Nestle India",
+        "sector": "FMCG",
         "action": "HOLD",
         "verdict": "HOLD",
-        "score": 49,
-        "rsi": 76.3,
-        "trend": "Full Bull (>20>50>200)",
-        "reason": "Full bullish SMA alignment",
-        "narrative": "TITAN sits in the middle of the pack with a 49/100 read with full bull (>20>50>200). Momentum is hot \u2014 RSI is at 76, meaning buyers are in control but the name is stretched on above-average volume (1.6\u00d7). The broader tape is range-bound with 43% breadth, so stock selection matters more than direction, with Consumer Disc. sector performing in-line. The verdict is HOLD \u2014 if you own it, let it work; if you don't, there are cleaner setups elsewhere. Our three-horizon read: Neutral tomorrow, Neutral over the next week, Neutral through the month.",
+        "score": 50,
+        "rsi": 72.7,
+        "trend": "Bull (>50>200)",
+        "reason": "Bullish SMA alignment",
+        "narrative": "NESTLEIND scores 50/100 on our engine. Trend-following signals are turning positive. Not enough for an aggressive bet, but enough to stay constructive. RSI at 73 with 1.4x volume \u2014 buyers mean business. Above-average volume (1.4x) adds weight to the move. The tape is chopping sideways with 43% breadth. Stock-picking matters more than market direction here. FMCG is lagging the broader tape (score 32) \u2014 an extra headwind. Bull case: momentum carries to \u20b91,361 if volume confirms. Bear case: fades below \u20b91,210 \u2014 failed rally territory. Needs to resolve \u20b91,247\u2013\u20b91,316 before a directional bet pays. Verdict: HOLD. Own it? Let it work. Don't own it? Cleaner entries exist elsewhere. Outlook: Neutral \u2192 Neutral \u2192 Neutral.",
         "forecasts": {
           "1d": {
             "label": "Tomorrow",
             "days": 1,
             "bias": "Neutral",
             "confidence": "Low",
-            "composite": 49.0,
+            "composite": 50.0,
             "price_band": {
-              "low": 4377.4,
-              "mid": 4525.9,
-              "high": 4674.4,
+              "low": 1251.79,
+              "mid": 1285.6,
+              "high": 1319.41,
               "move_pct_mid": 0.0
             },
-            "catalyst": "RSI at 76 \u2014 momentum carryover likely",
+            "catalyst": "RSI at 73 \u2014 momentum carryover likely",
             "primary_risk": "Gap risk at open; size positions accordingly"
           },
           "1w": {
@@ -4121,14 +4129,14 @@
             "days": 5,
             "bias": "Neutral",
             "confidence": "Low",
-            "composite": 49.0,
+            "composite": 50.0,
             "price_band": {
-              "low": 4193.84,
-              "mid": 4525.9,
-              "high": 4857.96,
+              "low": 1209.99,
+              "mid": 1285.6,
+              "high": 1361.21,
               "move_pct_mid": 0.0
             },
-            "catalyst": "Range-bound week; Full Bull (>20>50>200) bias",
+            "catalyst": "Range-bound week; Bull (>50>200) bias",
             "primary_risk": "Regime shift or sector rotation could invalidate setup"
           },
           "1m": {
@@ -4136,11 +4144,11 @@
             "days": 21,
             "bias": "Neutral",
             "confidence": "Low",
-            "composite": 49.0,
+            "composite": 50.0,
             "price_band": {
-              "low": 3845.39,
-              "mid": 4525.9,
-              "high": 5206.41,
+              "low": 1130.64,
+              "mid": 1285.6,
+              "high": 1440.56,
               "move_pct_mid": 0.0
             },
             "catalyst": "Consolidation phase in SIDEWAYS regime",
@@ -4148,24 +4156,17 @@
           }
         },
         "news_info": {
-          "score": 0,
+          "score": 0.0,
           "label": "NEUTRAL",
-          "count": 0,
+          "count": 1,
           "modifier": 0,
-          "top_headline": null
+          "top_headline": "Buy or sell: Sumeet Bagadia recommends three stocks to buy on Monday \u2014 20 April 2026",
+          "top_source": "Mint Markets",
+          "top_link": "https://www.livemint.com/market/stock-market-news/buy-or-sell-sumeet-bagadia-recommends-three-stocks-to-buy-on-monday-20-april-2026-11776495471921.html"
         }
       }
     ],
     "risk_watchlist": [
-      {
-        "symbol": "NESTLEIND",
-        "name": "Nestle India",
-        "action": "HOLD",
-        "flags": [
-          "negative news (1)"
-        ],
-        "verdict": "HOLD"
-      },
       {
         "symbol": "PFC",
         "name": "Power Finance Corp",
@@ -4250,7 +4251,7 @@
         "avg_score": 58.0,
         "count": 2,
         "trend": "up",
-        "news_count": 3,
+        "news_count": 2,
         "news_label": "NEUTRAL"
       },
       {
@@ -4282,7 +4283,7 @@
         "avg_score": 47.0,
         "count": 2,
         "trend": "flat",
-        "news_count": 4,
+        "news_count": 5,
         "news_label": "NEUTRAL"
       },
       {
@@ -4290,28 +4291,28 @@
         "avg_score": 39.0,
         "count": 1,
         "trend": "down",
-        "news_count": 12,
+        "news_count": 10,
         "news_label": "BEARISH"
       },
       {
         "sector": "Metals",
-        "avg_score": 35.7,
+        "avg_score": 36.0,
         "count": 3,
         "trend": "down",
-        "news_count": 1,
-        "news_label": "NEUTRAL"
-      },
-      {
-        "sector": "Banking",
-        "avg_score": 32.5,
-        "count": 6,
-        "trend": "down",
-        "news_count": 19,
+        "news_count": 3,
         "news_label": "BEARISH"
       },
       {
+        "sector": "Banking",
+        "avg_score": 34.3,
+        "count": 6,
+        "trend": "down",
+        "news_count": 22,
+        "news_label": "BULLISH"
+      },
+      {
         "sector": "FMCG",
-        "avg_score": 32.0,
+        "avg_score": 33.0,
         "count": 5,
         "trend": "down",
         "news_count": 1,
@@ -4335,11 +4336,11 @@
       },
       {
         "sector": "Defence",
-        "avg_score": 28.5,
+        "avg_score": 28.0,
         "count": 2,
         "trend": "down",
-        "news_count": 4,
-        "news_label": "BULLISH"
+        "news_count": 1,
+        "news_label": "NEUTRAL"
       }
     ],
     "action_plan": [
@@ -4389,16 +4390,89 @@
         "link": "https://www.livemint.com/market/pulse-of-the-street-indian-stocks-cool-after-surge-as-global-markets-race-ahead-11776430893991.html"
       },
       {
-        "title": "How 50 days of the Iran war led to the loss of $50 billion worth of oil",
+        "title": "Fall in provisions help ICICI Bank's net profit in Q4 FY26",
         "source": "ET Markets",
         "category": "market",
-        "sentiment": "BEARISH",
-        "tickers": [],
-        "sectors": [
-          "Telecom"
+        "sentiment": "BULLISH",
+        "tickers": [
+          "ICICIBANK"
         ],
-        "published": "2026-04-17T16:55:05+00:00",
-        "link": "https://economictimes.indiatimes.com/markets/commodities/news/how-50-days-of-the-iran-war-led-to-the-loss-of-50-billion-worth-of-oil/articleshow/130338646.cms"
+        "sectors": [],
+        "published": "2026-04-18T12:23:21+00:00",
+        "link": "https://economictimes.indiatimes.com/markets/stocks/earnings/fall-in-provisions-help-icici-banks-net-profit-in-q4-fy26/articleshow/130353695.cms"
+      },
+      {
+        "title": "ICICI Bank Q4 Results: Net profit up 8.5% to Rs 13,702 crore, announces Rs 12 dividend",
+        "source": "ET Markets",
+        "category": "market",
+        "sentiment": "BULLISH",
+        "tickers": [
+          "ICICIBANK"
+        ],
+        "sectors": [],
+        "published": "2026-04-18T09:56:54+00:00",
+        "link": "https://economictimes.indiatimes.com/markets/stocks/earnings/icici-bank-q4-results-net-profit-up-8-5-to-rs-13702-crore-announces-rs-12-dividend/articleshow/130351056.cms"
+      },
+      {
+        "title": "HDFC Bank Q4 Results: Net profit rises 9% to Rs 19,221 crore; announces Rs 13 dividend for FY26",
+        "source": "ET Markets",
+        "category": "market",
+        "sentiment": "BULLISH",
+        "tickers": [
+          "HDFCBANK"
+        ],
+        "sectors": [],
+        "published": "2026-04-18T09:29:51+00:00",
+        "link": "https://economictimes.indiatimes.com/markets/stocks/earnings/hdfc-bank-q4-results-net-profit-rises-9-to-rs-19221-crore-announces-rs-13-dividend-for-fy26/articleshow/130350665.cms"
+      },
+      {
+        "title": "ICICI Bank Q4 results: Profit rises 8.5% YoY; NII up 8.4% YoY to \u20b922,979 crore",
+        "source": "Mint Markets",
+        "category": "market",
+        "sentiment": "BULLISH",
+        "tickers": [
+          "RELIANCE",
+          "ICICIBANK"
+        ],
+        "sectors": [],
+        "published": "2026-04-18T09:52:49+00:00",
+        "link": "https://www.livemint.com/market/stock-market-news/icici-bank-q4-results-2026-profit-rises-8-5-yoy-nii-nim-provision-loan-growth-dividend-key-takeaways-11776494482515.html"
+      },
+      {
+        "title": "HDFC Bank Q4 Results: Net profit rises 9% to \u20b919,221 crore, NII up 3.8% YoY; declares dividend of \u20b913 per share",
+        "source": "Mint Markets",
+        "category": "market",
+        "sentiment": "BULLISH",
+        "tickers": [
+          "HDFCBANK"
+        ],
+        "sectors": [],
+        "published": "2026-04-18T09:38:37+00:00",
+        "link": "https://www.livemint.com/market/stock-market-news/hdfc-bank-q4-results-net-profit-rises-9-to-rs-19-221-crore-nii-up-3-8-yoy-declares-dividend-of-rs-13-per-share-11776500563671.html"
+      },
+      {
+        "title": "HDFC Bank Q4 Results 2026 Highlights: PAT rises 9% to \u20b919,221 crore; NII growth at 3.8% YoY; \u20b913 dividend declared",
+        "source": "Mint Markets",
+        "category": "market",
+        "sentiment": "BULLISH",
+        "tickers": [
+          "HDFCBANK"
+        ],
+        "sectors": [],
+        "published": "2026-04-18T05:58:41+00:00",
+        "link": "https://www.livemint.com/market/stock-market-news/hdfc-bank-q4-results-2026-live-hdfc-bank-q4-earnings-hdfc-bank-share-price-profit-npa-hdfc-bank-dividend-18-april-2026-11776491375916.html"
+      },
+      {
+        "title": "ICICI Bank Q4 Results 2026 Highlights: Profit rises 8.5% YoY to \u20b913,702 crore; announces a dividend of \u20b912 per share",
+        "source": "Mint Markets",
+        "category": "market",
+        "sentiment": "BULLISH",
+        "tickers": [
+          "ICICIBANK"
+        ],
+        "sectors": [],
+        "published": "2026-04-18T05:38:02+00:00",
+        "link": "https://www.livemint.com/market/stock-market-news/icici-bank-q4-results-2026-live-icici-bank-q4-earnings-icici-bank-share-price-profit-npa-fundraising-18-april-2026-11776490220655.html"
       },
       {
         "title": "HDFC Bank Q4 results preview: Net profit may rise 9%, NII seen up 6% YoY with stable margins; dividend in focus",
@@ -4413,16 +4487,6 @@
         "link": "https://www.livemint.com/market/stock-market-news/hdfc-bank-q4-results-preview-net-profit-may-rise-9-nii-seen-up-6-yoy-with-stable-margins-dividend-in-focus-11776447481339.html"
       },
       {
-        "title": "Up to 66% crash: How West Asia war battered India\u2019s top Gulf trade",
-        "source": "Mint Economy",
-        "category": "macro",
-        "sentiment": "BEARISH",
-        "tickers": [],
-        "sectors": [],
-        "published": "2026-04-16T07:34:03+00:00",
-        "link": "https://www.livemint.com/economy/west-asia-war-india-trade-gulf-countries-export-import-uae-saudi-arabia-qatar-iraq-11776321025491.html"
-      },
-      {
         "title": "India medical tourism slips below pre-Covid peak amid geopolitics, visa delays and rising Asian competition",
         "source": "ET Industry",
         "category": "sector",
@@ -4431,6 +4495,19 @@
         "sectors": [],
         "published": "2026-04-18T00:00:00+00:00",
         "link": "https://economictimes.indiatimes.com/industry/healthcare/biotech/healthcare/india-medical-tourism-slips-below-pre-covid-peak-amid-geopolitics-visa-delays-and-rising-asian-competition/articleshow/130342775.cms"
+      },
+      {
+        "title": "HDFC Bank senior management backs Keki Mistry to continue as chairman",
+        "source": "Mint Companies",
+        "category": "market",
+        "sentiment": "BULLISH",
+        "tickers": [
+          "RELIANCE",
+          "HDFCBANK"
+        ],
+        "sectors": [],
+        "published": "2026-04-18T15:27:06+00:00",
+        "link": "https://www.livemint.com/companies/company-results/hdfc-bank-q4-results-senior-management-keki-mistry-chairman-atanu-chakraborty-banking-india-11776524116559.html"
       },
       {
         "title": "Trent seeks nod for fundraise, bonus issue as FY27 expansion drive kicks in",
@@ -4443,84 +4520,14 @@
         "sectors": [],
         "published": "2026-04-17T14:00:29+00:00",
         "link": "https://www.thehindubusinessline.com/companies/trent-seeks-nod-for-fundraise-bonus-issue-as-fy27-expansion-drive-kicks-in/article70874089.ece"
-      },
-      {
-        "title": "Q4 Results Today Highlights: Mastek Q4 profit up y-o-y, Bajaj Consumer Care Q4 profit soars, Jio Financial, Aditya Birla Money to announce Q4 results, Wipro & HDFC Life top losers",
-        "source": "Hindu BusinessLine",
-        "category": "market",
-        "sentiment": "BULLISH",
-        "tickers": [
-          "RELIANCE",
-          "WIPRO"
-        ],
-        "sectors": [],
-        "published": "2026-04-17T12:55:23+00:00",
-        "link": "https://www.thehindubusinessline.com/markets/q4-results-today-live-updates-mastek-bajaj-consumer-care-jio-financial-wipro-hdfc-amc-hdfc-life-waaree-hathway-aditya-birla-money-results-17-april-2026/article70872157.ece"
-      },
-      {
-        "title": "Angel One shares jump 10% after strong Q4 earnings growth",
-        "source": "Hindu BusinessLine",
-        "category": "market",
-        "sentiment": "BULLISH",
-        "tickers": [],
-        "sectors": [],
-        "published": "2026-04-17T11:35:11+00:00",
-        "link": "https://www.thehindubusinessline.com/markets/stock-markets/angel-one-shares-gain-after-strong-q4-earnings-growth/article70872300.ece"
-      },
-      {
-        "title": "Seed industry seeks policy support amid input cost increase",
-        "source": "ET Economy",
-        "category": "macro",
-        "sentiment": "BULLISH",
-        "tickers": [],
-        "sectors": [],
-        "published": "2026-04-16T19:44:12+00:00",
-        "link": "https://economictimes.indiatimes.com/news/economy/agriculture/seed-industry-seeks-policy-support-amid-input-cost-increase/articleshow/130317391.cms"
-      },
-      {
-        "title": "US stocks today: S&P 500, Nasdaq end at fresh records as oil prices tumble",
-        "source": "ET Markets",
-        "category": "market",
-        "sentiment": "BEARISH",
-        "tickers": [],
-        "sectors": [
-          "Oil & Gas",
-          "Telecom"
-        ],
-        "published": "2026-04-17T20:13:02+00:00",
-        "link": "https://economictimes.indiatimes.com/markets/us-stocks/news/us-stocks-today-sp-500-nasdaq-end-at-fresh-records-as-oil-prices-tumble/articleshow/130342793.cms"
-      },
-      {
-        "title": "Sebi clears four IPOs including Avaada Electro and Grand Housing",
-        "source": "ET Markets",
-        "category": "market",
-        "sentiment": "BULLISH",
-        "tickers": [
-          "HAL"
-        ],
-        "sectors": [],
-        "published": "2026-04-17T15:19:59+00:00",
-        "link": "https://economictimes.indiatimes.com/markets/ipos/fpos/sebi-clears-four-ipos-including-avaada-electro-and-grand-housing/articleshow/130336958.cms"
-      },
-      {
-        "title": "Yes Bank Q4 results preview: NII growth seen steady, asset quality improves; profit to rise YoY",
-        "source": "Mint Markets",
-        "category": "market",
-        "sentiment": "BULLISH",
-        "tickers": [
-          "RELIANCE"
-        ],
-        "sectors": [],
-        "published": "2026-04-17T13:42:41+00:00",
-        "link": "https://www.livemint.com/market/stock-market-news/yes-bank-q4-results-preview-nii-growth-seen-steady-asset-quality-improves-profits-to-rise-yoy-11776427808103.html"
       }
     ],
     "news_stats": {
-      "total_items": 270,
+      "total_items": 246,
       "sources": 11,
-      "with_tickers": 51,
-      "bullish": 72,
-      "bearish": 65
+      "with_tickers": 55,
+      "bullish": 73,
+      "bearish": 47
     }
   }
 }
