@@ -1,13 +1,13 @@
 {
-  "generated_at": "2026-04-17T19:31:51.984653+05:30",
-  "market_date": "2026-04-17",
+  "generated_at": "2026-04-18T10:00:24.894677+05:30",
+  "market_date": "2026-04-18",
   "analysis_version": "5.0-rules+news+forecast+narrative",
   "engine": "rules_engine_v5_news_fusion",
   "stocks_analyzed": 49,
   "regime": {
     "label": "SIDEWAYS",
     "breadth_pct": 42.9,
-    "momentum_pct": 0.82,
+    "momentum_pct": 0.75,
     "volatility": 2.95,
     "notes": "49 stocks analyzed"
   },
@@ -167,7 +167,7 @@
       },
       {
         "symbol": "NTPC",
-        "score": 59,
+        "score": 56,
         "signal": "BUY",
         "confidence": "MEDIUM",
         "current_price": 393.6,
@@ -238,48 +238,48 @@
             "days": 1,
             "bias": "Mildly Bullish",
             "confidence": "Medium",
-            "composite": 63.5,
+            "composite": 56.0,
             "price_band": {
               "low": 385.16,
               "mid": 396.08,
               "high": 407.01,
               "move_pct_mid": 0.63
             },
-            "catalyst": "News flow: NTPC Green Energy group firm to begin 150 MW supply from solar project on Saturday",
-            "primary_risk": "News-driven spike may fade without volume confirmation"
+            "catalyst": "RSI at 65 \u2014 momentum carryover likely",
+            "primary_risk": "Gap risk at open; size positions accordingly"
           },
           "1w": {
             "label": "1 Week",
             "days": 5,
             "bias": "Mildly Bullish",
             "confidence": "Medium",
-            "composite": 61.7,
+            "composite": 56.0,
             "price_band": {
               "low": 374.73,
               "mid": 399.15,
               "high": 423.58,
               "move_pct_mid": 1.41
             },
-            "catalyst": "News flow: NTPC Green Energy group firm to begin 150 MW supply from solar project on Saturday",
-            "primary_risk": "News-driven spike may fade without volume confirmation"
+            "catalyst": "Range-bound week; Full Bull (>20>50>200) bias",
+            "primary_risk": "Regime shift or sector rotation could invalidate setup"
           },
           "1m": {
             "label": "1 Month",
             "days": 21,
             "bias": "Mildly Bullish",
             "confidence": "Medium",
-            "composite": 60.4,
+            "composite": 56.0,
             "price_band": {
               "low": 354.92,
               "mid": 404.98,
               "high": 455.03,
               "move_pct_mid": 2.89
             },
-            "catalyst": "News flow: NTPC Green Energy group firm to begin 150 MW supply from solar project on Saturday",
-            "primary_risk": "News-driven spike may fade without volume confirmation"
+            "catalyst": "Structural trend full bull (>20>50>200); SIDEWAYS regime supportive",
+            "primary_risk": "Macro shocks or earnings surprises are the biggest swing factor"
           }
         },
-        "narrative": "NTPC is holding a constructive setup at 59/100 with full bull (>20>50>200). Momentum is healthy with RSI at 65, leaving room before overbought territory. News flow is a tailwind \u2014 1 item in the last 48 hours lean positive, with the most prominent being 'NTPC Green Energy group firm to begin 150 MW supply from solar project on Saturday' (ET Industry). The broader tape is range-bound with 43% breadth, so stock selection matters more than direction, with Power sector performing in-line. The verdict is BUY \u2014 deploy on pullbacks toward \u20b9395 if you don't already own it. Our three-horizon read: Mildly Bullish tomorrow, Mildly Bullish over the next week, Mildly Bullish through the month.",
+        "narrative": "NTPC is holding a constructive setup at 56/100 with full bull (>20>50>200). Momentum is healthy with RSI at 65, leaving room before overbought territory. The broader tape is range-bound with 43% breadth, so stock selection matters more than direction, with Power sector performing in-line. The verdict is BUY \u2014 deploy on pullbacks toward \u20b9395 if you don't already own it. Our three-horizon read: Mildly Bullish tomorrow, Mildly Bullish over the next week, Mildly Bullish through the month.",
         "rank": 2
       },
       {
@@ -517,8 +517,130 @@
         "rank": 4
       },
       {
+        "symbol": "POLYCAB",
+        "score": 52,
+        "signal": "WATCH",
+        "confidence": "MEDIUM",
+        "current_price": 8182.5,
+        "change_pct": 3.53,
+        "change": 279.0,
+        "target_price": 8914.9,
+        "stop_loss": 7691.55,
+        "risk_reward": 1.6,
+        "holding_category": "short",
+        "sector": "Electricals",
+        "penalty": 0,
+        "scores": {
+          "trend": 18,
+          "momentum": 9,
+          "volume": 8,
+          "breakout": 10,
+          "price_action": 7
+        },
+        "indicators": {
+          "rsi": 75.7,
+          "macd_signal": "Bullish",
+          "sma_alignment": "Bull (>50>200)",
+          "volume_ratio": 1.32,
+          "week52_pct": 6.2,
+          "bb_position": 1.06,
+          "adx": null
+        },
+        "reasons": [
+          "Bullish SMA alignment",
+          "EMA 12/26 bullish",
+          "MACD bullish",
+          "MACD histogram expanding",
+          "OBV trending up",
+          "Near upper BB"
+        ],
+        "trade_plan": {
+          "category": "short",
+          "cat_score": 12,
+          "atr": 261.57,
+          "atr_pct": 3.2,
+          "entry": {
+            "ideal_price": 8109.26,
+            "limit_order": 8103.58,
+            "acceptable_max": 8207.05,
+            "entry_window": "09:15\u201309:45 AM IST",
+            "order_strategy": "Place limit order before 9:14 AM",
+            "note": "Prev close \u20b98,182.50 | Dip ~\u20b973.24"
+          },
+          "exit": {
+            "target_conservative": 8653.33,
+            "target_ideal": 8914.9,
+            "target_stretch": 9228.79,
+            "upside_conservative": 6.7,
+            "upside_ideal": 9.9,
+            "upside_stretch": 13.8,
+            "hold_min_days": 5,
+            "hold_max_days": 15,
+            "hold_duration": "5\u201315 trading days",
+            "sell_trigger": "Exit when RSI > 72 or price hits \u20b98,914.90",
+            "hold_note": "Review daily"
+          }
+        },
+        "name": "Polycab India",
+        "verdict": "HOLD",
+        "forecasts": {
+          "1d": {
+            "label": "Tomorrow",
+            "days": 1,
+            "bias": "Neutral",
+            "confidence": "Low",
+            "composite": 52.0,
+            "price_band": {
+              "low": 7894.77,
+              "mid": 8182.5,
+              "high": 8470.23,
+              "move_pct_mid": 0.0
+            },
+            "catalyst": "RSI at 76 \u2014 momentum carryover likely",
+            "primary_risk": "Gap risk at open; size positions accordingly"
+          },
+          "1w": {
+            "label": "1 Week",
+            "days": 5,
+            "bias": "Neutral",
+            "confidence": "Low",
+            "composite": 52.0,
+            "price_band": {
+              "low": 7539.12,
+              "mid": 8182.5,
+              "high": 8825.88,
+              "move_pct_mid": 0.0
+            },
+            "catalyst": "Range-bound week; Bull (>50>200) bias",
+            "primary_risk": "Regime shift or sector rotation could invalidate setup"
+          },
+          "1m": {
+            "label": "1 Month",
+            "days": 21,
+            "bias": "Neutral",
+            "confidence": "Low",
+            "composite": 52.0,
+            "price_band": {
+              "low": 6863.97,
+              "mid": 8182.5,
+              "high": 9501.03,
+              "move_pct_mid": 0.0
+            },
+            "catalyst": "Consolidation phase in SIDEWAYS regime",
+            "primary_risk": "Macro shocks or earnings surprises are the biggest swing factor"
+          }
+        },
+        "narrative": "POLYCAB sits in the middle of the pack with a 52/100 read with bull (>50>200). Momentum is hot \u2014 RSI is at 76, meaning buyers are in control but the name is stretched on above-average volume (1.3\u00d7). The broader tape is range-bound with 43% breadth, so stock selection matters more than direction, with Electricals sector performing in-line. The verdict is HOLD \u2014 if you own it, let it work; if you don't, there are cleaner setups elsewhere. Our three-horizon read: Neutral tomorrow, Neutral over the next week, Neutral through the month.",
+        "rank": 5
+      }
+    ]
+  },
+  "medium_term": {
+    "label": "Medium Term (4\u201312 weeks)",
+    "picks": [
+      {
         "symbol": "TITAN",
-        "score": 51,
+        "score": 49,
         "signal": "WATCH",
         "confidence": "MEDIUM",
         "current_price": 4525.9,
@@ -527,7 +649,7 @@
         "target_price": 6562.55,
         "stop_loss": 4254.35,
         "risk_reward": 7.9,
-        "holding_category": "short",
+        "holding_category": "medium",
         "sector": "Consumer Disc.",
         "penalty": 0,
         "scores": {
@@ -563,7 +685,7 @@
             "ideal_price": 4424.65,
             "limit_order": 4421.55,
             "acceptable_max": 4571.16,
-            "entry_window": "09:15\u201309:45 AM IST",
+            "entry_window": "09:15\u201310:15 AM IST",
             "order_strategy": "GTC limit \u2014 no urgency",
             "note": "Prev close \u20b94,525.90 | Dip ~\u20b9101.25"
           },
@@ -576,7 +698,7 @@
             "upside_stretch": 68.8,
             "hold_min_days": 180,
             "hold_max_days": 540,
-            "hold_duration": "5\u201315 trading days",
+            "hold_duration": "4\u201312 weeks",
             "sell_trigger": "Exit if fundamentals deteriorate or \u20b96,562.55 hit",
             "hold_note": "Review monthly"
           }
@@ -588,8 +710,8 @@
             "label": "Tomorrow",
             "days": 1,
             "bias": "Neutral",
-            "confidence": "Medium",
-            "composite": 54.0,
+            "confidence": "Low",
+            "composite": 49.0,
             "price_band": {
               "low": 4377.4,
               "mid": 4525.9,
@@ -603,8 +725,8 @@
             "label": "1 Week",
             "days": 5,
             "bias": "Neutral",
-            "confidence": "Medium",
-            "composite": 52.8,
+            "confidence": "Low",
+            "composite": 49.0,
             "price_band": {
               "low": 4193.84,
               "mid": 4525.9,
@@ -618,8 +740,8 @@
             "label": "1 Month",
             "days": 21,
             "bias": "Neutral",
-            "confidence": "Medium",
-            "composite": 51.9,
+            "confidence": "Low",
+            "composite": 49.0,
             "price_band": {
               "low": 3845.39,
               "mid": 4525.9,
@@ -630,14 +752,9 @@
             "primary_risk": "Macro shocks or earnings surprises are the biggest swing factor"
           }
         },
-        "narrative": "TITAN sits in the middle of the pack with a 51/100 read with full bull (>20>50>200). Momentum is hot \u2014 RSI is at 76, meaning buyers are in control but the name is stretched on above-average volume (1.6\u00d7). News flow is a tailwind \u2014 1 item in the last 48 hours lean positive, with the most prominent being 'Kalyan Jewellers, Titan, and other jewellery stocks tumble up to 6% while MMTC rallies 16%. Here's why' (ET Markets). The broader tape is range-bound with 43% breadth, so stock selection matters more than direction, with Consumer Disc. sector performing in-line. The verdict is HOLD \u2014 if you own it, let it work; if you don't, there are cleaner setups elsewhere. Our three-horizon read: Neutral tomorrow, Neutral over the next week, Neutral through the month.",
-        "rank": 5
-      }
-    ]
-  },
-  "medium_term": {
-    "label": "Medium Term (4\u201312 weeks)",
-    "picks": [
+        "narrative": "TITAN sits in the middle of the pack with a 49/100 read with full bull (>20>50>200). Momentum is hot \u2014 RSI is at 76, meaning buyers are in control but the name is stretched on above-average volume (1.6\u00d7). The broader tape is range-bound with 43% breadth, so stock selection matters more than direction, with Consumer Disc. sector performing in-line. The verdict is HOLD \u2014 if you own it, let it work; if you don't, there are cleaner setups elsewhere. Our three-horizon read: Neutral tomorrow, Neutral over the next week, Neutral through the month.",
+        "rank": 1
+      },
       {
         "symbol": "NESTLEIND",
         "score": 47,
@@ -753,7 +870,7 @@
           }
         },
         "narrative": "NESTLEIND sits in the middle of the pack with a 47/100 read with bull (>50>200). Momentum is hot \u2014 RSI is at 73, meaning buyers are in control but the name is stretched on above-average volume (1.4\u00d7). News flow is a headwind \u2014 1 item in the last 48 hours skew negative, with the most prominent being 'Sensex, Nifty hold steady at midday; HUL, Nestle lead gains as IT, Financials weigh' (Hindu BusinessLine). The broader tape is range-bound with 43% breadth, so stock selection matters more than direction, and FMCG is lagging (score 32, trend down). The verdict is HOLD \u2014 if you own it, let it work; if you don't, there are cleaner setups elsewhere. Our three-horizon read: Mildly Bearish tomorrow, Mildly Bearish over the next week, Neutral through the month.",
-        "rank": 1
+        "rank": 2
       },
       {
         "symbol": "SBIN",
@@ -869,124 +986,7 @@
             "primary_risk": "Macro shocks or earnings surprises are the biggest swing factor"
           }
         },
-        "narrative": "SBIN sits in the middle of the pack with a 46/100 read with above 200 sma. Momentum is healthy with RSI at 59, leaving room before overbought territory. News flow is mixed across 2 recent items, with the most prominent being 'Govt allows SBI, HDFC, Axis Bank & 12 others to import gold, silver until March 2029' (ET Industry). The broader tape is range-bound with 43% breadth, so stock selection matters more than direction, and Banking is lagging (score 32, trend down). The verdict is HOLD \u2014 if you own it, let it work; if you don't, there are cleaner setups elsewhere. Our three-horizon read: Neutral tomorrow, Neutral over the next week, Neutral through the month.",
-        "rank": 2
-      },
-      {
-        "symbol": "POLYCAB",
-        "score": 45,
-        "signal": "WATCH",
-        "confidence": "MEDIUM",
-        "current_price": 8182.5,
-        "change_pct": 3.53,
-        "change": 279.0,
-        "target_price": 8914.9,
-        "stop_loss": 7691.55,
-        "risk_reward": 1.6,
-        "holding_category": "medium",
-        "sector": "Electricals",
-        "penalty": 0,
-        "scores": {
-          "trend": 18,
-          "momentum": 9,
-          "volume": 8,
-          "breakout": 10,
-          "price_action": 7
-        },
-        "indicators": {
-          "rsi": 75.7,
-          "macd_signal": "Bullish",
-          "sma_alignment": "Bull (>50>200)",
-          "volume_ratio": 1.32,
-          "week52_pct": 6.2,
-          "bb_position": 1.06,
-          "adx": null
-        },
-        "reasons": [
-          "Bullish SMA alignment",
-          "EMA 12/26 bullish",
-          "MACD bullish",
-          "MACD histogram expanding",
-          "OBV trending up",
-          "Near upper BB"
-        ],
-        "trade_plan": {
-          "category": "short",
-          "cat_score": 12,
-          "atr": 261.57,
-          "atr_pct": 3.2,
-          "entry": {
-            "ideal_price": 8109.26,
-            "limit_order": 8103.58,
-            "acceptable_max": 8207.05,
-            "entry_window": "09:15\u201310:15 AM IST",
-            "order_strategy": "Place limit order before 9:14 AM",
-            "note": "Prev close \u20b98,182.50 | Dip ~\u20b973.24"
-          },
-          "exit": {
-            "target_conservative": 8653.33,
-            "target_ideal": 8914.9,
-            "target_stretch": 9228.79,
-            "upside_conservative": 6.7,
-            "upside_ideal": 9.9,
-            "upside_stretch": 13.8,
-            "hold_min_days": 5,
-            "hold_max_days": 15,
-            "hold_duration": "4\u201312 weeks",
-            "sell_trigger": "Exit when RSI > 72 or price hits \u20b98,914.90",
-            "hold_note": "Review daily"
-          }
-        },
-        "name": "Polycab India",
-        "verdict": "HOLD",
-        "forecasts": {
-          "1d": {
-            "label": "Tomorrow",
-            "days": 1,
-            "bias": "Mildly Bearish",
-            "confidence": "Medium",
-            "composite": 34.5,
-            "price_band": {
-              "low": 7829.38,
-              "mid": 8117.11,
-              "high": 8404.83,
-              "move_pct_mid": -0.8
-            },
-            "catalyst": "News flow: Rajesh Palviya of Axis Sec suggests Tata Power, Polycab, BEL shares to buy on April 17",
-            "primary_risk": "Negative news flow could accelerate downside"
-          },
-          "1w": {
-            "label": "1 Week",
-            "days": 5,
-            "bias": "Mildly Bearish",
-            "confidence": "Medium",
-            "composite": 38.7,
-            "price_band": {
-              "low": 7392.9,
-              "mid": 8036.28,
-              "high": 8679.66,
-              "move_pct_mid": -1.79
-            },
-            "catalyst": "News flow: Rajesh Palviya of Axis Sec suggests Tata Power, Polycab, BEL shares to buy on April 17",
-            "primary_risk": "Negative news flow could accelerate downside"
-          },
-          "1m": {
-            "label": "1 Month",
-            "days": 21,
-            "bias": "Mildly Bearish",
-            "confidence": "Medium",
-            "composite": 41.9,
-            "price_band": {
-              "low": 6564.3,
-              "mid": 7882.83,
-              "high": 9201.36,
-              "move_pct_mid": -3.66
-            },
-            "catalyst": "News flow: Rajesh Palviya of Axis Sec suggests Tata Power, Polycab, BEL shares to buy on April 17",
-            "primary_risk": "Negative news flow could accelerate downside"
-          }
-        },
-        "narrative": "POLYCAB sits in the middle of the pack with a 45/100 read with bull (>50>200). Momentum is hot \u2014 RSI is at 76, meaning buyers are in control but the name is stretched on above-average volume (1.3\u00d7). News flow is a headwind \u2014 1 item in the last 48 hours skew negative, with the most prominent being 'Rajesh Palviya of Axis Sec suggests Tata Power, Polycab, BEL shares to buy on April 17' (Mint Markets). The broader tape is range-bound with 43% breadth, so stock selection matters more than direction, with Electricals sector performing in-line. The verdict is HOLD \u2014 if you own it, let it work; if you don't, there are cleaner setups elsewhere. Our three-horizon read: Mildly Bearish tomorrow, Mildly Bearish over the next week, Mildly Bearish through the month.",
+        "narrative": "SBIN sits in the middle of the pack with a 46/100 read with above 200 sma. Momentum is healthy with RSI at 59, leaving room before overbought territory. The broader tape is range-bound with 43% breadth, so stock selection matters more than direction, and Banking is lagging (score 32, trend down). The verdict is HOLD \u2014 if you own it, let it work; if you don't, there are cleaner setups elsewhere. Our three-horizon read: Neutral tomorrow, Neutral over the next week, Neutral through the month.",
         "rank": 3
       },
       {
@@ -1577,6 +1577,123 @@
         },
         "narrative": "RECLTD sits in the middle of the pack with a 41/100 read with above 200 sma. Momentum is hot \u2014 RSI is at 75, meaning buyers are in control but the name is stretched on above-average volume (1.6\u00d7). The broader tape is range-bound with 43% breadth, so stock selection matters more than direction, and NBFC is lagging (score 31, trend down). The verdict is HOLD \u2014 if you own it, let it work; if you don't, there are cleaner setups elsewhere. Our three-horizon read: Mildly Bearish tomorrow, Mildly Bearish over the next week, Mildly Bearish through the month.",
         "rank": 3
+      },
+      {
+        "symbol": "BEL",
+        "score": 40,
+        "signal": "WATCH",
+        "confidence": "MEDIUM",
+        "current_price": 462.75,
+        "change_pct": 1.56,
+        "change": 7.1,
+        "target_price": 497.17,
+        "stop_loss": 434.98,
+        "risk_reward": 1.4,
+        "holding_category": "long",
+        "sector": "Defence",
+        "penalty": 10,
+        "scores": {
+          "trend": 18,
+          "momentum": 9,
+          "volume": 4,
+          "breakout": 10,
+          "price_action": 9
+        },
+        "indicators": {
+          "rsi": 81.1,
+          "macd_signal": "Bullish",
+          "sma_alignment": "Bull (>50>200)",
+          "volume_ratio": 0.88,
+          "week52_pct": 2.3,
+          "bb_position": 0.98,
+          "adx": null
+        },
+        "reasons": [
+          "Bullish SMA alignment",
+          "EMA 12/26 bullish",
+          "MACD bullish",
+          "MACD histogram expanding",
+          "OBV trending up",
+          "Near upper BB"
+        ],
+        "trade_plan": {
+          "category": "short",
+          "cat_score": 12,
+          "atr": 12.29,
+          "atr_pct": 2.66,
+          "entry": {
+            "ideal_price": 459.31,
+            "limit_order": 458.99,
+            "acceptable_max": 464.14,
+            "entry_window": "09:15 AM IST (GTC)",
+            "order_strategy": "Place limit order before 9:14 AM",
+            "note": "Prev close \u20b9462.75 | Dip ~\u20b93.44"
+          },
+          "exit": {
+            "target_conservative": 484.88,
+            "target_ideal": 497.17,
+            "target_stretch": 511.92,
+            "upside_conservative": 5.6,
+            "upside_ideal": 8.2,
+            "upside_stretch": 11.5,
+            "hold_min_days": 5,
+            "hold_max_days": 15,
+            "hold_duration": "6\u201318 months",
+            "sell_trigger": "Exit when RSI > 72 or price hits \u20b9497.17",
+            "hold_note": "Review daily"
+          }
+        },
+        "name": "Bharat Electronics",
+        "verdict": "HOLD",
+        "forecasts": {
+          "1d": {
+            "label": "Tomorrow",
+            "days": 1,
+            "bias": "Mildly Bearish",
+            "confidence": "Medium",
+            "composite": 40.0,
+            "price_band": {
+              "low": 446.16,
+              "mid": 459.68,
+              "high": 473.2,
+              "move_pct_mid": -0.66
+            },
+            "catalyst": "RSI at 81 \u2014 momentum carryover likely",
+            "primary_risk": "Gap risk at open; size positions accordingly"
+          },
+          "1w": {
+            "label": "1 Week",
+            "days": 5,
+            "bias": "Mildly Bearish",
+            "confidence": "Medium",
+            "composite": 40.0,
+            "price_band": {
+              "low": 425.65,
+              "mid": 455.88,
+              "high": 486.11,
+              "move_pct_mid": -1.48
+            },
+            "catalyst": "Weak setup (40/100) \u2014 expect continued pressure",
+            "primary_risk": "Regime shift or sector rotation could invalidate setup"
+          },
+          "1m": {
+            "label": "1 Month",
+            "days": 21,
+            "bias": "Mildly Bearish",
+            "confidence": "Medium",
+            "composite": 40.0,
+            "price_band": {
+              "low": 386.72,
+              "mid": 448.67,
+              "high": 510.62,
+              "move_pct_mid": -3.04
+            },
+            "catalyst": "Structural weakness; SIDEWAYS regime adds pressure",
+            "primary_risk": "Macro shocks or earnings surprises are the biggest swing factor"
+          }
+        },
+        "narrative": "BEL sits in the middle of the pack with a 40/100 read with bull (>50>200). Momentum is hot \u2014 RSI is at 81, meaning buyers are in control but the name is stretched. News flow is mixed across 1 recent item, with the most prominent being 'Berkshire CEO Abel sold stocks managed by ex-portfolio manager Combs, WSJ reports' (ET Markets). The broader tape is range-bound with 43% breadth, so stock selection matters more than direction, and Defence is lagging (score 27, trend down). The verdict is HOLD \u2014 if you own it, let it work; if you don't, there are cleaner setups elsewhere. Our three-horizon read: Mildly Bearish tomorrow, Mildly Bearish over the next week, Mildly Bearish through the month.",
+        "rank": 4
       }
     ]
   },
@@ -1700,7 +1817,7 @@
     },
     {
       "symbol": "NTPC",
-      "score": 59,
+      "score": 56,
       "signal": "BUY",
       "confidence": "MEDIUM",
       "current_price": 393.6,
@@ -1771,48 +1888,48 @@
           "days": 1,
           "bias": "Mildly Bullish",
           "confidence": "Medium",
-          "composite": 63.5,
+          "composite": 56.0,
           "price_band": {
             "low": 385.16,
             "mid": 396.08,
             "high": 407.01,
             "move_pct_mid": 0.63
           },
-          "catalyst": "News flow: NTPC Green Energy group firm to begin 150 MW supply from solar project on Saturday",
-          "primary_risk": "News-driven spike may fade without volume confirmation"
+          "catalyst": "RSI at 65 \u2014 momentum carryover likely",
+          "primary_risk": "Gap risk at open; size positions accordingly"
         },
         "1w": {
           "label": "1 Week",
           "days": 5,
           "bias": "Mildly Bullish",
           "confidence": "Medium",
-          "composite": 61.7,
+          "composite": 56.0,
           "price_band": {
             "low": 374.73,
             "mid": 399.15,
             "high": 423.58,
             "move_pct_mid": 1.41
           },
-          "catalyst": "News flow: NTPC Green Energy group firm to begin 150 MW supply from solar project on Saturday",
-          "primary_risk": "News-driven spike may fade without volume confirmation"
+          "catalyst": "Range-bound week; Full Bull (>20>50>200) bias",
+          "primary_risk": "Regime shift or sector rotation could invalidate setup"
         },
         "1m": {
           "label": "1 Month",
           "days": 21,
           "bias": "Mildly Bullish",
           "confidence": "Medium",
-          "composite": 60.4,
+          "composite": 56.0,
           "price_band": {
             "low": 354.92,
             "mid": 404.98,
             "high": 455.03,
             "move_pct_mid": 2.89
           },
-          "catalyst": "News flow: NTPC Green Energy group firm to begin 150 MW supply from solar project on Saturday",
-          "primary_risk": "News-driven spike may fade without volume confirmation"
+          "catalyst": "Structural trend full bull (>20>50>200); SIDEWAYS regime supportive",
+          "primary_risk": "Macro shocks or earnings surprises are the biggest swing factor"
         }
       },
-      "narrative": "NTPC is holding a constructive setup at 59/100 with full bull (>20>50>200). Momentum is healthy with RSI at 65, leaving room before overbought territory. News flow is a tailwind \u2014 1 item in the last 48 hours lean positive, with the most prominent being 'NTPC Green Energy group firm to begin 150 MW supply from solar project on Saturday' (ET Industry). The broader tape is range-bound with 43% breadth, so stock selection matters more than direction, with Power sector performing in-line. The verdict is BUY \u2014 deploy on pullbacks toward \u20b9395 if you don't already own it. Our three-horizon read: Mildly Bullish tomorrow, Mildly Bullish over the next week, Mildly Bullish through the month.",
+      "narrative": "NTPC is holding a constructive setup at 56/100 with full bull (>20>50>200). Momentum is healthy with RSI at 65, leaving room before overbought territory. The broader tape is range-bound with 43% breadth, so stock selection matters more than direction, with Power sector performing in-line. The verdict is BUY \u2014 deploy on pullbacks toward \u20b9395 if you don't already own it. Our three-horizon read: Mildly Bullish tomorrow, Mildly Bullish over the next week, Mildly Bullish through the month.",
       "rank": 2
     },
     {
@@ -2050,8 +2167,125 @@
       "rank": 4
     },
     {
+      "symbol": "POLYCAB",
+      "score": 52,
+      "signal": "WATCH",
+      "confidence": "MEDIUM",
+      "current_price": 8182.5,
+      "change_pct": 3.53,
+      "change": 279.0,
+      "target_price": 8914.9,
+      "stop_loss": 7691.55,
+      "risk_reward": 1.6,
+      "holding_category": "short",
+      "sector": "Electricals",
+      "penalty": 0,
+      "scores": {
+        "trend": 18,
+        "momentum": 9,
+        "volume": 8,
+        "breakout": 10,
+        "price_action": 7
+      },
+      "indicators": {
+        "rsi": 75.7,
+        "macd_signal": "Bullish",
+        "sma_alignment": "Bull (>50>200)",
+        "volume_ratio": 1.32,
+        "week52_pct": 6.2,
+        "bb_position": 1.06,
+        "adx": null
+      },
+      "reasons": [
+        "Bullish SMA alignment",
+        "EMA 12/26 bullish",
+        "MACD bullish",
+        "MACD histogram expanding",
+        "OBV trending up",
+        "Near upper BB"
+      ],
+      "trade_plan": {
+        "category": "short",
+        "cat_score": 12,
+        "atr": 261.57,
+        "atr_pct": 3.2,
+        "entry": {
+          "ideal_price": 8109.26,
+          "limit_order": 8103.58,
+          "acceptable_max": 8207.05,
+          "entry_window": "09:15\u201309:45 AM IST",
+          "order_strategy": "Place limit order before 9:14 AM",
+          "note": "Prev close \u20b98,182.50 | Dip ~\u20b973.24"
+        },
+        "exit": {
+          "target_conservative": 8653.33,
+          "target_ideal": 8914.9,
+          "target_stretch": 9228.79,
+          "upside_conservative": 6.7,
+          "upside_ideal": 9.9,
+          "upside_stretch": 13.8,
+          "hold_min_days": 5,
+          "hold_max_days": 15,
+          "hold_duration": "5\u201315 trading days",
+          "sell_trigger": "Exit when RSI > 72 or price hits \u20b98,914.90",
+          "hold_note": "Review daily"
+        }
+      },
+      "name": "Polycab India",
+      "verdict": "HOLD",
+      "forecasts": {
+        "1d": {
+          "label": "Tomorrow",
+          "days": 1,
+          "bias": "Neutral",
+          "confidence": "Low",
+          "composite": 52.0,
+          "price_band": {
+            "low": 7894.77,
+            "mid": 8182.5,
+            "high": 8470.23,
+            "move_pct_mid": 0.0
+          },
+          "catalyst": "RSI at 76 \u2014 momentum carryover likely",
+          "primary_risk": "Gap risk at open; size positions accordingly"
+        },
+        "1w": {
+          "label": "1 Week",
+          "days": 5,
+          "bias": "Neutral",
+          "confidence": "Low",
+          "composite": 52.0,
+          "price_band": {
+            "low": 7539.12,
+            "mid": 8182.5,
+            "high": 8825.88,
+            "move_pct_mid": 0.0
+          },
+          "catalyst": "Range-bound week; Bull (>50>200) bias",
+          "primary_risk": "Regime shift or sector rotation could invalidate setup"
+        },
+        "1m": {
+          "label": "1 Month",
+          "days": 21,
+          "bias": "Neutral",
+          "confidence": "Low",
+          "composite": 52.0,
+          "price_band": {
+            "low": 6863.97,
+            "mid": 8182.5,
+            "high": 9501.03,
+            "move_pct_mid": 0.0
+          },
+          "catalyst": "Consolidation phase in SIDEWAYS regime",
+          "primary_risk": "Macro shocks or earnings surprises are the biggest swing factor"
+        }
+      },
+      "narrative": "POLYCAB sits in the middle of the pack with a 52/100 read with bull (>50>200). Momentum is hot \u2014 RSI is at 76, meaning buyers are in control but the name is stretched on above-average volume (1.3\u00d7). The broader tape is range-bound with 43% breadth, so stock selection matters more than direction, with Electricals sector performing in-line. The verdict is HOLD \u2014 if you own it, let it work; if you don't, there are cleaner setups elsewhere. Our three-horizon read: Neutral tomorrow, Neutral over the next week, Neutral through the month.",
+      "rank": 5
+    },
+    {
       "symbol": "TITAN",
-      "score": 51,
+      "score": 49,
       "signal": "WATCH",
       "confidence": "MEDIUM",
       "current_price": 4525.9,
@@ -2096,7 +2330,7 @@
           "ideal_price": 4424.65,
           "limit_order": 4421.55,
           "acceptable_max": 4571.16,
-          "entry_window": "09:15\u201309:45 AM IST",
+          "entry_window": "09:15\u201310:15 AM IST",
           "order_strategy": "GTC limit \u2014 no urgency",
           "note": "Prev close \u20b94,525.90 | Dip ~\u20b9101.25"
         },
@@ -2109,7 +2343,7 @@
           "upside_stretch": 68.8,
           "hold_min_days": 180,
           "hold_max_days": 540,
-          "hold_duration": "5\u201315 trading days",
+          "hold_duration": "4\u201312 weeks",
           "sell_trigger": "Exit if fundamentals deteriorate or \u20b96,562.55 hit",
           "hold_note": "Review monthly"
         }
@@ -2121,8 +2355,8 @@
           "label": "Tomorrow",
           "days": 1,
           "bias": "Neutral",
-          "confidence": "Medium",
-          "composite": 54.0,
+          "confidence": "Low",
+          "composite": 49.0,
           "price_band": {
             "low": 4377.4,
             "mid": 4525.9,
@@ -2136,8 +2370,8 @@
           "label": "1 Week",
           "days": 5,
           "bias": "Neutral",
-          "confidence": "Medium",
-          "composite": 52.8,
+          "confidence": "Low",
+          "composite": 49.0,
           "price_band": {
             "low": 4193.84,
             "mid": 4525.9,
@@ -2151,8 +2385,8 @@
           "label": "1 Month",
           "days": 21,
           "bias": "Neutral",
-          "confidence": "Medium",
-          "composite": 51.9,
+          "confidence": "Low",
+          "composite": 49.0,
           "price_band": {
             "low": 3845.39,
             "mid": 4525.9,
@@ -2163,8 +2397,8 @@
           "primary_risk": "Macro shocks or earnings surprises are the biggest swing factor"
         }
       },
-      "narrative": "TITAN sits in the middle of the pack with a 51/100 read with full bull (>20>50>200). Momentum is hot \u2014 RSI is at 76, meaning buyers are in control but the name is stretched on above-average volume (1.6\u00d7). News flow is a tailwind \u2014 1 item in the last 48 hours lean positive, with the most prominent being 'Kalyan Jewellers, Titan, and other jewellery stocks tumble up to 6% while MMTC rallies 16%. Here's why' (ET Markets). The broader tape is range-bound with 43% breadth, so stock selection matters more than direction, with Consumer Disc. sector performing in-line. The verdict is HOLD \u2014 if you own it, let it work; if you don't, there are cleaner setups elsewhere. Our three-horizon read: Neutral tomorrow, Neutral over the next week, Neutral through the month.",
-      "rank": 5
+      "narrative": "TITAN sits in the middle of the pack with a 49/100 read with full bull (>20>50>200). Momentum is hot \u2014 RSI is at 76, meaning buyers are in control but the name is stretched on above-average volume (1.6\u00d7). The broader tape is range-bound with 43% breadth, so stock selection matters more than direction, with Consumer Disc. sector performing in-line. The verdict is HOLD \u2014 if you own it, let it work; if you don't, there are cleaner setups elsewhere. Our three-horizon read: Neutral tomorrow, Neutral over the next week, Neutral through the month.",
+      "rank": 6
     },
     {
       "symbol": "NESTLEIND",
@@ -2281,7 +2515,7 @@
         }
       },
       "narrative": "NESTLEIND sits in the middle of the pack with a 47/100 read with bull (>50>200). Momentum is hot \u2014 RSI is at 73, meaning buyers are in control but the name is stretched on above-average volume (1.4\u00d7). News flow is a headwind \u2014 1 item in the last 48 hours skew negative, with the most prominent being 'Sensex, Nifty hold steady at midday; HUL, Nestle lead gains as IT, Financials weigh' (Hindu BusinessLine). The broader tape is range-bound with 43% breadth, so stock selection matters more than direction, and FMCG is lagging (score 32, trend down). The verdict is HOLD \u2014 if you own it, let it work; if you don't, there are cleaner setups elsewhere. Our three-horizon read: Mildly Bearish tomorrow, Mildly Bearish over the next week, Neutral through the month.",
-      "rank": 6
+      "rank": 7
     },
     {
       "symbol": "SBIN",
@@ -2397,124 +2631,7 @@
           "primary_risk": "Macro shocks or earnings surprises are the biggest swing factor"
         }
       },
-      "narrative": "SBIN sits in the middle of the pack with a 46/100 read with above 200 sma. Momentum is healthy with RSI at 59, leaving room before overbought territory. News flow is mixed across 2 recent items, with the most prominent being 'Govt allows SBI, HDFC, Axis Bank & 12 others to import gold, silver until March 2029' (ET Industry). The broader tape is range-bound with 43% breadth, so stock selection matters more than direction, and Banking is lagging (score 32, trend down). The verdict is HOLD \u2014 if you own it, let it work; if you don't, there are cleaner setups elsewhere. Our three-horizon read: Neutral tomorrow, Neutral over the next week, Neutral through the month.",
-      "rank": 7
-    },
-    {
-      "symbol": "POLYCAB",
-      "score": 45,
-      "signal": "WATCH",
-      "confidence": "MEDIUM",
-      "current_price": 8182.5,
-      "change_pct": 3.53,
-      "change": 279.0,
-      "target_price": 8914.9,
-      "stop_loss": 7691.55,
-      "risk_reward": 1.6,
-      "holding_category": "short",
-      "sector": "Electricals",
-      "penalty": 0,
-      "scores": {
-        "trend": 18,
-        "momentum": 9,
-        "volume": 8,
-        "breakout": 10,
-        "price_action": 7
-      },
-      "indicators": {
-        "rsi": 75.7,
-        "macd_signal": "Bullish",
-        "sma_alignment": "Bull (>50>200)",
-        "volume_ratio": 1.32,
-        "week52_pct": 6.2,
-        "bb_position": 1.06,
-        "adx": null
-      },
-      "reasons": [
-        "Bullish SMA alignment",
-        "EMA 12/26 bullish",
-        "MACD bullish",
-        "MACD histogram expanding",
-        "OBV trending up",
-        "Near upper BB"
-      ],
-      "trade_plan": {
-        "category": "short",
-        "cat_score": 12,
-        "atr": 261.57,
-        "atr_pct": 3.2,
-        "entry": {
-          "ideal_price": 8109.26,
-          "limit_order": 8103.58,
-          "acceptable_max": 8207.05,
-          "entry_window": "09:15\u201310:15 AM IST",
-          "order_strategy": "Place limit order before 9:14 AM",
-          "note": "Prev close \u20b98,182.50 | Dip ~\u20b973.24"
-        },
-        "exit": {
-          "target_conservative": 8653.33,
-          "target_ideal": 8914.9,
-          "target_stretch": 9228.79,
-          "upside_conservative": 6.7,
-          "upside_ideal": 9.9,
-          "upside_stretch": 13.8,
-          "hold_min_days": 5,
-          "hold_max_days": 15,
-          "hold_duration": "4\u201312 weeks",
-          "sell_trigger": "Exit when RSI > 72 or price hits \u20b98,914.90",
-          "hold_note": "Review daily"
-        }
-      },
-      "name": "Polycab India",
-      "verdict": "HOLD",
-      "forecasts": {
-        "1d": {
-          "label": "Tomorrow",
-          "days": 1,
-          "bias": "Mildly Bearish",
-          "confidence": "Medium",
-          "composite": 34.5,
-          "price_band": {
-            "low": 7829.38,
-            "mid": 8117.11,
-            "high": 8404.83,
-            "move_pct_mid": -0.8
-          },
-          "catalyst": "News flow: Rajesh Palviya of Axis Sec suggests Tata Power, Polycab, BEL shares to buy on April 17",
-          "primary_risk": "Negative news flow could accelerate downside"
-        },
-        "1w": {
-          "label": "1 Week",
-          "days": 5,
-          "bias": "Mildly Bearish",
-          "confidence": "Medium",
-          "composite": 38.7,
-          "price_band": {
-            "low": 7392.9,
-            "mid": 8036.28,
-            "high": 8679.66,
-            "move_pct_mid": -1.79
-          },
-          "catalyst": "News flow: Rajesh Palviya of Axis Sec suggests Tata Power, Polycab, BEL shares to buy on April 17",
-          "primary_risk": "Negative news flow could accelerate downside"
-        },
-        "1m": {
-          "label": "1 Month",
-          "days": 21,
-          "bias": "Mildly Bearish",
-          "confidence": "Medium",
-          "composite": 41.9,
-          "price_band": {
-            "low": 6564.3,
-            "mid": 7882.83,
-            "high": 9201.36,
-            "move_pct_mid": -3.66
-          },
-          "catalyst": "News flow: Rajesh Palviya of Axis Sec suggests Tata Power, Polycab, BEL shares to buy on April 17",
-          "primary_risk": "Negative news flow could accelerate downside"
-        }
-      },
-      "narrative": "POLYCAB sits in the middle of the pack with a 45/100 read with bull (>50>200). Momentum is hot \u2014 RSI is at 76, meaning buyers are in control but the name is stretched on above-average volume (1.3\u00d7). News flow is a headwind \u2014 1 item in the last 48 hours skew negative, with the most prominent being 'Rajesh Palviya of Axis Sec suggests Tata Power, Polycab, BEL shares to buy on April 17' (Mint Markets). The broader tape is range-bound with 43% breadth, so stock selection matters more than direction, with Electricals sector performing in-line. The verdict is HOLD \u2014 if you own it, let it work; if you don't, there are cleaner setups elsewhere. Our three-horizon read: Mildly Bearish tomorrow, Mildly Bearish over the next week, Mildly Bearish through the month.",
+      "narrative": "SBIN sits in the middle of the pack with a 46/100 read with above 200 sma. Momentum is healthy with RSI at 59, leaving room before overbought territory. The broader tape is range-bound with 43% breadth, so stock selection matters more than direction, and Banking is lagging (score 32, trend down). The verdict is HOLD \u2014 if you own it, let it work; if you don't, there are cleaner setups elsewhere. Our three-horizon read: Neutral tomorrow, Neutral over the next week, Neutral through the month.",
       "rank": 8
     },
     {
@@ -3102,6 +3219,123 @@
       "rank": 13
     },
     {
+      "symbol": "BEL",
+      "score": 40,
+      "signal": "WATCH",
+      "confidence": "MEDIUM",
+      "current_price": 462.75,
+      "change_pct": 1.56,
+      "change": 7.1,
+      "target_price": 497.17,
+      "stop_loss": 434.98,
+      "risk_reward": 1.4,
+      "holding_category": "short",
+      "sector": "Defence",
+      "penalty": 10,
+      "scores": {
+        "trend": 18,
+        "momentum": 9,
+        "volume": 4,
+        "breakout": 10,
+        "price_action": 9
+      },
+      "indicators": {
+        "rsi": 81.1,
+        "macd_signal": "Bullish",
+        "sma_alignment": "Bull (>50>200)",
+        "volume_ratio": 0.88,
+        "week52_pct": 2.3,
+        "bb_position": 0.98,
+        "adx": null
+      },
+      "reasons": [
+        "Bullish SMA alignment",
+        "EMA 12/26 bullish",
+        "MACD bullish",
+        "MACD histogram expanding",
+        "OBV trending up",
+        "Near upper BB"
+      ],
+      "trade_plan": {
+        "category": "short",
+        "cat_score": 12,
+        "atr": 12.29,
+        "atr_pct": 2.66,
+        "entry": {
+          "ideal_price": 459.31,
+          "limit_order": 458.99,
+          "acceptable_max": 464.14,
+          "entry_window": "09:15 AM IST (GTC)",
+          "order_strategy": "Place limit order before 9:14 AM",
+          "note": "Prev close \u20b9462.75 | Dip ~\u20b93.44"
+        },
+        "exit": {
+          "target_conservative": 484.88,
+          "target_ideal": 497.17,
+          "target_stretch": 511.92,
+          "upside_conservative": 5.6,
+          "upside_ideal": 8.2,
+          "upside_stretch": 11.5,
+          "hold_min_days": 5,
+          "hold_max_days": 15,
+          "hold_duration": "6\u201318 months",
+          "sell_trigger": "Exit when RSI > 72 or price hits \u20b9497.17",
+          "hold_note": "Review daily"
+        }
+      },
+      "name": "Bharat Electronics",
+      "verdict": "HOLD",
+      "forecasts": {
+        "1d": {
+          "label": "Tomorrow",
+          "days": 1,
+          "bias": "Mildly Bearish",
+          "confidence": "Medium",
+          "composite": 40.0,
+          "price_band": {
+            "low": 446.16,
+            "mid": 459.68,
+            "high": 473.2,
+            "move_pct_mid": -0.66
+          },
+          "catalyst": "RSI at 81 \u2014 momentum carryover likely",
+          "primary_risk": "Gap risk at open; size positions accordingly"
+        },
+        "1w": {
+          "label": "1 Week",
+          "days": 5,
+          "bias": "Mildly Bearish",
+          "confidence": "Medium",
+          "composite": 40.0,
+          "price_band": {
+            "low": 425.65,
+            "mid": 455.88,
+            "high": 486.11,
+            "move_pct_mid": -1.48
+          },
+          "catalyst": "Weak setup (40/100) \u2014 expect continued pressure",
+          "primary_risk": "Regime shift or sector rotation could invalidate setup"
+        },
+        "1m": {
+          "label": "1 Month",
+          "days": 21,
+          "bias": "Mildly Bearish",
+          "confidence": "Medium",
+          "composite": 40.0,
+          "price_band": {
+            "low": 386.72,
+            "mid": 448.67,
+            "high": 510.62,
+            "move_pct_mid": -3.04
+          },
+          "catalyst": "Structural weakness; SIDEWAYS regime adds pressure",
+          "primary_risk": "Macro shocks or earnings surprises are the biggest swing factor"
+        }
+      },
+      "narrative": "BEL sits in the middle of the pack with a 40/100 read with bull (>50>200). Momentum is hot \u2014 RSI is at 81, meaning buyers are in control but the name is stretched. News flow is mixed across 1 recent item, with the most prominent being 'Berkshire CEO Abel sold stocks managed by ex-portfolio manager Combs, WSJ reports' (ET Markets). The broader tape is range-bound with 43% breadth, so stock selection matters more than direction, and Defence is lagging (score 27, trend down). The verdict is HOLD \u2014 if you own it, let it work; if you don't, there are cleaner setups elsewhere. Our three-horizon read: Mildly Bearish tomorrow, Mildly Bearish over the next week, Mildly Bearish through the month.",
+      "rank": 14
+    },
+    {
       "symbol": "ONGC",
       "score": 39,
       "signal": "AVOID",
@@ -3126,7 +3360,7 @@
         "rsi": 67.9,
         "macd_signal": "Bearish",
         "sma_alignment": "Full Bull (>20>50>200)",
-        "volume_ratio": 0.74,
+        "volume_ratio": 0.75,
         "week52_pct": 3.1,
         "bb_position": 0.63,
         "adx": null
@@ -3214,123 +3448,6 @@
         }
       },
       "narrative": "ONGC is flashing weakness, scoring just 39/100 with full bull (>20>50>200). Momentum is healthy with RSI at 68, leaving room before overbought territory. The broader tape is range-bound with 43% breadth, so stock selection matters more than direction, and Oil & Gas is lagging (score 39, trend down). The verdict is HOLD \u2014 if you own it, let it work; if you don't, there are cleaner setups elsewhere. Our three-horizon read: Mildly Bearish tomorrow, Mildly Bearish over the next week, Mildly Bearish through the month.",
-      "rank": 14
-    },
-    {
-      "symbol": "BEL",
-      "score": 38,
-      "signal": "AVOID",
-      "confidence": "LOW",
-      "current_price": 462.75,
-      "change_pct": 1.56,
-      "change": 7.1,
-      "target_price": 497.17,
-      "stop_loss": 434.98,
-      "risk_reward": 1.4,
-      "holding_category": "short",
-      "sector": "Defence",
-      "penalty": 10,
-      "scores": {
-        "trend": 18,
-        "momentum": 9,
-        "volume": 4,
-        "breakout": 10,
-        "price_action": 9
-      },
-      "indicators": {
-        "rsi": 81.1,
-        "macd_signal": "Bullish",
-        "sma_alignment": "Bull (>50>200)",
-        "volume_ratio": 0.88,
-        "week52_pct": 2.3,
-        "bb_position": 0.98,
-        "adx": null
-      },
-      "reasons": [
-        "Bullish SMA alignment",
-        "EMA 12/26 bullish",
-        "MACD bullish",
-        "MACD histogram expanding",
-        "OBV trending up",
-        "Near upper BB"
-      ],
-      "trade_plan": {
-        "category": "short",
-        "cat_score": 12,
-        "atr": 12.29,
-        "atr_pct": 2.66,
-        "entry": {
-          "ideal_price": 459.31,
-          "limit_order": 458.99,
-          "acceptable_max": 464.14,
-          "entry_window": "09:15\u201309:45 AM IST",
-          "order_strategy": "Place limit order before 9:14 AM",
-          "note": "Prev close \u20b9462.75 | Dip ~\u20b93.44"
-        },
-        "exit": {
-          "target_conservative": 484.88,
-          "target_ideal": 497.17,
-          "target_stretch": 511.92,
-          "upside_conservative": 5.6,
-          "upside_ideal": 8.2,
-          "upside_stretch": 11.5,
-          "hold_min_days": 5,
-          "hold_max_days": 15,
-          "hold_duration": "5\u201315 trading days",
-          "sell_trigger": "Exit when RSI > 72 or price hits \u20b9497.17",
-          "hold_note": "Review daily"
-        }
-      },
-      "name": "Bharat Electronics",
-      "verdict": "HOLD",
-      "forecasts": {
-        "1d": {
-          "label": "Tomorrow",
-          "days": 1,
-          "bias": "Mildly Bearish",
-          "confidence": "High",
-          "composite": 35.0,
-          "price_band": {
-            "low": 446.16,
-            "mid": 459.68,
-            "high": 473.2,
-            "move_pct_mid": -0.66
-          },
-          "catalyst": "RSI at 81 \u2014 momentum carryover likely",
-          "primary_risk": "Gap risk at open; size positions accordingly"
-        },
-        "1w": {
-          "label": "1 Week",
-          "days": 5,
-          "bias": "Mildly Bearish",
-          "confidence": "High",
-          "composite": 36.2,
-          "price_band": {
-            "low": 425.65,
-            "mid": 455.88,
-            "high": 486.11,
-            "move_pct_mid": -1.48
-          },
-          "catalyst": "Weak setup (38/100) \u2014 expect continued pressure",
-          "primary_risk": "Regime shift or sector rotation could invalidate setup"
-        },
-        "1m": {
-          "label": "1 Month",
-          "days": 21,
-          "bias": "Mildly Bearish",
-          "confidence": "High",
-          "composite": 37.1,
-          "price_band": {
-            "low": 386.72,
-            "mid": 448.67,
-            "high": 510.62,
-            "move_pct_mid": -3.04
-          },
-          "catalyst": "Structural weakness; SIDEWAYS regime adds pressure",
-          "primary_risk": "Macro shocks or earnings surprises are the biggest swing factor"
-        }
-      },
-      "narrative": "BEL is flashing weakness, scoring just 38/100 with bull (>50>200). Momentum is hot \u2014 RSI is at 81, meaning buyers are in control but the name is stretched. News flow is a headwind \u2014 2 items in the last 48 hours skew negative, with the most prominent being 'Rajesh Palviya of Axis Sec suggests Tata Power, Polycab, BEL shares to buy on April 17' (Mint Markets). The broader tape is range-bound with 43% breadth, so stock selection matters more than direction, and Defence is lagging (score 27, trend down). The verdict is HOLD \u2014 if you own it, let it work; if you don't, there are cleaner setups elsewhere. Our three-horizon read: Mildly Bearish tomorrow, Mildly Bearish over the next week, Mildly Bearish through the month.",
       "rank": 15
     }
   ],
@@ -3345,11 +3462,20 @@
       "reason": "Bullish SMA alignment"
     },
     {
+      "symbol": "POLYCAB",
+      "name": "Polycab India",
+      "sector": "Electricals",
+      "current_price": 8182.5,
+      "score": 52,
+      "signal": "WATCH",
+      "reason": "Bullish SMA alignment"
+    },
+    {
       "symbol": "TITAN",
       "name": "Titan Company",
       "sector": "Consumer Disc.",
       "current_price": 4525.9,
-      "score": 51,
+      "score": 49,
       "signal": "WATCH",
       "reason": "Full bullish SMA alignment"
     },
@@ -3370,15 +3496,6 @@
       "score": 46,
       "signal": "WATCH",
       "reason": "Above 200 SMA"
-    },
-    {
-      "symbol": "POLYCAB",
-      "name": "Polycab India",
-      "sector": "Electricals",
-      "current_price": 8182.5,
-      "score": 45,
-      "signal": "WATCH",
-      "reason": "Bullish SMA alignment"
     }
   ],
   "avoid": [
@@ -3391,18 +3508,18 @@
       "reason": "Full bullish SMA alignment"
     },
     {
-      "symbol": "BEL",
-      "name": "Bharat Electronics",
-      "sector": "Defence",
-      "current_price": 462.75,
-      "score": 38,
-      "reason": "Bullish SMA alignment"
-    },
-    {
       "symbol": "AXISBANK",
       "name": "Axis Bank",
       "sector": "Banking",
       "current_price": 1359.1,
+      "score": 38,
+      "reason": "Bullish SMA alignment"
+    },
+    {
+      "symbol": "LT",
+      "name": "Larsen & Toubro",
+      "sector": "Infrastructure",
+      "current_price": 4096.1,
       "score": 38,
       "reason": "Bullish SMA alignment"
     }
@@ -3470,41 +3587,31 @@
     }
   ],
   "daily_brief": {
-    "generated_at": "2026-04-17T19:32:09.478989+05:30",
-    "date": "2026-04-17",
+    "generated_at": "2026-04-18T10:00:45.143374+05:30",
+    "date": "2026-04-18",
     "source": "rules_engine_v4_news_fusion",
-    "headline": "SIDEWAYS tape \u2014 3 ADDs, 1 cautious; 159 macro items in focus",
+    "headline": "SIDEWAYS tape \u2014 3 ADDs, 0 cautious; 159 macro items in focus",
     "regime": {
       "label": "SIDEWAYS",
       "breadth_pct": 42.9,
-      "momentum_pct": 0.82,
+      "momentum_pct": 0.75,
       "volatility": 2.95,
       "notes": "49 stocks analyzed"
     },
     "macro_context": {
       "label": "NEUTRAL",
-      "score": -0.07,
+      "score": -0.29,
       "count": 159,
       "highlights": [
         {
-          "title": "Lloyds Metals among 8 midcap-cap stocks that hit 52-week highs & rallied up to 31% in a month",
+          "title": "How 50 days of the Iran war led to the loss of $50 billion worth of oil",
           "source": "ET Markets",
           "category": "market",
-          "sentiment": "BULLISH",
+          "sentiment": "BEARISH",
           "sectors": [
-            "Metals"
+            "Telecom"
           ],
-          "link": "https://economictimes.indiatimes.com/markets/stocks/news/lloyds-metals-among-8-midcap-cap-stocks-that-hit-52-week-highs-amp-rallied-up-to-31-in-a-month/slideshow/130332943.cms"
-        },
-        {
-          "title": "YES Bank Q4 preview: NII to grow up to 12%; PAT estimates diverge. 8 things to watch",
-          "source": "ET Markets",
-          "category": "market",
-          "sentiment": "BULLISH",
-          "sectors": [
-            "Banking"
-          ],
-          "link": "https://economictimes.indiatimes.com/markets/stocks/news/yes-bank-q4-preview-nii-to-grow-up-to-12-pat-estimates-diverge-8-things-to-watch/articleshow/130330370.cms"
+          "link": "https://economictimes.indiatimes.com/markets/commodities/news/how-50-days-of-the-iran-war-led-to-the-loss-of-50-billion-worth-of-oil/articleshow/130338646.cms"
         },
         {
           "title": "Up to 66% crash: How West Asia war battered India\u2019s top Gulf trade",
@@ -3515,16 +3622,6 @@
           "link": "https://www.livemint.com/economy/west-asia-war-india-trade-gulf-countries-export-import-uae-saudi-arabia-qatar-iraq-11776321025491.html"
         },
         {
-          "title": "Waaree Renewable shares rally 13% on strong Q4 earnings",
-          "source": "Hindu BusinessLine",
-          "category": "market",
-          "sentiment": "BULLISH",
-          "sectors": [
-            "Power"
-          ],
-          "link": "https://www.thehindubusinessline.com/markets/stock-markets/waaree-renewable-shares-rally-13-on-strong-q4-earnings/article70872316.ece"
-        },
-        {
           "title": "World's biggest chocolate maker issues profit warning as cocoa prices collapse; shares plunge 17%",
           "source": "CNBC World",
           "category": "global",
@@ -3533,21 +3630,38 @@
           "link": "https://www.cnbc.com/2026/04/16/chocolate-barry-callebaut-profit-earnings-cocoa-prices-switzerland.html"
         },
         {
-          "title": "US stocks today: Dow soars over 600 points as Iran announces opening of Strait of Hormuz",
+          "title": "US stocks today: S&P 500, Nasdaq end at fresh records as oil prices tumble",
           "source": "ET Markets",
           "category": "market",
-          "sentiment": "BULLISH",
+          "sentiment": "BEARISH",
           "sectors": [
+            "Oil & Gas",
             "Telecom"
           ],
-          "link": "https://economictimes.indiatimes.com/markets/us-stocks/news/us-stocks-today-dow-soars-over-600-points-as-iran-announces-opening-of-strait-of-hormuz/articleshow/130334726.cms"
+          "link": "https://economictimes.indiatimes.com/markets/us-stocks/news/us-stocks-today-sp-500-nasdaq-end-at-fresh-records-as-oil-prices-tumble/articleshow/130342793.cms"
+        },
+        {
+          "title": "Seed industry seeks policy support amid input cost increase",
+          "source": "ET Economy",
+          "category": "macro",
+          "sentiment": "BULLISH",
+          "sectors": [],
+          "link": "https://economictimes.indiatimes.com/news/economy/agriculture/seed-industry-seeks-policy-support-amid-input-cost-increase/articleshow/130317391.cms"
+        },
+        {
+          "title": "Europe to face fuel shortage? Energy agency head warns \u2018maybe 6 weeks of jet fuel left\u2019 \u2014 Here's all we know",
+          "source": "Mint Economy",
+          "category": "macro",
+          "sentiment": "BEARISH",
+          "sectors": [],
+          "link": "https://www.livemint.com/economy/europe-fuel-shortage-iea-energy-agency-head-warn-maybe-6-weeks-jet-fuel-left-west-asia-war-strait-of-hormuz-block-supply-11776350929365.html"
         }
       ]
     },
     "key_insight": "Range-bound tape with 43% breadth. No directional edge \u2014 let existing positions work, avoid fresh breakout trades, save dry powder for the next regime shift. Macro flow is neutral with 159 policy/global items in focus \u2014 factor this into position sizing. Sector dispersion is wide: Power leads at 58 while Conglomerate lags at 9 \u2014 a stock-picker's tape.",
     "narrative": [
       "Regime: SIDEWAYS \u00b7 breadth 43% \u00b7 median momentum +0.8% \u00b7 ATR 3.0%",
-      "Book: 3 ADD \u00b7 0 ACCUMULATE \u00b7 45 HOLD \u00b7 1 EXIT",
+      "Book: 3 ADD \u00b7 0 ACCUMULATE \u00b7 46 HOLD \u00b7 0 EXIT",
       "Macro tone: NEUTRAL from 159 items across 11 sources",
       "Strongest sector: Power (avg score 58)"
     ],
@@ -3555,8 +3669,8 @@
       "total_analyzed": 49,
       "strong_buys": 0,
       "actionable_buys": 3,
-      "holds": 45,
-      "risk_alerts": 1,
+      "holds": 46,
+      "risk_alerts": 0,
       "earnings_blackouts": 0,
       "do_not_trade": 0
     },
@@ -3567,7 +3681,7 @@
         "change_pct": 4.75,
         "price": 2240.8,
         "action": "HOLD",
-        "score": 34
+        "score": 33
       },
       {
         "symbol": "POLYCAB",
@@ -3575,7 +3689,7 @@
         "change_pct": 3.53,
         "price": 8182.5,
         "action": "HOLD",
-        "score": 45
+        "score": 52
       },
       {
         "symbol": "BRITANNIA",
@@ -3609,7 +3723,7 @@
         "change_pct": -2.83,
         "price": 204.32,
         "action": "HOLD",
-        "score": 22
+        "score": 24
       },
       {
         "symbol": "SUNPHARMA",
@@ -3633,7 +3747,7 @@
         "change_pct": -0.98,
         "price": 5446.5,
         "action": "HOLD",
-        "score": 6
+        "score": 8
       },
       {
         "symbol": "LT",
@@ -3717,66 +3831,64 @@
         "sector": "Power",
         "action": "ADD",
         "verdict": "BUY",
-        "score": 59,
+        "score": 56,
         "rsi": 65.3,
         "trend": "Full Bull (>20>50>200)",
         "reason": "Full bullish SMA alignment",
-        "narrative": "NTPC is holding a constructive setup at 59/100 with full bull (>20>50>200). Momentum is healthy with RSI at 65, leaving room before overbought territory. News flow is a tailwind \u2014 1 item in the last 48 hours lean positive, with the most prominent being 'NTPC Green Energy group firm to begin 150 MW supply from solar project on Saturday' (ET Industry). The broader tape is range-bound with 43% breadth, so stock selection matters more than direction, with Power sector performing in-line. The verdict is BUY \u2014 deploy on pullbacks toward \u20b9395 if you don't already own it. Our three-horizon read: Mildly Bullish tomorrow, Mildly Bullish over the next week, Mildly Bullish through the month.",
+        "narrative": "NTPC is holding a constructive setup at 56/100 with full bull (>20>50>200). Momentum is healthy with RSI at 65, leaving room before overbought territory. The broader tape is range-bound with 43% breadth, so stock selection matters more than direction, with Power sector performing in-line. The verdict is BUY \u2014 deploy on pullbacks toward \u20b9395 if you don't already own it. Our three-horizon read: Mildly Bullish tomorrow, Mildly Bullish over the next week, Mildly Bullish through the month.",
         "forecasts": {
           "1d": {
             "label": "Tomorrow",
             "days": 1,
             "bias": "Mildly Bullish",
             "confidence": "Medium",
-            "composite": 63.5,
+            "composite": 56.0,
             "price_band": {
               "low": 385.16,
               "mid": 396.08,
               "high": 407.01,
               "move_pct_mid": 0.63
             },
-            "catalyst": "News flow: NTPC Green Energy group firm to begin 150 MW supply from solar project on Saturday",
-            "primary_risk": "News-driven spike may fade without volume confirmation"
+            "catalyst": "RSI at 65 \u2014 momentum carryover likely",
+            "primary_risk": "Gap risk at open; size positions accordingly"
           },
           "1w": {
             "label": "1 Week",
             "days": 5,
             "bias": "Mildly Bullish",
             "confidence": "Medium",
-            "composite": 61.7,
+            "composite": 56.0,
             "price_band": {
               "low": 374.73,
               "mid": 399.15,
               "high": 423.58,
               "move_pct_mid": 1.41
             },
-            "catalyst": "News flow: NTPC Green Energy group firm to begin 150 MW supply from solar project on Saturday",
-            "primary_risk": "News-driven spike may fade without volume confirmation"
+            "catalyst": "Range-bound week; Full Bull (>20>50>200) bias",
+            "primary_risk": "Regime shift or sector rotation could invalidate setup"
           },
           "1m": {
             "label": "1 Month",
             "days": 21,
             "bias": "Mildly Bullish",
             "confidence": "Medium",
-            "composite": 60.4,
+            "composite": 56.0,
             "price_band": {
               "low": 354.92,
               "mid": 404.98,
               "high": 455.03,
               "move_pct_mid": 2.89
             },
-            "catalyst": "News flow: NTPC Green Energy group firm to begin 150 MW supply from solar project on Saturday",
-            "primary_risk": "News-driven spike may fade without volume confirmation"
+            "catalyst": "Structural trend full bull (>20>50>200); SIDEWAYS regime supportive",
+            "primary_risk": "Macro shocks or earnings surprises are the biggest swing factor"
           }
         },
         "news_info": {
-          "score": 2.2,
-          "label": "BULLISH",
-          "count": 1,
-          "modifier": 3,
-          "top_headline": "NTPC Green Energy group firm to begin 150 MW supply from solar project on Saturday",
-          "top_source": "ET Industry",
-          "top_link": "https://economictimes.indiatimes.com/industry/renewables/ntpc-green-energy-group-firm-to-begin-150-mw-supply-from-solar-project-on-saturday/articleshow/130326250.cms"
+          "score": 0,
+          "label": "NEUTRAL",
+          "count": 0,
+          "modifier": 0,
+          "top_headline": null
         }
       },
       {
@@ -3912,23 +4024,89 @@
         }
       },
       {
-        "symbol": "TITAN",
-        "name": "Titan Company",
-        "sector": "Consumer Disc.",
+        "symbol": "POLYCAB",
+        "name": "Polycab India",
+        "sector": "Electricals",
         "action": "HOLD",
         "verdict": "HOLD",
-        "score": 51,
-        "rsi": 76.3,
-        "trend": "Full Bull (>20>50>200)",
-        "reason": "Full bullish SMA alignment",
-        "narrative": "TITAN sits in the middle of the pack with a 51/100 read with full bull (>20>50>200). Momentum is hot \u2014 RSI is at 76, meaning buyers are in control but the name is stretched on above-average volume (1.6\u00d7). News flow is a tailwind \u2014 1 item in the last 48 hours lean positive, with the most prominent being 'Kalyan Jewellers, Titan, and other jewellery stocks tumble up to 6% while MMTC rallies 16%. Here's why' (ET Markets). The broader tape is range-bound with 43% breadth, so stock selection matters more than direction, with Consumer Disc. sector performing in-line. The verdict is HOLD \u2014 if you own it, let it work; if you don't, there are cleaner setups elsewhere. Our three-horizon read: Neutral tomorrow, Neutral over the next week, Neutral through the month.",
+        "score": 52,
+        "rsi": 75.7,
+        "trend": "Bull (>50>200)",
+        "reason": "Bullish SMA alignment",
+        "narrative": "POLYCAB sits in the middle of the pack with a 52/100 read with bull (>50>200). Momentum is hot \u2014 RSI is at 76, meaning buyers are in control but the name is stretched on above-average volume (1.3\u00d7). The broader tape is range-bound with 43% breadth, so stock selection matters more than direction, with Electricals sector performing in-line. The verdict is HOLD \u2014 if you own it, let it work; if you don't, there are cleaner setups elsewhere. Our three-horizon read: Neutral tomorrow, Neutral over the next week, Neutral through the month.",
         "forecasts": {
           "1d": {
             "label": "Tomorrow",
             "days": 1,
             "bias": "Neutral",
-            "confidence": "Medium",
-            "composite": 54.0,
+            "confidence": "Low",
+            "composite": 52.0,
+            "price_band": {
+              "low": 7894.77,
+              "mid": 8182.5,
+              "high": 8470.23,
+              "move_pct_mid": 0.0
+            },
+            "catalyst": "RSI at 76 \u2014 momentum carryover likely",
+            "primary_risk": "Gap risk at open; size positions accordingly"
+          },
+          "1w": {
+            "label": "1 Week",
+            "days": 5,
+            "bias": "Neutral",
+            "confidence": "Low",
+            "composite": 52.0,
+            "price_band": {
+              "low": 7539.12,
+              "mid": 8182.5,
+              "high": 8825.88,
+              "move_pct_mid": 0.0
+            },
+            "catalyst": "Range-bound week; Bull (>50>200) bias",
+            "primary_risk": "Regime shift or sector rotation could invalidate setup"
+          },
+          "1m": {
+            "label": "1 Month",
+            "days": 21,
+            "bias": "Neutral",
+            "confidence": "Low",
+            "composite": 52.0,
+            "price_band": {
+              "low": 6863.97,
+              "mid": 8182.5,
+              "high": 9501.03,
+              "move_pct_mid": 0.0
+            },
+            "catalyst": "Consolidation phase in SIDEWAYS regime",
+            "primary_risk": "Macro shocks or earnings surprises are the biggest swing factor"
+          }
+        },
+        "news_info": {
+          "score": 0,
+          "label": "NEUTRAL",
+          "count": 0,
+          "modifier": 0,
+          "top_headline": null
+        }
+      },
+      {
+        "symbol": "TITAN",
+        "name": "Titan Company",
+        "sector": "Consumer Disc.",
+        "action": "HOLD",
+        "verdict": "HOLD",
+        "score": 49,
+        "rsi": 76.3,
+        "trend": "Full Bull (>20>50>200)",
+        "reason": "Full bullish SMA alignment",
+        "narrative": "TITAN sits in the middle of the pack with a 49/100 read with full bull (>20>50>200). Momentum is hot \u2014 RSI is at 76, meaning buyers are in control but the name is stretched on above-average volume (1.6\u00d7). The broader tape is range-bound with 43% breadth, so stock selection matters more than direction, with Consumer Disc. sector performing in-line. The verdict is HOLD \u2014 if you own it, let it work; if you don't, there are cleaner setups elsewhere. Our three-horizon read: Neutral tomorrow, Neutral over the next week, Neutral through the month.",
+        "forecasts": {
+          "1d": {
+            "label": "Tomorrow",
+            "days": 1,
+            "bias": "Neutral",
+            "confidence": "Low",
+            "composite": 49.0,
             "price_band": {
               "low": 4377.4,
               "mid": 4525.9,
@@ -3942,8 +4120,8 @@
             "label": "1 Week",
             "days": 5,
             "bias": "Neutral",
-            "confidence": "Medium",
-            "composite": 52.8,
+            "confidence": "Low",
+            "composite": 49.0,
             "price_band": {
               "low": 4193.84,
               "mid": 4525.9,
@@ -3957,8 +4135,8 @@
             "label": "1 Month",
             "days": 21,
             "bias": "Neutral",
-            "confidence": "Medium",
-            "composite": 51.9,
+            "confidence": "Low",
+            "composite": 49.0,
             "price_band": {
               "low": 3845.39,
               "mid": 4525.9,
@@ -3970,81 +4148,11 @@
           }
         },
         "news_info": {
-          "score": 1.2,
-          "label": "MILDLY_BULLISH",
-          "count": 1,
-          "modifier": 2,
-          "top_headline": "Kalyan Jewellers, Titan, and other jewellery stocks tumble up to 6% while MMTC rallies 16%. Here's why",
-          "top_source": "ET Markets",
-          "top_link": "https://economictimes.indiatimes.com/markets/stocks/news/kalyan-jewellers-titan-and-other-jewellery-stocks-tumble-up-to-6-while-mmtc-rallies-16-heres-why/articleshow/130326445.cms"
-        }
-      },
-      {
-        "symbol": "NESTLEIND",
-        "name": "Nestle India",
-        "sector": "FMCG",
-        "action": "HOLD",
-        "verdict": "HOLD",
-        "score": 47,
-        "rsi": 72.7,
-        "trend": "Bull (>50>200)",
-        "reason": "Bullish SMA alignment",
-        "narrative": "NESTLEIND sits in the middle of the pack with a 47/100 read with bull (>50>200). Momentum is hot \u2014 RSI is at 73, meaning buyers are in control but the name is stretched on above-average volume (1.4\u00d7). News flow is a headwind \u2014 1 item in the last 48 hours skew negative, with the most prominent being 'Sensex, Nifty hold steady at midday; HUL, Nestle lead gains as IT, Financials weigh' (Hindu BusinessLine). The broader tape is range-bound with 43% breadth, so stock selection matters more than direction, and FMCG is lagging (score 32, trend down). The verdict is HOLD \u2014 if you own it, let it work; if you don't, there are cleaner setups elsewhere. Our three-horizon read: Mildly Bearish tomorrow, Mildly Bearish over the next week, Neutral through the month.",
-        "forecasts": {
-          "1d": {
-            "label": "Tomorrow",
-            "days": 1,
-            "bias": "Mildly Bearish",
-            "confidence": "Medium",
-            "composite": 42.5,
-            "price_band": {
-              "low": 1244.1,
-              "mid": 1277.91,
-              "high": 1311.73,
-              "move_pct_mid": -0.6
-            },
-            "catalyst": "News flow: Sensex, Nifty hold steady at midday; HUL, Nestle lead gains as IT, Financials weigh",
-            "primary_risk": "Negative news flow could accelerate downside"
-          },
-          "1w": {
-            "label": "1 Week",
-            "days": 5,
-            "bias": "Mildly Bearish",
-            "confidence": "Medium",
-            "composite": 44.3,
-            "price_band": {
-              "low": 1192.81,
-              "mid": 1268.42,
-              "high": 1344.03,
-              "move_pct_mid": -1.34
-            },
-            "catalyst": "News flow: Sensex, Nifty hold steady at midday; HUL, Nestle lead gains as IT, Financials weigh",
-            "primary_risk": "Negative news flow could accelerate downside"
-          },
-          "1m": {
-            "label": "1 Month",
-            "days": 21,
-            "bias": "Neutral",
-            "confidence": "Medium",
-            "composite": 45.6,
-            "price_band": {
-              "low": 1130.64,
-              "mid": 1285.6,
-              "high": 1440.56,
-              "move_pct_mid": 0.0
-            },
-            "catalyst": "News flow: Sensex, Nifty hold steady at midday; HUL, Nestle lead gains as IT, Financials weigh",
-            "primary_risk": "Negative news flow could accelerate downside"
-          }
-        },
-        "news_info": {
-          "score": -2.2,
-          "label": "BEARISH",
-          "count": 1,
-          "modifier": -3,
-          "top_headline": "Sensex, Nifty hold steady at midday; HUL, Nestle lead gains as IT, Financials weigh",
-          "top_source": "Hindu BusinessLine",
-          "top_link": "https://www.thehindubusinessline.com/markets/sensex-nifty-hold-steady-at-midday-hul-nestle-lead-gains-as-it-financials-weigh/article70872840.ece"
+          "score": 0,
+          "label": "NEUTRAL",
+          "count": 0,
+          "modifier": 0,
+          "top_headline": null
         }
       }
     ],
@@ -4052,15 +4160,6 @@
       {
         "symbol": "NESTLEIND",
         "name": "Nestle India",
-        "action": "HOLD",
-        "flags": [
-          "negative news (1)"
-        ],
-        "verdict": "HOLD"
-      },
-      {
-        "symbol": "POLYCAB",
-        "name": "Polycab India",
         "action": "HOLD",
         "flags": [
           "negative news (1)"
@@ -4104,21 +4203,20 @@
         "verdict": "HOLD"
       },
       {
-        "symbol": "HDFCBANK",
-        "name": "HDFC Bank",
-        "action": "EXIT",
-        "flags": [
-          "rule \u2192 EXIT",
-          "negative news (1)"
-        ],
-        "verdict": "EXIT"
-      },
-      {
         "symbol": "TRENT",
         "name": "Trent",
         "action": "HOLD",
         "flags": [
           "RSI 78 overbought"
+        ],
+        "verdict": "HOLD"
+      },
+      {
+        "symbol": "HAL",
+        "name": "Hindustan Aeronautics",
+        "action": "HOLD",
+        "flags": [
+          "RSI 83 overbought"
         ],
         "verdict": "HOLD"
       }
@@ -4142,18 +4240,18 @@
         "symbol": "NTPC",
         "name": "NTPC",
         "pct_from_52h": 0.9,
-        "score": 59,
+        "score": 56,
         "action": "ADD"
       }
     ],
     "sector_heatmap": [
       {
         "sector": "Power",
-        "avg_score": 59.5,
+        "avg_score": 58.0,
         "count": 2,
         "trend": "up",
-        "news_count": 5,
-        "news_label": "BULLISH"
+        "news_count": 3,
+        "news_label": "NEUTRAL"
       },
       {
         "sector": "Healthcare",
@@ -4164,8 +4262,16 @@
         "news_label": "NEUTRAL"
       },
       {
+        "sector": "Electricals",
+        "avg_score": 52.0,
+        "count": 1,
+        "trend": "flat",
+        "news_count": 0,
+        "news_label": "NEUTRAL"
+      },
+      {
         "sector": "Consumer Disc.",
-        "avg_score": 51.0,
+        "avg_score": 49.0,
         "count": 1,
         "trend": "flat",
         "news_count": 0,
@@ -4176,15 +4282,7 @@
         "avg_score": 47.0,
         "count": 2,
         "trend": "flat",
-        "news_count": 6,
-        "news_label": "BULLISH"
-      },
-      {
-        "sector": "Electricals",
-        "avg_score": 45.0,
-        "count": 1,
-        "trend": "flat",
-        "news_count": 0,
+        "news_count": 4,
         "news_label": "NEUTRAL"
       },
       {
@@ -4192,7 +4290,7 @@
         "avg_score": 39.0,
         "count": 1,
         "trend": "down",
-        "news_count": 13,
+        "news_count": 12,
         "news_label": "BEARISH"
       },
       {
@@ -4200,23 +4298,23 @@
         "avg_score": 35.7,
         "count": 3,
         "trend": "down",
-        "news_count": 3,
-        "news_label": "BULLISH"
-      },
-      {
-        "sector": "FMCG",
-        "avg_score": 32.2,
-        "count": 5,
-        "trend": "down",
         "news_count": 1,
-        "news_label": "BULLISH"
+        "news_label": "NEUTRAL"
       },
       {
         "sector": "Banking",
-        "avg_score": 31.5,
+        "avg_score": 32.5,
         "count": 6,
         "trend": "down",
-        "news_count": 22,
+        "news_count": 19,
+        "news_label": "BEARISH"
+      },
+      {
+        "sector": "FMCG",
+        "avg_score": 32.0,
+        "count": 5,
+        "trend": "down",
+        "news_count": 1,
         "news_label": "BULLISH"
       },
       {
@@ -4236,26 +4334,15 @@
         "news_label": "NEUTRAL"
       },
       {
-        "sector": "Mining",
-        "avg_score": 28.0,
-        "count": 1,
+        "sector": "Defence",
+        "avg_score": 28.5,
+        "count": 2,
         "trend": "down",
-        "news_count": 0,
-        "news_label": "NEUTRAL"
+        "news_count": 4,
+        "news_label": "BULLISH"
       }
     ],
     "action_plan": [
-      {
-        "priority": 1,
-        "type": "EXIT",
-        "symbol": "HDFCBANK",
-        "name": "HDFC Bank",
-        "price": 799.9,
-        "instruction": "Market order at open \u2014 rule ladder triggered.",
-        "reason": "RSI ideal zone (57.5)",
-        "confidence": "LOW",
-        "verdict": "EXIT"
-      },
       {
         "priority": 3,
         "type": "ADD",
@@ -4292,60 +4379,38 @@
     ],
     "news_highlights": [
       {
-        "title": "Lloyds Metals among 8 midcap-cap stocks that hit 52-week highs & rallied up to 31% in a month",
-        "source": "ET Markets",
-        "category": "market",
-        "sentiment": "BULLISH",
-        "tickers": [],
-        "sectors": [
-          "Metals"
-        ],
-        "published": "2026-04-17T12:20:41+00:00",
-        "link": "https://economictimes.indiatimes.com/markets/stocks/news/lloyds-metals-among-8-midcap-cap-stocks-that-hit-52-week-highs-amp-rallied-up-to-31-in-a-month/slideshow/130332943.cms"
-      },
-      {
-        "title": "YES Bank Q4 preview: NII to grow up to 12%; PAT estimates diverge. 8 things to watch",
-        "source": "ET Markets",
-        "category": "market",
-        "sentiment": "BULLISH",
-        "tickers": [],
-        "sectors": [
-          "Banking"
-        ],
-        "published": "2026-04-17T10:52:40+00:00",
-        "link": "https://economictimes.indiatimes.com/markets/stocks/news/yes-bank-q4-preview-nii-to-grow-up-to-12-pat-estimates-diverge-8-things-to-watch/articleshow/130330370.cms"
-      },
-      {
-        "title": "Bajaj Consumer Care shares soar 16% after Q4 net profit doubles to Rs 63 crore",
-        "source": "ET Markets",
+        "title": "Pulse of the Street: Indian stocks cool after surge as global markets race ahead",
+        "source": "Mint Markets",
         "category": "market",
         "sentiment": "BULLISH",
         "tickers": [],
         "sectors": [],
-        "published": "2026-04-17T10:17:53+00:00",
-        "link": "https://economictimes.indiatimes.com/markets/stocks/news/bajaj-consumer-care-shares-soar-16-after-q4-net-profit-doubles-to-rs-63-crore/articleshow/130329556.cms"
+        "published": "2026-04-17T14:50:19+00:00",
+        "link": "https://www.livemint.com/market/pulse-of-the-street-indian-stocks-cool-after-surge-as-global-markets-race-ahead-11776430893991.html"
       },
       {
-        "title": "Why stock market rose today? Sensex jumps 500 points, Nifty settles above 24,350. 5 key factors explained",
+        "title": "How 50 days of the Iran war led to the loss of $50 billion worth of oil",
         "source": "ET Markets",
         "category": "market",
-        "sentiment": "BULLISH",
+        "sentiment": "BEARISH",
         "tickers": [],
-        "sectors": [],
-        "published": "2026-04-17T10:16:36+00:00",
-        "link": "https://economictimes.indiatimes.com/markets/stocks/news/why-stock-market-rose-today-sensex-jumps-500-points-nifty-settles-above-24350-5-key-factors-explained/articleshow/130329422.cms"
+        "sectors": [
+          "Telecom"
+        ],
+        "published": "2026-04-17T16:55:05+00:00",
+        "link": "https://economictimes.indiatimes.com/markets/commodities/news/how-50-days-of-the-iran-war-led-to-the-loss-of-50-billion-worth-of-oil/articleshow/130338646.cms"
       },
       {
-        "title": "Windlas Biotech announces Rs 47 crore buyback at Rs 1,000/share; sets April 24 as record date",
-        "source": "ET Markets",
+        "title": "HDFC Bank Q4 results preview: Net profit may rise 9%, NII seen up 6% YoY with stable margins; dividend in focus",
+        "source": "Mint Markets",
         "category": "market",
         "sentiment": "BULLISH",
         "tickers": [
-          "RELIANCE"
+          "HDFCBANK"
         ],
         "sectors": [],
-        "published": "2026-04-17T10:07:55+00:00",
-        "link": "https://economictimes.indiatimes.com/markets/stocks/news/windlas-biotech-announces-rs-47-crore-buyback-at-rs-1000/share-sets-april-24-as-record-date/articleshow/130329363.cms"
+        "published": "2026-04-18T01:06:22+00:00",
+        "link": "https://www.livemint.com/market/stock-market-news/hdfc-bank-q4-results-preview-net-profit-may-rise-9-nii-seen-up-6-yoy-with-stable-margins-dividend-in-focus-11776447481339.html"
       },
       {
         "title": "Up to 66% crash: How West Asia war battered India\u2019s top Gulf trade",
@@ -4358,42 +4423,26 @@
         "link": "https://www.livemint.com/economy/west-asia-war-india-trade-gulf-countries-export-import-uae-saudi-arabia-qatar-iraq-11776321025491.html"
       },
       {
-        "title": "VST Industries shares surge 19%: What's behind the rally in this Radhakishan Damani-owned stock?",
-        "source": "Mint Markets",
-        "category": "market",
-        "sentiment": "BULLISH",
+        "title": "India medical tourism slips below pre-Covid peak amid geopolitics, visa delays and rising Asian competition",
+        "source": "ET Industry",
+        "category": "sector",
+        "sentiment": "BEARISH",
         "tickers": [],
         "sectors": [],
-        "published": "2026-04-17T06:18:52+00:00",
-        "link": "https://www.livemint.com/market/stock-market-news/vst-industries-shares-surge-19-after-q4-results-whats-behind-the-rally-in-this-radhakishan-damani-owned-stock-11776405732091.html"
+        "published": "2026-04-18T00:00:00+00:00",
+        "link": "https://economictimes.indiatimes.com/industry/healthcare/biotech/healthcare/india-medical-tourism-slips-below-pre-covid-peak-amid-geopolitics-visa-delays-and-rising-asian-competition/articleshow/130342775.cms"
       },
       {
-        "title": "Waaree Renewable Technologies shares jump over 13% after strong Q4 results",
-        "source": "Mint Markets",
+        "title": "Trent seeks nod for fundraise, bonus issue as FY27 expansion drive kicks in",
+        "source": "Hindu BusinessLine",
         "category": "market",
         "sentiment": "BULLISH",
         "tickers": [
-          "RELIANCE"
+          "TRENT"
         ],
         "sectors": [],
-        "published": "2026-04-17T05:03:12+00:00",
-        "link": "https://www.livemint.com/market/stock-market-news/waaree-renewable-technologies-shares-jump-over-13-after-strong-q4-results-11776401760450.html"
-      },
-      {
-        "title": "Rajesh Palviya of Axis Sec suggests Tata Power, Polycab, BEL shares to buy on April 17",
-        "source": "Mint Markets",
-        "category": "market",
-        "sentiment": "BEARISH",
-        "tickers": [
-          "RELIANCE",
-          "WIPRO",
-          "POLYCAB",
-          "BEL",
-          "TATAPOWER"
-        ],
-        "sectors": [],
-        "published": "2026-04-17T04:47:45+00:00",
-        "link": "https://www.livemint.com/market/stock-market-news/rajesh-palviya-of-axis-sec-suggests-tata-power-polycab-bel-shares-to-buy-on-april-17-11776399821026.html"
+        "published": "2026-04-17T14:00:29+00:00",
+        "link": "https://www.thehindubusinessline.com/companies/trent-seeks-nod-for-fundraise-bonus-issue-as-fy27-expansion-drive-kicks-in/article70874089.ece"
       },
       {
         "title": "Q4 Results Today Highlights: Mastek Q4 profit up y-o-y, Bajaj Consumer Care Q4 profit soars, Jio Financial, Aditya Birla Money to announce Q4 results, Wipro & HDFC Life top losers",
@@ -4419,24 +4468,59 @@
         "link": "https://www.thehindubusinessline.com/markets/stock-markets/angel-one-shares-gain-after-strong-q4-earnings-growth/article70872300.ece"
       },
       {
-        "title": "Waaree Renewable shares rally 13% on strong Q4 earnings",
-        "source": "Hindu BusinessLine",
-        "category": "market",
+        "title": "Seed industry seeks policy support amid input cost increase",
+        "source": "ET Economy",
+        "category": "macro",
         "sentiment": "BULLISH",
         "tickers": [],
+        "sectors": [],
+        "published": "2026-04-16T19:44:12+00:00",
+        "link": "https://economictimes.indiatimes.com/news/economy/agriculture/seed-industry-seeks-policy-support-amid-input-cost-increase/articleshow/130317391.cms"
+      },
+      {
+        "title": "US stocks today: S&P 500, Nasdaq end at fresh records as oil prices tumble",
+        "source": "ET Markets",
+        "category": "market",
+        "sentiment": "BEARISH",
+        "tickers": [],
         "sectors": [
-          "Power"
+          "Oil & Gas",
+          "Telecom"
         ],
-        "published": "2026-04-17T06:20:24+00:00",
-        "link": "https://www.thehindubusinessline.com/markets/stock-markets/waaree-renewable-shares-rally-13-on-strong-q4-earnings/article70872316.ece"
+        "published": "2026-04-17T20:13:02+00:00",
+        "link": "https://economictimes.indiatimes.com/markets/us-stocks/news/us-stocks-today-sp-500-nasdaq-end-at-fresh-records-as-oil-prices-tumble/articleshow/130342793.cms"
+      },
+      {
+        "title": "Sebi clears four IPOs including Avaada Electro and Grand Housing",
+        "source": "ET Markets",
+        "category": "market",
+        "sentiment": "BULLISH",
+        "tickers": [
+          "HAL"
+        ],
+        "sectors": [],
+        "published": "2026-04-17T15:19:59+00:00",
+        "link": "https://economictimes.indiatimes.com/markets/ipos/fpos/sebi-clears-four-ipos-including-avaada-electro-and-grand-housing/articleshow/130336958.cms"
+      },
+      {
+        "title": "Yes Bank Q4 results preview: NII growth seen steady, asset quality improves; profit to rise YoY",
+        "source": "Mint Markets",
+        "category": "market",
+        "sentiment": "BULLISH",
+        "tickers": [
+          "RELIANCE"
+        ],
+        "sectors": [],
+        "published": "2026-04-17T13:42:41+00:00",
+        "link": "https://www.livemint.com/market/stock-market-news/yes-bank-q4-results-preview-nii-growth-seen-steady-asset-quality-improves-profits-to-rise-yoy-11776427808103.html"
       }
     ],
     "news_stats": {
-      "total_items": 273,
+      "total_items": 270,
       "sources": 11,
-      "with_tickers": 56,
-      "bullish": 81,
-      "bearish": 68
+      "with_tickers": 51,
+      "bullish": 72,
+      "bearish": 65
     }
   }
 }
