@@ -25,7 +25,8 @@ sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 from news_fetcher import fetch_all_news
 from news_analyzer import analyze, aggregate_ticker_sentiment, aggregate_macro_sentiment, news_for_ticker
 from forecast_engine import forecast_stock
-from advisor_narrator import build_narrative
+#from advisor_narrator import build_narrative
+from narrative_engine import build_narrative
 
 IST = pytz.timezone("Asia/Kolkata")
 
@@ -905,7 +906,9 @@ def main():
             action=action, verdict=verdict,
             news_info=news_info, regime=regime, sector_momentum=sector_momentum,
             forecasts=forecasts, entry_ceiling=r.get("_entry_ceiling", r["current_price"]),
+            horizon=r.get("holding_category", "medium"),
         )
+
         r["_narrative"] = narrative
         r["narrative"] = narrative  # expose in JSON
 
