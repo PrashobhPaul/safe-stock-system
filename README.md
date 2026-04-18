@@ -1,4 +1,4 @@
-# StockSage India — Enterprise PWA
+# ProfitPilot — Enterprise PWA
 
 > AI-powered Indian stock market predictions. Zero login. Zero config. Open to all.
 **[🌐 Live App →](https://PrashobhPaul.github.io/safe-stock-system)**
